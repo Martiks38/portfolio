@@ -2,20 +2,59 @@
 <html lang="es">
 
 <head>
-
+  <title>Giuliano Cappa | Portfolio Frontend</title>
   <meta charset="UTF-8">
   <link rel="icon" href="/favicon.ico" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
     content="Hola y bienvenidos a mi portfolio. Me llamo Giuliano y soy un front-end developer. Aquí podrán ver algunos de mis proyectos y las tecnologías que uso comunmente en la actualidad.">
-  <link rel="manifest" href="/manifest.json">
   <meta name="theme-color" content="#213bce">
+  <link rel="manifest" href="/manifest.json">
 
-  <title>Giuliano Cappa | Portfolio</title>
+  <link rel="stylesheet" href="styles/index.css">
 </head>
 
 <body>
-
+  <aside class="barData">
+    <img src="assets/foto.jpg" alt="Foto personal" class="barData__foto" />
+    <div class="line"></div>
+    <nav class="barData__navbar">
+      <ul class="navbar">
+        <li>
+          <a href="#" class="navbar__section isActive">INICIO</a>
+        </li>
+        <li>
+          <a href="#" class="navbar__section">ACERCA DE</a>
+        </li>
+        <li>
+          <a href="#" class="navbar__section">PROYECTOS</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="line"></div>
+    <footer>
+      <nav class="socialCard">
+        <a href="#" class="socialCard__link">
+          <img src="/assets/icons8-linkedin.svg" alt="Linkedin">
+        </a>
+        <a href="#" class="socialCard__link socialCard__link_blackBackground">
+          <img src="/assets/GitHub-Mark-32px.png" alt="Github">
+        </a>
+      </nav>
+    </footer>
+  </aside>
+  <div class="wrapperContent">
+    <!-- Bubbles -->
+    <div class="bubbleGroup">
+      <div class="bubble bubble1"></div>
+      <div class="bubble bubble2"></div>
+      <div class="bubble bubble3"></div>
+      <div class="bubble bubble4"></div>
+    </div>
+    <main>
+      <h1>Hola, soy Giuliano Cappa Frontend Developer </h1>
+    </main>
+  </div>
 </body>
 
 </html>
