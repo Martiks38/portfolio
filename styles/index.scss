@@ -44,3 +44,28 @@ a {
   color: var(--color-white);
   width: 100%;
 }
+
+main {
+  height: 100vh;
+}
+
+.section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.glass {
+  background-color: #dedede11;
+  padding: 5rem 2rem;
+  border-radius: 6px;
+  -webkit-backdrop-filter: blur(50px);
+  backdrop-filter: blur(50px);
+  box-shadow: 0 0 3px #ffff;
+}
+
+.parraph {
+  max-width: 65ch;
+  margin: 1rem auto;
+}

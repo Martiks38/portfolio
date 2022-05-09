@@ -4,8 +4,6 @@
   width: 100%;
   min-height: 100vh;
   background-color: var(--color-background-bubbles);
-  -webkit-filter: blur(8px);
-  filter: blur(8px);
   overflow: hidden;
   z-index: -1;
 }
@@ -15,7 +13,7 @@
   border-radius: 50%;
 }
 
-@for $number from 1 through 4 {
+@for $number from 1 through 5 {
   .bubble#{$number} {
     background: radial-gradient(
       circle closest-side,
@@ -54,11 +52,20 @@
 }
 
 .bubble4 {
-  top: 38vh;
-  right: 15vw;
+  top: 45vh;
+  right: 18vw;
   width: 15vw;
   height: 15vw;
-  -webkit-animation: move 3s linear infinite;
+  -webkit-animation: move 6s linear infinite;
+  animation: move 6s linear infinite;
+}
+
+.bubble5 {
+  top: 7vh;
+  right: 10vw;
+  width: 9vw;
+  height: 9vw;
+  -webkit-animation: move 6s linear infinite;
   animation: move 6s linear infinite;
 }
 
@@ -79,5 +86,16 @@
   }
   50% {
     transform: scale(1.1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bubble1,
+  .bubble2,
+  .bubble3,
+  .bubble4,
+  .bubble5 {
+    -webkit-animation: none;
+    animation: none;
   }
 }
