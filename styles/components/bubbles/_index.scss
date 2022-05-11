@@ -1,8 +1,7 @@
 .bubbleGroup {
   position: fixed;
-  max-width: calc(100vw - 200px);
   width: 100%;
-  min-height: 100vh;
+  min-height: 110vh;
   background-color: var(--color-background-bubbles);
   overflow: hidden;
   z-index: -1;
@@ -25,46 +24,46 @@
 }
 
 .bubble1 {
-  top: 90px;
-  left: 100px;
-  width: 25vw;
-  height: 25vw;
+  top: 5%;
+  right: 68%;
+  width: 25vmax;
+  height: 25vmax;
   -webkit-animation: move 5s linear infinite;
   animation: move 5s linear infinite;
 }
 
 .bubble2 {
-  bottom: -14vw;
-  right: -14vw;
-  width: 28vw;
-  height: 28vw;
+  top: 85%;
+  right: 5%;
+  width: 20vmax;
+  height: 20vmax;
   -webkit-animation: move 3s linear infinite;
   animation: move 3s linear infinite;
 }
 
 .bubble3 {
-  top: 80vh;
-  left: 20vw;
-  width: 10vw;
-  height: 10vw;
+  top: 71%;
+  right: 64%;
+  width: 19vmax;
+  height: 19vmax;
   -webkit-animation: move 3s linear infinite;
   animation: move 3s linear infinite;
 }
 
 .bubble4 {
-  top: 45vh;
-  right: 18vw;
-  width: 15vw;
-  height: 15vw;
+  top: 18%;
+  right: 25%;
+  width: 13vmax;
+  height: 13vmax;
   -webkit-animation: move 6s linear infinite;
   animation: move 6s linear infinite;
 }
 
 .bubble5 {
-  top: 7vh;
-  right: 10vw;
-  width: 9vw;
-  height: 9vw;
+  top: 70%;
+  right: 37%;
+  width: 6vmax;
+  height: 6vmax;
   -webkit-animation: move 6s linear infinite;
   animation: move 6s linear infinite;
 }

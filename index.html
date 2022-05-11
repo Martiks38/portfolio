@@ -11,45 +11,50 @@
   <meta name="theme-color" content="#213bce">
   <link rel="manifest" href="/manifest.json">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Radio+Canada&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="styles/index.css">
+  <script src="./script/index.js" type="module"></script>
 </head>
 
 <body>
   <aside class="barData">
-    <img src="assets/foto.jpg" alt="Foto personal" class="barData__foto" />
+    <img src="assets/images/photo1.jpg" alt="Foto personal" class="barData__photo" />
     <div class="line"></div>
     <nav class="barData__navbar">
       <ul class="navbar">
         <li>
-          <a href="#" class="navbar__section">SOBRE MÍ</a>
+          <a href="#about-me" class="navbar__section">SOBRE MÍ</a>
         </li>
         <li>
-          <a href="#" class="navbar__section">
+          <a href="#skills" class="navbar__section">
             HABILIDADES
           </a>
         </li>
         <li>
-          <a href="#" class="navbar__section">PROYECTOS</a>
+          <a href="#projects" class="navbar__section">PROYECTOS</a>
         </li>
         <li>
-          <a href="#" class="navbar__section">CONTACTO</a>
+          <a href="#contact" class="navbar__section">CONTACTO</a>
         </li>
       </ul>
     </nav>
     <div class="line"></div>
     <footer>
       <nav class="socialCard">
-        <a href="#" class="socialCard__link">
-          <img src="/assets/icons8-linkedin.svg" alt="Linkedin">
+        <a href="https://www.linkedin.com/in/giuliano-cappa" class="socialCard__link">
+          <img src="./assets/images/svg/linkedin-38.svg" alt="LinkedIn">
         </a>
-        <a href="#" class="socialCard__link socialCard__link_blackBackground">
-          <img src="/assets/GitHub-Mark-32px.png" alt="Github">
+        <a href="https://github.com/Martiks38?tab=repositories"
+          class="socialCard__link socialCard__link_blackBackground">
+          <img src="./assets/images/svg/github-38.svg" alt="Repositorio de GitHub">
         </a>
       </nav>
     </footer>
   </aside>
   <article class="wrapperContent">
-    <!-- Bubbles -->
     <div class="bubbleGroup">
       <div class="bubble bubble1"></div>
       <div class="bubble bubble2"></div>
@@ -58,59 +63,146 @@
       <div class="bubble bubble5"></div>
     </div>
     <main>
-      <section class="section">
-        <h1 class="glass">
-          Hola, soy Giuliano Cappa Desarrolador Frontend
+      <section class="introduction">
+        <h1 class="glass glass_introduction">
+          <span class="introduction__name">Giuliano Martín Cappa</span>
+          <span class="introduction__perfil">Desarrollador Frontend</span>
         </h1>
-      </section>
-      <section>
-        <h2>Sobre mí</h2>
-        <p class="parraph">Soy técnico electrónico con estudios en ingeniería electrónica. A medidos de 2021 mientras
-          cursaba
-          informática decidí estudiar empezar a desarrollo Frontend.</p>
-        <p class="parraph">Me gustan los juegos de estrategia y World of Warcraft. En éste último, juntos a mis
-          amigos llegamos a estar entre los 10 mejores del reino de nuestras respectivas clases.</p>
-        <p class="parraph">Actualmente estoy en el programa #SéProgramar y cada vez que puedo respondo algunas dudas que
-          surgen en el foro sobre JavaScript.</p>
-      </section>
-      <section>
-        <h2>Habilidades</h2>
-        <ul>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>sass</li>
-          <li>JavaScript</li>
-          <li>TypeScript</li>
-          <li>React</li>
-          <li>Next.js</li>
-          <li>git</li>
-        </ul>
-      </section>
-      <section>
-        <h2>Proyectos</h2>
-        <figure class="card">
-          <img src="" alt="Pokestore" class="card__img">
-          <figcaption class="card__text">Pokestore</figcaption>
-        </figure>
-        <figure class="card">
-          <img src="" alt="Typing-game" class="card__img">
-          <figcaption class="card__text">Typing-game</figcaption>
-        </figure>
-        <figure class="card">
-          <img src="" alt="possum-maze" class="card__img">
-          <figcaption class="card__text">possum-maze</figcaption>
-        </figure>
-        <figure class="card">
-          <img src="" alt="Fan Page Escuela" class="card__img">
-          <figcaption class="card__text">Fan Page Escuela</figcaption>
+        <figure class="arrow">
+          <img src="./assets/images/arrow.png" alt="">
         </figure>
       </section>
-      <section>
-        <h2>Contacto</h2>
-        <p>Si quieres hablar conmigo</p>
+      <section class="section__theme" data-target data-target-value="about-me">
+        <h2 class="section__title" id="about-me">Sobre mí</h2>
+        <div class="glass glass_info">
+          <p class="section__paragraph">Hola, soy técnico electrónico con estudios en ingeniería electrónica.</p>
+          <p class="section__paragraph">Me gustan los videojuegos de estrategia y World of Warcraft. También me
+            gusta la literatura de horror, principalmente horror cósmico.
+          </p>
+          <p class="section__paragraph">Actualmente estoy en el programa #SéProgramar y cada vez que puedo respondo
+            algunas dudas que
+            surgen en el foro sobre JavaScript.
+          </p>
+        </div>
+      </section>
+      <section class="section__theme" data-target data-target-value="skills">
+        <h2 class="section__title" id="skills">Habilidades</h2>
+        <div class="skillsWrapper glass glass_info">
+          <section>
+            <h3>Lenguajes</h3>
+            <ul class=" skills">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>Sass</li>
+              <li>JavaScript</li>
+              <li>TypeScript</li>
+            </ul>
+          </section>
+          <section>
+            <h3>Librerías y Frameworks</h3>
+            <ul class="skills">
+              <li>React</li>
+              <li>Next.js</li>
+            </ul>
+          </section>
+          <section>
+            <h3>Herramientas</h3>
+            <ul class="skills">
+              <li>git</li>
+            </ul>
+          </section>
+        </div>
+      </section>
+      <section class="section__theme" data-target data-target-value="projects">
+        <h2 class="section__title" id="projects">Proyectos</h2>
+        <div class="wrapperCards">
+          <figure class="card">
+            <img src="./assets/images/Pokestore.webp" alt="Pokestore" loading="lazy" class="card__img">
+            <figcaption class="card__text">
+              <h3 class="text__title">
+                <span>Pokestore</span>
+                <a href="#" class="text__title_link">
+                  <img src="./assets/images/svg/url-19.svg" alt="url">
+                </a>
+                <a class="text__title_link" href="https://github.com/Martiks38/Pokestore" target="_blank">
+                  <img src="./assets/images/svg/github-19.svg" alt="GitHub" />
+                </a>
+              </h3>
+              <p class="text__desc">Tienda de cartas de Pokémon.</p>
+            </figcaption>
+          </figure>
+          <figure class="card">
+            <img src="./assets/images/Typing-game.png" alt="Typing-game" loading="lazy" class="card__img">
+            <figcaption class="card__text">
+              <h3 class="text__title">
+                <span>Typing-game</span>
+                <a href="#" class="text__title_link">
+                  <img src="./assets/images/svg/url-19.svg" alt="url">
+                </a>
+                <a class="text__title_link" href="https://github.com/Martiks38/typing-game-" target="_blank">
+                  <img src="./assets/images/svg/github-19.svg" alt="GitHub" />
+                </a>
+              </h3>
+              <p class="text__desc">Juego para practicar mecanografía</p>
+            </figcaption>
+          </figure>
+          <figure class="card">
+            <img src="./assets/images/Possum-Maze.png" alt="possum-maze" loading="lazy" class="card__img">
+            <figcaption class="card__text">
+              <h3 class="text__title">
+                <span>Possum-Maze</span>
+                <a href="#" class="text__title_link">
+                  <img src="./assets/images/svg/url-19.svg" alt="url">
+                </a>
+                <a class="text__title_link" href="https://github.com/Martiks38/typing-game-" target="_blank">
+                  <img src="./assets/images/svg/github-19.svg" alt="GitHub" />
+                </a>
+              </h3>
+              <p class="text__desc">Buscador de series e información de banda y letra de una canción.</p>
+            </figcaption>
+          </figure>
+          <figure class="card">
+            <img src="./assets/images/Fan-Page.webp" alt="Fan Page Escuela" loading="lazy" class="card__img">
+            <figcaption class="card__text">
+              <h3 class="text__title">
+                <span>Fan page</span>
+                <a href="#" class="text__title_link">
+                  <img src="./assets/images/svg/url-19.svg" alt="url">
+                </a>
+                <a class="text__title_link" href="https://github.com/Martiks38/my_school_page" target="_blank">
+                  <img src="./assets/images/svg/github-19.svg" alt="GitHub" />
+                </a>
+              </h3>
+              <p class="text__desc">Rediseño de la fan page.</p>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+      <section class="section__theme section__theme_last" data-target data-target-value="contact">
+        <h2 class="section__title" id="contact">Contacto</h2>
+        <div class="glass glass_info">
+          <p class="msgContact">Si tienes una duda o pregunta, o quieres hablar conmigo no dudes en contactarme.</p>
+          <div class="socialCard">
+            <a class="socialCard__button" href="https://www.linkedin.com/in/giuliano-cappa" target="_blank">
+              <img src="./assets/images/svg/linkedin-38.svg" alt="LinkedIn">
+            </a>
+            <a class="socialCard__button" href="https://github.com/Martiks38?tab=repositories" target="_blank">
+              <img src="./assets/images/svg/github-38.svg" alt="Repositorio de GitHub">
+            </a>
+            <button class="socialCard__button" data-copy-value="Giuliano Cappa#4522">
+              <img src="./assets/images/svg/discord-38.svg" alt="User ID de Discord">
+            </button>
+            <button class="socialCard__button" data-copy-value="cappa.giuliano.m@gmail.com">
+              <img src="./assets/images/svg/gmail-38.svg" alt="Dirección de email">
+            </button>
+          </div>
+        </div>
       </section>
     </main>
   </article>
+  <button class="menu">
+    <span class="menu__line"></span>
+  </button>
 </body>
 
 </html>

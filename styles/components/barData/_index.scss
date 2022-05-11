@@ -1,4 +1,4 @@
-@use '../mixins/mixins';
+@use '../../mixins/mixins';
 
 $sideFoto: calc(var(--width-dataBar) - 2rem);
 
@@ -12,15 +12,21 @@ $sideFoto: calc(var(--width-dataBar) - 2rem);
   align-items: center;
   height: 100vh;
   background-color: var(--color-dataBar-grey);
+  transition: left 0.3s ease-in-out;
+  z-index: 1;
 
-  &__foto {
+  &.view {
+    left: 0;
+  }
+
+  &__photo {
     @include mixins.sides($sideFoto, $sideFoto);
     border-radius: 100%;
     box-shadow: 1px -1px 2px var(--color-white), 1px 1px 2px var(--color-white);
     -o-object-fit: cover;
     object-fit: cover;
-    -o-object-position: top;
-    object-position: top;
+    -o-object-position: top right;
+    object-position: top right;
   }
 
   &__navbar {
@@ -44,15 +50,11 @@ $sideFoto: calc(var(--width-dataBar) - 2rem);
   gap: 1.5rem 0;
 
   &__section {
-    text-align: center;
     display: block;
-    width: 100%;
-    padding: 0.5rem 0;
-
-    &.isActive {
-      background: #a50e82;
-      color: var(--color-black);
-    }
+    text-align: center;
+    font-size: 1.1rem;
+    padding: 0.6rem 0;
+    font-family: 'Radio Canada', -apple-system, Helvetica, Verdana, Arial;
   }
 }
 
@@ -68,27 +70,32 @@ $sideFoto: calc(var(--width-dataBar) - 2rem);
 
 .socialCard {
   display: flex;
-  width: $sideFoto;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
   justify-content: space-evenly;
   align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  gap: 0 2rem;
+
+  &__button {
+    padding: 0;
+    background-color: transparent;
+    border-style: none;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
 
   &__link {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 2rem;
-    height: 2rem;
-
-    &:hover {
-      background: var(--color-white);
-      border-radius: 6px;
-      -webkit-filter: none;
-      filter: none;
-    }
-
-    &_blackBackground {
-      -webkit-filter: invert(1);
-      filter: invert(1);
-    }
+    width: 3rem;
+    height: 3rem;
   }
 }

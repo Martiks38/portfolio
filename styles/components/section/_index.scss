@@ -1,0 +1,42 @@
+.section {
+  height: 100vh;
+
+  &__theme {
+    min-height: -webkit-max-content;
+    min-height: -moz-max-content;
+    min-height: max-content;
+    margin-bottom: 10rem;
+
+    &_last {
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__title {
+    position: relative;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 2rem auto 3rem;
+    text-align: center;
+    font-family: 'Radio Canada', Helvetica, Verdana, Arial;
+
+    &::before {
+      position: absolute;
+      content: ' ';
+      height: 4px;
+      width: 100%;
+      bottom: -5px;
+      border-radius: 2px;
+      background-color: var(--color-line-section);
+    }
+  }
+
+  &__paragraph {
+    max-width: 65ch;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 170%;
+    font-family: 'Poppins', Helvetica, Verdana, Arial;
+  }
+}
