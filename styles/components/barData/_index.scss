@@ -5,11 +5,11 @@ $sideFoto: calc(var(--width-dataBar) - 2rem);
 .barData {
   position: -webkit-sticky;
   position: sticky;
-  display: flex;
   top: 0;
-  flex-direction: column;
+  display: flex;
   justify-content: space-around;
   align-items: center;
+  flex-direction: column;
   height: 100vh;
   background-color: var(--color-dataBar-grey);
   transition: left 0.3s ease-in-out;
@@ -30,8 +30,8 @@ $sideFoto: calc(var(--width-dataBar) - 2rem);
   }
 
   &__navbar {
-    color: var(--color-white);
     padding: 1rem 0;
+    color: var(--color-white);
   }
 }
 
@@ -51,10 +51,10 @@ $sideFoto: calc(var(--width-dataBar) - 2rem);
 
   &__section {
     display: block;
-    text-align: center;
-    font-size: 1.1rem;
     padding: 0.6rem 0;
+    font-size: 1.1rem;
     font-family: 'Radio Canada', -apple-system, Helvetica, Verdana, Arial;
+    text-align: center;
   }
 }
 
@@ -70,11 +70,11 @@ $sideFoto: calc(var(--width-dataBar) - 2rem);
 
 .socialCard {
   display: flex;
+  justify-content: space-evenly;
+  align-items: center;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-  justify-content: space-evenly;
-  align-items: center;
   margin-left: auto;
   margin-right: auto;
   gap: 0 2rem;
@@ -98,4 +98,8 @@ $sideFoto: calc(var(--width-dataBar) - 2rem);
     width: 3rem;
     height: 3rem;
   }
+}
+
+.isActive {
+  background-color: var(--color-background-tab);
 }

@@ -22,13 +22,13 @@
     font-family: 'Radio Canada', Helvetica, Verdana, Arial;
 
     &::before {
-      position: absolute;
       content: ' ';
-      height: 4px;
-      width: 100%;
+      position: absolute;
       bottom: -5px;
-      border-radius: 2px;
+      width: 100%;
+      height: 4px;
       background-color: var(--color-line-section);
+      border-radius: 2px;
     }
   }
 
@@ -36,7 +36,7 @@
     max-width: 65ch;
     margin-left: auto;
     margin-right: auto;
-    line-height: 170%;
     font-family: 'Poppins', Helvetica, Verdana, Arial;
+    line-height: 170%;
   }
 }

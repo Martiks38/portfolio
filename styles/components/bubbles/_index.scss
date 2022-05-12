@@ -1,3 +1,5 @@
+@use '../../mixins/animation';
+
 .bubbleGroup {
   position: fixed;
   width: 100%;
@@ -24,48 +26,23 @@
 }
 
 .bubble1 {
-  top: 5%;
-  right: 68%;
-  width: 25vmax;
-  height: 25vmax;
-  -webkit-animation: move 5s linear infinite;
-  animation: move 5s linear infinite;
+  @include animation.animationBubble(5%, 68%, 25vmax, 5s);
 }
 
 .bubble2 {
-  top: 85%;
-  right: 5%;
-  width: 20vmax;
-  height: 20vmax;
-  -webkit-animation: move 3s linear infinite;
-  animation: move 3s linear infinite;
+  @include animation.animationBubble(80%, 7%, 24vmax, 8s);
 }
 
 .bubble3 {
-  top: 71%;
-  right: 64%;
-  width: 19vmax;
-  height: 19vmax;
-  -webkit-animation: move 3s linear infinite;
-  animation: move 3s linear infinite;
+  @include animation.animationBubble(71%, 64%, 19vmax, 3s);
 }
 
 .bubble4 {
-  top: 18%;
-  right: 25%;
-  width: 13vmax;
-  height: 13vmax;
-  -webkit-animation: move 6s linear infinite;
-  animation: move 6s linear infinite;
+  @include animation.animationBubble(18%, 25%, 13vmax, 6s);
 }
 
 .bubble5 {
-  top: 70%;
-  right: 37%;
-  width: 6vmax;
-  height: 6vmax;
-  -webkit-animation: move 6s linear infinite;
-  animation: move 6s linear infinite;
+  @include animation.animationBubble(70%, 37%, 6vmax, 6s);
 }
 
 @-webkit-keyframes move {
@@ -85,16 +62,5 @@
   }
   50% {
     transform: scale(1.1);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .bubble1,
-  .bubble2,
-  .bubble3,
-  .bubble4,
-  .bubble5 {
-    -webkit-animation: none;
-    animation: none;
   }
 }
