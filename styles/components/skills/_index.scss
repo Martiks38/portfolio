@@ -1,0 +1,17 @@
+.skillsWrapper {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  gap: 3rem;
+}
+
+.skills {
+  padding-left: 0;
+  list-style: none;
+
+  & li {
+    margin: 0.6rem 0;
+    font-size: 1.1rem;
+    font-family: 'Poppins', Helvetica, Verdana, Arial;
+  }
+}
