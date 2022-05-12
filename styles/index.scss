@@ -54,3 +54,46 @@ main {
   min-height: 100vh;
   padding: 0 2rem 4rem;
 }
+
+@media screen and (max-width: 56rem) {
+  body {
+    grid-template-columns: 1fr;
+  }
+
+  .section__theme {
+    min-height: auto;
+  }
+
+  .barData {
+    position: fixed;
+    left: -100%;
+  }
+
+  .menu {
+    visibility: visible;
+  }
+}
+
+@media screen and (max-width: 47rem) {
+  .aboutMePhoto {
+    display: block;
+  }
+
+  .skillsWrapper {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 27rem) {
+  main {
+    padding: 0 1rem 2rem;
+  }
+
+  .glass_info {
+    padding: 1rem 1.5rem;
+  }
+
+  .text__title {
+    font-size: 1.1rem;
+  }
+}
