@@ -1,0 +1,30 @@
+.arrow {
+  height: 3rem;
+  margin: 0;
+  -webkit-filter: invert(1);
+  filter: invert(1);
+  -webkit-animation: viewArrow 10s linear 0s infinite;
+  animation: viewArrow 10s linear 0s infinite;
+}
+
+@-webkit-keyframes viewArrow {
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes viewArrow {
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}

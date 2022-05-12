@@ -1,0 +1,51 @@
+%menuButtonLine {
+  position: absolute;
+  width: 1.8rem;
+  height: 0.25rem;
+  background-color: var(--color-line-button);
+  border-radius: 0.125rem;
+}
+
+.menu {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3.4rem;
+  height: 3rem;
+  background-color: var(--color-background-button);
+  border-style: none;
+  border-radius: 10px;
+  visibility: hidden;
+
+  &.collapse {
+    .menu__line {
+      &::before,
+      &::after {
+        top: 0;
+      }
+    }
+  }
+
+  &__line {
+    @extend %menuButtonLine;
+
+    &::before,
+    &::after {
+      content: ' ';
+      @extend %menuButtonLine;
+      left: 0;
+      transition: top 0.3s ease-in-out;
+    }
+
+    &::before {
+      top: -8px;
+    }
+
+    &::after {
+      top: 8px;
+    }
+  }
+}

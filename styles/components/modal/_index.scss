@@ -1,0 +1,11 @@
+.modalCopyMsg {
+  position: fixed;
+  top: 4rem;
+  right: 2rem;
+  padding: 0.8rem 1rem;
+  background-color: var(--color-background-msg);
+  border-radius: 6px;
+  color: var(--color-white);
+  font-weight: 600;
+  font-family: 'Poppins', Helvetica, Verdana, Arial;
+}

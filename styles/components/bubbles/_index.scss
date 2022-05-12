@@ -1,0 +1,66 @@
+@use '../../mixins/animation';
+
+.bubbleGroup {
+  position: fixed;
+  width: 100%;
+  min-height: 110vh;
+  background-color: var(--color-background-bubbles);
+  overflow: hidden;
+  z-index: -1;
+}
+
+.bubble {
+  position: absolute;
+  border-radius: 50%;
+}
+
+@for $number from 1 through 5 {
+  .bubble#{$number} {
+    background: radial-gradient(
+      circle closest-side,
+      var(--color-bubbles) 10%,
+      transparent
+    );
+    box-shadow: 0 0 60px var(--color-bubbles-075);
+  }
+}
+
+.bubble1 {
+  @include animation.animationBubble(5%, 68%, 25vmax, 5s);
+}
+
+.bubble2 {
+  @include animation.animationBubble(80%, 7%, 24vmax, 8s);
+}
+
+.bubble3 {
+  @include animation.animationBubble(71%, 64%, 19vmax, 3s);
+}
+
+.bubble4 {
+  @include animation.animationBubble(18%, 25%, 13vmax, 6s);
+}
+
+.bubble5 {
+  @include animation.animationBubble(70%, 37%, 6vmax, 6s);
+}
+
+@-webkit-keyframes move {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes move {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
