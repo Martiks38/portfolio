@@ -1,0 +1,8 @@
+@mixin animationBubble($top, $right, $diameter, $time) {
+  top: $top;
+  right: $right;
+  width: $diameter;
+  height: $diameter;
+  -webkit-animation: move $time linear infinite;
+  animation: move $time linear infinite;
+}
