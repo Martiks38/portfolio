@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Giuliano Cappa | Portfolio Frontend</title>
+  <title>Giuliano Cappa</title>
 
   <link rel="icon" href="assets/favicon.ico" />
   <link rel="apple-touch-icon" sizes="192x192" href="assets/android-icon-192x192.png" />
@@ -38,32 +38,31 @@
 </head>
 
 <body>
-  <aside class="barData">
 
-    <div class="barData__logo">
-      <div class="logoImg"></div>
-    </div>
-    <nav class="barData__navbar">
-      <ul class="navbar">
-        <li>
-          <a href="#about-me" class="navbar__section">SOBRE MÍ</a>
-        </li>
-        <li>
-          <a href="#skills" class="navbar__section">
-            HABILIDADES
-          </a>
-        </li>
-        <li>
-          <a href="#projects" class="navbar__section">PROYECTOS</a>
-        </li>
-        <li>
-          <a href="#contact" class="navbar__section">CONTACTO</a>
-        </li>
-      </ul>
-    </nav>
-  </aside>
-
-  <article class="wrapperContent">
+  <main>
+    <aside class="barData">
+      <div class="barData__logo">
+        <div class="logoImg"></div>
+      </div>
+      <nav class="barData__navbar">
+        <ul class="navbar">
+          <li>
+            <a href="#about-me" class="navbar__section">SOBRE MÍ</a>
+          </li>
+          <li>
+            <a href="#skills" class="navbar__section">
+              HABILIDADES
+            </a>
+          </li>
+          <li>
+            <a href="#projects" class="navbar__section">PROYECTOS</a>
+          </li>
+          <li>
+            <a href="#contact" class="navbar__section">CONTACTO</a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
     <div class="bubbleGroup">
       <div class="bubble bubble1"></div>
       <div class="bubble bubble2"></div>
@@ -71,12 +70,15 @@
       <div class="bubble bubble4"></div>
       <div class="bubble bubble5"></div>
     </div>
-    <main>
+    <article class="wrapperContent">
       <section class="introduction">
-        <h1 class="glass glass_introduction">
-          <span class="introduction__name">Giuliano Martín Cappa</span>
-          <span class="introduction__perfil">Desarrollador Fullstack</span>
-        </h1>
+        <div class="glass glass_presentation">
+          <img src="/assets/images/photo1.jpg" alt="Giuliano Martín Cappa" class="personalImage">
+          <h1 class="glass__title">
+            <span class="introduction__name">Giuliano Martín Cappa</span>
+            <span class="introduction__perfil">Desarrollador Fullstack</span>
+          </h1>
+        </div>
         <figure class="arrow">
           <img src="./assets/images/arrow.png" alt="">
         </figure>
@@ -105,6 +107,7 @@
               <li>Sass</li>
               <li>JavaScript</li>
               <li>TypeScript</li>
+              <li>Node.js</li>
             </ul>
           </section>
           <section>
@@ -115,9 +118,16 @@
             </ul>
           </section>
           <section>
+            <h3>Base de datos</h3>
+            <ul class="skills">
+              <li>MySQL</li>
+              <li>MongoDB</li>
+            </ul>
+          </section>
+          <section>
             <h3>Herramientas</h3>
             <ul class="skills">
-              <li>git</li>
+              <li>git/GitHub</li>
             </ul>
           </section>
         </div>
@@ -217,8 +227,8 @@
           </div>
         </div>
       </section>
-    </main>
-  </article>
+    </article>
+  </main>
   <button class="menu">
     <span class="menu__line"></span>
   </button>

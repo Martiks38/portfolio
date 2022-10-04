@@ -3,9 +3,9 @@
 @use './media';
 
 :root {
-  color: rgba(255, 255, 255, 0.8);
-
   font-size: 16px;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.8;
 
   /* Colors */
   --color-white: #eee;
@@ -17,7 +17,7 @@
   --color-bubbles-075: #0f82a5bf;
   --color-background-msg: #544e00;
   --color-background-tab: #970e7a;
-  --color-line-section: #c751af;
+  --color-line-section: #173e3b;
   --color-glass: #dedede11;
   --color-background-button: #0f82a5;
   --color-line-button: #161414e6;
@@ -25,6 +25,22 @@
   --width-dataBar: 10rem;
 
   --color-gray-alpha-75: rgba(31, 31, 35, 0.75);
+  --color-primary-alpha-75: rgba(5, 20, 17, 0.75);
+
+  --color-black-pure: #000;
+  --color-white-pure: #fff;
+
+  --color-light-purple: #b310b3;
+  --color-purple: #660366;
+  --color-dark-purple: #440044;
+
+  --color-orange: #e05008;
+  --color-dark-orange-eye: #c42704;
+  --color-dark-yello-eye: #cdae00;
+
+  --color-dark-red-eye: #900705;
+
+  --width-content: 75rem;
 
   --border-radius-8: 8px;
   --border-radius-16: 16px;
@@ -50,12 +66,11 @@ a {
 }
 
 body {
-  background-color: var(--color-background-body);
+  background-color: var(--color-black);
 }
 
 main {
   min-height: 100vh;
-  padding: 0 2rem 4rem;
 }
 
 @media screen and (max-width: 56rem) {

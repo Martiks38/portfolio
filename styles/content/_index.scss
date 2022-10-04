@@ -14,6 +14,16 @@
   }
 }
 
+.personalImage {
+  width: 15rem;
+  height: 15rem;
+  border-radius: 50%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: right 0;
+     object-position: right 0;
+}
+
 .msgContact {
   text-align: center;
   font-family: 'Poppins', Helvetica, Verdana, Arial;
@@ -25,8 +35,7 @@
 }
 
 .wrapperContent {
-  position: absolute;
-  top: 0;
+  max-width: var(--width-content);
   width: 100%;
-  color: var(--color-white);
+  margin: 0 auto;
 }
