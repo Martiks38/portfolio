@@ -3,14 +3,15 @@
 @use './media';
 
 :root {
-  /* Font Size */
-  --font-size: 16px;
+  color: rgba(255, 255, 255, 0.8);
+
+  font-size: 16px;
 
   /* Colors */
   --color-white: #eee;
   --color-black: #0d0d0d;
   --color-background-body: #0e0e10;
-  --color-dataBar-grey: #1f1f23;
+  --color-dataBar-grey: rgb(31, 31, 35);
   --color-background-bubbles: #3c3c3c33;
   --color-bubbles: #0f82a5;
   --color-bubbles-075: #0f82a5bf;
@@ -21,8 +22,12 @@
   --color-background-button: #0f82a5;
   --color-line-button: #161414e6;
   --color-background-text-card: #2d2d2df2;
-
   --width-dataBar: 10rem;
+
+  --color-gray-alpha-75: rgba(31, 31, 35, 0.75);
+
+  --border-radius-8: 8px;
+  --border-radius-16: 16px;
 }
 
 *,
@@ -39,15 +44,13 @@ body {
   font-family: -apple-system, verdana, helvetica, arial;
 }
 
-body {
-  display: grid;
-  grid-template-columns: var(--width-dataBar) 1fr;
-  background-color: var(--color-background-body);
-}
-
 a {
   text-decoration: none;
   color: inherit;
+}
+
+body {
+  background-color: var(--color-background-body);
 }
 
 main {
