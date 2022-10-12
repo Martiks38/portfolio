@@ -2,9 +2,11 @@
 
 .bubbleGroup {
   position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   min-height: 110vh;
-  background-color: var(--color-background-bubbles);
+  background-color: var(--color-gray-alpha-20);
   overflow: hidden;
   z-index: -1;
 }
@@ -21,7 +23,7 @@
       var(--color-bubbles) 10%,
       transparent
     );
-    box-shadow: 0 0 60px var(--color-bubbles-075);
+    box-shadow: 0 0 60px var(--color-bubbles-alpha-75);
   }
 }
 
@@ -43,24 +45,4 @@
 
 .bubble5 {
   @include animation.animationBubble(70%, 37%, 6vmax, 6s);
-}
-
-@-webkit-keyframes move {
-  0%,
-  100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-}
-
-@keyframes move {
-  0%,
-  100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
 }

@@ -1,45 +1,138 @@
-@use '../../mixins/mixins';
+@use '../../placeholder/bottomLine';
 
-$sideFoto: calc(var(--width-dataBar) - 2rem);
+$z-index: 1;
 
-.barData {
-  position: -webkit-sticky;
-  position: sticky;
+.headerPage {
+  position: fixed;
   top: 0;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: column;
-  height: 100vh;
-  background-color: var(--color-dataBar-grey);
-  transition: left 0.3s ease-in-out;
-  z-index: 1;
+  width: 100%;
+  background-color: var(--color-primary-black-alpha-75);
+  -webkit-backdrop-filter: blur(50px);
+  backdrop-filter: blur(50px);
+  transition: transform 300ms ease-in-out;
+  z-index: $z-index;
 
   &.view {
-    left: 0;
+    transform: translateY(0);
   }
+}
 
-  &__photo {
-    @include mixins.sides($sideFoto, $sideFoto);
+.barData {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 1rem 3rem;
+  max-width: var(--width-content);
+  width: 100%;
+
+  &__logo {
+    $sizes: 3rem;
+
+    position: relative;
+    width: $sizes;
+    height: $sizes;
     border-radius: 100%;
-    box-shadow: 1px -1px 2px var(--color-white), 1px 1px 2px var(--color-white);
-    -o-object-fit: cover;
-    object-fit: cover;
-    -o-object-position: top right;
-    object-position: top right;
-  }
+    box-shadow: 0 0 12px 4px var(--color-purple);
+    perspective: 1000px;
+    overflow: hidden;
 
-  &__navbar {
-    padding: 1rem 0;
-    color: var(--color-white);
+    &::after,
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      z-index: $z-index + 1;
+    }
+
+    &::after {
+      left: -100%;
+      background-image: radial-gradient(
+        circle at right,
+        var(--color-light-purple) 10%,
+        var(--color-purple) 40%,
+        var(--color-dark-purple)
+      );
+    }
+
+    &::before {
+      left: 100%;
+      background-image: radial-gradient(
+        circle at right,
+        var(--color-light-purple) 10%,
+        var(--color-purple) 40%,
+        var(--color-dark-purple)
+      );
+      transform: rotate(0.5turn);
+    }
+
+    &:hover {
+      $time-eye-animation: 10s;
+      $animation: $time-eye-animation ease-in-out 0s infinite;
+
+      &::after {
+        -webkit-animation: $animation eyelidLeft;
+        animation: $animation eyelidLeft;
+      }
+      &::before {
+        -webkit-animation: $animation eyelidRight;
+        animation: $animation eyelidRight;
+      }
+    }
+  }
+}
+
+.logoImg {
+  $logo: '/assets/logo.webp';
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background: url($logo) 0 2px / cover no-repeat;
+  transform: translate(-50%, -50%);
+  z-index: $z-index;
+
+  &::before {
+    content: '';
+    background-color: var(--color-black-pure);
+    border-radius: 0 100%;
+  }
+}
+
+.barData__logo:hover {
+  .logoImg {
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(
+      circle at center,
+      var(--color-orange),
+      var(--color-dark-orange-eye) 45%,
+      var(--color-dark-red-eye) 65%
+    );
+    transform-style: preserve-3d;
+    -webkit-animation: 3s ease-in-out 800ms infinite eyeMoves;
+    animation: 3s ease-in-out 800ms infinite eyeMoves;
+  }
+  .logoImg::before {
+    height: 25%;
+    width: 25%;
+    box-shadow: 0 0 8px 6px var(--color-dark-yello-eye);
+    transform: rotate(45deg);
   }
 }
 
 .navbar {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-evenly;
-  width: var(--width-dataBar);
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
@@ -47,37 +140,31 @@ $sideFoto: calc(var(--width-dataBar) - 2rem);
   padding: 0;
   font-weight: 700;
   list-style: none;
-  gap: 1.5rem 0;
+  gap: 1.5rem;
 
   &__section {
+    position: relative;
     display: block;
-    padding: 0.6rem 0;
+    padding: 0.4rem 0.8rem;
     font-size: 1.1rem;
-    font-family: 'Radio Canada', -apple-system, Helvetica, Verdana, Arial;
+    font-family: 'Radio Canada';
     text-align: center;
+
+    &:hover {
+      &::before {
+        @extend %bottomLine;
+        bottom: -10px;
+      }
+    }
   }
 }
 
-.line {
-  @include mixins.sides($sideFoto, 1px);
-  background: linear-gradient(
-    to left,
-    transparent 1%,
-    var(--color-white) 25% 75%,
-    transparent 99%
-  );
-}
-
-.socialCard {
+.contact {
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-  margin-left: auto;
-  margin-right: auto;
-  gap: 0 2rem;
+  gap: 1rem;
 
   &__button {
     padding: 0;
@@ -101,5 +188,6 @@ $sideFoto: calc(var(--width-dataBar) - 2rem);
 }
 
 .isActive {
-  background-color: var(--color-background-tab);
+  background-color: var(--color-line-section);
+  border-radius: var(--border-radius-8);
 }

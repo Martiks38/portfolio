@@ -1,42 +1,38 @@
+@use '../../placeholder/bottomLine';
+
 .section {
   height: 100vh;
 
   &__theme {
-    min-height: -webkit-max-content;
-    min-height: -moz-max-content;
-    min-height: max-content;
-    margin-bottom: 10rem;
-
-    &_last {
-      margin-bottom: 3rem;
-    }
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-bottom: 6rem;
+    min-height: 100vh;
   }
 
   &__title {
     position: relative;
+    margin: 2rem auto 3rem;
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
-    margin: 2rem auto 3rem;
+    font-size: 2.5rem;
+    font-size: clamp(2rem, 1.8697rem + 0.8403vw, 2.5rem);
+    font-family: 'Radio Canada';
     text-align: center;
-    font-family: 'Radio Canada', Helvetica, Verdana, Arial;
 
     &::before {
-      content: ' ';
-      position: absolute;
+      @extend %bottomLine;
       bottom: -5px;
-      width: 100%;
-      height: 4px;
-      background-color: var(--color-line-section);
-      border-radius: 2px;
     }
   }
 
   &__paragraph {
+    margin: 0 auto 0.5rem;
     max-width: 65ch;
-    margin-left: auto;
-    margin-right: auto;
-    font-family: 'Poppins', Helvetica, Verdana, Arial;
-    line-height: 170%;
+    font-size: 1.25rem;
+    font-family: 'Poppins';
+    line-height: 140%;
   }
 }
