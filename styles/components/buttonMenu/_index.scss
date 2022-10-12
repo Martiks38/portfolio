@@ -1,23 +1,25 @@
 %menuButtonLine {
   position: absolute;
-  width: 1.8rem;
   height: 0.25rem;
-  background-color: var(--color-line-button);
+  width: 1.8rem;
+  background-color: var(--color-black-pure-alpha-80);
   border-radius: 0.125rem;
 }
 
 .menu {
+  --dist-position: 2rem;
+
   position: fixed;
-  bottom: 2rem;
-  right: 2rem;
+  bottom: var(--dist-position);
+  right: var(--dist-position);
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 3.4rem;
   height: 3rem;
-  background-color: var(--color-background-button);
+  width: 3.4rem;
+  background-color: var(--color-bubbles);
   border-style: none;
-  border-radius: 10px;
+  border-radius: var(--border-radius-10);
   visibility: hidden;
 
   &.collapse {
@@ -25,6 +27,7 @@
       &::before,
       &::after {
         top: 0;
+        opacity: 0;
       }
     }
   }
@@ -34,10 +37,13 @@
 
     &::before,
     &::after {
-      content: ' ';
+      --transition-line: 300ms;
+
+      content: '';
       @extend %menuButtonLine;
       left: 0;
-      transition: top 0.3s ease-in-out;
+      transition: top var(--transition-line) ease-in,
+        opacity var(--transition-line) ease-in;
     }
 
     &::before {

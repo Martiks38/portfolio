@@ -1,30 +1,15 @@
 .arrow {
+  position: absolute;
+  top: calc(100% + 2rem);
+  right: 0;
+  left: 0;
+  margin: 0 auto;
   height: 3rem;
-  margin: 0;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
   -webkit-filter: invert(1);
   filter: invert(1);
-  -webkit-animation: viewArrow 10s linear 0s infinite;
-  animation: viewArrow 10s linear 0s infinite;
-}
-
-@-webkit-keyframes viewArrow {
-  0%,
-  100% {
-    opacity: 1;
-  }
-
-  50% {
-    opacity: 0;
-  }
-}
-
-@keyframes viewArrow {
-  0%,
-  100% {
-    opacity: 1;
-  }
-
-  50% {
-    opacity: 0;
-  }
+  -webkit-animation: viewArrow 3s linear 0s infinite alternate;
+  animation: viewArrow 3s linear 0s infinite alternate;
 }
