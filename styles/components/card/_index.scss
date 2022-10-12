@@ -1,39 +1,93 @@
+@use '../../mixins/animationBackgroundImg' as bgImg;
+
+@use '../../lists/cards';
+@use '../../placeholder/efectGlass';
+
 .wrapperCards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 350px));
-  place-content: center;
-  padding: 0 1.5rem;
-  gap: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: var(--width-content);
+  gap: 1rem 2rem;
 }
 
 .card {
   position: relative;
-  width: 100%;
-  margin: 0;
-  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 450px;
+  border-radius: var(--border-radius-16);
   overflow: hidden;
+  @extend %glass;
 
-  &__img {
+  &_rowReverse {
+    flex-direction: row-reverse;
+    text-align: right;
+  }
+
+  &__img,
+  &__background {
     width: 100%;
+    height: auto;
+    -o-object-fit: contain;
+    object-fit: contain;
+  }
+
+  &__background {
+    position: absolute;
+    top: 0;
+    min-height: 225px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    visibility: hidden;
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 1.5rem 1.5rem;
     height: 100%;
-    -o-object-fit: cover;
-    object-fit: cover;
+    max-width: 40ch;
+    width: 100%;
+    gap: 1.3rem;
   }
 
   &:hover {
-    .card__text {
-      bottom: 0;
+    .card__background {
+      visibility: visible;
+    }
+
+    .card__img {
+      visibility: hidden;
+    }
+
+    @each $card in cards.$cardName {
+      .card_imgTransition_#{$card} {
+        @include bgImg.animationBackgroundImage($card);
+      }
     }
   }
+}
 
-  &__text {
-    position: absolute;
-    bottom: -11.25rem;
-    background-color: var(--color-background-text-card);
-    width: 100%;
-    padding: 0.8rem;
-    transition: bottom 0.3s ease-in-out;
-  }
+.description__title {
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+.description__text {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+  word-wrap: break-word;
+}
+
+.description__links {
+  display: flex;
+  justify-content: center;
+  margin-top: auto;
+  width: 100%;
+  gap: 1rem;
 }
 
 .text {

@@ -6,7 +6,7 @@
   left: 0;
   width: 100%;
   min-height: 110vh;
-  background-color: var(--color-background-bubbles);
+  background-color: var(--color-gray-alpha-20);
   overflow: hidden;
   z-index: -1;
 }
@@ -45,24 +45,4 @@
 
 .bubble5 {
   @include animation.animationBubble(70%, 37%, 6vmax, 6s);
-}
-
-@-webkit-keyframes move {
-  0%,
-  100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-}
-
-@keyframes move {
-  0%,
-  100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
 }
