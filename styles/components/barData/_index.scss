@@ -1,30 +1,30 @@
 @use '../../placeholder/bottomLine';
 
-$logo: '/assets/image.png';
+$z-index: 1;
 
-.barData {
-  position: -webkit-sticky;
+.headerPage {
   position: fixed;
   top: 0;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: row;
-  max-width: var(--width-content);
   width: 100%;
-  background-color: var(--color-primary-alpha-75);
-  border-bottom-left-radius: var(--border-radius-16);
-  border-bottom-right-radius: var(--border-radius-16);
+  background-color: var(--color-primary-black-alpha-75);
   -webkit-backdrop-filter: blur(50px);
   backdrop-filter: blur(50px);
-  z-index: 1;
+  transition: transform 300ms ease-in-out;
+  z-index: $z-index;
 
   &.view {
-    left: 0;
+    transform: translateY(0);
   }
+}
+
+.barData {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 1rem 3rem;
+  max-width: var(--width-content);
+  width: 100%;
 
   &__logo {
     $sizes: 3rem;
@@ -45,7 +45,7 @@ $logo: '/assets/image.png';
       display: block;
       width: 100%;
       height: 100%;
-      z-index: 2;
+      z-index: $z-index + 1;
     }
 
     &::after {
@@ -70,23 +70,24 @@ $logo: '/assets/image.png';
     }
 
     &:hover {
+      $time-eye-animation: 10s;
+      $animation: $time-eye-animation ease-in-out 0s infinite;
+
       &::after {
-        -webkit-animation: 10s ease-in-out 0s infinite eyelidLeft;
-        animation: 10s ease-in-out 0s infinite eyelidLeft;
+        -webkit-animation: $animation eyelidLeft;
+        animation: $animation eyelidLeft;
       }
       &::before {
-        -webkit-animation: 10s ease-in-out 0s infinite eyelidRight;
-        animation: 10s ease-in-out 0s infinite eyelidRight;
+        -webkit-animation: $animation eyelidRight;
+        animation: $animation eyelidRight;
       }
     }
-  }
-
-  &__navbar {
-    padding: 1rem 0;
   }
 }
 
 .logoImg {
+  $logo: '/assets/logo.webp';
+
   position: absolute;
   top: 50%;
   left: 50%;
@@ -97,7 +98,7 @@ $logo: '/assets/image.png';
   height: 100%;
   background: url($logo) 0 2px / cover no-repeat;
   transform: translate(-50%, -50%);
-  z-index: 1;
+  z-index: $z-index;
 
   &::before {
     content: '';
@@ -146,7 +147,7 @@ $logo: '/assets/image.png';
     display: block;
     padding: 0.4rem 0.8rem;
     font-size: 1.1rem;
-    font-family: 'Radio Canada', -apple-system, Helvetica, Verdana, Arial;
+    font-family: 'Radio Canada';
     text-align: center;
 
     &:hover {
@@ -158,16 +159,12 @@ $logo: '/assets/image.png';
   }
 }
 
-.socialCard {
+.contact {
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-  margin-left: auto;
-  margin-right: auto;
-  gap: 0 2rem;
+  gap: 1rem;
 
   &__button {
     padding: 0;
@@ -193,124 +190,4 @@ $logo: '/assets/image.png';
 .isActive {
   background-color: var(--color-line-section);
   border-radius: var(--border-radius-8);
-}
-
-@-webkit-keyframes eyelidLeft {
-  0% {
-    left: -100%;
-  }
-  2% {
-    left: -50%;
-  }
-  4% {
-    left: -100%;
-  }
-  6% {
-    left: -50%;
-  }
-  8% {
-    left: -100%;
-  }
-  100% {
-    left: -100%;
-  }
-}
-
-@keyframes eyelidLeft {
-  0% {
-    left: -100%;
-  }
-  2% {
-    left: -50%;
-  }
-  4% {
-    left: -100%;
-  }
-  6% {
-    left: -50%;
-  }
-  8% {
-    left: -100%;
-  }
-  100% {
-    left: -100%;
-  }
-}
-
-@-webkit-keyframes eyelidRight {
-  0% {
-    left: 100%;
-  }
-  2% {
-    left: calc(50% - 1px);
-  }
-  4% {
-    left: 100%;
-  }
-  6% {
-    left: calc(50% - 1px);
-  }
-  8% {
-    left: 100%;
-  }
-  100% {
-    left: 100%;
-  }
-}
-
-@keyframes eyelidRight {
-  0% {
-    left: 100%;
-  }
-  2% {
-    left: calc(50% - 1px);
-  }
-  4% {
-    left: 100%;
-  }
-  6% {
-    left: calc(50% - 1px);
-  }
-  8% {
-    left: 100%;
-  }
-  100% {
-    left: 100%;
-  }
-}
-
-@-webkit-keyframes eyeMoves {
-  0% {
-    transform: translate(-50%, -50%);
-  }
-  25% {
-    transform: translate(-40%, -35%) rotateX(10deg) rotateY(30deg);
-  }
-  50% {
-    transform: translate(-65%, -50%) rotateX(-15deg) rotateY(-30deg);
-  }
-  75% {
-    transform: translate(-45%, -45%) rotateX(-10deg) rotateY(-35deg);
-  }
-  100% {
-    transform: translate(-50%, -50%);
-  }
-}
-
-@keyframes eyeMoves {
-  0% {
-    transform: translate(-50%, -50%);
-  }
-  25% {
-    transform: translate(-40%, -35%) rotateX(10deg) rotateY(30deg);
-  }
-  50% {
-    transform: translate(-65%, -50%) rotateX(-15deg) rotateY(-30deg);
-  }
-  75% {
-    transform: translate(-45%, -45%) rotateX(-10deg) rotateY(-35deg);
-  }
-  100% {
-    transform: translate(-50%, -50%);
-  }
 }
