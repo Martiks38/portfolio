@@ -6,21 +6,14 @@
   <title>Giuliano Cappa</title>
 
   <link rel="icon" href="/assets/favicon.ico" />
-  <link rel="apple-touch-icon" sizes="192x192" href="/assets/android-icon-192x192.png" />
-  <link rel="apple-touch-icon" sizes="144x144" href="/assets/android-icon-144x144.png" />
-  <link rel="icon" sizes="192x192" href="/assets/android-icon-192x192.png" />
-  <link rel="icon" sizes="144x144" href="/android-icon-144x144.png" />
-  <link rel="icon" type="image/png" sizes="96x96" href="/assets/android-icon-96x96.png" />
-  <link rel="icon" type="image/png" sizes="72x72" href="/assets/android-icon-72x72.png" />
-  <link rel="icon" type="image/png" sizes="48x48" href="/assets/android-icon-48x48.png" />
-  <link rel="icon" type="image/png" sizes="36x36" href="/assets/android-icon-36x36.png" />
+  <link rel="icon" type="image/png" sizes="144x144" href="/assets/logo-144x144.png" />
+  <link rel="icon" type="image/png" sizes="48x48" href="/assets/logo-48x48.png" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Radio+Canada&display=swap"
     rel="stylesheet">
 
-  <link rel="stylesheet" href="/styles/index.css">
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
@@ -35,279 +28,366 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://giuliano-cappa.vercel.app">
 
-  <script src="/script/observer.js" type="module"></script>
+  <link rel="stylesheet" href="/styles/index.css">
 </head>
 
 <body>
-
-  <main>
-    <header class="headerPage">
-      <div class="barData">
-        <div class="barData__logo">
-          <div class="logoImg"></div>
-        </div>
-        <nav class="barData__navbar">
-          <ul class="navbar">
-            <li>
-              <span class="navbar__section" data-section="about-me">SOBRE MÍ</span>
-            </li>
-            <li>
-              <span class="navbar__section" data-section="skills">
-                CONOCIMIENTOS
-              </span>
-            </li>
-            <li>
-              <span class="navbar__section" data-section="projects">PROYECTOS</span>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-    <div class="bubbleGroup">
-      <div class="bubble bubble1"></div>
-      <div class="bubble bubble2"></div>
-      <div class="bubble bubble3"></div>
-      <div class="bubble bubble4"></div>
-      <div class="bubble bubble5"></div>
-    </div>
-    <article class="wrapperContent">
-      <section class="introduction">
-        <div class="glass glass_presentation">
-          <img src="/assets/images/photo.webp" alt="Giuliano Martín Cappa" class="personalImage">
-          <div>
-            <h1 class="introduction__name">Hola, soy<br />Giuliano Cappa</h1>
-            <h2 class="introduction__perfil">Desarrollador Full Stack</h2>
-            <span class="contact">
-              <a class="socialCard__button" href="https://www.linkedin.com/in/giuliano-cappa" target="_blank"
-                rel="noopener noreferrer">
-                <img src="/assets/images/svg/linkedin-38.svg" alt="LinkedIn">
-              </a>
-              <a class="socialCard__button" href="https://github.com/Martiks38?tab=repositories" target="_blank"
-                rel="noopener noreferrer">
-                <img src="/assets/images/svg/github-38.svg" alt="Repositorio de GitHub">
-              </a>
-              <a href="mailto:cappa.giuliano@gmail.com" class="socialCard__button">
-                <img src="/assets/images/svg/gmail-38.svg" alt="Gmail">
-              </a>
-            </span>
-          </div>
-          <figure class="arrow">
-            <img src="/assets/images/arrow.png" alt="">
-          </figure>
-        </div>
-      </section>
-      <section class="section__theme" data-target-section="about-me">
-        <h2 class="section__title" id="about-me" tabindex="0">Sobre mí</h2>
-        <div class="glass">
-          <p class="section__paragraph">Soy técnico electrónico con estudios en ingeniería electrónica.</p>
-          <p class="section__paragraph">
-            Actualmente estoy en el programa #YoProgramo y ayudo a las personas y amigos con dudas de programación, de
-            matemática o de algún videojuego.
-          </p>
-          <p class="section__paragraph">Me gustan los videojuegos de estrategia y World of Warcraft, caminar y la
-            literatura de horror.
-          </p>
-        </div>
-      </section>
-      <section class="section__theme" data-target-section="skills">
-        <h2 class="section__title" id="skills" tabindex="0">CONOCIMIENTOS</h2>
-        <div class="skillsWrapper glass">
-          <article class="skills-list">
-            <h3>Lenguajes</h3>
-            <ul class="skills">
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>Scss</li>
-              <li>JavaScript</li>
-              <li>TypeScript</li>
-              <li>Node.js</li>
-            </ul>
-          </article>
-          <article class="skills-list">
-            <h3>Librerías y Frameworks</h3>
-            <ul class="skills">
-              <li>React.js</li>
-              <li>Next.js</li>
-            </ul>
-          </article>
-          <article class="skills-list">
-            <h3>Base de datos</h3>
-            <ul class="skills">
-              <li>MySQL</li>
-              <li>MongoDB</li>
-            </ul>
-          </article>
-        </div>
-      </section>
-      <section class="section__theme" data-target-section="projects">
-        <h2 class="section__title" id="projects" tabindex="0">Proyectos</h2>
-        <div class="wrapperCards">
-          <article class="card">
-            <div class="card__containerImg">
-              <img src="/assets/images/Words/img4.png" alt="Age of Words" loading="lazy" class="card__img">
-              <img src="/assets/images/Words/img3.png" alt="Age of Words" loading="lazy"
-                class="card__img changeFourImages_3">
-              <img src="/assets/images/Words/img2.png" alt="Age of Words" loading="lazy"
-                class="card__img changeFourImages_2">
-              <img src="/assets/images/Words/img1.png" alt="Age of Words" loading="lazy"
-                class="card__img changeFourImages">
-            </div>
-            <div class="card__description">
-              <h3 class="description__title">Age of Words</h3>
-              <div>
-                <p class="description__text">
-                  Juego de descubrir la palabra.
-                </p>
-                <p class="description__text">
-                  Creación y manipulación de la cuenta. La sesión permanece abierta durante una semana y puede
-                  extenderse.
-                </p>
-                <p class="description__text">
-                  Al iniciar el servidor backend, genera la lista de palabras predeterminas.
-                </p>
-              </div>
-              <div class="description__links">
-                <a href="https://github.com/Martiks38/AgeOfWords" class="button button_link" target="_blank"
-                  rel="noopener noreferrer">
-                  Ver código
-                </a>
-              </div>
-            </div>
-          </article>
-
-          <article class="card">
-            <div class="card__containerImg">
-              <img src="/assets/images/PokeStore/img4.png" alt="Pokestore" loading="lazy" class="card__img">
-              <img src="/assets/images/PokeStore/img3.png" alt="Pokestore" loading="lazy"
-                class="card__img changeFourImages_3">
-              <img src="/assets/images/PokeStore/img2.png" alt="Pokestore" loading="lazy"
-                class="card__img changeFourImages_2">
-              <img src="/assets/images/PokeStore/img1.png" alt="Pokestore" loading="lazy"
-                class="card__img changeFourImages">
-            </div>
-            <div class="card__description">
-              <h3 class="description__title">Pokestore</h3>
-              <div>
-                <p class="description__text">
-                  Tienda de cartas de Pokémon.
-                </p>
-                <p class="description__text">
-                  Posee un carro de compras y tiene una simulación de login de cuenta y
-                  formulario de validación de compra.
-                </p>
-              </div>
-              <div class="description__links">
-                <a href="https://pokestore-now.vercel.app" class="button button_link" target="_blank"
-                  rel="noopener noreferrer">
-                  Visitar sitio
-                </a>
-                <a href="https://github.com/Martiks38/Pokestore" class="button button_link" target="_blank"
-                  rel="noopener noreferrer">
-                  Ver código
-                </a>
-              </div>
-            </div>
-          </article>
-
-          <article class="card">
-            <div class="card__containerImg">
-              <img src="/assets/images/Typing/img4.png" alt="Typing-game" loading="lazy" class="card__img">
-              <img src="/assets/images/Typing/img3.png" alt="Typing-game" loading="lazy"
-                class="card__img changeFourImages_3">
-              <img src="/assets/images/Typing/img2.png" alt="Typing-game" loading="lazy"
-                class="card__img changeFourImage changeFourImages_2">
-              <img src="/assets/images/Typing/img1.png" alt="Typing-game" loading="lazy"
-                class="card__img changeFourImages">
-            </div>
-            <div class="card__description">
-              <h3 class="description__title">Typing-game</h3>
-              <div>
-                <p class="description__text">
-                  Juego de tipografía.
-                </p>
-                <p class="description__text">
-                  Tiene tres idiomas. Tanto el idioma y los resultados son almacenados en el localstorage. Y estos
-                  últimos se reinician al ingresar en otro día.
-                </p>
-                <p class="description__text">
-                  Muestra los wpm durante la sesión y las estadísticas al finalizar pudiendo el usuario ver o no un
-                  gráfico de las wpm en el tiempo.
-                </p>
-              </div>
-              <div class="description__links">
-                <a href="https://typingso.vercel.app" class="button button_link" target="_blank"
-                  rel="noopener noreferrer">
-                  Visitar sitio
-                </a>
-                <a href="https://github.com/Martiks38/typing-game-" class="button button_link" target="_blank"
-                  rel="noopener noreferrer">
-                  Ver código
-                </a>
-              </div>
-            </div>
-          </article>
-
-          <article class="card">
-            <div class="card__containerImg">
-              <img src="/assets/images/School/img3.png" alt="School Page" loading="lazy" class="card__img">
-              <img src="/assets/images/School/img2.png" alt="School Page" loading="lazy"
-                class="card__img changeThreeImages_2">
-              <img src="/assets/images/School/img1.png" alt="School Page" loading="lazy"
-                class="card__img changeThreeImages">
-            </div>
-            <div class="card__description">
-              <h3 class="description__title">School Page</h3>
-              <div>
-                <p class="description__text">
-                  Idea de rediseño de la página donde hice mis estudios secundarios
-                </p>
-              </div>
-              <div class="description__links">
-                <a href="https://my-school-page.vercel.app" class="button button_link" target="_blank"
-                  rel="noopener noreferrer">
-                  Visitar sitio
-                </a>
-                <a href="https://github.com/Martiks38/my_school_page" class="button button_link" target="_blank"
-                  rel="noopener noreferrer">
-                  Ver código
-                </a>
-              </div>
-            </div>
-          </article>
-
-          <article class="card">
-            <div class="card__containerImg">
-              <img src="/assets/images/Possum/img2.png" alt="Possum-Maze" loading="lazy" class="card__img">
-              <img src="/assets/images/Possum/img1.png" alt="Possum-Maze" loading="lazy"
-                class="card__img changeTwoImages">
-            </div>
-            <div class="card__description">
-              <h3 class="description__title">Possum-Maze</h3>
-              <div>
-                <p class="description__text">
-                  Buscador de letras de canciones y de series.
-                </p>
-              </div>
-              <div class="description__links">
-                <a href="https://possum-maze.vercel.app" class="button button_link" target="_blank"
-                  rel="noopener noreferrer">
-                  Visitar sitio
-                </a>
-                <a href="https://github.com/Martiks38/possum-maze" class="button button_link" target="_blank"
-                  rel="noopener noreferrer">
-                  Ver código
-                </a>
-              </div>
-            </div>
-          </article>
-        </div>
-      </section>
-    </article>
-  </main>
-  <button class="menu" aria-hidden="true">
+  <button class="menu" aria-hidden="true" aria-label="Menú de navegación" aria-expanded="false">
     <span class="menu__line"></span>
   </button>
-  <script src="/script/handleMenu.js" type="module"></script>
+
+  <header class="header">
+    <div class="header-container">
+      <img src="/assets/logo.webp" alt="" class="logo">
+      <nav class="nav">
+        <ul class="navMenu">
+          <li class="navMenu__item">
+            <a href="#home">INICIO</a>
+          </li>
+          <li class="navMenu__item">
+            <a href="#about-me">SOBRE MÍ</a>
+          </li>
+          <li class="navMenu__item">
+            <a href="#knowledge">
+              CONOCIMIENTOS
+            </a>
+          </li>
+          <li class="navMenu__item">
+            <a href="#projects">PROYECTOS</a>
+          </li>
+          <li class="navMenu__item">
+            <a href="#contact">CONTACTO</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section section-introduction" id="home">
+      <img src="/assets/images/photo.webp" alt="" class="introduction-img">
+      <div class="introduction-text">
+        <h1 class="introduction-title">¡Hola! Soy<br /> <span class="introduction-title-name">Giuliano Martín
+            Cappa</span></h1>
+        <h3 class="introduction-subtitle">Desarrollador Front End</h3>
+        <article class="socialCard">
+          <a href="https://www.linkedin.com/in/giuliano-cappa" target="_blank" class="socialCard__button">
+            <img src="/assets/icons/linkedin.svg" alt="LinkedIn">
+          </a>
+          <a href="https://github.com/Martiks38?tab=repositories" target="_blank"
+            class="socialCard__button socialCard__button_invert">
+            <img src="/assets/icons/github.svg" alt="Repositorio de GitHub">
+          </a>
+          <a href="mailto:cappa.giuliano@gmail.com" class="socialCard__button">
+            <img src="/assets/icons/gmail.svg" alt="Gmail">
+          </a>
+        </article>
+      </div>
+    </section>
+    <section class="section">
+      <h3 class="section-title" id="about-me">Sobre mí</h3>
+      <div class="section-text">
+        <p class="section-paragraph">Soy desarrollador Front End autodidacta en React.</p>
+        <p class="section-paragraph">Actualmente haciendo el programa #YoProgramo y ayudo a las personas y mis amigos
+          con dudas de programación o de algún videojuego.</p>
+        <p class="section-paragraph">Me gusta aprender cosas nuevas y mejorar cada día. También me gusta la literatura
+          de horror y los videojuegos de estrategia y World of Warcraft.</p>
+      </div>
+    </section>
+    <section class="section">
+      <h3 class="section-title" id="knowledge">Conocimientos</h3>
+      <ul class="section-techs">
+        <li class="tech">
+          <figure>
+            <img src="/assets/icons/html.svg" alt="HTML" loading="lazy">
+            <figcaption>HTML</figcaption>
+          </figure>
+        </li>
+        <li class="tech">
+          <figure>
+            <img src="/assets/icons/css.svg" alt="CSS" loading="lazy">
+            <figcaption>CSS</figcaption>
+          </figure>
+        </li>
+        <li class="tech">
+          <figure>
+            <img src="/assets/icons/sass.svg" alt="Sass" loading="lazy">
+            <figcaption>Scss</figcaption>
+          </figure>
+        </li>
+        <li class="tech">
+          <figure>
+            <img src="/assets/icons/javascript.svg" alt="JavaScript" loading="lazy">
+            <figcaption>JavaScript</figcaption>
+          </figure>
+        </li>
+        <li class="tech">
+          <figure>
+            <img src="/assets/icons/typescript.svg" alt="TypeScript" loading="lazy">
+            <figcaption>TypeScript</figcaption>
+          </figure>
+        </li>
+        <li class="tech">
+          <figure>
+            <img src="/assets/icons/node.svg" alt="Node.js" loading="lazy">
+            <figcaption>Node.js</figcaption>
+          </figure>
+        </li>
+        <li class="tech">
+          <figure>
+            <img src="/assets/icons/react.svg" alt="React.js" loading="lazy">
+            <figcaption>React.js</figcaption>
+          </figure>
+        </li>
+        <li class="tech">
+          <figure>
+            <img src="/assets/icons/mysql.svg" alt="Git" loading="lazy">
+            <figcaption>MySQL</figcaption>
+          </figure>
+        </li>
+        <li class="tech">
+          <figure>
+            <img src="/assets/icons/mongo.svg" alt="MongoDB" loading="lazy">
+            <figcaption>MongoDB</figcaption>
+          </figure>
+        </li>
+        <li class="tech">
+          <figure>
+            <img src="/assets/icons/git.svg" alt="Git" loading="lazy">
+            <figcaption>Git</figcaption>
+          </figure>
+        </li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h3 class="section-title" id="projects">Proyectos</h3>
+      <div class="wrapperCards">
+
+        <article class="card">
+          <div class="card-containerImg">
+            <img src="/assets/images/Memory/img1.webp" alt="Imagen de presentación 1 de la página Memory" loading="lazy"
+              class="card-img active">
+            <img src="/assets/images/Memory/img2.webp" alt="Imagen de presentación 2 de la página Memory" loading="lazy"
+              class="card-img">
+            <img src="/assets/images/Memory/img3.webp" alt="Imagen de presentación 3 de la página Memory" loading="lazy"
+              class="card-img">
+          </div>
+          <div class="card-description">
+            <h4 class="card-title">Memory</h4>
+            <div class="card-text">
+              <div class="card-paragraph">Juego de la memoria con temática en Darkest Dungeon.</div>
+              <div class="card-paragraph">Hecho con <em>React</em> y testing con <em>Jest</em>.</div>
+            </div>
+            <div class="card-links">
+              <a href="https://memory-game-dd.vercel.app" class="button button-link" target="_blank"
+                rel="noopener noreferrer">
+                Visitar sitio
+              </a>
+              <a href="https://github.com/Martiks38/game-memory" class="button button-link" target="_blank"
+                rel="noopener noreferrer">
+                Ver código
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-containerImg">
+            <img src="/assets/images/Words/img1.png" alt="Imagen de presentación 1 de la página Age of Words"
+              loading="lazy" class="card-img active">
+            <img src="/assets/images/Words/img2.png" alt="Imagen de presentación 2 de la página Age of Words"
+              loading="lazy" class="card-img">
+            <img src="/assets/images/Words/img3.png" alt="Imagen de presentación 3 de la página Age of Words"
+              loading="lazy" class="card-img">
+            <img src="/assets/images/Words/img4.png" alt="Imagen de presentación 4 de la página Age of Words"
+              loading="lazy" class="card-img">
+          </div>
+          <div class="card-description">
+            <h4 class="card-title">Age of Words</h4>
+            <div class="card-text">
+              <p class="card-paragraph">
+                Juego wordle. Tiene gestión de cuenta de usuario y de sesión.
+              </p>
+              <p class="card-paragraph">
+                Hecho con <strong>React, Node.js y MongoDB</strong>.
+              </p>
+            </div>
+            <div class="card-links">
+              <a href="https://github.com/Martiks38/AgeOfWords" class="button button-link" target="_blank"
+                rel="noopener noreferrer">
+                Ver código
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-containerImg">
+            <img src="/assets/images/PokeStore/img1.png" alt="Imagen de presentación 1 de la página Pokestore"
+              loading="lazy" class="card-img active">
+            <img src="/assets/images/PokeStore/img2.png" alt="Imagen de presentación 2 de la página Pokestore"
+              loading="lazy" class="card-img">
+            <img src="/assets/images/PokeStore/img3.png" alt="Imagen de presentación 3 de la página Pokestore"
+              loading="lazy" class="card-img">
+            <img src="/assets/images/PokeStore/img4.png" alt="Imagen de presentación 4 de la página Pokestore"
+              loading="lazy" class="card-img">
+          </div>
+          <div class="card-description">
+            <h4 class="card-title">Pokestore</h4>
+            <div class="card-text">
+              <p class="card-paragraph">
+                Tienda de cartas de Pokémon. Posee un carro de compras y tiene una simulación de login de cuenta y de
+                formulario de validación de compra.
+              </p>
+              <p class="card-paragraph">
+                Hecho con <strong>Next.js y TypeScript</strong>.
+              </p>
+            </div>
+            <div class="card-links">
+              <a href="https://pokestore-now.vercel.app" class="button button-link" target="_blank"
+                rel="noopener noreferrer">
+                Visitar sitio
+              </a>
+              <a href="https://github.com/Martiks38/Pokestore" class="button button-link" target="_blank"
+                rel="noopener noreferrer">
+                Ver código
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-containerImg">
+            <img src="/assets/images/Typing/img1.png" alt="Imagen de presentación 1 de la página Typing-game"
+              loading="lazy" class="card-img active">
+            <img src="/assets/images/Typing/img2.png" alt="Imagen de presentación 2 de la página Typing-game"
+              loading="lazy" class="card-img">
+            <img src="/assets/images/Typing/img3.png" alt="Imagen de presentación 3 de la página Typing-game"
+              loading="lazy" class="card-img">
+            <img src="/assets/images/Typing/img4.png" alt="Imagen de presentación 4 de la página Typing-game"
+              loading="lazy" class="card-img">
+          </div>
+          <div class="card-description">
+            <h4 class="card-title">Typing-game</h4>
+            <div class="card-text">
+              <p class="card-paragraph">
+                Juego de mecanografía. Tiene tres idiomas. El usuario puede ver en una gráfica generada bajo petición.
+              </p>
+              <p class="card-paragraph">
+                Hecho con <strong>Next.js, TypeScript y Chart.js</strong>.
+              </p>
+            </div>
+            <div class="card-links">
+              <a href="https://typingso.vercel.app" class="button button-link" target="_blank"
+                rel="noopener noreferrer">
+                Visitar sitio
+              </a>
+              <a href="https://github.com/Martiks38/typing-game-" class="button button-link" target="_blank"
+                rel="noopener noreferrer">
+                Ver código
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-containerImg">
+            <img src="/assets/images/School/img1.png" alt="Imagen de presentación 1 de la página School Page"
+              loading="lazy" class="card-img active">
+            <img src="/assets/images/School/img2.png" alt="Imagen de presentación 2 de la página School Page"
+              loading="lazy" class="card-img">
+            <img src="/assets/images/School/img3.png" alt="Imagen de presentación 3 de la página School Page"
+              loading="lazy" class="card-img">
+          </div>
+          <div class="card-description">
+            <h4 class="card-title">School Page</h4>
+            <div class="card-text">
+              <p class="card-paragraph">
+                Idea de rediseño de la página donde hice mis estudios secundarios.
+              </p>
+              <p class="card-paragraph">
+                Hecho con <strong>React.js</strong>.
+              </p>
+            </div>
+            <div class="card-links">
+              <a href="https://my-school-page.vercel.app" class="button button-link" target="_blank"
+                rel="noopener noreferrer">
+                Visitar sitio
+              </a>
+              <a href="https://github.com/Martiks38/my_school_page" class="button button-link" target="_blank"
+                rel="noopener noreferrer">
+                Ver código
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-containerImg">
+            <img src="/assets/images/Possum/img1.png" alt="Imagen de presentación 1 de la página Possum-Maze"
+              loading="lazy" class="card-img active">
+            <img src="/assets/images/Possum/img2.png" alt="Imagen de presentación 2 de la página Possum-Maze"
+              loading="lazy" class="card-img">
+          </div>
+          <div class="card-description">
+            <h4 class="card-title">Possum-Maze</h4>
+            <div class="card-text">
+              <p class="card-paragraph">
+                Buscador de letras de canciones y de series.
+              </p>
+              <p class="card-paragraph">
+                Hecho con <strong>React.js</strong>.
+              </p>
+            </div>
+            <div class="card-links">
+              <a href="https://possum-maze.vercel.app" class="button button-link" target="_blank"
+                rel="noopener noreferrer">
+                Visitar sitio
+              </a>
+              <a href="https://github.com/Martiks38/possum-maze" class="button button-link" target="_blank"
+                rel="noopener noreferrer">
+                Ver código
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="section">
+      <h3 class="section-title" id="contact">Contacto</h3>
+      <div class="section-text">
+        <p class="section-paragraph">Muchas gracias por ver llegado hasta aquí. Espero que este portfolio haya sido de
+          tu agrado.</p>
+        <p class="section-paragraph">
+          Contacta conmigo a través del correo electrónico o redes sociales. ¡Hasta pronto!
+        </p>
+        <address class="section-paragraph">
+          <a href="mailto:cappa.giuliano@gmail.com">
+            cappa.giuliano@gmail.com
+          </a>
+        </address>
+      </div>
+      <article class="socialCard">
+        <a href="https://www.linkedin.com/in/giuliano-cappa" target="_blank" class="socialCard__button">
+          <img src="/assets/icons/linkedin.svg" alt="LinkedIn">
+        </a>
+        <a href="https://github.com/Martiks38?tab=repositories" target="_blank"
+          class="socialCard__button socialCard__button_invert">
+          <img src="/assets/icons/github.svg" alt="Repositorio de GitHub">
+        </a>
+        <a href="mailto:cappa.giuliano@gmail.com" class="socialCard__button">
+          <img src="/assets/icons/gmail.svg" alt="Gmail">
+        </a>
+      </article>
+    </section>
+  </main>
+
+  <script src="./script/toggleMenu.js" type="module"></script>
+  <script src="./script/index.js" type="module"></script>
+
 </body>
 
 </html>
