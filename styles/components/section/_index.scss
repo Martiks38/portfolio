@@ -2,7 +2,7 @@
 
 .introduction {
   &-img {
-    --size-img: 220px;
+    --size-img: 250px;
 
     width: var(--size-img);
     height: var(--size-img);
@@ -33,13 +33,14 @@
 }
 
 main .section:last-child {
-  min-height: auto;
   margin-top: 2.5rem;
-  margin-bottom: 1.5rem;
+  padding-bottom: calc(var(--padding-y) + 1.5rem);
+  min-height: auto;
 
   & .section-paragraph {
     margin-left: auto;
     margin-right: auto;
+    width: 100%;
     max-width: 40ch;
   }
 
@@ -49,6 +50,8 @@ main .section:last-child {
 }
 
 .section {
+  --padding-y: 2rem;
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -60,10 +63,6 @@ main .section:last-child {
   padding: 2rem;
   font-family: 'Poppins', sans-serif;
 
-  &-introduction {
-    justify-content: space-between;
-  }
-
   &-paragraph {
     font-size: 1.125rem;
     line-height: 1.75rem;
@@ -72,25 +71,6 @@ main .section:last-child {
   &-text {
     max-width: 60ch;
     width: 100%;
-  }
-}
-
-.section {
-  &-title {
-    position: relative;
-    display: inline-block;
-    margin-top: 0;
-    margin-bottom: 1.3em;
-    font-family: 'Radio Canada', sans-serif;
-    font-size: 2.25rem;
-    line-height: 2.75rem;
-
-    &::before {
-      @include mixins.underline(4px, 100%) {
-        bottom: -0.02em;
-        background-color: var(--color-secondary-alpha-75);
-      }
-    }
   }
 
   &-techs {
@@ -101,6 +81,23 @@ main .section:last-child {
     margin: 0;
     max-width: 43.75rem;
     list-style-type: none;
+  }
+
+  &-title {
+    position: relative;
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: 1.3rem;
+    font-family: 'Radio Canada', sans-serif;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+
+    &::before {
+      @include mixins.underline(4px, 100%) {
+        bottom: -0.02em;
+        background-color: var(--color-secondary-alpha-75);
+      }
+    }
   }
 }
 

@@ -33,6 +33,14 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 })
 
+document.addEventListener('click', (e) => {
+  const target = e.target
+  const isHeaderOrMenu = target.closest('.header') || target.closest('.menu')
+  const isCollapse = menu.classList.contains('collapse')
+
+  if (!isHeaderOrMenu && isCollapse) changeMenuView()
+})
+
 window.addEventListener('resize', () => {
   const width = window.innerWidth
 

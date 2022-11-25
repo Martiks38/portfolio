@@ -91,15 +91,11 @@
   }
 
   .section-introduction {
+    flex-direction: row;
     min-height: auto;
     height: calc(100vh - 4.5rem);
-  }
-}
-
-@media screen and (min-width: 61rem) {
-  .header-container {
-    padding-left: 0;
-    padding-right: 0;
+    justify-content: space-between;
+    gap: 1.6rem;
   }
 
   .introduction-text {
@@ -113,6 +109,13 @@
 
   .introduction-subtitle {
     font-size: 2rem;
+  }
+}
+
+@media screen and (min-width: 61rem) {
+  .header-container {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 

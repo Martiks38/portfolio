@@ -23,12 +23,13 @@
   width: auto;
 }
 
-.menu__line::before, .menu__line::after, .menu__line {
+.menu__line {
+  --height-line: 0.25rem;
   position: absolute;
-  height: 0.25rem;
+  height: var(--height-line);
   width: 1.8rem;
   background-color: var(--color-black-pure-alpha-80);
-  border-radius: 0.125rem;
+  border-radius: calc(var(--height-line) / 2);
 }
 
 .menu {
@@ -46,22 +47,12 @@
   border-radius: var(--border-radius-10);
   z-index: 100;
 }
-.menu.collapse .menu__line::before, .menu.collapse .menu__line::after {
-  top: 0;
-  opacity: 0;
+.menu.collapse .menu__line {
+  box-shadow: 0 0 transparent, 0 0 transparent;
 }
-.menu__line::before, .menu__line::after {
-  --transition-line: 300ms;
-  --line-height: 8px;
-  content: "";
-  left: 0;
-  transition: top var(--transition-line) ease-in, opacity var(--transition-line) ease-in;
-}
-.menu__line::before {
-  top: calc(-1 * var(--line-height));
-}
-.menu__line::after {
-  top: var(--line-height);
+.menu__line {
+  box-shadow: 0 calc(2 * var(--height-line)) var(--color-black-pure), 0 calc(-2 * var(--height-line)) var(--color-black-pure);
+  transition: box-shadow 300ms ease-in;
 }
 
 .wrapperCards {
@@ -74,7 +65,7 @@
 .card {
   display: grid;
   grid-template-rows: max-content auto;
-  max-width: 350px;
+  max-width: 21.875rem;
   width: 100%;
   background-color: var(--color-black-1);
   font-family: "Poppins", sans-serif;
@@ -122,8 +113,8 @@
 
 .card-title {
   margin-top: 0;
-  font-size: 1.4rem;
-  line-height: 30px;
+  font-size: 1.2rem;
+  line-height: 1.875rem;
 }
 
 .card-text .card-paragraph:last-child {
@@ -139,6 +130,7 @@
 
 .card-links {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   margin-top: auto;
   width: 100%;
@@ -154,7 +146,7 @@
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: var(--color-black-pure-alpha-50);
+  background-color: var(--color-black-1);
   transform: translateY(-100%);
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 99;
@@ -215,7 +207,7 @@
 }
 
 .introduction-img {
-  --size-img: 220px;
+  --size-img: 250px;
   width: var(--size-img);
   height: var(--size-img);
   border-radius: 50%;
@@ -240,13 +232,14 @@
 }
 
 main .section:last-child {
-  min-height: auto;
   margin-top: 2.5rem;
-  margin-bottom: 1.5rem;
+  padding-bottom: calc(var(--padding-y) + 1.5rem);
+  min-height: auto;
 }
 main .section:last-child .section-paragraph {
   margin-left: auto;
   margin-right: auto;
+  width: 100%;
   max-width: 40ch;
 }
 main .section:last-child address {
@@ -254,6 +247,7 @@ main .section:last-child address {
 }
 
 .section {
+  --padding-y: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -265,9 +259,6 @@ main .section:last-child address {
   padding: 2rem;
   font-family: "Poppins", sans-serif;
 }
-.section-introduction {
-  justify-content: space-between;
-}
 .section-paragraph {
   font-size: 1.125rem;
   line-height: 1.75rem;
@@ -276,12 +267,20 @@ main .section:last-child address {
   max-width: 60ch;
   width: 100%;
 }
-
+.section-techs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding-left: 0;
+  margin: 0;
+  max-width: 43.75rem;
+  list-style-type: none;
+}
 .section-title {
   position: relative;
   display: inline-block;
   margin-top: 0;
-  margin-bottom: 1.3em;
+  margin-bottom: 1.3rem;
   font-family: "Radio Canada", sans-serif;
   font-size: 2.25rem;
   line-height: 2.75rem;
@@ -296,15 +295,6 @@ main .section:last-child address {
   border-radius: 2px;
   bottom: -0.02em;
   background-color: var(--color-secondary-alpha-75);
-}
-.section-techs {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  padding-left: 0;
-  margin: 0;
-  max-width: 43.75rem;
-  list-style-type: none;
 }
 
 .tech {
@@ -604,14 +594,11 @@ template {
     visibility: hidden;
   }
   .section-introduction {
+    flex-direction: row;
     min-height: auto;
     height: calc(100vh - 4.5rem);
-  }
-}
-@media screen and (min-width: 61rem) {
-  .header-container {
-    padding-left: 0;
-    padding-right: 0;
+    justify-content: space-between;
+    gap: 1.6rem;
   }
   .introduction-text {
     text-align: left;
@@ -624,6 +611,12 @@ template {
     font-size: 2rem;
   }
 }
+@media screen and (min-width: 61rem) {
+  .header-container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -631,7 +624,6 @@ template {
 }
 :root {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-size: 16px;
   line-height: 1.5rem;
   --color-black-pure: #000;
   --color-black: #0e0e10;
@@ -666,9 +658,6 @@ html {
 }
 
 body {
-  min-height: 100vh;
-  width: 100%;
-  min-width: 22.5rem;
   background-color: var(--color-black);
   color: var(--color-white-pure-alpha-90);
 }

@@ -8,7 +8,7 @@
 .card {
   display: grid;
   grid-template-rows: max-content auto;
-  max-width: 350px;
+  max-width: 21.875rem;
   width: 100%;
   background-color: var(--color-black-1);
   font-family: 'Poppins', sans-serif;
@@ -66,8 +66,8 @@
 
 .card-title {
   margin-top: 0;
-  font-size: 1.4rem;
-  line-height: 30px;
+  font-size: 1.2rem;
+  line-height: 1.875rem;
 }
 
 .card-text .card-paragraph:last-child {
@@ -83,6 +83,7 @@
 
 .card-links {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   margin-top: auto;
   width: 100%;
