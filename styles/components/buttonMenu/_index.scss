@@ -17,18 +17,16 @@
   align-items: center;
   height: 3rem;
   width: 3.4rem;
-  background-color: var(--color-bubbles);
+  background-color: var(--color-secondary);
   border-style: none;
   border-radius: var(--border-radius-10);
-  visibility: hidden;
+  z-index: 100;
 
-  &.collapse {
-    .menu__line {
-      &::before,
-      &::after {
-        top: 0;
-        opacity: 0;
-      }
+  &.collapse .menu__line {
+    &::before,
+    &::after {
+      top: 0;
+      opacity: 0;
     }
   }
 
@@ -38,6 +36,7 @@
     &::before,
     &::after {
       --transition-line: 300ms;
+      --line-height: 8px;
 
       content: '';
       @extend %menuButtonLine;
@@ -47,11 +46,11 @@
     }
 
     &::before {
-      top: -8px;
+      top: calc(-1 * var(--line-height));
     }
 
     &::after {
-      top: 8px;
+      top: var(--line-height);
     }
   }
 }

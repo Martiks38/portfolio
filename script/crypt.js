@@ -1,7 +1,9 @@
 class EffectDecryptingText {
+  word = 'Desarrollador Front End'
+
   constructor(selector, stagger = 100, staggerPerLetter = 50) {
     this.element = document.querySelector(selector)
-    this.letters = this.element.innerText.split('')
+    this.letters = this.word.split('')
     this.stagger = stagger
     this.staggerPerLetter = staggerPerLetter
 
@@ -9,8 +11,8 @@ class EffectDecryptingText {
   }
 
   animate() {
-    let fragment = document.createDocumentFragment()
     let encryptedText = (this.element.innerText = this.encryptText())
+    let fragment = document.createDocumentFragment()
 
     let lettersEncryptedText = encryptedText.split('')
     this.element.innerText = ''
