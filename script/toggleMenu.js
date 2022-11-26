@@ -4,6 +4,7 @@ const header = $('.header')
 const menu = $('.menu')
 const itemsMenu = $$('.navMenu__item')
 
+/** Change the aria attributes and modify the menu button and show or hide the menu list */
 const changeMenuView = () => {
   let visibleMenu = menu.classList.contains('collapse')
 
@@ -19,20 +20,14 @@ const changeMenuView = () => {
   menu.classList.toggle('collapse')
 }
 
-menu.addEventListener('click', changeMenuView)
+/** When choosing one of the sections of the page, it executes the changeMenuView function */
 itemsMenu.forEach((itemMenu) =>
   itemMenu.addEventListener('click', changeMenuView)
 )
 
-document.addEventListener('DOMContentLoaded', () => {
-  const width = window.innerWidth
+menu.addEventListener('click', changeMenuView)
 
-  if (width < 680) {
-    menu.setAttribute('aria-hidden', 'false')
-    header.setAttribute('aria-hidden', 'true')
-  }
-})
-
+/** Calls the changeMenuView() function on click outside of the navigation menu or menu button */
 document.addEventListener('click', (e) => {
   const target = e.target
   const isHeaderOrMenu = target.closest('.header') || target.closest('.menu')
@@ -41,10 +36,21 @@ document.addEventListener('click', (e) => {
   if (!isHeaderOrMenu && isCollapse) changeMenuView()
 })
 
+/** Sets the aria attributes according to the initial dimensions */
+document.addEventListener('DOMContentLoaded', () => {
+  const width = window.innerWidth
+
+  if (width < 776) {
+    menu.setAttribute('aria-hidden', 'false')
+    header.setAttribute('aria-hidden', 'true')
+  }
+})
+
+/** Modifies the aria attributes according to the new dimensions */
 window.addEventListener('resize', () => {
   const width = window.innerWidth
 
-  if (width < 680) {
+  if (width < 776) {
     menu.setAttribute('aria-hidden', 'false')
     header.setAttribute('aria-hidden', 'true')
     return
