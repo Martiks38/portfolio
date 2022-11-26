@@ -1,38 +1,125 @@
-@use '../../placeholder/bottomLine';
+@use '../../mixins';
 
-.section {
-  height: 100vh;
+.introduction {
+  &-img {
+    --size-img: 250px;
 
-  &__theme {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    margin-bottom: 6rem;
-    min-height: 100vh;
+    width: var(--size-img);
+    height: var(--size-img);
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center right;
   }
 
-  &__title {
-    position: relative;
-    margin: 2rem auto 3rem;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-    font-size: 2.5rem;
-    font-size: clamp(2rem, 1.8697rem + 0.8403vw, 2.5rem);
-    font-family: 'Radio Canada';
+  &-text {
     text-align: center;
+  }
+
+  &-title {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+
+  &-subtitle {
+    --line-height: 2.25rem;
+
+    overflow-wrap: anywhere;
+    font-size: 1.6rem;
+    line-height: var(--line-height);
+    color: var(--color-crypted-text);
+    transition: color 300ms;
+    height: calc(var(--line-height) * 2);
+  }
+}
+
+main .section:last-child {
+  margin-top: 2.5rem;
+  padding-bottom: calc(var(--padding-y) + 1.5rem);
+  min-height: auto;
+
+  & .section-paragraph {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 40ch;
+  }
+
+  & address {
+    color: var(--color-primary);
+  }
+}
+
+.section {
+  --padding-y: 2rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: var(--width-content);
+  width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: 'Poppins', sans-serif;
+
+  &-paragraph {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  &-text {
+    max-width: 60ch;
+    width: 100%;
+  }
+
+  &-techs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding-left: 0;
+    margin: 0;
+    max-width: 43.75rem;
+    list-style-type: none;
+  }
+
+  &-title {
+    position: relative;
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: 1.3em;
+    font-family: 'Radio Canada', sans-serif;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
 
     &::before {
-      @extend %bottomLine;
-      bottom: -5px;
+      @include mixins.underline(4px, 100%) {
+        bottom: -0.02em;
+        background-color: var(--color-secondary-alpha-75);
+      }
+    }
+  }
+}
+
+.tech {
+  width: 5rem;
+  margin: 0 auto;
+
+  & figure {
+    margin: 0;
+
+    & figcaption {
+      margin-top: 0.8em;
+      text-align: center;
+      font-weight: 500;
+      font-size: 1rem;
+      line-height: 1.5rem;
     }
   }
 
-  &__paragraph {
-    margin: 0 auto 0.5rem;
-    max-width: 65ch;
-    font-size: 1.25rem;
-    font-family: 'Poppins';
-    line-height: 140%;
+  & figure img {
+    width: 100%;
+    height: auto;
+    vertical-align: middle;
   }
 }
