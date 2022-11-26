@@ -8,6 +8,7 @@
 .card {
   display: grid;
   grid-template-rows: max-content auto;
+  height: 100%;
   max-width: 21.875rem;
   width: 100%;
   background-color: var(--color-black-1);
@@ -21,16 +22,6 @@
     padding: 1.4em;
     display: flex;
     flex-direction: column;
-
-    & em,
-    & strong {
-      color: var(--color-primary);
-    }
-
-    & em {
-      font-weight: bold;
-      font-style: normal;
-    }
   }
 
   &-containerImg {
@@ -79,6 +70,16 @@
   margin-bottom: 0.5em;
   font-size: 1rem;
   line-height: 1.5rem;
+
+  & em,
+  & strong {
+    color: var(--color-primary);
+  }
+
+  & em {
+    font-weight: bold;
+    font-style: normal;
+  }
 }
 
 .card-links {
