@@ -1,7 +1,7 @@
 import { startDecryptingText } from './crypt.js'
-import { initSetSliders } from './slider.js'
+import { defineCustomElements } from './customElements.js'
 
 document.addEventListener('DOMContentLoaded', () => {
   startDecryptingText()
-  initSetSliders()
+  defineCustomElements()
 })
