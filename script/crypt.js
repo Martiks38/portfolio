@@ -1,3 +1,8 @@
+/**
+ * La clase genera un efecto de desencriptación.
+ *
+ * Genera letras alfanuméricas aleatoriamente hasta alcanzar la cantidad de iteraciones indicada.
+ */
 class EffectDecryptingText {
   word = 'Desarrollador Front End'
 
@@ -10,8 +15,12 @@ class EffectDecryptingText {
     this.animate()
   }
 
+  /**
+   * Start the decryption animation.
+   * Creates the container for each letter and inserts them.
+   */
   animate() {
-    let encryptedText = (this.element.innerText = this.encryptText())
+    let encryptedText = this.element.innerText
     let fragment = document.createDocumentFragment()
 
     let lettersEncryptedText = encryptedText.split('')
@@ -32,12 +41,24 @@ class EffectDecryptingText {
     this.element.appendChild(fragment)
   }
 
+  /**
+   * Assign random characters until the desired number of iterations is reached.
+   * Once the number of iterations is reached, it changes the color style and assigns the correct letter.
+   *
+   * @param {object} options
+   * @property {string} options.letter - Letter of the correct word.
+   * @property {HTMLElement} options.elementLetter - One letter container.
+   * @param {number} count - Number of iterations.
+   * @returns -
+   */
   decryptLetter(options, count = 0) {
     if (count > 25) {
       let subtitle = document.querySelector('.introduction-subtitle')
-      subtitle.style.color = '#75eff8'
 
-      return (options.elementLetter.innerText = options.letter)
+      subtitle.style.color = '#75eff8'
+      options.elementLetter.innerText = options.letter
+
+      return
     }
 
     count++
@@ -49,6 +70,9 @@ class EffectDecryptingText {
     }, this.staggerPerLetter)
   }
 
+  /**
+   * Generates a string of random characters whose length is equal to the true string.
+   */
   encryptText() {
     let encryptedText = ''
 
@@ -61,6 +85,9 @@ class EffectDecryptingText {
     return encryptedText
   }
 
+  /**
+   * Returns the third character of the number returned by Math.random()
+   */
   generateRandomLetter() {
     return Math.random().toString(36).substring(2, 3)
   }
