@@ -1,9 +1,11 @@
 %menuButtonLine {
+  --height-line: 0.25rem;
+
   position: absolute;
-  height: 0.25rem;
+  height: var(--height-line);
   width: 1.8rem;
   background-color: var(--color-black-pure-alpha-80);
-  border-radius: 0.125rem;
+  border-radius: calc(var(--height-line) / 2);
 }
 
 .menu {
@@ -17,41 +19,26 @@
   align-items: center;
   height: 3rem;
   width: 3.4rem;
-  background-color: var(--color-bubbles);
+  background-color: var(--color-secondary);
   border-style: none;
   border-radius: var(--border-radius-10);
-  visibility: hidden;
+  z-index: 100;
 
-  &.collapse {
-    .menu__line {
-      &::before,
-      &::after {
-        top: 0;
-        opacity: 0;
-      }
-    }
+  &.collapse .menu__line {
+    $color-shadow: transparent;
+
+    box-shadow: 0 0 $color-shadow, 0 0 $color-shadow;
   }
 
   &__line {
     @extend %menuButtonLine;
 
-    &::before,
-    &::after {
-      --transition-line: 300ms;
+    $position-top-line: calc(2 * var(--height-line));
+    $position-bottom-line: calc(-2 * var(--height-line));
 
-      content: '';
-      @extend %menuButtonLine;
-      left: 0;
-      transition: top var(--transition-line) ease-in,
-        opacity var(--transition-line) ease-in;
-    }
+    box-shadow: 0 $position-top-line var(--color-black-pure),
+      0 $position-bottom-line var(--color-black-pure);
 
-    &::before {
-      top: -8px;
-    }
-
-    &::after {
-      top: 8px;
-    }
+    transition: box-shadow 300ms ease-in;
   }
 }

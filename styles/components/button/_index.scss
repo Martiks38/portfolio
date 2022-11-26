@@ -2,21 +2,23 @@
   display: block;
   padding: 0.4rem 1rem;
 
-  &_link {
-    $timeTransition: 300ms;
-    $transition: $timeTransition ease-in-out;
+  &-link {
+    $durationTransition: 300ms;
+    $timingFunction: ease-in-out;
 
     border-radius: var(--border-radius-8);
-    background-color: var(--color-bubbles-alpha-50);
+    background-color: var(--color-secondary-alpha-50);
     color: var(--color-white-pure);
-    font-family: 'Poppins';
+    font-family: 'Poppins', sans-serif;
     font-weight: 600;
-    transition: background-color $transition, color $transition,
-      transform $transition;
+    transform: scale(1);
+    transition-property: background-color, color, transform;
+    transition-duration: $durationTransition;
+    transition-timing-function: $timingFunction;
 
     &:hover {
       transform: scale(1.15);
-      background-color: var(--color-bubbles);
+      background-color: var(--color-primary);
       color: var(--color-black-pure);
     }
   }
