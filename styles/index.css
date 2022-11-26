@@ -2,21 +2,20 @@
   display: block;
   padding: 0.4rem 1rem;
 }
-.button-link {
-  border-radius: var(--border-radius-8);
-  background-color: var(--color-secondary-alpha-50);
+.button.button-link {
+  position: relative;
+  background-color: transparent;
   color: var(--color-white-pure);
+  border-radius: 0.25rem;
   font-family: "Poppins", sans-serif;
   font-weight: 600;
-  transform: scale(1);
-  transition-property: background-color, color, transform;
-  transition-duration: 300ms;
-  transition-timing-function: ease-in-out;
+  transition: color 300ms ease-in-out;
+  border: solid 2px var(--color-primary);
+  overflow: hidden;
 }
-.button-link:hover {
-  transform: scale(1.15);
-  background-color: var(--color-primary);
-  color: var(--color-black-pure);
+.button.button-link .button-text {
+  position: relative;
+  z-index: 1;
 }
 .button > img {
   height: 100%;
@@ -200,7 +199,6 @@
   width: 0;
   border-radius: 2px;
   right: 0;
-  width: 0;
   margin-left: auto;
   margin-right: auto;
   background-color: var(--color-secondary-alpha-75);
@@ -294,8 +292,8 @@ main .section:last-child address {
   height: 4px;
   width: 100%;
   border-radius: 2px;
-  bottom: -0.02em;
-  background-color: var(--color-secondary-alpha-75);
+  bottom: 0.075em;
+  background-color: var(--color-secondary);
 }
 
 .tech {
@@ -339,6 +337,7 @@ main .section:last-child address {
   width: 100%;
   height: auto;
   object-fit: cover;
+  vertical-align: middle;
 }
 
 html {
@@ -642,8 +641,8 @@ template {
   --color-scrollbar-card: rgb(117 239 248 / 0.2);
   --color-scrollbar-thumb-card: rgb(117 239 248 / 0.5);
   --width-content: 56.25rem;
-  --shadow-color-1-card-project: rgb(255 255 255 / 0.16);
-  --shadow-color-2-card-project: rgb(255 255 255 / 0.12);
+  --shadow-color-1-card-project: rgb(117 239 248 / 0.16);
+  --shadow-color-2-card-project: rgb(117 239 248 / 0.12);
   --border-radius-8: 8px;
   --border-radius-10: 10px;
 }
