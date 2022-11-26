@@ -1,5 +1,5 @@
-import { ProjectCard } from './Components/ProjectCard.js'
-import { TechItem } from './Components/TechItem.js'
+import { ProjectCard } from './ProjectCard.js'
+import { TechItem } from './TechItem.js'
 
 const customElmentsList = {
   'project-card': ProjectCard,
