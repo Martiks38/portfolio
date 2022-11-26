@@ -52,7 +52,7 @@ class EffectDecryptingText {
    * @returns -
    */
   decryptLetter(options, count = 0) {
-    if (count > 25) {
+    if (count > 20) {
       let subtitle = document.querySelector('.introduction-subtitle')
 
       subtitle.style.color = '#75eff8'
