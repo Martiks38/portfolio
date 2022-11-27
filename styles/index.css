@@ -1,22 +1,21 @@
 .button {
   display: block;
-  padding: 0.4rem 1rem;
+  padding: 0.4rem 0.8rem;
 }
-.button-link {
-  border-radius: var(--border-radius-8);
-  background-color: var(--color-secondary-alpha-50);
+.button.button-link {
+  position: relative;
+  background-color: transparent;
   color: var(--color-white-pure);
+  border-radius: 0.25rem;
   font-family: "Poppins", sans-serif;
   font-weight: 600;
-  transform: scale(1);
-  transition-property: background-color, color, transform;
-  transition-duration: 300ms;
-  transition-timing-function: ease-in-out;
+  transition: color 300ms ease-in-out;
+  border: solid 2px var(--color-primary);
+  overflow: hidden;
 }
-.button-link:hover {
-  transform: scale(1.15);
-  background-color: var(--color-primary);
-  color: var(--color-black-pure);
+.button.button-link .button-text {
+  position: relative;
+  z-index: 1;
 }
 .button > img {
   height: 100%;
@@ -117,7 +116,6 @@
 
 .card-paragraph {
   margin-top: 0;
-  margin-bottom: 0.5em;
   font-size: 1rem;
   line-height: 1.5rem;
 }
@@ -200,7 +198,6 @@
   width: 0;
   border-radius: 2px;
   right: 0;
-  width: 0;
   margin-left: auto;
   margin-right: auto;
   background-color: var(--color-secondary-alpha-75);
@@ -216,11 +213,19 @@
   object-position: center right;
 }
 .introduction-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 31.25rem;
+  flex-grow: 1;
   text-align: center;
 }
 .introduction-title {
   font-size: 2rem;
   line-height: 2.5rem;
+}
+.introduction-title span {
+  display: block;
 }
 .introduction-subtitle {
   --line-height: 2.25rem;
@@ -234,7 +239,7 @@
 
 main .section:last-child {
   margin-top: 2.5rem;
-  padding-bottom: calc(var(--padding-y) + 1.5rem);
+  padding-bottom: calc(var(--padding) + 1.5rem);
   min-height: auto;
 }
 main .section:last-child .section-paragraph {
@@ -248,17 +253,19 @@ main .section:last-child address {
 }
 
 .section {
-  --padding-y: 2rem;
+  --padding: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   max-width: var(--width-content);
   width: 100%;
-  min-height: 100vh;
   margin: 0 auto;
-  padding: 2rem;
+  padding: var(--padding);
   font-family: "Poppins", sans-serif;
+}
+.section-introduction {
+  min-height: 100vh;
 }
 .section-paragraph {
   font-size: 1.125rem;
@@ -281,8 +288,8 @@ main .section:last-child address {
   position: relative;
   display: inline-block;
   margin-top: 0;
-  margin-bottom: 1.3em;
-  font-family: "Radio Canada", sans-serif;
+  margin-bottom: 1em;
+  font-family: sans-serif;
   font-size: 2.25rem;
   line-height: 2.75rem;
 }
@@ -294,8 +301,8 @@ main .section:last-child address {
   height: 4px;
   width: 100%;
   border-radius: 2px;
-  bottom: -0.02em;
-  background-color: var(--color-secondary-alpha-75);
+  bottom: 0.075em;
+  background-color: var(--color-secondary);
 }
 
 .tech {
@@ -339,6 +346,7 @@ main .section:last-child address {
   width: 100%;
   height: auto;
   object-fit: cover;
+  vertical-align: middle;
 }
 
 html {
@@ -545,6 +553,10 @@ template {
   }
 }
 @media screen and (min-width: 36.25rem) {
+  .button {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
   .tech {
     width: 6.25rem;
   }
@@ -613,7 +625,8 @@ template {
   }
 }
 @media screen and (min-width: 61rem) {
-  .header-container {
+  .header-container,
+  .section {
     padding-left: 0;
     padding-right: 0;
   }
@@ -642,8 +655,8 @@ template {
   --color-scrollbar-card: rgb(117 239 248 / 0.2);
   --color-scrollbar-thumb-card: rgb(117 239 248 / 0.5);
   --width-content: 56.25rem;
-  --shadow-color-1-card-project: rgb(255 255 255 / 0.16);
-  --shadow-color-2-card-project: rgb(255 255 255 / 0.12);
+  --shadow-color-1-card-project: rgb(117 239 248 / 0.16);
+  --shadow-color-2-card-project: rgb(117 239 248 / 0.12);
   --border-radius-8: 8px;
   --border-radius-10: 10px;
 }

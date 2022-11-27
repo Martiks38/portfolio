@@ -1,9 +1,5 @@
 # Portfolio
 
-## Desarrollo
+Este portfolio fue realizdo utilizando HTML, Scss y JavaScript.
 
-- JavaScript
-
-## Estilo
-
-- Sass
+Para la presentación de las tecnología conocidas y de projectos se utilizó web components.

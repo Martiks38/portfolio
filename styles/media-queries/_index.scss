@@ -27,6 +27,11 @@
 }
 
 @media screen and (min-width: 36.25rem) {
+  .button {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
   .tech {
     width: 6.25rem;
   }
@@ -113,7 +118,8 @@
 }
 
 @media screen and (min-width: 61rem) {
-  .header-container {
+  .header-container,
+  .section {
     padding-left: 0;
     padding-right: 0;
   }

@@ -4,7 +4,7 @@
  * Genera letras alfanuméricas aleatoriamente hasta alcanzar la cantidad de iteraciones indicada.
  */
 class EffectDecryptingText {
-  word = 'Desarrollador Front End'
+  word = 'Desarrollador Front End React'
 
   constructor(selector, stagger = 100, staggerPerLetter = 50) {
     this.element = document.querySelector(selector)
@@ -49,10 +49,10 @@ class EffectDecryptingText {
    * @property {string} options.letter - Letter of the correct word.
    * @property {HTMLElement} options.elementLetter - One letter container.
    * @param {number} count - Number of iterations.
-   * @returns -
+   * @returns
    */
   decryptLetter(options, count = 0) {
-    if (count > 25) {
+    if (count > 20) {
       let subtitle = document.querySelector('.introduction-subtitle')
 
       subtitle.style.color = '#75eff8'
