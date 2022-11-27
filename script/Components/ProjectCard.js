@@ -36,6 +36,10 @@ export class ProjectCard extends HTMLElement {
   ripple(ev) {
     const target = ev.target
 
+    let elements = target.querySelectorAll('.button-link > *')
+
+    if (elements.length > 2) return
+
     const { x, y } = ev
 
     let { width, left, top } = target.getBoundingClientRect()
@@ -124,7 +128,7 @@ export class ProjectCard extends HTMLElement {
   start = () => {
     if (window.innerWidth < 991) return
 
-    this.intervalSlider = setInterval(this.nextImage, 2500)
+    this.intervalSlider = setInterval(this.nextImage, 1800)
   }
 
   /** Hides the image by returning to its starting position. */

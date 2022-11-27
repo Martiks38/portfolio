@@ -4,7 +4,7 @@
  * Genera letras alfanuméricas aleatoriamente hasta alcanzar la cantidad de iteraciones indicada.
  */
 class EffectDecryptingText {
-  word = 'Desarrollador Front End'
+  word = 'Desarrollador Front End React'
 
   constructor(selector, stagger = 100, staggerPerLetter = 50) {
     this.element = document.querySelector(selector)
