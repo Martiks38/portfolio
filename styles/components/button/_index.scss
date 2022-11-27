@@ -1,23 +1,21 @@
 .button {
   display: block;
-  padding: 0.4rem 1rem;
+  padding: 0.4rem 0.8rem;
 
-  &_link {
-    $timeTransition: 300ms;
-    $transition: $timeTransition ease-in-out;
-
-    border-radius: var(--border-radius-8);
-    background-color: var(--color-bubbles-alpha-50);
+  &.button-link {
+    position: relative;
+    background-color: transparent;
     color: var(--color-white-pure);
-    font-family: 'Poppins';
+    border-radius: 0.25rem;
+    font-family: 'Poppins', sans-serif;
     font-weight: 600;
-    transition: background-color $transition, color $transition,
-      transform $transition;
+    transition: color 300ms ease-in-out;
+    border: solid 2px var(--color-primary);
+    overflow: hidden;
 
-    &:hover {
-      transform: scale(1.15);
-      background-color: var(--color-bubbles);
-      color: var(--color-black-pure);
+    & .button-text {
+      position: relative;
+      z-index: 1;
     }
   }
 
