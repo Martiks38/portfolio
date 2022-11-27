@@ -49,7 +49,7 @@ class EffectDecryptingText {
    * @property {string} options.letter - Letter of the correct word.
    * @property {HTMLElement} options.elementLetter - One letter container.
    * @param {number} count - Number of iterations.
-   * @returns -
+   * @returns
    */
   decryptLetter(options, count = 0) {
     if (count > 20) {
