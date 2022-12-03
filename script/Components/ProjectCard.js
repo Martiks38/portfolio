@@ -65,7 +65,7 @@ export class ProjectCard extends HTMLElement {
 
     setTimeout(() => {
       ripple.style.transform = 'scale(1)'
-      ripple.style.opacity = 1
+      ripple.style.opacity = '1'
     }, 50)
 
     target.style.color = '#000'
