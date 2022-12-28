@@ -204,6 +204,28 @@
   transition: width 200ms cubic-bezier(0.83, 0.04, 0.7, 1);
 }
 
+.skipNavLinks {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  width: 100%;
+  background-color: var(--color-black-2-alpha-80);
+  color: var(--color-menu-item);
+  font-family: "Poppins", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 800;
+  line-height: 1.75rem;
+  text-align: center;
+  opacity: 0;
+}
+.skipNavLinks:focus {
+  opacity: 1;
+  z-index: 1;
+}
+
 .introduction-img {
   --size-img: 250px;
   width: var(--size-img);
@@ -642,6 +664,7 @@ template {
   --color-black-pure: #000;
   --color-black: #0e0e10;
   --color-black-1: #18181b;
+  --color-black-2-alpha-80: rgb(42 42 45 / 0.95);
   --color-black-pure-alpha-50: rgba(0, 0, 0, 0.5);
   --color-black-pure-alpha-80: rgba(0, 0, 0, 0.8);
   --color-white-pure: #fff;
