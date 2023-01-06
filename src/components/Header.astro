@@ -1,0 +1,40 @@
+---
+import logo from '../assets/imgs/logo.webp'
+import '../assets/styles/components/Header/_index.scss'
+
+const ITEMS_NAV = [
+  ['INICIO', 'home'],
+  ['SOBRE MÍ', 'about-me'],
+  ['PROYECTOS', 'projects'],
+  ['CONOCIMIENTOS', 'knowledge'],
+  ['CONTACTO', 'contact'],
+]
+---
+
+<a href="#home" class="skipNavLinks">Ir al contenido principal</a>
+
+<button
+  class="menu"
+  aria-hidden="true"
+  aria-label="Menú de navegación"
+  aria-expanded="false"
+>
+  <span class="menu__line"></span>
+</button>
+
+<header class="headerPage">
+  <div class="headerPage__container">
+    <img src={logo} alt="" class="logo" />
+    <nav class="nav">
+      <ul class="navMenu">
+        {
+          ITEMS_NAV.map((item_menu) => (
+            <li class="navMenu__item">
+              <a href={`#${item_menu[1]}`}>{item_menu[0]}</a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+  </div>
+</header>
