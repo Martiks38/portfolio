@@ -1,3 +1,11 @@
+---
+interface Props {
+  title: string
+}
+
+const { title } = Astro.props
+---
+
 <!DOCTYPE html>
 <html lang="es">
   <head>
@@ -43,7 +51,9 @@
     <meta name="theme-color" content="#75eff8" />
 
     <meta name="generator" content={Astro.generator} />
-    <title>Giuliano Cappa</title>
+
+    <link rel="stylesheet" href="/styles.css" />
+    <title>{title}</title>
   </head>
   <body>
     <slot />
