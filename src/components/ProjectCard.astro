@@ -1,5 +1,5 @@
 ---
-import '../assets/styles/components/CardProject/_index.scss'
+import '@assets/styles/components/CardProject/_index.scss'
 
 interface Project {
   description: string
@@ -24,42 +24,42 @@ let conjunction = new Intl.ListFormat('es', {
 }).format(techs)
 ---
 
-<article class="card">
-  <div class="card-containerImg">
+<article class='card'>
+  <div class='card-containerImg'>
     {
       imgs.map((img, ind) => (
         <img
           src={img}
           alt={`Imagen de presentación ${ind + 1} de la página ${title}`}
           class={ind === 0 ? 'card-img active' : 'card-img'}
-          width="350"
-          height="175"
+          width='350'
+          height='175'
         />
       ))
     }
   </div>
-  <div class="card-description">
-    <h4 class="card-title">{title}</h4>
-    <div class="card-text">
+  <div class='card-description'>
+    <h4 class='card-title'>{title}</h4>
+    <div class='card-text'>
       {
         description
           .split('\n')
-          .map((paragraph) => <p class="card-paragraph">{paragraph}</p>)
+          .map((paragraph) => <p class='card-paragraph'>{paragraph}</p>)
       }
-      <p class="card-paragraph">
+      <p class='card-paragraph'>
         Hecho con: <strong>{conjunction}</strong>
       </p>
     </div>
-    <div class="card-links">
+    <div class='card-links'>
       {
         url_page ? (
-          <a href={url_page} class="button button-link" target="_blank">
-            <span class="button-text">Visitar sitio</span>
+          <a href={url_page} class='button button-link' target='_blank'>
+            <span class='button-text'>Visitar sitio</span>
           </a>
         ) : null
       }
-      <a href={url_code} class="button button-link" target="_blank">
-        <span class="button-text">Ver código</span>
+      <a href={url_code} class='button button-link' target='_blank'>
+        <span class='button-text'>Ver código</span>
       </a>
     </div>
   </div>

@@ -1,11 +1,78 @@
 ---
 import Layout from '../layouts/Layout.astro'
-import Header from '../components/Header.astro'
 
-import '../assets/styles/_normalize.scss'
+import Header from '@components/Header.astro'
+import Knowledge from '@components/Knowledge.astro'
+import Section from '@components/Section.astro'
+import SocialCard from '@components/SocialCard.astro'
+import ProjectCard from '@components/ProjectCard.astro'
+
+import '@assets/styles/_normalize.scss'
+
+import photo from '@assets/imgs/photo.webp'
+import knowledges from '../db/knowledges.json'
+import projects from '../db/projects.json'
 ---
 
-<Layout title="Giuliano Cappa">
+<Layout title='Giuliano Cappa'>
   <Header />
-  <main></main>
+  <main>
+    <Section classes='section-introduction' id='home'>
+      <img src={photo} alt='' class='introduction-img' />
+      <div class='introduction-text'>
+        <h1 class='introduction-title'>
+          <span>¡Hola! Soy</span><span class='introduction-title-name'
+            >Giuliano Martín Cappa</span
+          >
+        </h1>
+        <h2 class='introduction-subtitle'>Qrfneebyynqbe Sebag Raq Ernpg</h2>
+        <SocialCard />
+      </div>
+    </Section>
+    <Section>
+      <h3 class='section-title' id='about-me'>Sobre mí</h3>
+      <div class='section-text'>
+        <p class='section-paragraph'>
+          Empático, responsable, curioso, reflexivo y que si puedo ayudar en
+          algo lo haré encantado. Me adapto a cualquier proyecto y reto que me
+          propongan.
+        </p>
+        <p class='section-paragraph'>
+          Me gusta la literatura de horror y los videojuegos de estrategia y
+          World of Warcraft.
+        </p>
+      </div>
+    </Section>
+    <Section>
+      <h3 class='section-title' id='projects'>Proyectos</h3>
+      <div class='wrapperCards'>
+        {projects.map((project) => <ProjectCard project={project} />)}
+      </div>
+    </Section>
+    <Section>
+      <h3 class='section-title' id='knowledge'>Conocimientos</h3>
+      <ul class='section-knowledges'>
+        {knowledges.map((knowledge) => <Knowledge knowledge={knowledge} />)}
+      </ul>
+    </Section>
+    <Section>
+      <h3 class='section-title' id='contact'>Contacto</h3>
+      <div class='section-text'>
+        <p class='section-paragraph'>
+          Muchas gracias por ver llegado hasta aquí. Espero que este portfolio
+          haya sido de tu agrado.
+        </p>
+        <p class='section-paragraph'>
+          Contacta conmigo a través del correo electrónico o redes sociales.
+          ¡Hasta pronto!
+        </p>
+        <address class='section-paragraph'>
+          <a href='mailto:cappa.giuliano@gmail.com'>
+            cappa.giuliano@gmail.com
+          </a>
+        </address>
+      </div>
+      <SocialCard />
+    </Section>
+  </main>
 </Layout>

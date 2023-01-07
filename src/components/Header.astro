@@ -1,6 +1,6 @@
 ---
-import logo from '../assets/imgs/logo.webp'
-import '../assets/styles/components/Header/_index.scss'
+import logo from '@assets/imgs/logo.webp'
+import '@assets/styles/components/Header/_index.scss'
 
 const ITEMS_NAV = [
   ['INICIO', 'home'],
@@ -11,25 +11,25 @@ const ITEMS_NAV = [
 ]
 ---
 
-<a href="#home" class="skipNavLinks">Ir al contenido principal</a>
+<a href='#home' class='skipNavLinks'>Ir al contenido principal</a>
 
 <button
-  class="menu"
-  aria-hidden="true"
-  aria-label="Menú de navegación"
-  aria-expanded="false"
+  class='menu'
+  aria-hidden='true'
+  aria-label='Menú de navegación'
+  aria-expanded='false'
 >
-  <span class="menu__line"></span>
+  <span class='menu__line'></span>
 </button>
 
-<header class="headerPage">
-  <div class="headerPage__container">
-    <img src={logo} alt="" class="logo" />
-    <nav class="nav">
-      <ul class="navMenu">
+<header class='headerPage'>
+  <div class='headerPage__container'>
+    <img src={logo} alt='' class='logo' />
+    <nav class='nav'>
+      <ul class='navMenu'>
         {
           ITEMS_NAV.map((item_menu) => (
-            <li class="navMenu__item">
+            <li class='navMenu__item'>
               <a href={`#${item_menu[1]}`}>{item_menu[0]}</a>
             </li>
           ))
