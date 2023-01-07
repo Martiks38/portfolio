@@ -2,9 +2,9 @@
   {
     "description": "Juego de la memoria con temática en Darkest Dungeon.",
     "imgs": [
-      "/assets/images/Memory/img1.webp",
-      "/assets/images/Memory/img2.webp",
-      "/assets/images/Memory/img3.webp"
+      "/images/Memory/img1.webp",
+      "/images/Memory/img2.webp",
+      "/images/Memory/img3.webp"
     ],
     "techs": ["React", "Jest"],
     "title": "Memory",
@@ -13,10 +13,7 @@
   },
   {
     "description": "Clon del home de la página Troy Total War Saga.\nAñadí animaciones y corregí el enlace de algunos héroes que re direccionaban a la página de otro.",
-    "imgs": [
-      "/assets/images/TotalWar/img1.webp",
-      "/assets/images/TotalWar/img2.webp"
-    ],
+    "imgs": ["/images/TotalWar/img1.webp", "/images/TotalWar/img2.webp"],
     "techs": ["React", "Tailwind CSS"],
     "title": "Troy Total War Saga - Clon",
     "name_repository": "clon-page-troy-total-war",
@@ -25,10 +22,10 @@
   {
     "description": "Tienda de cartas de Pokémon. Posee un carro de compras y tiene una simulación de login de cuenta y de formulario de validación de compra.",
     "imgs": [
-      "/assets/images/PokeStore/img1.png",
-      "/assets/images/PokeStore/img2.png",
-      "/assets/images/PokeStore/img3.png",
-      "/assets/images/PokeStore/img4.png"
+      "/images/PokeStore/img1.png",
+      "/images/PokeStore/img2.png",
+      "/images/PokeStore/img3.png",
+      "/images/PokeStore/img4.png"
     ],
     "techs": ["Next.js", "TypeScript"],
     "title": "PokeStore",
@@ -38,10 +35,10 @@
   {
     "description": "Juego wordle.\nTiene gestión de cuenta de usuario y de sesión. El usuario puede jugar habiendo ingresado o no a su cuenta, pero en el caso de estar conectado los resultados se almacenarán y se mostrarán las estadísticas generales al finalizar cada partida.\nLa palabra es obtenida aleatoriamente de una lista de palabras almacenadas en la base de datos.",
     "imgs": [
-      "/assets/images/Words/img1.png",
-      "/assets/images/Words/img2.png",
-      "/assets/images/Words/img3.png",
-      "/assets/images/Words/img4.png"
+      "/images/Words/img1.png",
+      "/images/Words/img2.png",
+      "/images/Words/img3.png",
+      "/images/Words/img4.png"
     ],
     "techs": ["React", "Node.js", "MongoDB"],
     "title": "Memory",
@@ -51,10 +48,10 @@
   {
     "description": "Juego de mecanografía con tres idiomas para elegir. El cual se mantiene entre sesiones.\nDurante la práctica se muestra las palabras por minuto (wpm) al escribir una palabra correcta. Y al finalizar se muestra su desempeño pudiendo ver una gráfica de wpm vs tiempo generada solo bajo petición del usuario.",
     "imgs": [
-      "/assets/images/Typing/img1.png",
-      "/assets/images/Typing/img2.png",
-      "/assets/images/Typing/img3.png",
-      "/assets/images/Typing/img4.png"
+      "/images/Typing/img1.png",
+      "/images/Typing/img2.png",
+      "/images/Typing/img3.png",
+      "/images/Typing/img4.png"
     ],
     "techs": ["Next.js", "TypeScript", "Chart.js"],
     "title": "Typing-game",
@@ -64,9 +61,9 @@
   {
     "description": "Se trata de un rediseño de la página de una escuela secundaria creada durante la pandemia. Donde los nuevos y actuales estudiantes pueden ver los cronogramas del curso, las especialidades ofrecidas por la institución y sus respectivas materias.",
     "imgs": [
-      "/assets/images/School/img1.png",
-      "/assets/images/School/img2.png",
-      "/assets/images/School/img3.png"
+      "/images/School/img1.png",
+      "/images/School/img2.png",
+      "/images/School/img3.png"
     ],
     "techs": ["React"],
     "title": "School Page",
