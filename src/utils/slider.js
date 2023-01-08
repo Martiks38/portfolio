@@ -72,7 +72,6 @@ class Slider {
 
 export function createSliders(selector) {
   document.querySelectorAll(selector).forEach((elem) => {
-    console.log('hi')
     new Slider(elem)
   })
 }
