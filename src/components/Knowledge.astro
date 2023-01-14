@@ -1,0 +1,20 @@
+---
+import '@assets/styles/components/Knowledge/_index.scss'
+
+interface Props {
+  knowledge: string
+}
+
+const { knowledge } = Astro.props
+
+let nameSvg = knowledge.replace(/\s|.js/, '').toLowerCase()
+
+let src = `/svgs/${nameSvg}.svg`
+---
+
+<li class="knowledge">
+  <figure>
+    <img src={src} alt={knowledge} loading="lazy" class="knowledge__img" />
+    <figcaption>{knowledge}</figcaption>
+  </figure>
+</li>

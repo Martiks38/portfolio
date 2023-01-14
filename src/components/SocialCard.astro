@@ -1,0 +1,27 @@
+---
+import '@assets/styles/components/SocialCard/_index.scss'
+
+import github from '@assets/svgs/github.svg'
+import linkedin from '@assets/svgs/linkedin.svg'
+import gmail from '@assets/svgs/gmail.svg'
+---
+
+<article class='socialCard'>
+  <a
+    href='https://github.com/Martiks38?tab=repositories'
+    target='_blank'
+    class='socialCard__button socialCard__button_invert'
+  >
+    <img src={github} alt='Repositorio de GitHub' class='socialCard__img' />
+  </a>
+  <a
+    href='https://www.linkedin.com/in/giuliano-cappa'
+    target='_blank'
+    class='socialCard__button'
+  >
+    <img src={linkedin} alt='LinkedIn' class='socialCard__img' />
+  </a>
+  <a href='mailto:cappa.giuliano@gmail.com' class='socialCard__button'>
+    <img src={gmail} alt='Gmail' class='socialCard__img' />
+  </a>
+</article>

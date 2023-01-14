@@ -1,0 +1,14 @@
+---
+interface Props {
+  classes?: string
+  id?: string
+}
+
+const { classes, id } = Astro.props
+
+import '@assets/styles/components/Section/_index.scss'
+---
+
+<section class={classes ? `section ${classes}` : `section`} id={id}>
+  <slot />
+</section>
