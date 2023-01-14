@@ -63,13 +63,7 @@ let conjunction = new Intl.ListFormat('es', {
     <div class='card-links'>
       {
         url_page ? (
-          <a
-            onmouseenter='ripple()'
-            onmouseleave='removeRipple()'
-            href={url_page}
-            class='button button-link'
-            target='_blank'
-          >
+          <a href={url_page} class='button button-link' target='_blank'>
             <span class='button-text'>Visitar sitio</span>
           </a>
         ) : null
