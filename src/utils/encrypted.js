@@ -20,14 +20,14 @@ class EffectDecryptingText {
    * Creates the container for each letter and inserts them.
    */
   animate() {
-    let encryptedText = this.element.innerText
-    let fragment = document.createDocumentFragment()
+    const encryptedText = this.element.innerText
+    const fragment = document.createDocumentFragment()
 
-    let lettersEncryptedText = encryptedText.split('')
+    const lettersEncryptedText = encryptedText.split('')
     this.element.innerText = ''
 
     this.letters.forEach((letter, index) => {
-      let span = document.createElement('span')
+      const span = document.createElement('span')
 
       span.innerText = lettersEncryptedText.at(index)
 
@@ -53,7 +53,7 @@ class EffectDecryptingText {
    */
   decryptLetter(options, count = 0) {
     if (count > 10) {
-      let subtitle = document.querySelector('.introduction-subtitle')
+      const subtitle = document.querySelector('.introduction-subtitle')
 
       subtitle.style.color = '#75eff8'
       options.elementLetter.innerText = options.letter
@@ -77,7 +77,7 @@ class EffectDecryptingText {
     let encryptedText = ''
 
     this.letters.forEach(() => {
-      let randomLetter = this.generateRandomLetter()
+      const randomLetter = this.generateRandomLetter()
 
       encryptedText += randomLetter
     })

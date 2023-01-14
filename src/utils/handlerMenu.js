@@ -6,7 +6,7 @@ const itemsMenu = $$('.navMenu__item')
 
 /** Change the aria attributes and modify the menu button and show or hide the menu list */
 const changeMenuView = () => {
-  let visibleMenu = menu.classList.contains('collapse')
+  const visibleMenu = menu.classList.contains('collapse')
 
   if (visibleMenu) {
     menu.setAttribute('aria-expanded', 'false')
@@ -21,17 +21,14 @@ const changeMenuView = () => {
 }
 
 /** When choosing one of the sections of the page, it executes the changeMenuView function */
-itemsMenu.forEach((itemMenu) =>
-  itemMenu.addEventListener('click', changeMenuView)
-)
+itemsMenu.forEach((itemMenu) => itemMenu.addEventListener('click', changeMenuView))
 
 menu.addEventListener('click', changeMenuView)
 
 /** Calls the changeMenuView() function on click outside of the navigation menu or menu button */
 document.addEventListener('click', (e) => {
   const target = e.target
-  const isHeaderOrMenu =
-    target.closest('.headerPage') || target.closest('.menu')
+  const isHeaderOrMenu = target.closest('.headerPage') || target.closest('.menu')
   const isCollapse = menu.classList.contains('collapse')
 
   if (!isHeaderOrMenu && isCollapse) changeMenuView()

@@ -6,17 +6,17 @@
 export function ripple(ev) {
   const target = ev.target
 
-  let elements = target.querySelectorAll('.button-link > *')
+  const elements = target.querySelectorAll('.button-link > *')
 
   if (elements.length > 2) return
 
   const { x, y } = ev
 
-  let { width, left, top } = target.getBoundingClientRect()
+  const { width, left, top } = target.getBoundingClientRect()
 
-  let ripple = document.createElement('span')
+  const ripple = document.createElement('span')
 
-  let styles = `
+  const styles = `
       position: absolute;
       display: block; 
       width: ${2.5 * width}px;
@@ -50,10 +50,10 @@ export function ripple(ev) {
  */
 export function removeRipple(ev) {
   const target = ev.target
-  let ripple = target.firstChild
+  const ripple = target.firstChild
 
-  let { x, y } = ev
-  let { width, left, top } = target.getBoundingClientRect()
+  const { x, y } = ev
+  const { width, left, top } = target.getBoundingClientRect()
 
   target.removeAttribute('style')
 

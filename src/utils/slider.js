@@ -38,7 +38,7 @@ class Slider {
 
     if (this.currentIndex >= this.imgs.length) this.currentIndex = 0
 
-    let img = this.imgs[this.currentIndex]
+    const img = this.imgs[this.currentIndex]
 
     img.classList.add('active')
   }
@@ -49,7 +49,7 @@ class Slider {
 
     if (this.currentIndex === 0) return
 
-    let imgActive = this.imgs[this.currentIndex]
+    const imgActive = this.imgs[this.currentIndex]
 
     imgActive.classList.add('start-out')
 
@@ -60,9 +60,9 @@ class Slider {
       imgActive.classList.remove('start-out')
 
       this.imgs.forEach((img, ind) => {
-        let imgClassList = img.classList
+        const imgClassList = img.classList
 
-        let isActive = imgClassList.contains('active')
+        const isActive = imgClassList.contains('active')
 
         if (isActive && ind !== 0) imgClassList.remove('active')
       })
@@ -71,7 +71,5 @@ class Slider {
 }
 
 export function createSliders(selector) {
-  document.querySelectorAll(selector).forEach((elem) => {
-    new Slider(elem)
-  })
+  document.querySelectorAll(selector).forEach((elem) => new Slider(elem))
 }
