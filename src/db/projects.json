@@ -55,7 +55,7 @@
     "url_page": "https://typingso.vercel.app"
   },
   {
-    "description": "Se trata de un rediseño de la página de una escuela secundaria creada durante la cuarentena. Donde los nuevos y actuales estudiantes pueden ver los cronogramas del curso, las especialidades ofrecidas por la institución y sus respectivas materias.",
+    "description": "Rediseño de la página de una escuela secundaria creada durante la cuarentena. Donde los nuevos y actuales estudiantes pueden ver los cronogramas del curso, las especialidades ofrecidas por la institución y sus respectivas materias.",
     "imgs": ["/images/School/img1.png", "/images/School/img2.png", "/images/School/img3.png"],
     "techs": ["React"],
     "title": "School Page",
