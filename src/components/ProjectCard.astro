@@ -20,7 +20,7 @@ const { title, description, imgs, techs, url_page, name_repository } = project
 let url_code = 'https://github.com/Martiks38/' + name_repository
 let conjunction = new Intl.ListFormat('es', {
   style: 'long',
-  type: 'conjunction',
+  type: 'conjunction'
 }).format(techs)
 ---
 
@@ -55,11 +55,7 @@ let conjunction = new Intl.ListFormat('es', {
   <div class='card-description'>
     <h4 class='card-title'>{title}</h4>
     <div class='card-text'>
-      {
-        description
-          .split('\n')
-          .map((paragraph) => <p class='card-paragraph'>{paragraph}</p>)
-      }
+      {description.split('\n').map((paragraph) => <p class='card-paragraph'>{paragraph}</p>)}
       <p class='card-paragraph'>
         Hecho con: <strong>{conjunction}</strong>
       </p>
