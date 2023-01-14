@@ -4,6 +4,8 @@
  * @param {MouseEvent} ev
  */
 export function ripple(ev) {
+  if (window.innerWidth < 991) return
+
   const target = ev.target
 
   const elements = target.querySelectorAll('.button-link > *')
@@ -49,6 +51,8 @@ export function ripple(ev) {
  * @param {MouseEvent} ev
  */
 export function removeRipple(ev) {
+  if (window.innerWidth < 991) return
+
   const target = ev.target
   const ripple = target.firstChild
 
