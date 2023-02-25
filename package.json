@@ -1,29 +1,30 @@
 {
   "name": "portfolio",
   "type": "module",
-  "version": "2.0.2",
+  "version": "3.1.1",
   "private": true,
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "prepare": "husky install",
+    "format": "prettier -w --plugin-search-dir=. .",
+    "lint": "eslint . --ext .astro,.js,.ts",
+    "lint:fix": "npm run lint -- --fix"
   },
   "dependencies": {
-    "astro": "^1.9.0"
+    "astro": "^2.0.15"
   },
   "devDependencies": {
-    "sass": "1.57.1",
-    "standard": "17.0.0"
-  },
-  "eslintConfig": {
-    "extends": "standard",
-    "rules": {
-      "space-before-function-paren": [
-        "error",
-        "never"
-      ]
-    }
+    "@typescript-eslint/parser": "5.53.0",
+    "eslint": "8.34.0",
+    "eslint-plugin-astro": "0.23.0",
+    "husky": "8.0.3",
+    "lint-staged": "13.1.2",
+    "prettier": "2.8.4",
+    "prettier-plugin-astro": "0.8.0",
+    "sass": "1.57.1"
   }
 }
