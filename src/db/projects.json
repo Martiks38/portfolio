@@ -1,6 +1,6 @@
 [
   {
-    "description": "Juego de la memoria con temática en Darkest Dungeon.",
+    "description": "Juego de la memoria con temática en Darkest Dungeon. Y modo contrarreloj.",
     "imgs": ["/images/Memory/img1.webp", "/images/Memory/img2.webp", "/images/Memory/img3.webp"],
     "techs": ["React", "Jest"],
     "title": "Memory",
@@ -8,8 +8,13 @@
     "url_page": "https://memory-game-dd.vercel.app"
   },
   {
-    "description": "Clon del home de la página Troy Total War Saga.\nAñadí animaciones y corregí el enlace de algunos héroes que re direccionan a la página de otro.",
-    "imgs": ["/images/TotalWar/img1.webp", "/images/TotalWar/img2.webp"],
+    "description": "Clon del home de la página Troy Total War Saga.\nAñadí animaciones y corregí el enlace de algunos héroes, los cuales re direccionan a la página de otro.",
+    "imgs": [
+      "/images/TotalWar/img1.webp",
+      "/images/TotalWar/img2.png",
+      "/images/TotalWar/img3.webp",
+      "/images/TotalWar/img4.webp"
+    ],
     "techs": ["React", "Tailwind CSS"],
     "title": "Troy Total War Saga - Clon",
     "name_repository": "clon-page-troy-total-war",
