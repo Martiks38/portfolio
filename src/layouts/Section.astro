@@ -1,0 +1,15 @@
+---
+import clsx from 'clsx'
+import '@assets/styles/components/Section/_index.scss'
+
+interface Props {
+	classes?: string
+	id?: string
+}
+
+const { classes, id } = Astro.props
+---
+
+<section class={clsx(['section', classes])} id={id}>
+	<slot />
+</section>
