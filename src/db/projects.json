@@ -2,7 +2,6 @@
   {
     "description": "Juego de la memoria con temática en Darkest Dungeon. Y modo contrarreloj.",
     "imgs": ["/images/Memory/img1.webp", "/images/Memory/img2.webp", "/images/Memory/img3.webp"],
-    "techs": ["React", "Jest"],
     "title": "Memory",
     "name_repository": "game-memory",
     "url_page": "https://memory-game-dd.vercel.app"
@@ -28,7 +27,6 @@
       "/images/PokeStore/img3.png",
       "/images/PokeStore/img4.png"
     ],
-    "techs": ["Next.js", "TypeScript"],
     "title": "PokeStore",
     "name_repository": "Pokestore",
     "url_page": "https://pokestore-now.vercel.app"
@@ -41,7 +39,6 @@
       "/images/Words/img3.png",
       "/images/Words/img4.png"
     ],
-    "techs": ["React", "Node.js", "MongoDB"],
     "title": "Age of Words",
     "name_repository": "AgeOfWords",
     "url_page": null
@@ -54,7 +51,6 @@
       "/images/Typing/img3.png",
       "/images/Typing/img4.png"
     ],
-    "techs": ["Next.js", "TypeScript", "Chart.js"],
     "title": "Typing-game",
     "name_repository": "typing-game-",
     "url_page": "https://typingso.vercel.app"
@@ -62,7 +58,6 @@
   {
     "description": "Rediseño de la página de una escuela secundaria creada durante la cuarentena. Donde los nuevos y actuales estudiantes pueden ver los cronogramas del curso, las especialidades ofrecidas por la institución y sus respectivas materias.",
     "imgs": ["/images/School/img1.png", "/images/School/img2.png", "/images/School/img3.png"],
-    "techs": ["React"],
     "title": "School Page",
     "name_repository": "my_school_page",
     "url_page": "https://my-school-page.vercel.app"
