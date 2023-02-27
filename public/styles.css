@@ -40,6 +40,11 @@
 	box-sizing: border-box;
 }
 
+html,
+body {
+	overflow-x: hidden;
+}
+
 html {
 	scroll-behavior: smooth;
 }
@@ -47,11 +52,6 @@ html {
 body {
 	background-color: var(--color-black);
 	color: var(--color-white-pure-alpha-90);
-}
-
-a {
-	text-decoration: none;
-	color: inherit;
 }
 
 @media (prefers-reduced-motion: reduce) {
