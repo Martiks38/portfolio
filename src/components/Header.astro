@@ -1,24 +1,20 @@
 ---
-import logo from '@assets/imgs/logo.webp'
 import '@assets/styles/components/Header/_index.scss'
+
+import logo from '@assets/imgs/logo.webp'
 
 const ITEMS_NAV = [
   ['INICIO', 'home'],
   ['SOBRE MÍ', 'about-me'],
   ['PROYECTOS', 'projects'],
   ['CONOCIMIENTOS', 'knowledge'],
-  ['CONTACTO', 'contact'],
+  ['CONTACTO', 'contact']
 ]
 ---
 
 <a href='#home' class='skipNavLinks'>Ir al contenido principal</a>
 
-<button
-  class='menu'
-  aria-hidden='true'
-  aria-label='Menú de navegación'
-  aria-expanded='false'
->
+<button class='menu' aria-hidden='true' aria-label='Menú de navegación' aria-expanded='false'>
   <span class='menu__line'></span>
 </button>
 
@@ -38,3 +34,5 @@ const ITEMS_NAV = [
     </nav>
   </div>
 </header>
+
+<script src='../utils/handlerMenu.js'></script>

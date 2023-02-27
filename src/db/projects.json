@@ -1,71 +1,63 @@
 [
   {
-    "description": "Juego de la memoria con temática en Darkest Dungeon.",
-    "imgs": [
-      "/images/Memory/img1.webp",
-      "/images/Memory/img2.webp",
-      "/images/Memory/img3.webp"
-    ],
-    "techs": ["React", "Jest"],
+    "description": "Juego de la memoria con temática en Darkest Dungeon. Y modo contrarreloj.",
+    "imgs": ["/images/Memory/img1.webp", "/images/Memory/img2.webp", "/images/Memory/img3.webp"],
     "title": "Memory",
     "name_repository": "game-memory",
     "url_page": "https://memory-game-dd.vercel.app"
   },
   {
-    "description": "Clon del home de la página Troy Total War Saga.\nAñadí animaciones y corregí el enlace de algunos héroes que re direccionaban a la página de otro.",
-    "imgs": ["/images/TotalWar/img1.webp", "/images/TotalWar/img2.webp"],
+    "description": "Clon del home de la página Troy Total War Saga.\nAñadí animaciones y corregí el enlace de algunos héroes, los cuales re direccionan a la página de otro.",
+    "imgs": [
+      "/images/TotalWar/img1.webp",
+      "/images/TotalWar/img2.png",
+      "/images/TotalWar/img3.webp",
+      "/images/TotalWar/img4.webp"
+    ],
     "techs": ["React", "Tailwind CSS"],
     "title": "Troy Total War Saga - Clon",
     "name_repository": "clon-page-troy-total-war",
     "url_page": "https://clon-page-troy-total-war.vercel.app"
   },
   {
-    "description": "Tienda de cartas de Pokémon. Posee un carro de compras y tiene una simulación de login de cuenta y de formulario de validación de compra.",
+    "description": "Tienda de cartas de Pokémon.\nPosee un carro de compras y tiene una simulación de login de cuenta y de formulario de validación de compra.",
     "imgs": [
       "/images/PokeStore/img1.png",
       "/images/PokeStore/img2.png",
       "/images/PokeStore/img3.png",
       "/images/PokeStore/img4.png"
     ],
-    "techs": ["Next.js", "TypeScript"],
     "title": "PokeStore",
     "name_repository": "Pokestore",
     "url_page": "https://pokestore-now.vercel.app"
   },
   {
-    "description": "Juego wordle.\nTiene gestión de cuenta de usuario y de sesión. El usuario puede jugar habiendo ingresado o no a su cuenta, pero en el caso de estar conectado los resultados se almacenarán y se mostrarán las estadísticas generales al finalizar cada partida.\nLa palabra es obtenida aleatoriamente de una lista de palabras almacenadas en la base de datos.",
+    "description": "Juego wordle.\nSi el jugador está conectado, los resultados serán guardados y mostrados al finalizar cada partida.\nLa palabra es obtenida aleatoriamente de una lista de palabras almacenadas en la base de datos.",
     "imgs": [
       "/images/Words/img1.png",
       "/images/Words/img2.png",
       "/images/Words/img3.png",
       "/images/Words/img4.png"
     ],
-    "techs": ["React", "Node.js", "MongoDB"],
-    "title": "Memory",
+    "title": "Age of Words",
     "name_repository": "AgeOfWords",
     "url_page": null
   },
   {
-    "description": "Juego de mecanografía con tres idiomas para elegir. El cual se mantiene entre sesiones.\nDurante la práctica se muestra las palabras por minuto (wpm) al escribir una palabra correcta. Y al finalizar se muestra su desempeño pudiendo ver una gráfica de wpm vs tiempo generada solo bajo petición del usuario.",
+    "description": "Juego de mecanografía con tres idiomas para elegir.\nDurante la práctica se muestran las palabras por minuto (wpm) al escribir una palabra correcta. Y al finalizar se muestra su desempeño pudiendo ver una gráfica de wpm vs tiempo.",
     "imgs": [
       "/images/Typing/img1.png",
       "/images/Typing/img2.png",
       "/images/Typing/img3.png",
       "/images/Typing/img4.png"
     ],
-    "techs": ["Next.js", "TypeScript", "Chart.js"],
     "title": "Typing-game",
     "name_repository": "typing-game-",
     "url_page": "https://typingso.vercel.app"
   },
   {
-    "description": "Se trata de un rediseño de la página de una escuela secundaria creada durante la pandemia. Donde los nuevos y actuales estudiantes pueden ver los cronogramas del curso, las especialidades ofrecidas por la institución y sus respectivas materias.",
-    "imgs": [
-      "/images/School/img1.png",
-      "/images/School/img2.png",
-      "/images/School/img3.png"
-    ],
-    "techs": ["React"],
+    "description": "Rediseño de la página de una escuela secundaria creada durante la cuarentena. Donde los nuevos y actuales estudiantes pueden ver los cronogramas del curso, las especialidades ofrecidas por la institución y sus respectivas materias.",
+    "imgs": ["/images/School/img1.png", "/images/School/img2.png", "/images/School/img3.png"],
     "title": "School Page",
     "name_repository": "my_school_page",
     "url_page": "https://my-school-page.vercel.app"

@@ -1,0 +1,67 @@
+---
+import LinkIcon from '@components/LinkIcon.astro'
+import '@assets/styles/components/BgCircles/_index.scss'
+import clsx from 'clsx'
+
+type Project = {
+	description: string
+	imgs: string[]
+	title: string
+	url_page: string | null
+	name_repository: string
+}
+
+// eslint-disable-next-line
+interface Props {
+	project: Project
+	isReverse?: boolean
+}
+
+const { project, isReverse } = Astro.props
+
+const { title, description, imgs, url_page, name_repository } = project
+
+const path = 'https://github.com/Martiks38/'
+const url_code = path.concat(name_repository)
+
+const paragraphs = description.split('\n')
+const reverseRow = isReverse ? 'desktop:flex-row-reverse' : 'desktop:flex-row'
+const classDescription = `flex flex-col justify-between min-h-[450px] mb-16 ${reverseRow}`
+---
+
+<article class="w-full mb-36">
+	<div class={classDescription}>
+		<div class="px-4">
+			<span class="relative block w-fit">
+				<h4 class="mb-6 text-4xl font-semibold">{title}</h4>
+				<a href={url_page || url_code} target="_blank">
+					<LinkIcon stroke="#dec55d" styles="absolute -bottom-1 -right-8 w-6 h-auto" />
+				</a>
+			</span>
+			{paragraphs.map((paragraph) => <p class="max-w-[55ch] mb-2 text-xl">{paragraph}</p>)}
+		</div>
+		<div class={clsx(['relative w-fit mx-auto bg-circle', { reverse: isReverse }])}>
+			<img
+				src={imgs[0]}
+				alt=""
+				class={clsx([
+					'relative mt-12 mb-16 mx-auto desktop:w-[650px] h-auto rounded-lg desktop:top-1/2 desktop:-translate-y-1/2',
+					{ 'desktop:right-[-40%]': !isReverse, 'desktop:left-[-40%]': isReverse }
+				])}
+			/>
+		</div>
+	</div>
+	<div class="grid grid-cols-presentationImages gap-12 justify-items-center w-full mx-auto">
+		{
+			imgs
+				.slice(1)
+				.map((img) => (
+					<img
+						src={img}
+						alt=""
+						class="rounded-lg shadow-[0_2px_2px_rgb(255_255_255_/_0.12),_0_2px_10px_rgb(255_255_255_/_0.16)]"
+					/>
+				))
+		}
+	</div>
+</article>

@@ -1,0 +1,11 @@
+---
+// eslint-disable-next-line
+interface Props {
+  styles: string
+  stroke?: string
+}
+
+const {stroke, styles} = Astro.props
+---
+
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" fill="none" class={styles} viewBox="0 0 24 24"><path stroke={stroke ? stroke : "#292929"} stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4H4v14c0 1.1.9 2 2 2h12a2 2 0 0 0 2-2v-5M9 15 20 4M15 4h5v5"/></svg>
