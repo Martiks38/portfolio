@@ -3,7 +3,7 @@ import '@assets/styles/components/Knowledge/_index.scss'
 
 // eslint-disable-next-line
 interface Props {
-  knowledge: string
+	knowledge: string
 }
 
 const { knowledge } = Astro.props
@@ -13,9 +13,9 @@ let nameSvg = knowledge.replace(/\s|.js/, '').toLowerCase()
 let src = `/svgs/${nameSvg}.svg`
 ---
 
-<li class='knowledge'>
-  <figure>
-    <img src={src} alt={knowledge} loading='lazy' class='knowledge__img' />
-    <figcaption>{knowledge}</figcaption>
-  </figure>
+<li class="knowledge">
+	<figure>
+		<img src={src} alt={knowledge} loading="lazy" class="knowledge__img" title={knowledge} />
+		<figcaption>{knowledge}</figcaption>
+	</figure>
 </li>
