@@ -53,7 +53,7 @@ class EffectDecryptingText {
 	 */
 	decryptLetter(options, count = 0) {
 		if (count > 10) {
-			const subtitle = document.querySelector('.introduction-subtitle')
+			const subtitle = document.querySelector('.introduction__subtitle')
 
 			subtitle.style.color = '#75eff8'
 			options.elementLetter.innerText = options.letter
@@ -94,7 +94,7 @@ class EffectDecryptingText {
 }
 
 export const startDecryptingText = (stagger = 1000) => {
-	const selectors = ['.introduction-subtitle']
+	const selectors = ['.introduction__subtitle']
 
 	setTimeout(() => {
 		selectors.forEach((selector) => new EffectDecryptingText(selector))

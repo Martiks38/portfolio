@@ -1,7 +1,7 @@
 @use '../../mixins';
 
 .introduction {
-	&-img {
+	&__img {
 		--size-img: 250px;
 
 		width: var(--size-img);
@@ -11,7 +11,7 @@
 		object-position: center right;
 	}
 
-	&-text {
+	&__text {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -20,7 +20,7 @@
 		text-align: center;
 	}
 
-	&-title {
+	&__title {
 		font-size: 2rem;
 		line-height: 2.5rem;
 
@@ -29,7 +29,7 @@
 		}
 	}
 
-	&-subtitle {
+	&__subtitle {
 		--line-height: 2.25rem;
 
 		overflow-wrap: anywhere;
@@ -46,7 +46,7 @@ main .section:last-child {
 	padding-bottom: calc(var(--padding) + 1.5rem);
 	min-height: auto;
 
-	& .section-paragraph {
+	& .section__paragraph {
 		margin-left: auto;
 		margin-right: auto;
 		width: 100%;
@@ -71,22 +71,26 @@ main .section:last-child {
 	padding: var(--padding);
 	font-family: 'Poppins', sans-serif;
 
-	&-introduction {
+	&_min-h-screen {
+		min-height: 100vh;
+	}
+
+	&__introduction {
 		max-width: 56.25rem;
 		min-height: 100vh;
 	}
 
-	&-paragraph {
+	&__paragraph {
 		font-size: 1.125rem;
 		line-height: 1.75rem;
 	}
 
-	&-text {
+	&__text {
 		max-width: 60ch;
 		width: 100%;
 	}
 
-	&-knowledges {
+	&__knowledges {
 		display: flex;
 		flex-wrap: wrap;
 		gap: 1.5rem;
@@ -96,13 +100,13 @@ main .section:last-child {
 		list-style-type: none;
 	}
 
-	&-title {
+	&__title {
 		position: relative;
 		display: inline-block;
 		margin-top: 0;
 		margin-bottom: 1.5em;
 		font-family: sans-serif;
-		font-size: 3rem;
+		font-size: 2.55rem;
 		line-height: 1;
 
 		&::before {
@@ -122,7 +126,11 @@ main .section:last-child {
 }
 
 @media screen and (min-width: 48.5rem) {
-	.section-introduction {
+	.section__title {
+		font-size: 3rem;
+	}
+
+	.section__introduction {
 		flex-direction: row;
 		min-height: auto;
 		height: calc(100vh - 4.5rem);
@@ -130,22 +138,22 @@ main .section:last-child {
 		gap: 1.6rem;
 	}
 
-	.introduction-text {
+	.introduction__text {
 		text-align: left;
 	}
 
-	.introduction-title-name {
+	.introduction__title_name {
 		font-size: 2.75rem;
 		line-height: 1;
 	}
 
-	.introduction-subtitle {
+	.introduction__subtitle {
 		font-size: 2rem;
 	}
 }
 
 @media screen and (min-width: 36.25rem) {
-	.section-title {
+	.section__title {
 		&::after,
 		&::before {
 			--height: 4px;
