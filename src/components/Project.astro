@@ -1,6 +1,7 @@
 ---
 import LinkIcon from '@components/LinkIcon.astro'
 import '@assets/styles/components/BgCircles/_index.scss'
+import '@assets/styles/components/Project/_index.scss'
 import clsx from 'clsx'
 
 type Project = {
@@ -9,6 +10,7 @@ type Project = {
 	title: string
 	url_page: string | null
 	name_repository: string
+	techs: string[]
 }
 
 // eslint-disable-next-line
@@ -19,49 +21,49 @@ interface Props {
 
 const { project, isReverse } = Astro.props
 
-const { title, description, imgs, url_page, name_repository } = project
+const { title, description, imgs, url_page, name_repository, techs } = project
 
-const path = 'https://github.com/Martiks38/'
-const url_code = path.concat(name_repository)
+const BASE_URL = 'https://github.com/Martiks38/'
+const url_code = BASE_URL.concat(name_repository)
+const [mainImage, ...presentationImages] = imgs
 
+let dontHaveImgs = presentationImages.length === 0
 const paragraphs = description.split('\n')
-const reverseRow = isReverse ? 'desktop:flex-row-reverse' : 'desktop:flex-row'
-const classDescription = `flex flex-col justify-between min-h-[450px] mb-16 ${reverseRow}`
+const reverseRow = isReverse
+	? 'project__descriptionContainer_rowReverse'
+	: 'project__descriptionContainer_row'
+const classDescription = `project__descriptionContainer ${reverseRow}`
 ---
 
-<article class="w-full mb-36">
-	<div class={classDescription}>
-		<div class="px-4">
-			<span class="relative block w-fit">
-				<h4 class="mb-6 text-4xl font-semibold">{title}</h4>
+<article class="project">
+	<div class={clsx([classDescription, dontHaveImgs && 'project__descriptionContainer_mb-0'])}>
+		<div>
+			<h4 class="project__title">
+				<span class="project__title__text">{title}</span>
 				<a href={url_page || url_code} target="_blank">
-					<LinkIcon stroke="#dec55d" styles="absolute -bottom-1 -right-8 w-6 h-auto" />
+					<LinkIcon stroke="#dec55d" styles="project__title__url" />
 				</a>
-			</span>
-			{paragraphs.map((paragraph) => <p class="max-w-[55ch] mb-2 text-xl">{paragraph}</p>)}
+			</h4>
+			{paragraphs.map((paragraph) => <p class="project__description">{paragraph}</p>)}
+			<p class="project__techs">Tecnologías usadas:</p>
+			<div class="techs">
+				{techs.map((tech) => <span class="tech">{tech}</span>)}
+			</div>
 		</div>
-		<div class={clsx(['relative w-fit mx-auto bg-circle', { reverse: isReverse }])}>
-			<img
-				src={imgs[0]}
-				alt=""
-				class={clsx([
-					'relative mt-12 mb-16 mx-auto desktop:w-[650px] h-auto rounded-lg desktop:top-1/2 desktop:-translate-y-1/2',
-					{ 'desktop:right-[-40%]': !isReverse, 'desktop:left-[-40%]': isReverse }
-				])}
-			/>
+		<div
+			class={clsx([
+				'bg-circle project__introImgContainer',
+				dontHaveImgs && 'project__introImgContainer_mb-0',
+				{
+					'project__introImgContainer_left reverse': isReverse,
+					project__introImgContainer_right: !isReverse
+				}
+			])}
+		>
+			<img src={mainImage} alt="" />
 		</div>
 	</div>
-	<div class="grid grid-cols-presentationImages gap-12 justify-items-center w-full mx-auto">
-		{
-			imgs
-				.slice(1)
-				.map((img) => (
-					<img
-						src={img}
-						alt=""
-						class="rounded-lg shadow-[0_2px_2px_rgb(255_255_255_/_0.12),_0_2px_10px_rgb(255_255_255_/_0.16)]"
-					/>
-				))
-		}
+	<div class="project__wrapperImages">
+		{presentationImages.map((img) => <img src={img} alt="" />)}
 	</div>
 </article>
