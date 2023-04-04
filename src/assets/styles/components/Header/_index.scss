@@ -1,6 +1,19 @@
 @use '../../mixins';
 @use '../../placeholders/lineMenuButton.scss';
 
+.asideButtons {
+	--dist-position: 2rem;
+
+	position: fixed;
+	bottom: calc(4 * var(--dist-position));
+	right: var(--dist-position);
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	width: 3.4rem;
+	z-index: 1;
+}
+
 .headerPage {
 	position: fixed;
 	top: 0;
@@ -66,16 +79,11 @@
 }
 
 .menu {
-	--dist-position: 2rem;
-
-	position: fixed;
-	bottom: var(--dist-position);
-	right: var(--dist-position);
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	height: 3rem;
-	width: 3.4rem;
+	width: 100%;
 	background-color: var(--color-secondary);
 	border-style: none;
 	border-radius: var(--border-radius-10);
@@ -153,7 +161,7 @@
 	}
 
 	.menu {
-		visibility: hidden;
+		display: none;
 	}
 }
 
