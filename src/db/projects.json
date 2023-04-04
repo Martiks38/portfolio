@@ -1,84 +1,119 @@
 [
   {
+    "description": "Crea componentes y hooks con apartir de templates tanto en JavaScript como en TypeScript.\nLos componentes se pueden crear junto a su hoja de estilos y/o test.",
+    "imgs": ["/src/assets/images/React-CLI/img1.png"],
+    "title": "React CLI",
+    "name_repository": "React-CLI",
+    "url_page": null,
+    "techs": ["Node.js"]
+  },
+  {
     "description": "Clon del juego Matatena de Cult of the Lamb.",
-    "imgs": ["/images/Matatena/img1.png", "/images/Matatena/img2.png", "/images/Matatena/img3.png"],
+    "imgs": [
+      "/src/assets/images/Matatena/img1.png",
+      "/src/assets/images/Matatena/img2.png",
+      "/src/assets/images/Matatena/img3.png"
+    ],
     "title": "Matatena",
     "name_repository": "Knucklebones",
-    "url_page": "knucklebones-theta.vercel.app"
+    "url_page": "https://knucklebones-theta.vercel.app",
+    "techs": ["Vue 3", "Vue Router", "TypeScript", "Tailwind CSS", "Vitest"]
   },
   {
     "description": "Página creada para una Code Jam entre amigos con temática \"naturaleza\".",
     "imgs": [
-      "/images/Madagascar/img1.jpg",
-      "/images/Madagascar/img2.webp",
-      "/images/Madagascar/img3.webp",
-      "/images/Madagascar/img4.webp"
+      "/src/assets/images/Madagascar/img1.jpg",
+      "/src/assets/images/Madagascar/img2.webp",
+      "/src/assets/images/Madagascar/img3.webp",
+      "/src/assets/images/Madagascar/img4.webp"
     ],
     "title": "Madagascar Salvaje",
     "name_repository": "madagascar-salvaje",
-    "url_page": "madagascar-salvaje.vercel.app"
+    "url_page": "https://madagascar-salvaje.vercel.app",
+    "techs": ["Astro", "Tailwind CSS", "TypeScript"]
   },
   {
     "description": "Juego de la memoria con temática en Darkest Dungeon. Y modo contrarreloj.",
-    "imgs": ["/images/Memory/img1.webp", "/images/Memory/img2.webp", "/images/Memory/img3.webp"],
+    "imgs": [
+      "/src/assets/images/Memory/img1.webp",
+      "/src/assets/images/Memory/img2.webp",
+      "/src/assets/images/Memory/img3.webp"
+    ],
     "title": "Memory",
     "name_repository": "game-memory",
-    "url_page": "https://memory-game-dd.vercel.app"
+    "url_page": "https://memory-game-dd.vercel.app",
+    "techs": ["React.js", "Wouter", "Tailwind CSS", "Vitest"]
   },
   {
     "description": "Clon del home de la página Troy Total War Saga.\nAñadí animaciones y corregí el enlace de algunos héroes, los cuales re direccionan a la página de otro.",
     "imgs": [
-      "/images/TotalWar/img1.webp",
-      "/images/TotalWar/img2.png",
-      "/images/TotalWar/img3.webp",
-      "/images/TotalWar/img4.webp"
+      "/src/assets/images/TotalWar/img1.webp",
+      "/src/assets/images/TotalWar/img2.png",
+      "/src/assets/images/TotalWar/img3.webp",
+      "/src/assets/images/TotalWar/img4.webp"
     ],
-    "techs": ["React", "Tailwind CSS"],
     "title": "Troy Total War Saga - Clon",
     "name_repository": "clon-page-troy-total-war",
-    "url_page": "https://clon-page-troy-total-war.vercel.app"
+    "url_page": "https://clon-page-troy-total-war.vercel.app",
+    "techs": ["React.js", "Tailwind CSS"]
   },
   {
     "description": "Tienda de cartas de Pokémon.\nPosee un carro de compras y tiene una simulación de login de cuenta y de formulario de validación de compra.",
     "imgs": [
-      "/images/PokeStore/img1.png",
-      "/images/PokeStore/img2.png",
-      "/images/PokeStore/img3.png",
-      "/images/PokeStore/img4.png"
+      "/src/assets/images/PokeStore/img1.png",
+      "/src/assets/images/PokeStore/img2.png",
+      "/src/assets/images/PokeStore/img3.png",
+      "/src/assets/images/PokeStore/img4.png"
     ],
     "title": "PokeStore",
     "name_repository": "Pokestore",
-    "url_page": "https://pokestore-now.vercel.app"
+    "url_page": "https://pokestore-now.vercel.app",
+    "techs": ["Next.js", "Scss", "TypeScript"]
   },
   {
     "description": "Juego wordle.\nSi el jugador está conectado, los resultados serán guardados y mostrados al finalizar cada partida.\nLa palabra es obtenida aleatoriamente de una lista de palabras almacenadas en la base de datos.",
     "imgs": [
-      "/images/Words/img1.png",
-      "/images/Words/img2.png",
-      "/images/Words/img3.png",
-      "/images/Words/img4.png"
+      "/src/assets/images/Words/img1.png",
+      "/src/assets/images/Words/img2.png",
+      "/src/assets/images/Words/img3.png",
+      "/src/assets/images/Words/img4.png"
     ],
     "title": "Age of Words",
     "name_repository": "AgeOfWords",
-    "url_page": null
+    "url_page": null,
+    "techs": [
+      "React.js",
+      "Scss",
+      "TypeScript",
+      "Express",
+      "Mongoose",
+      "JSON Web Token",
+      "bcrypt.js"
+    ]
   },
   {
     "description": "Juego de mecanografía con tres idiomas para elegir.\nDurante la práctica se muestran las palabras por minuto (wpm) al escribir una palabra correcta. Y al finalizar se muestra su desempeño pudiendo ver una gráfica de wpm vs tiempo.",
     "imgs": [
-      "/images/Typing/img1.png",
-      "/images/Typing/img2.png",
-      "/images/Typing/img3.png",
-      "/images/Typing/img4.png"
+      "/src/assets/images/Typing/img1.png",
+      "/src/assets/images/Typing/img2.png",
+      "/src/assets/images/Typing/img3.png",
+      "/src/assets/images/Typing/img4.png"
     ],
     "title": "Typing-game",
     "name_repository": "typing-game-",
-    "url_page": "https://typingso.vercel.app"
+    "url_page": "https://typingso.vercel.app",
+    "techs": ["Next.js", "Scss", "chart.js", "TypeScript"]
   },
   {
     "description": "Rediseño de la página de una escuela secundaria creada durante la cuarentena. Donde los nuevos y actuales estudiantes pueden ver los cronogramas del curso, las especialidades ofrecidas por la institución y sus respectivas materias.",
-    "imgs": ["/images/School/img1.png", "/images/School/img2.png", "/images/School/img3.png"],
+    "imgs": [
+      "/src/assets/images/School/img1.png",
+      "/src/assets/images/School/img2.png",
+      "/src/assets/images/School/img3.png"
+    ],
     "title": "School Page",
     "name_repository": "my_school_page",
-    "url_page": "https://my-school-page.vercel.app"
+    "url_page": "https://my-school-page.vercel.app",
+    "techs": ["React.js"]
   }
 ]
