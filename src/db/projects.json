@@ -9,11 +9,7 @@
   },
   {
     "description": "Clon del juego Matatena de Cult of the Lamb.",
-    "imgs": [
-      "/images/Matatena/img1.png",
-      "/images/Matatena/img2.png",
-      "/images/Matatena/img3.png"
-    ],
+    "imgs": ["/images/Matatena/img1.png", "/images/Matatena/img2.png", "/images/Matatena/img3.png"],
     "title": "Matatena",
     "name_repository": "Knucklebones",
     "url_page": "https://knucklebones-theta.vercel.app",
@@ -34,11 +30,7 @@
   },
   {
     "description": "Juego de la memoria con temática en Darkest Dungeon. Y modo contrarreloj.",
-    "imgs": [
-      "/images/Memory/img1.webp",
-      "/images/Memory/img2.webp",
-      "/images/Memory/img3.webp"
-    ],
+    "imgs": ["/images/Memory/img1.webp", "/images/Memory/img2.webp", "/images/Memory/img3.webp"],
     "title": "Memory",
     "name_repository": "game-memory",
     "url_page": "https://memory-game-dd.vercel.app",
@@ -86,6 +78,7 @@
       "Scss",
       "TypeScript",
       "Express",
+      "MongoDB",
       "Mongoose",
       "JSON Web Token",
       "bcrypt.js"
@@ -106,11 +99,7 @@
   },
   {
     "description": "Rediseño de la página de una escuela secundaria creada durante la cuarentena. Donde los nuevos y actuales estudiantes pueden ver los cronogramas del curso, las especialidades ofrecidas por la institución y sus respectivas materias.",
-    "imgs": [
-      "/images/School/img1.png",
-      "/images/School/img2.png",
-      "/images/School/img3.png"
-    ],
+    "imgs": ["/images/School/img1.png", "/images/School/img2.png", "/images/School/img3.png"],
     "title": "School Page",
     "name_repository": "my_school_page",
     "url_page": "https://my-school-page.vercel.app",
