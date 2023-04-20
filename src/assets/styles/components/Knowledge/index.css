@@ -2,23 +2,23 @@
 	width: 5rem;
 	margin: 0 auto;
 
-	& figure {
-		margin: 0;
-
-		& figcaption {
-			margin-top: 0.8em;
-			text-align: center;
-			font-weight: 500;
-			font-size: 1rem;
-			line-height: 1.5rem;
-		}
-	}
-
 	&__img {
 		width: 100%;
 		height: auto;
 		vertical-align: middle;
 		transition: transform 300ms ease-in-out;
+	}
+
+	&__name {
+		margin-top: 0.8em;
+		text-align: center;
+		font-weight: 500;
+		font-size: 1rem;
+		line-height: 1.5rem;
+	}
+
+	&__wrap {
+		margin: 0;
 	}
 }
 
@@ -27,7 +27,7 @@
 		width: 6.25rem;
 	}
 
-	.knowledge figure figcaption {
+	.knowledge__name {
 		font-size: 1rem;
 		line-height: 1.5rem;
 	}
