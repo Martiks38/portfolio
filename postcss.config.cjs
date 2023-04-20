@@ -1,7 +1,14 @@
-const autoprefixer = require('autoprefixer')
-const purgecss = require('purgecss')
-const nesting = require('postcss-nesting')
+/* eslint @typescript-eslint/no-var-requires: "off" */
+const purgecss = require('@fullhuman/postcss-purgecss')
 
 module.exports = {
-	plugins: [nesting, autoprefixer, purgecss]
+	plugins: [
+		require('postcss-nested'),
+		require('autoprefixer'),
+		require('cssnano'),
+		purgecss({
+			content: ['src/**/*.astro'],
+			css: ['src/**/*.css']
+		})
+	]
 }
