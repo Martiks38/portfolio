@@ -1,4 +1,7 @@
 .introduction {
+	max-width: 56.25rem;
+	min-height: 100vh;
+
 	&__img {
 		--size-img: 15.625rem;
 
@@ -22,7 +25,7 @@
 		font-size: 2rem;
 		line-height: 2.5rem;
 
-		& span {
+		& :is(span) {
 			display: block;
 		}
 	}
@@ -39,23 +42,6 @@
 	}
 }
 
-main .section:last-child {
-	margin-top: 2.5rem;
-	padding-bottom: calc(var(--padding) + 1.5rem);
-	min-height: auto;
-
-	& .section__paragraph {
-		margin-left: auto;
-		margin-right: auto;
-		width: 100%;
-		max-width: 40ch;
-	}
-
-	& address {
-		color: var(--color-primary);
-	}
-}
-
 .section {
 	--padding: 2rem;
 
@@ -69,23 +55,17 @@ main .section:last-child {
 	padding: var(--padding);
 	font-family: 'Poppins', sans-serif;
 
-	&_min-h-screen {
-		min-height: 100vh;
+	& :is(address) {
+		color: var(--color-primary);
 	}
 
-	&__introduction {
-		max-width: 56.25rem;
-		min-height: 100vh;
-	}
-
-	&__paragraph {
+	& :is(address, .section__paragraph) {
 		font-size: 1.125rem;
 		line-height: 1.75rem;
 	}
 
-	&__text {
-		max-width: 60ch;
-		width: 100%;
+	&_min-h-screen {
+		min-height: 100vh;
 	}
 
 	&__knowledges {
@@ -96,6 +76,11 @@ main .section:last-child {
 		margin: 0;
 		max-width: 43.75rem;
 		list-style-type: none;
+	}
+
+	&__text {
+		max-width: 60ch;
+		width: 100%;
 	}
 
 	&__title {
@@ -120,6 +105,19 @@ main .section:last-child {
 			border-radius: calc(var(--height) / 2);
 		}
 	}
+
+	main &:last-child {
+		margin-top: 2.5rem;
+		padding-bottom: calc(var(--padding) + 1.5rem);
+		min-height: auto;
+
+		& :is(.section__paragraph, address) {
+			margin-left: auto;
+			margin-right: auto;
+			width: 100%;
+			max-width: 40ch;
+		}
+	}
 }
 
 @media screen and (min-width: 80rem) {
@@ -130,29 +128,29 @@ main .section:last-child {
 }
 
 @media screen and (min-width: 48.5rem) {
-	.section__title {
-		font-size: 3rem;
-	}
-
-	.section__introduction {
+	.introduction {
 		flex-direction: row;
 		min-height: auto;
 		height: calc(100vh - 4.5rem);
 		justify-content: space-between;
 		gap: 1.6rem;
+
+		&__text {
+			text-align: left;
+		}
+
+		&__title :is(span:last-child) {
+			font-size: 2.75rem;
+			line-height: 1;
+		}
+
+		&__subtitle {
+			font-size: 2rem;
+		}
 	}
 
-	.introduction__text {
-		text-align: left;
-	}
-
-	.introduction__title_name {
-		font-size: 2.75rem;
-		line-height: 1;
-	}
-
-	.introduction__subtitle {
-		font-size: 2rem;
+	.section__title {
+		font-size: 3rem;
 	}
 }
 
