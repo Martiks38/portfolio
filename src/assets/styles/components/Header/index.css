@@ -1,6 +1,6 @@
 /* Page Header */
 .headerPage {
-	position: sticky;
+	position: fixed;
 	top: 0;
 	width: 100%;
 	background-color: var(--color-black-1);
