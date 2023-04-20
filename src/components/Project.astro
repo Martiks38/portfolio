@@ -1,7 +1,7 @@
 ---
 import LinkIcon from '@components/LinkIcon.astro'
-import '@assets/styles/components/BgCircles/_index.scss'
-import '@assets/styles/components/Project/_index.scss'
+import '@assets/styles/components/BgCircles/index.css'
+import '@assets/styles/components/Project/index.css'
 import clsx from 'clsx'
 
 type Project = {
@@ -52,7 +52,7 @@ const classDescription = `project__descriptionContainer ${reverseRow}`
 		</div>
 		<div
 			class={clsx([
-				'bg-circle project__introImgContainer',
+				'bgCircle project__introImgContainer',
 				dontHaveImgs && 'project__introImgContainer_mb-0',
 				{
 					'project__introImgContainer_left reverse': isReverse,
@@ -60,10 +60,14 @@ const classDescription = `project__descriptionContainer ${reverseRow}`
 				}
 			])}
 		>
-			<img src={mainImage} alt="" width="540" height="270" />
+			<img src={mainImage} alt="" width="540" height="270" loading="lazy" />
 		</div>
 	</div>
 	<div class="project__wrapperImages">
-		{presentationImages.map((img) => <img src={img} alt="" width="368" height="184" />)}
+		{
+			presentationImages.map((img) => (
+				<img src={img} alt="" width="368" height="184" loading="lazy" />
+			))
+		}
 	</div>
 </article>

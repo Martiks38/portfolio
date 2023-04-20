@@ -1,16 +1,18 @@
 ---
-import Layout from '../layouts/Layout.astro'
-
+// Components
+import Layout from '@/layouts/Layout.astro'
 import Section from '@/layouts/Section.astro'
 import Header from '@components/Header.astro'
 import Knowledge from '@components/Knowledge.astro'
 import SocialCard from '@components/SocialCard.astro'
 import Project from '@components/Project.astro'
 
-import '@assets/styles/_normalize.scss'
+// Styles
+import '@assets/styles/normalize.css'
 
-import knowledges from '../db/knowledges.json'
-import projects from '../db/projects.json'
+// Data
+import knowledges from '@/db/knowledges.json'
+import projects from '@/db/projects.json'
 ---
 
 <Layout title="Giuliano Cappa">

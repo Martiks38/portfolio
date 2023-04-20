@@ -1,9 +1,0 @@
-%menuButtonLine {
-  --height-line: 0.25rem;
-
-  position: absolute;
-  height: var(--height-line);
-  width: 1.8rem;
-  background-color: var(--color-black-pure-alpha-80);
-  border-radius: calc(var(--height-line) / 2);
-}

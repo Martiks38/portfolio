@@ -1,8 +1,6 @@
-@use '../../mixins';
-
 .introduction {
 	&__img {
-		--size-img: 250px;
+		--size-img: 15.625rem;
 
 		width: var(--size-img);
 		height: var(--size-img);
@@ -110,10 +108,16 @@ main .section:last-child {
 		line-height: 1;
 
 		&::before {
-			@include mixins.underline(4px, 100%) {
-				bottom: 0.075em;
-				background-color: var(--color-secondary);
-			}
+			--height: 0.25rem;
+			--width: 100%;
+
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			height: var(--height);
+			width: var(--width);
+			border-radius: calc(var(--height) / 2);
 		}
 	}
 }
@@ -156,7 +160,7 @@ main .section:last-child {
 	.section__title {
 		&::after,
 		&::before {
-			--height: 4px;
+			--height: 0.25rem;
 			--width: 10vw;
 
 			content: '';
@@ -165,7 +169,7 @@ main .section:last-child {
 			left: auto;
 			bottom: auto;
 			height: var(--height);
-			max-width: 400px;
+			max-width: 25rem;
 			width: var(--width);
 			background-color: var(--color-secondary-alpha-75);
 			border-radius: calc(var(--height) / 2);

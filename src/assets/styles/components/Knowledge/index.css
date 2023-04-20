@@ -1,0 +1,34 @@
+.knowledge {
+	width: 5rem;
+	margin: 0 auto;
+
+	& figure {
+		margin: 0;
+
+		& figcaption {
+			margin-top: 0.8em;
+			text-align: center;
+			font-weight: 500;
+			font-size: 1rem;
+			line-height: 1.5rem;
+		}
+	}
+
+	&__img {
+		width: 100%;
+		height: auto;
+		vertical-align: middle;
+		transition: transform 300ms ease-in-out;
+	}
+}
+
+@media screen and (min-width: 36.25rem) {
+	.knowledge {
+		width: 6.25rem;
+	}
+
+	.knowledge figure figcaption {
+		font-size: 1rem;
+		line-height: 1.5rem;
+	}
+}
