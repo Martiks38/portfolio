@@ -13,7 +13,7 @@
 			margin-bottom: 0;
 		}
 
-		& > *:first-child {
+		& :is(div:first-child) {
 			padding-left: 1rem;
 			padding-right: 1rem;
 		}
@@ -65,10 +65,12 @@
 			height: auto;
 			margin: 1rem auto 0;
 			border-radius: var(--border-radius-8);
+			object-fit: cover;
 		}
 
 		&_mb-0 img {
 			margin-bottom: 0;
+			object-fit: cover;
 		}
 	}
 
@@ -84,6 +86,7 @@
 		& img {
 			border-radius: var(--border-radius-8);
 			box-shadow: 0 2px 2px rgb(255 255 255 / 0.12), 0 2px 10px rgb(255 255 255/ 0.16);
+			object-fit: cover;
 		}
 	}
 }
