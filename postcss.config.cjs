@@ -8,7 +8,10 @@ module.exports = {
 		require('cssnano'),
 		purgecss({
 			content: ['src/**/*.astro'],
-			css: ['src/**/*.css']
+			css: ['src/**/*.css'],
+			safelist: {
+				deep: [/buttonToTop$/, /headerPage$/, /menuBtn$/]
+			}
 		})
 	]
 }
