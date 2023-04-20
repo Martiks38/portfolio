@@ -1,5 +1,18 @@
 [
   {
+    "description": "Rediseño de la página de una escuela secundaria creada durante la cuarentena. Donde los nuevos y actuales estudiantes pueden ver los cronogramas del curso, las especialidades ofrecidas por la institución y sus respectivas materias.",
+    "imgs": [
+      "/images/School/img1.webp",
+      "/images/School/img2.webp",
+      "/images/School/img3.webp",
+      "/images/School/img4.webp"
+    ],
+    "title": "School Page",
+    "name_repository": "my_school_page",
+    "url_page": "https://my-school-page.vercel.app",
+    "techs": ["Next.js", "TypeScript", "Tailwind CSS", "Remark", "Vitest"]
+  },
+  {
     "description": "Crea componentes y hooks con apartir de templates tanto en JavaScript como en TypeScript.\nLos componentes se pueden crear junto a su hoja de estilos y/o test.",
     "imgs": ["/images/React-CLI/img1.png"],
     "title": "React CLI",
@@ -96,13 +109,5 @@
     "name_repository": "typing-game-",
     "url_page": "https://typingso.vercel.app",
     "techs": ["Next.js", "Scss", "chart.js", "TypeScript"]
-  },
-  {
-    "description": "Rediseño de la página de una escuela secundaria creada durante la cuarentena. Donde los nuevos y actuales estudiantes pueden ver los cronogramas del curso, las especialidades ofrecidas por la institución y sus respectivas materias.",
-    "imgs": ["/images/School/img1.png", "/images/School/img2.png", "/images/School/img3.png"],
-    "title": "School Page",
-    "name_repository": "my_school_page",
-    "url_page": "https://my-school-page.vercel.app",
-    "techs": ["React.js"]
   }
 ]
