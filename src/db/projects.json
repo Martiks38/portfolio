@@ -73,7 +73,7 @@
     "title": "PokeStore",
     "name_repository": "Pokestore",
     "url_page": "https://pokestore-now.vercel.app",
-    "techs": ["Next.js", "Scss", "TypeScript"]
+    "techs": ["Next.js", "SCSS", "TypeScript"]
   },
   {
     "description": "Juego wordle.\nSi el jugador está conectado, los resultados serán guardados y mostrados al finalizar cada partida.\nLa palabra es obtenida aleatoriamente de una lista de palabras almacenadas en la base de datos.",
@@ -88,7 +88,7 @@
     "url_page": null,
     "techs": [
       "React.js",
-      "Scss",
+      "SCSS",
       "TypeScript",
       "Express",
       "MongoDB",
@@ -108,6 +108,6 @@
     "title": "Typing-game",
     "name_repository": "typing-game-",
     "url_page": "https://typingso.vercel.app",
-    "techs": ["Next.js", "Scss", "chart.js", "TypeScript"]
+    "techs": ["Next.js", "SCSS", "chart.js", "TypeScript"]
   }
 ]
