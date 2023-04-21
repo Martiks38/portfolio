@@ -8,8 +8,9 @@
 	padding-top: 0.2rem;
 	padding-bottom: 0.2rem;
 	visibility: hidden;
+	background-image: url('/images/Hearstone.webp');
 
-	& :is(img, svg) {
+	& svg {
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -17,14 +18,6 @@
 		padding: inherit;
 		height: 100%;
 		object-fit: cover;
-	}
-
-	& img {
-		opacity: 0;
-		filter: brightness(1.55) drop-shadow(0 0 4px var(--color-primary));
-	}
-
-	& svg {
 		opacity: 1;
 		transition: opacity linear 100ms;
 	}
@@ -36,10 +29,8 @@
 	&:focus,
 	&:hover {
 		background-color: rgb(22, 26, 84);
-
-		& img {
-			opacity: 1;
-		}
+		background-size: contain;
+		filter: brightness(1.55) drop-shadow(0 0 4px var(--color-primary));
 
 		& svg {
 			opacity: 0;
