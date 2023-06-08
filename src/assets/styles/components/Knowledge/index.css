@@ -4,7 +4,7 @@
 
 	&__img {
 		width: 100%;
-		height: auto;
+		height: 6.25rem;
 		vertical-align: middle;
 		transition: transform 300ms ease-in-out;
 	}
