@@ -1,11 +1,11 @@
 import { $ } from './selectors'
-
-// eslint-disable-next-line
 ;(() => {
 	const handlerElement = $('#viewBtnToTop')
 	const buttonToTop = $('.buttonToTop')
 	const classListBtnToTop = buttonToTop.classList
 
+	// 	Show the button to the top of the page.
+	// If when you open it you already have a scroll.
 	window.addEventListener('DOMContentLoaded', () => {
 		setTimeout(() => {
 			if (window.scrollY > 1200) buttonToTop.classList.add('visible')
@@ -18,6 +18,7 @@ import { $ } from './selectors'
 		threshold: 0.05
 	}
 
+	// Manages the display of the button according to its position with respect to the reference element.
 	const handlerViewButtonToTop = (entries) => {
 		let entry = entries[0]
 
