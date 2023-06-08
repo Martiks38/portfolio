@@ -63,17 +63,17 @@
     "techs": ["React.js", "Tailwind CSS"]
   },
   {
-    "description": "Tienda de cartas de Pokémon.\nPosee un carro de compras y tiene una simulación de login de cuenta y de formulario de validación de compra.",
+    "description": "Tienda de mascotas de batalla de World of Warcraft.",
     "imgs": [
-      "/images/PokeStore/img1.png",
-      "/images/PokeStore/img2.png",
-      "/images/PokeStore/img3.png",
-      "/images/PokeStore/img4.png"
+      "/images/PetsTheCrazyGoblin/img1.jpg",
+      "/images/PetsTheCrazyGoblin/img2.jpg",
+      "/images/PetsTheCrazyGoblin/img3.jpg",
+      "/images/PetsTheCrazyGoblin/img4.jpg"
     ],
-    "title": "PokeStore",
-    "name_repository": "Pokestore",
-    "url_page": "https://pokestore-now.vercel.app",
-    "techs": ["Next.js", "SCSS", "TypeScript"]
+    "title": "Pets - The Crazy Goblin",
+    "name_repository": "pets-the-crazy-goblin",
+    "url_page": "https://pets-the-crazy-goblin.vercel.app",
+    "techs": ["Next.js", "TypeScript", "PostCSS", "MongoDB", "Mongoose", "Zustand"]
   },
   {
     "description": "Juego wordle.\nSi el jugador está conectado, los resultados serán guardados y mostrados al finalizar cada partida.\nLa palabra es obtenida aleatoriamente de una lista de palabras almacenadas en la base de datos.",
