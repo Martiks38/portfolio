@@ -5,9 +5,9 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	margin: 0 auto 4em;
 	max-width: var(--width-content);
 	width: 100%;
-	margin: 0 auto;
 	padding: var(--padding);
 	font-family: 'Poppins', sans-serif;
 
