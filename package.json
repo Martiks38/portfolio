@@ -15,10 +15,10 @@
     "lint:fix": "npm run lint -- --fix"
   },
   "browserslist": [
-    "last 5 versions"
+    "defaults"
   ],
   "dependencies": {
-    "astro": "^2.0.15",
+    "astro": "2.6.1",
     "clsx": "1.2.1"
   },
   "devDependencies": {
