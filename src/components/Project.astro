@@ -33,6 +33,7 @@ const reverseRow = isReverse
 	? 'project__descriptionContainer_rowReverse'
 	: 'project__descriptionContainer_row'
 const classDescription = `project__descriptionContainer ${reverseRow}`
+const anchorDescription = url_page ? `Ir a la página de ${title}` : `Ir al repositorio de ${title}`
 ---
 
 <article class="project">
@@ -40,7 +41,13 @@ const classDescription = `project__descriptionContainer ${reverseRow}`
 		<div>
 			<h4 class="project__title">
 				<span class="project__title__text">{title}</span>
-				<a href={url_page || url_code} target="_blank" rel="norefferer noopenner">
+				<a
+					href={url_page || url_code}
+					target="_blank"
+					rel="norefferer noopenner"
+					aria-label={anchorDescription}
+					title={anchorDescription}
+				>
 					<LinkIcon stroke="#dec55d" styles="project__title__url" />
 				</a>
 			</h4>
@@ -60,13 +67,25 @@ const classDescription = `project__descriptionContainer ${reverseRow}`
 				}
 			])}
 		>
-			<img src={mainImage} alt="" width="540" height="270" loading="lazy" />
+			<img
+				src={mainImage}
+				alt={`Visualización del inicio de la página de ${title}`}
+				width="540"
+				height="270"
+				loading="lazy"
+			/>
 		</div>
 	</div>
 	<div class="project__wrapperImages">
 		{
 			presentationImages.map((img) => (
-				<img src={img} alt="" width="368" height="184" loading="lazy" />
+				<img
+					src={img}
+					alt={`Visualización de sección de la página ${title}`}
+					width="368"
+					height="184"
+					loading="lazy"
+				/>
 			))
 		}
 	</div>

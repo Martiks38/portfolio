@@ -3,7 +3,6 @@
 import Layout from '@/layouts/Layout.astro'
 import Section from '@/layouts/Section.astro'
 import Header from '@components/Header.astro'
-import Knowledge from '@components/Knowledge.astro'
 import SocialCard from '@components/SocialCard.astro'
 import Project from '@components/Project.astro'
 
@@ -11,7 +10,6 @@ import Project from '@components/Project.astro'
 import '@assets/styles/normalize.css'
 
 // Data
-import knowledges from '@/db/knowledges.json'
 import projects from '@/db/projects.json'
 ---
 
@@ -19,11 +17,12 @@ import projects from '@/db/projects.json'
 	<Header />
 	<main>
 		<Section classes="introduction" id="home">
-			<img src="/photo.webp" alt="" class="introduction__img" width="250" height="250" />
+			<img src="/photo.webp" alt="Foto" class="introduction__img" width="250" height="250" />
 			<div class="introduction__text">
 				<h1 class="introduction__title" style="font-family: 'Poppins';">
 					<span>¡Hola! Soy</span><span>Giuliano Martín Cappa</span>
 				</h1>
+				<!-- Texto encriptado a ROT-13 -->
 				<h2 class="introduction__subtitle">Qrfneebyynqbe Sebag Raq</h2>
 				<SocialCard />
 			</div>
@@ -32,22 +31,15 @@ import projects from '@/db/projects.json'
 			<h3 class="section__title" id="about-me">Sobre mí</h3>
 			<div class="section__text">
 				<p class="section__paragraph">
-					Empático, responsable, curioso, reflexivo y que si puedo ayudar en algo lo haré encantado.
-				</p>
-				<p class="section__paragraph">
-					Me gusta la literatura de horror y los videojuegos de estrategia y World of Warcraft.
+					Bienvenido, probablemente, ahora mismo esté continuando un proyecto o aprendiendo, si no
+					es así, estaré trabajando, leyendo historias de terror o jugando con mis amigos. Aquí
+					podrás ver mis diferentes proyectos.
 				</p>
 			</div>
 		</Section>
 		<Section id="viewBtnToTop">
 			<h3 class="section__title" id="projects">Proyectos</h3>
 			{projects.map((project, ind) => <Project project={project} isReverse={ind % 2 !== 0} />)}
-		</Section>
-		<Section>
-			<h3 class="section__title" id="knowledge">Conocimientos</h3>
-			<ul class="section__knowledges">
-				{knowledges.map((knowledge) => <Knowledge knowledge={knowledge} />)}
-			</ul>
 		</Section>
 		<Section>
 			<h3 class="section__title" id="contact">Contacto</h3>
