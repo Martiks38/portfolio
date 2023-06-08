@@ -3,7 +3,6 @@
 import Layout from '@/layouts/Layout.astro'
 import Section from '@/layouts/Section.astro'
 import Header from '@components/Header.astro'
-import Knowledge from '@components/Knowledge.astro'
 import SocialCard from '@components/SocialCard.astro'
 import Project from '@components/Project.astro'
 
@@ -11,7 +10,6 @@ import Project from '@components/Project.astro'
 import '@assets/styles/normalize.css'
 
 // Data
-import knowledges from '@/db/knowledges.json'
 import projects from '@/db/projects.json'
 ---
 
@@ -42,12 +40,6 @@ import projects from '@/db/projects.json'
 		<Section id="viewBtnToTop">
 			<h3 class="section__title" id="projects">Proyectos</h3>
 			{projects.map((project, ind) => <Project project={project} isReverse={ind % 2 !== 0} />)}
-		</Section>
-		<Section>
-			<h3 class="section__title" id="knowledge">Conocimientos</h3>
-			<ul class="section__knowledges">
-				{knowledges.map((knowledge) => <Knowledge knowledge={knowledge} />)}
-			</ul>
 		</Section>
 		<Section>
 			<h3 class="section__title" id="contact">Contacto</h3>
