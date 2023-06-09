@@ -37,6 +37,10 @@
 			right: -2rem;
 			width: 1.5rem;
 			height: auto;
+
+			& path {
+				stroke: var(--url-icon);
+			}
 		}
 	}
 

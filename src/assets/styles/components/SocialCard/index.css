@@ -1,9 +1,9 @@
 .socialCard {
 	display: flex;
-	margin-top: 1.6rem;
 	align-items: center;
 	justify-content: center;
 	gap: 3.2em;
+	margin-top: 1.6rem;
 
 	&__button {
 		width: 3rem;
