@@ -18,7 +18,7 @@ const ITEMS_NAV = [
 	['CONTACTO', 'contact']
 ]
 
-const { dark, white } = COLOR_ASPECT
+const { dark, light } = COLOR_ASPECT
 
 /**
  * Indica si los iconos del botón están girados o no.
@@ -34,13 +34,13 @@ const setColorScheme = () => {
 
 	const currentColor = Astro.cookies.get(NAME_COOKIE_COLOR).value
 
-	if (currentColor === white) turns = 1
+	if (currentColor === light) turns = 1
 }
 
 setColorScheme()
 
-const color = turns === 0 ? dark : white
-const changeColor = turns === 0 ? white : dark
+const color = turns === 0 ? dark : light
+const changeColor = turns === 0 ? light : dark
 ---
 
 <a href="#home" class="skipNavLinks">Ir al contenido principal</a>
@@ -88,7 +88,7 @@ const changeColor = turns === 0 ? white : dark
 <script>
 	import { COLOR_ASPECT, MAX_AGE_COOKIE, NAME_COOKIE_COLOR } from '@/consts'
 
-	const { dark, white } = COLOR_ASPECT
+	const { dark, light } = COLOR_ASPECT
 	const btnPrefersColor = document.querySelector<HTMLButtonElement>('.btnColorScheme')
 
 	/**
@@ -108,8 +108,8 @@ const changeColor = turns === 0 ? white : dark
 
 		const currentColorIsDark = btnPrefersColor?.dataset.color === dark
 
-		const currentColor = currentColorIsDark ? white : dark
-		const changeColor = currentColorIsDark ? dark : white
+		const currentColor = currentColorIsDark ? light : dark
+		const changeColor = currentColorIsDark ? dark : light
 
 		const prevTurn = Number(btnPrefersColor.dataset.turns)
 
@@ -135,8 +135,9 @@ const changeColor = turns === 0 ? white : dark
 
 	window.addEventListener('DOMContentLoaded', () => {
 		const cookieStorage = window.document.cookie
+		const hasNotPrefersColor = !cookieStorage.includes(NAME_COOKIE_COLOR)
 
-		if (cookieStorage.includes(NAME_COOKIE_COLOR)) {
+		if (hasNotPrefersColor) {
 			btnPrefersColor?.setAttribute('data-color', dark)
 
 			window.document.cookie = `${NAME_COOKIE_COLOR}=${dark};max-age=${MAX_AGE_COOKIE}`
