@@ -1,6 +1,10 @@
 export const COLOR_ASPECT = {
 	dark: 'oscuro',
-	white: 'claro'
+	light: 'claro',
+	textColors: {
+		dark: '#75eff8',
+		light: '#006970'
+	}
 }
 
 export const NAME_COOKIE_COLOR = 'prefersColor'
