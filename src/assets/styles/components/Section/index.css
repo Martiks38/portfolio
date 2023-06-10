@@ -12,7 +12,7 @@
 	font-family: 'Poppins', sans-serif;
 
 	& :is(address) {
-		color: var(--color-primary);
+		color: var(--address-color);
 	}
 
 	& :is(address, .section__paragraph) {
