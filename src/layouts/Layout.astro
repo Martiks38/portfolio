@@ -1,10 +1,21 @@
 ---
+import { COLOR_ASPECT, NAME_COOKIE_COLOR } from '@/consts'
+
 // eslint-disable-next-line
 interface Props {
 	title: string
 }
 
 const { title } = Astro.props
+
+const hasCookiePrefersColor = Astro.cookies.has(NAME_COOKIE_COLOR)
+let isLight = false
+
+if (hasCookiePrefersColor) {
+	const color = Astro.cookies.get(NAME_COOKIE_COLOR).value
+
+	isLight = color === COLOR_ASPECT.white
+}
 ---
 
 <!DOCTYPE html>
@@ -54,7 +65,7 @@ const { title } = Astro.props
 
 		<title>{title}</title>
 	</head>
-	<body>
+	<body class={isLight ? 'light' : ''}>
 		<slot />
 	</body>
 </html>
