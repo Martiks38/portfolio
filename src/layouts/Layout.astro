@@ -14,7 +14,7 @@ let isLight = false
 if (hasCookiePrefersColor) {
 	const color = Astro.cookies.get(NAME_COOKIE_COLOR).value
 
-	isLight = color === COLOR_ASPECT.white
+	isLight = color === COLOR_ASPECT.light
 }
 ---
 
