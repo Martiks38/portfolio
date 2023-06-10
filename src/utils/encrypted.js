@@ -1,3 +1,5 @@
+import { COLOR_ASPECT, NAME_COOKIE_COLOR } from '@/consts'
+
 /**
  * La clase genera un efecto de desencriptación.
  *
@@ -6,7 +8,8 @@
 class EffectDecryptingText {
 	word = 'Desarrollador Front End'
 
-	constructor(selector, stagger = 100, staggerPerLetter = 50) {
+	constructor(selector, colorModes, stagger = 100, staggerPerLetter = 50) {
+		this.colorModes = colorModes
 		this.element = document.querySelector(selector)
 		this.letters = this.word.split('')
 		this.stagger = stagger
@@ -16,8 +19,8 @@ class EffectDecryptingText {
 	}
 
 	/**
-	 * Start the decryption animation.
-	 * Creates the container for each letter and inserts them.
+	 * Inicia la animación de descifrado.
+	 * Crea el contenedor para cada letra y los inserta.
 	 */
 	animate() {
 		const encryptedText = this.element.innerText
@@ -42,20 +45,30 @@ class EffectDecryptingText {
 	}
 
 	/**
-	 * Assign random characters until the desired number of iterations is reached.
-	 * Once the number of iterations is reached, it changes the color style and assigns the correct letter.
+	 * Asigna caracteres aleatorios hasta alcanzar el número deseado de iteraciones.
+	 * Una vez que se alcanza el número de iteraciones, cambia el estilo de color y asigna la letra correcta.
 	 *
 	 * @param {object} options
-	 * @property {string} options.letter - Letter of the correct word.
-	 * @property {HTMLElement} options.elementLetter - One letter container.
-	 * @param {number} count - Number of iterations.
+	 * @property {string} options.letter - Letra de la palabra correcta.
+	 * @property {HTMLElement} options.elementLetter - Contenedor de una letra.
+	 * @param {number} count - Número de iteraciones
 	 * @returns
 	 */
 	decryptLetter(options, count = 0) {
 		if (count > 10) {
 			const subtitle = document.querySelector('.introduction__subtitle')
 
-			subtitle.style.color = '#75eff8'
+			const cookies = window.document.cookie
+			let valuePrefersColor = ''
+
+			if (cookies.includes(NAME_COOKIE_COLOR)) {
+				valuePrefersColor = cookies
+					.split(';')
+					.find((cookie) => cookie.includes(NAME_COOKIE_COLOR))
+					.split('=')[1]
+			}
+
+			subtitle.style.color = valuePrefersColor === this.colorModes.dark ? '#75eff8' : '#006970'
 			options.elementLetter.innerText = options.letter
 
 			return
@@ -71,7 +84,7 @@ class EffectDecryptingText {
 	}
 
 	/**
-	 * Generates a string of random characters whose length is equal to the true string.
+	 * Genera una cadena de caracteres aleatorios cuya longitud es igual a la cadena verdadera.
 	 */
 	encryptText() {
 		let encryptedText = ''
@@ -86,7 +99,7 @@ class EffectDecryptingText {
 	}
 
 	/**
-	 * Returns the third character of the number returned by Math.random()
+	 * Devuelve el tercer carácter del número devuelto por Math.random()
 	 */
 	generateRandomLetter() {
 		return Math.random().toString(36).substring(2, 3)
@@ -97,6 +110,6 @@ export const startDecryptingText = (stagger = 1000) => {
 	const selectors = ['.introduction__subtitle']
 
 	setTimeout(() => {
-		selectors.forEach((selector) => new EffectDecryptingText(selector))
+		selectors.forEach((selector) => new EffectDecryptingText(selector, COLOR_ASPECT))
 	}, stagger)
 }
