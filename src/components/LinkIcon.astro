@@ -2,10 +2,9 @@
 // eslint-disable-next-line
 interface Props {
 	styles: string
-	stroke?: string
 }
 
-const { stroke, styles } = Astro.props
+const { styles } = Astro.props
 ---
 
 <svg
@@ -16,7 +15,6 @@ const { stroke, styles } = Astro.props
 	class={styles}
 	viewBox="0 0 24 24"
 	><path
-		stroke={stroke ? stroke : '#292929'}
 		stroke-linecap="round"
 		stroke-linejoin="round"
 		stroke-width="2"

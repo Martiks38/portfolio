@@ -25,6 +25,44 @@
 	}
 }
 
+.headerPage__actions {
+	display: flex;
+	align-items: center;
+	gap: 2.5em;
+
+	&__colorPanel {
+		display: flex;
+		height: var(--height-nav-item);
+		width: 5rem;
+		overflow-y: hidden;
+		overflow-x: clip;
+	}
+}
+
+.btnColorScheme {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	margin: 0 auto;
+	height: max-content;
+	background-color: transparent;
+	border-width: 0;
+	color: var(--color-menu-item);
+	transform-origin: center;
+	transition: transform linear 700ms;
+	cursor: pointer;
+
+	& svg path {
+		stroke: currentColor;
+	}
+
+	& svg {
+		height: var(--height-nav-item);
+		width: var(--height-nav-item);
+		padding: 0.4rem;
+	}
+}
+
 /* Nav Links */
 .navMenu {
 	display: flex;
@@ -163,8 +201,10 @@
 	}
 
 	.navMenu__item {
-		&:last-child a {
-			padding-right: 0;
+		height: var(--height-nav-item);
+
+		& a {
+			height: 100%;
 		}
 
 		&:hover a::before {
