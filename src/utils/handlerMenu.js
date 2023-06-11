@@ -3,6 +3,7 @@ import { $, $$ } from './selectors'
 const header = $('.headerPage')
 const menuBtn = $('.menuBtn')
 const itemsMenu = $$('.navMenu__item')
+const backdropMenu = $('.backdropMenu')
 
 /** Cambie los atributos de aria y modifique el botón de menú y muestre u oculte la lista de menú */
 const changeMenuView = () => {
@@ -20,13 +21,7 @@ itemsMenu.forEach((itemMenu) => itemMenu.addEventListener('click', changeMenuVie
 menuBtn.addEventListener('click', changeMenuView)
 
 /** Llama a la función changeMenuView() al hacer clic fuera del menú de navegación o del botón de menú */
-document.addEventListener('click', (e) => {
-	const target = e.target
-	const isHeaderOrMenu = target.closest('.headerPage') || target.closest('.menuBtn')
-	const isCollapse = menuBtn.classList.contains('collapse')
-
-	if (!isHeaderOrMenu && isCollapse) changeMenuView()
-})
+backdropMenu.addEventListener('click', changeMenuView)
 
 /** Establece los atributos de aria según las dimensiones iniciales */
 document.addEventListener('DOMContentLoaded', () => {
