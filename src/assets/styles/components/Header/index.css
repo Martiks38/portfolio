@@ -1,3 +1,12 @@
+.backdropMenu {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	z-index: -1;
+}
+
 /* Page Header */
 .headerPage {
 	position: fixed;
@@ -6,10 +15,16 @@
 	background-color: var(--color-black-1);
 	transform: translateY(-100%);
 	transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-	z-index: 1;
+	z-index: 2;
 
 	&.menu-view {
 		transform: translateY(0);
+
+		& + .backdropMenu {
+			background-color: var(--color-black-pure-alpha-50);
+			backdrop-filter: blur(2px);
+			z-index: 1;
+		}
 	}
 
 	&__container {
@@ -22,6 +37,89 @@
 		max-width: var(--width-content);
 		width: 100%;
 		backdrop-filter: blur(50px);
+	}
+}
+
+.headerPage__actions {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 2.5em;
+
+	&__colorPanel {
+		display: none;
+		height: var(--height-nav-item);
+		width: 5rem;
+		overflow-y: hidden;
+		overflow-x: clip;
+	}
+}
+
+.btnColorScheme {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	margin: 0 auto;
+	height: max-content;
+	background-color: transparent;
+	border-width: 0;
+	color: var(--color-menu-item);
+	transform-origin: center;
+	transition: transform linear 700ms;
+	cursor: pointer;
+
+	& svg path {
+		stroke: currentColor;
+	}
+
+	& svg {
+		height: var(--height-nav-item);
+		width: var(--height-nav-item);
+		padding: 0.4rem;
+	}
+}
+
+.controlPanelBottom {
+	position: fixed;
+	bottom: 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	padding: 0.4em 1em;
+	width: 100%;
+	background-color: var(--color-black-1);
+	backdrop-filter: blur(50px);
+	z-index: 100;
+
+	& .menuBtn {
+		display: flex;
+		padding-top: 0;
+		padding-bottom: 0;
+		width: 3rem;
+		height: 2.375rem;
+		background-color: transparent;
+		cursor: pointer;
+
+		&__line {
+			--color-line: var(--color-menu-item);
+
+			background-color: var(--color-line);
+		}
+	}
+
+	& .headerPage__actions__colorPanel {
+		display: flex;
+
+		& .btnColorScheme {
+			padding-top: 0;
+			padding-bottom: 0;
+		}
+
+		& svg {
+			--height-nav-item: 2.375rem;
+
+			padding: 0;
+		}
 	}
 }
 
@@ -86,7 +184,7 @@
 
 	&:focus {
 		opacity: 1;
-		z-index: 1;
+		z-index: 2;
 	}
 }
 
@@ -136,10 +234,10 @@
 		position: absolute;
 		height: var(--height-line);
 		width: 1.8rem;
-		background-color: var(--color-black-pure-alpha-80);
+		background-color: var(--color-line);
 		border-radius: calc(var(--height-line) / 2);
-		box-shadow: 0 var(--position-top-line) var(--color-black-pure),
-			0 var(--position-bottom-line) var(--color-black-pure);
+		box-shadow: 0 var(--position-top-line) var(--color-line),
+			0 var(--position-bottom-line) var(--color-line);
 		transition: box-shadow 300ms ease-in;
 	}
 }
@@ -155,6 +253,10 @@
 	.headerPage {
 		transform: translateY(0%);
 
+		&__actions__colorPanel {
+			display: flex;
+		}
+
 		&__container {
 			flex-direction: row;
 			justify-content: space-between;
@@ -163,8 +265,10 @@
 	}
 
 	.navMenu__item {
-		&:last-child a {
-			padding-right: 0;
+		height: var(--height-nav-item);
+
+		& a {
+			height: 100%;
 		}
 
 		&:hover a::before {
@@ -172,13 +276,21 @@
 		}
 	}
 
+	.controlPanelBottom,
 	.menuBtn {
 		display: none;
 	}
 }
 
 @media screen and (min-width: 43.8125rem) {
+	.headerPage__actions,
 	.navMenu {
 		flex-direction: row;
+	}
+}
+
+@media (min-width: 40rem) {
+	.menuBtn {
+		display: none;
 	}
 }

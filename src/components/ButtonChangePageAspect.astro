@@ -1,0 +1,27 @@
+---
+import Moon from './Moon.astro'
+import Sun from './Sun.astro'
+
+// eslint-disable-next-line
+interface Props {
+  changeColor: string
+  color: string
+  turns: number
+}
+
+const { changeColor, color, turns } = Astro.props
+---
+
+<div class="headerPage__actions__colorPanel">
+  <button
+    id="button-theme"
+    class="btnColorScheme"
+    data-turns={turns}
+    data-color={color}
+    aria-label={`Cambiar aspecto a modo ${changeColor}`}
+    style={`transform: rotate(${turns * 0.5}turn)`}
+  >
+    <Moon />
+    <Sun />
+  </button>
+</div>

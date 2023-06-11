@@ -1,10 +1,21 @@
 ---
+import { COLOR_ASPECT, NAME_COOKIE_COLOR } from '@/consts'
+
 // eslint-disable-next-line
 interface Props {
 	title: string
 }
 
 const { title } = Astro.props
+
+const hasCookiePrefersColor = Astro.cookies.has(NAME_COOKIE_COLOR)
+let isLight = false
+
+if (hasCookiePrefersColor) {
+	const color = Astro.cookies.get(NAME_COOKIE_COLOR).value
+
+	isLight = color === COLOR_ASPECT.light
+}
 ---
 
 <!DOCTYPE html>
@@ -46,15 +57,30 @@ const { title } = Astro.props
 
 		<script>
 			import { startDecryptingText } from '@utils/encrypted'
+			import { COLOR_ASPECT, NAME_COOKIE_COLOR } from '@/consts'
+
+			const { dark, textColors } = COLOR_ASPECT
 
 			document.addEventListener('DOMContentLoaded', () => {
-				startDecryptingText()
+				const cookies = window.document.cookie
+				let valuePrefersColor = ''
+
+				if (cookies.includes(NAME_COOKIE_COLOR)) {
+					valuePrefersColor = cookies
+						.split(';')
+						.find((cookie) => cookie.includes(NAME_COOKIE_COLOR))
+						.split('=')[1]
+				}
+
+				let color = valuePrefersColor === dark ? textColors.dark : textColors.light
+
+				startDecryptingText(color)
 			})
 		</script>
 
 		<title>{title}</title>
 	</head>
-	<body>
+	<body class={isLight ? 'light' : ''}>
 		<slot />
 	</body>
 </html>

@@ -2,7 +2,7 @@
 
 Hola. Soy Giuliano Cappa, Desarrollador Front-End | React.
 
-Te invito a ver el portfolio y poder conorme un poco más y de las cosas que he ido realizando.
+Te invito a ver el portfolio y poder conocerme un poco más y de las cosas que he ido realizando.
 Espero que sea de tu agrado. Saludos 👋😀.
 
 <h2 align="center"><a href="https://giuliano-cappa.vercel.app">WEB</a></h2>

@@ -1,44 +1,149 @@
 ---
+import ButtonToTop from './ButtonToTop.astro'
+import ButtonChangePageAspect from './ButtonChangePageAspect.astro'
+
 // Styles
 import '@assets/styles/components/Header/index.css'
 
 // Images
 import logo from '/logo.webp'
-import ButtonToTop from './ButtonToTop.astro'
+
+import { COLOR_ASPECT, NAME_COOKIE_COLOR } from '@/consts'
 
 const ITEMS_NAV = [
 	['INICIO', 'home'],
 	['SOBRE MÍ', 'about-me'],
 	['PROYECTOS', 'projects'],
-	['CONOCIMIENTOS', 'knowledge'],
 	['CONTACTO', 'contact']
 ]
+
+const { dark, light } = COLOR_ASPECT
+
+/**
+ * Indica si los iconos del botón están girados o no.
+ * Valor 0: el contendio del botón no está rotado
+ * Valor 1: el contenido del botón está girado
+ */
+let turns = 0
+
+const setColorScheme = () => {
+	const hasCookiePrefersColor = Astro.cookies.has(NAME_COOKIE_COLOR)
+
+	if (!hasCookiePrefersColor) return
+
+	const currentColor = Astro.cookies.get(NAME_COOKIE_COLOR).value
+
+	if (currentColor === light) turns = 1
+}
+
+setColorScheme()
+
+const color = turns === 0 ? dark : light
+const changeColor = turns === 0 ? light : dark
 ---
 
 <a href="#home" class="skipNavLinks">Ir al contenido principal</a>
 
 <div class="asideButtons">
 	<ButtonToTop />
-	<button class="menuBtn" aria-hidden="true" aria-label="Menú de navegación" aria-expanded="false">
-		<span class="menuBtn__line"></span>
-	</button>
 </div>
 
 <header class="headerPage">
 	<div class="headerPage__container">
 		<img src={logo} alt="Giuliano Cappa" class="logo" width="38" height="38" />
-		<nav class="nav">
-			<ul class="navMenu">
-				{
-					ITEMS_NAV.map((item_menu) => (
-						<li class="navMenu__item">
-							<a href={`#${item_menu[1]}`}>{item_menu[0]}</a>
-						</li>
-					))
-				}
-			</ul>
-		</nav>
+		<div class="headerPage__actions">
+			<nav class="nav">
+				<ul class="navMenu">
+					{
+						ITEMS_NAV.map((item_menu) => (
+							<li class="navMenu__item">
+								<a href={`#${item_menu[1]}`}>{item_menu[0]}</a>
+							</li>
+						))
+					}
+				</ul>
+			</nav>
+
+			<ButtonChangePageAspect changeColor={changeColor} color={color} turns={turns} />
+		</div>
 	</div>
 </header>
 
+<div class="backdropMenu"></div>
+
+<div class="controlPanelBottom">
+	<button class="menuBtn" aria-hidden="true" aria-label="Menú de navegación" aria-expanded="false">
+		<span class="menuBtn__line"></span>
+	</button>
+	<ButtonChangePageAspect changeColor={changeColor} color={color} turns={turns} />
+</div>
+
+<script>
+	import { COLOR_ASPECT, MAX_AGE_COOKIE, NAME_COOKIE_COLOR } from '@/consts'
+
+	const { dark, light, textColors } = COLOR_ASPECT
+	const btnsPrefersColor = document.querySelectorAll<HTMLButtonElement>('.btnColorScheme')
+	const btnPrefersColor = btnsPrefersColor[0] ?? null
+
+	/**
+	 * Dado que hacer toggle de una clase que rote el ícono del sol o la luna hará efecto de que vuelva a la posición.
+	 * Para dar efecto siempre de giro en un mismo sentido el ángulo de rotación debe ir aumentando.
+	 */
+	const addTurns = () => {
+		let turns = 0
+
+		return () => ++turns
+	}
+
+	const nextTurn = addTurns()
+
+	const changeColorScheme = () => {
+		if (btnPrefersColor === null) return
+
+		const currentColorIsDark = btnPrefersColor?.dataset.color === dark
+
+		const currentColor = currentColorIsDark ? light : dark
+		const changeColor = currentColorIsDark ? dark : light
+
+		const prevTurn = Number(btnPrefersColor.dataset.turns)
+
+		const subtitle = document.querySelector<HTMLHeadingElement>('.introduction__subtitle')
+
+		if (subtitle) subtitle.style.color = currentColorIsDark ? textColors.light : textColors.dark
+
+		if (currentColorIsDark) {
+			document.body.classList.add('light')
+		} else {
+			document.body.classList.remove('light')
+		}
+
+		const currentTurn = nextTurn()
+		const totalTurn = currentTurn + prevTurn
+
+		btnsPrefersColor.forEach((btnPrefersColor) => {
+			btnPrefersColor.style.transform = `rotate(${totalTurn * 0.5}turn)`
+			btnPrefersColor.setAttribute('data-color', currentColor)
+			btnPrefersColor.setAttribute('aria-label', `Cambiar aspecto a modo ${changeColor}`)
+		})
+
+		document.cookie = `${NAME_COOKIE_COLOR}=${currentColor};max-age=${MAX_AGE_COOKIE}`
+	}
+
+	window.addEventListener('DOMContentLoaded', () => {
+		const cookieStorage = window.document.cookie
+		const hasNotPrefersColor = !cookieStorage.includes(NAME_COOKIE_COLOR)
+
+		if (hasNotPrefersColor) {
+			btnsPrefersColor.forEach((btnPrefersColor) =>
+				btnPrefersColor?.setAttribute('data-color', dark)
+			)
+
+			window.document.cookie = `${NAME_COOKIE_COLOR}=${dark};max-age=${MAX_AGE_COOKIE}`
+		}
+	})
+
+	btnsPrefersColor.forEach((btnPrefersColor) =>
+		btnPrefersColor.addEventListener('click', changeColorScheme, false)
+	)
+</script>
 <script src="../utils/handlerMenu.js"></script>

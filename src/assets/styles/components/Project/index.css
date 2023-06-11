@@ -37,6 +37,10 @@
 			right: -2rem;
 			width: 1.5rem;
 			height: auto;
+
+			& path {
+				stroke: var(--url-icon);
+			}
 		}
 	}
 
@@ -46,6 +50,11 @@
 		margin-bottom: 0.5rem;
 		font-size: 1.25rem;
 		line-height: 1.75rem;
+	}
+
+	&__repositoryLink {
+		color: var(--repository-link);
+		font-weight: 600;
 	}
 
 	&__techs {
@@ -85,9 +94,13 @@
 
 		& img {
 			border-radius: var(--border-radius-8);
-			box-shadow: 0 2px 2px rgb(255 255 255 / 0.12), 0 2px 10px rgb(255 255 255/ 0.16);
 			object-fit: cover;
 		}
+	}
+
+	&__introImgContainer img,
+	&__wrapperImages img {
+		filter: var(--shadow-project-image);
 	}
 }
 
@@ -100,7 +113,7 @@
 .tech {
 	width: fit-content;
 	padding: 0.2rem 0.6rem;
-	border: solid 2px var(--color-primary);
+	border: solid 0.1875rem var(--border-tech);
 	border-radius: 2.5rem;
 }
 

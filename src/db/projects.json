@@ -65,16 +65,7 @@
     "title": "Age of Words",
     "name_repository": "AgeOfWords",
     "url_page": null,
-    "techs": [
-      "React.js",
-      "SCSS",
-      "TypeScript",
-      "Express",
-      "MongoDB",
-      "Mongoose",
-      "JSON Web Token",
-      "bcrypt.js"
-    ]
+    "techs": ["React.js", "SCSS", "TypeScript", "Express", "MongoDB", "Mongoose"]
   },
   {
     "description": "Juego de mecanografía con tres idiomas para elegir.\nDurante la práctica se muestran las palabras por minuto (wpm) al escribir una palabra correcta. Y al finalizar se muestra su desempeño pudiendo ver una gráfica de wpm vs tiempo.",
@@ -103,7 +94,7 @@
     "techs": ["Astro", "Tailwind CSS", "TypeScript"]
   },
   {
-    "description": "Crea componentes y hooks con apartir de templates tanto en JavaScript como en TypeScript.\nLos componentes se pueden crear junto a su hoja de estilos y/o test.",
+    "description": "Crea componentes y hooks con a partir de templates tanto en JavaScript como en TypeScript.\nLos componentes se pueden crear junto a su hoja de estilos y/o test.",
     "imgs": ["/images/React-CLI/img1.png"],
     "title": "React CLI",
     "name_repository": "React-CLI",
