@@ -8,8 +8,14 @@
 	&__button {
 		display: flex;
 		align-items: center;
+		justify-content: center;
 		width: 3rem;
 		transition: transform 0.3s ease-in-out;
+
+		&:is(:first-child, :nth-child(2)) img {
+			height: 2.375rem;
+			width: 2.375rem;
+		}
 
 		&_invert {
 			filter: invert(var(--invert-icon));
