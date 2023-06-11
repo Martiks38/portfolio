@@ -46,9 +46,6 @@ const changeColor = turns === 0 ? light : dark
 
 <div class="asideButtons">
 	<ButtonToTop />
-	<button class="menuBtn" aria-hidden="true" aria-label="Menú de navegación" aria-expanded="false">
-		<span class="menuBtn__line"></span>
-	</button>
 </div>
 
 <header class="headerPage">
@@ -82,7 +79,7 @@ const changeColor = turns === 0 ? light : dark
 <script>
 	import { COLOR_ASPECT, MAX_AGE_COOKIE, NAME_COOKIE_COLOR } from '@/consts'
 
-	const { dark, light } = COLOR_ASPECT
+	const { dark, light, textColors } = COLOR_ASPECT
 	const btnsPrefersColor = document.querySelectorAll<HTMLButtonElement>('.btnColorScheme')
 	const btnPrefersColor = btnsPrefersColor[0] ?? null
 
@@ -110,7 +107,7 @@ const changeColor = turns === 0 ? light : dark
 
 		const subtitle = document.querySelector<HTMLHeadingElement>('.introduction__subtitle')
 
-		if (subtitle) subtitle.style.color = currentColorIsDark ? '#006970' : '#75eff8'
+		if (subtitle) subtitle.style.color = currentColorIsDark ? textColors.light : textColors.dark
 
 		if (currentColorIsDark) {
 			document.body.classList.add('light')
