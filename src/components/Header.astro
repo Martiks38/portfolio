@@ -1,13 +1,12 @@
 ---
-import Moon from './Moon.astro'
-import Sun from './Sun.astro'
+import ButtonToTop from './ButtonToTop.astro'
+import ButtonChangePageAspect from './ButtonChangePageAspect.astro'
 
 // Styles
 import '@assets/styles/components/Header/index.css'
 
 // Images
 import logo from '/logo.webp'
-import ButtonToTop from './ButtonToTop.astro'
 
 import { COLOR_ASPECT, NAME_COOKIE_COLOR } from '@/consts'
 
@@ -68,28 +67,24 @@ const changeColor = turns === 0 ? light : dark
 				</ul>
 			</nav>
 
-			<div class="headerPage__actions__colorPanel">
-				<button
-					id="button-theme"
-					class="btnColorScheme"
-					data-turns={turns}
-					data-color={color}
-					aria-label={`Cambiar aspecto a modo ${changeColor}`}
-					style={`transform: rotate(${turns * 0.5}turn)`}
-				>
-					<Moon />
-					<Sun />
-				</button>
-			</div>
+			<ButtonChangePageAspect changeColor={changeColor} color={color} turns={turns} />
 		</div>
 	</div>
 </header>
+
+<div class="controlPanelBottom">
+	<button class="menuBtn" aria-hidden="true" aria-label="Menú de navegación" aria-expanded="false">
+		<span class="menuBtn__line"></span>
+	</button>
+	<ButtonChangePageAspect changeColor={changeColor} color={color} turns={turns} />
+</div>
 
 <script>
 	import { COLOR_ASPECT, MAX_AGE_COOKIE, NAME_COOKIE_COLOR } from '@/consts'
 
 	const { dark, light } = COLOR_ASPECT
-	const btnPrefersColor = document.querySelector<HTMLButtonElement>('.btnColorScheme')
+	const btnsPrefersColor = document.querySelectorAll<HTMLButtonElement>('.btnColorScheme')
+	const btnPrefersColor = btnsPrefersColor[0] ?? null
 
 	/**
 	 * Dado que hacer toggle de una clase que rote el ícono del sol o la luna hará efecto de que vuelva a la posición.
@@ -126,9 +121,11 @@ const changeColor = turns === 0 ? light : dark
 		const currentTurn = nextTurn()
 		const totalTurn = currentTurn + prevTurn
 
-		btnPrefersColor.style.transform = `rotate(${totalTurn * 0.5}turn)`
-		btnPrefersColor.setAttribute('data-color', currentColor)
-		btnPrefersColor.setAttribute('aria-label', `Cambiar aspecto a modo ${changeColor}`)
+		btnsPrefersColor.forEach((btnPrefersColor) => {
+			btnPrefersColor.style.transform = `rotate(${totalTurn * 0.5}turn)`
+			btnPrefersColor.setAttribute('data-color', currentColor)
+			btnPrefersColor.setAttribute('aria-label', `Cambiar aspecto a modo ${changeColor}`)
+		})
 
 		document.cookie = `${NAME_COOKIE_COLOR}=${currentColor};max-age=${MAX_AGE_COOKIE}`
 	}
@@ -138,12 +135,16 @@ const changeColor = turns === 0 ? light : dark
 		const hasNotPrefersColor = !cookieStorage.includes(NAME_COOKIE_COLOR)
 
 		if (hasNotPrefersColor) {
-			btnPrefersColor?.setAttribute('data-color', dark)
+			btnsPrefersColor.forEach((btnPrefersColor) =>
+				btnPrefersColor?.setAttribute('data-color', dark)
+			)
 
 			window.document.cookie = `${NAME_COOKIE_COLOR}=${dark};max-age=${MAX_AGE_COOKIE}`
 		}
 	})
 
-	if (btnPrefersColor) btnPrefersColor.addEventListener('click', changeColorScheme, false)
+	btnsPrefersColor.forEach((btnPrefersColor) =>
+		btnPrefersColor.addEventListener('click', changeColorScheme, false)
+	)
 </script>
 <script src="../utils/handlerMenu.js"></script>

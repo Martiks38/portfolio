@@ -1,45 +1,42 @@
 import { $, $$ } from './selectors'
 
 const header = $('.headerPage')
-const menu = $('.menuBtn')
+const menuBtns = $$('.menuBtn')
 const itemsMenu = $$('.navMenu__item')
 
-/** Change the aria attributes and modify the menu button and show or hide the menu list */
+/** Cambie los atributos de aria y modifique el botón de menú y muestre u oculte la lista de menú */
 const changeMenuView = () => {
-	const visibleMenu = menu.classList.contains('collapse')
+	const visibleMenu = menuBtns[0].classList.contains('collapse')
 
-	if (visibleMenu) {
-		menu.setAttribute('aria-expanded', 'false')
-		header.setAttribute('aria-hidden', 'true')
-	} else {
-		menu.setAttribute('aria-expanded', 'true')
-		header.setAttribute('aria-hidden', 'false')
-	}
+	menuBtns.forEach((menuBtn) => {
+		menuBtn.setAttribute('aria-expanded', visibleMenu ? 'false' : 'true')
+		menuBtn.classList.toggle('collapse')
+	})
 
+	header.setAttribute('aria-hidden', visibleMenu ? 'true' : 'false')
 	header.classList.toggle('menu-view')
-	menu.classList.toggle('collapse')
 }
 
-/** When choosing one of the sections of the page, it executes the changeMenuView function */
+/** Al elegir una de las secciones de la página, ejecuta la función changeMenuView */
 itemsMenu.forEach((itemMenu) => itemMenu.addEventListener('click', changeMenuView))
 
-menu.addEventListener('click', changeMenuView)
+menuBtns.forEach((menuBtn) => menuBtn.addEventListener('click', changeMenuView))
 
-/** Calls the changeMenuView() function on click outside of the navigation menu or menu button */
+/** Llama a la función changeMenuView() al hacer clic fuera del menú de navegación o del botón de menú */
 document.addEventListener('click', (e) => {
 	const target = e.target
 	const isHeaderOrMenu = target.closest('.headerPage') || target.closest('.menuBtn')
-	const isCollapse = menu.classList.contains('collapse')
+	const isCollapse = menuBtns[0].classList.contains('collapse')
 
 	if (!isHeaderOrMenu && isCollapse) changeMenuView()
 })
 
-/** Sets the aria attributes according to the initial dimensions */
+/** Establece los atributos de aria según las dimensiones iniciales */
 document.addEventListener('DOMContentLoaded', () => {
 	const width = window.innerWidth
 
 	if (width < 776) {
-		menu.setAttribute('aria-hidden', 'false')
+		menuBtns.forEach((menuBtn) => menuBtn.setAttribute('aria-hidden', 'false'))
 		header.setAttribute('aria-hidden', 'true')
 	}
 })
@@ -49,12 +46,12 @@ window.addEventListener('resize', () => {
 	const width = window.innerWidth
 
 	if (width < 776) {
-		menu.setAttribute('aria-hidden', 'false')
+		menuBtns.forEach((menuBtn) => menuBtn.setAttribute('aria-hidden', 'false'))
 		header.setAttribute('aria-hidden', 'true')
 		return
 	}
 
 	header.removeAttribute('aria-hidden')
 	header.classList.remove('menu-view')
-	menu.classList.remove('collapse')
+	menuBtns.forEach((menuBtn) => menuBtn.classList.remove('collapse'))
 })
