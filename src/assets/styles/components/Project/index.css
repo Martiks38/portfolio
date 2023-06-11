@@ -52,6 +52,11 @@
 		line-height: 1.75rem;
 	}
 
+	&__repositoryLink {
+		color: var(--repository-link);
+		font-weight: 600;
+	}
+
 	&__techs {
 		font-size: 1.25rem;
 		line-height: 1.75rem;
