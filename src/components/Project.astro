@@ -34,6 +34,7 @@ const reverseRow = isReverse
 	: 'project__descriptionContainer_row'
 const classDescription = `project__descriptionContainer ${reverseRow}`
 const anchorDescription = url_page ? `Ir a la página de ${title}` : `Ir al repositorio de ${title}`
+const amountParagraphs = paragraphs.length
 ---
 
 <article class="project">
@@ -51,7 +52,18 @@ const anchorDescription = url_page ? `Ir a la página de ${title}` : `Ir al repo
 					<LinkIcon styles="project__title__url" />
 				</a>
 			</h4>
-			{paragraphs.map((paragraph) => <p class="project__description">{paragraph}</p>)}
+			{
+				paragraphs.map((paragraph, index) => (
+					<p class="project__description">
+						{paragraph}
+						{index === amountParagraphs - 1 && (
+							<a href={url_code} class="project__repositoryLink" rel="noopener noreferrer">
+								Ver código
+							</a>
+						)}
+					</p>
+				))
+			}
 			<p class="project__techs">Tecnologías usadas:</p>
 			<div class="techs">
 				{techs.map((tech) => <span class="tech">{tech}</span>)}
