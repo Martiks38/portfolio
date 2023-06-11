@@ -42,7 +42,7 @@
 		overflow-y: hidden;
 		overflow-x: clip;
 
-		@media (min-width: 640px) {
+		@media (min-width: 40rem) {
 			display: flex;
 		}
 	}
@@ -84,7 +84,7 @@
 	backdrop-filter: blur(50px);
 	z-index: 100;
 
-	@media (min-width: 640px) {
+	@media (min-width: 48.5rem) {
 		display: none;
 	}
 
@@ -93,7 +93,7 @@
 		padding-top: 0;
 		padding-bottom: 0;
 		width: 3rem;
-		height: 38px;
+		height: 2.375rem;
 		background-color: transparent;
 		cursor: pointer;
 
@@ -113,7 +113,7 @@
 		}
 
 		& svg {
-			--height-nav-item: 38px;
+			--height-nav-item: 2.375rem;
 
 			padding: 0;
 		}
