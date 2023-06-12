@@ -61,9 +61,9 @@ if (hasCookiePrefersColor) {
 
 			const { dark, textColors } = COLOR_ASPECT
 
-			document.addEventListener('DOMContentLoaded', () => {
+			window.addEventListener('DOMContentLoaded', () => {
 				const cookies = window.document.cookie
-				let valuePrefersColor = ''
+				let valuePrefersColor = dark
 
 				if (cookies.includes(NAME_COOKIE_COLOR)) {
 					valuePrefersColor = cookies
