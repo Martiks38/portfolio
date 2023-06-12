@@ -5,6 +5,8 @@ const menuBtn = $('.menuBtn')
 const itemsMenu = $$('.navMenu__item')
 const backdropMenu = $('.backdropMenu')
 
+const isDesktopView = window.innerWidth >= 776
+
 /** Cambie los atributos de aria y modifique el botón de menú y muestre u oculte la lista de menú */
 const changeMenuView = () => {
 	const visibleMenu = menuBtn.classList.contains('collapse')
@@ -16,7 +18,13 @@ const changeMenuView = () => {
 }
 
 /** Al elegir una de las secciones de la página, ejecuta la función changeMenuView */
-itemsMenu.forEach((itemMenu) => itemMenu.addEventListener('click', changeMenuView))
+itemsMenu.forEach((itemMenu) =>
+	itemMenu.addEventListener('click', () => {
+		if (isDesktopView) return
+
+		changeMenuView()
+	})
+)
 
 menuBtn.addEventListener('click', changeMenuView)
 
@@ -25,19 +33,15 @@ backdropMenu.addEventListener('click', changeMenuView)
 
 /** Establece los atributos de aria según las dimensiones iniciales */
 document.addEventListener('DOMContentLoaded', () => {
-	const width = window.innerWidth
+	if (isDesktopView) return
 
-	if (width > 776) return
-
-	menuBtn.setAttribute('aria-hidden', 'false')
+	menuBtn.setAttribute('aria-hidden', 'falsez')
 	header.setAttribute('aria-hidden', 'true')
 })
 
 /** Modifies the aria attributes according to the new dimensions */
 window.addEventListener('resize', () => {
-	const width = window.innerWidth
-
-	if (width < 776) {
+	if (!isDesktopView) {
 		menuBtn.setAttribute('aria-hidden', 'false')
 		header.setAttribute('aria-hidden', 'true')
 		return
