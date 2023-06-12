@@ -57,7 +57,12 @@ const amountParagraphs = paragraphs.length
 					<p class="project__description">
 						{paragraph}
 						{index === amountParagraphs - 1 && (
-							<a href={url_code} class="project__repositoryLink" rel="noopener noreferrer">
+							<a
+								href={url_code}
+								class="project__repositoryLink"
+								rel="noopener noreferrer"
+								target="_blank"
+							>
 								Ver código
 							</a>
 						)}
