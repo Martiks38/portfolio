@@ -33,7 +33,7 @@ const reverseRow = isReverse
 	? 'project__descriptionContainer_rowReverse'
 	: 'project__descriptionContainer_row'
 const classDescription = `project__descriptionContainer ${reverseRow}`
-const anchorDescription = url_page ? `Ir a la página de ${title}` : `Ir al repositorio de ${title}`
+const anchorDescription = url_page ? `Ir a la página de ${title}` : null
 const amountParagraphs = paragraphs.length
 ---
 
@@ -41,24 +41,35 @@ const amountParagraphs = paragraphs.length
 	<div class={clsx([classDescription, dontHaveImgs && 'project__descriptionContainer_mb-0'])}>
 		<div>
 			<h4 class="project__title">
-				<span class="project__title__text">{title}</span>
-				<a
-					href={url_page || url_code}
-					target="_blank"
-					rel="norefferer noopenner"
-					aria-label={anchorDescription}
-					title={anchorDescription}
-				>
-					<LinkIcon styles="project__title__url" />
-				</a>
+				<span class="project__title__text"
+					>{title}
+					{
+						anchorDescription && (
+							<a
+								href={url_page || url_code}
+								target="_blank"
+								rel="norefferer noopenner"
+								aria-label={anchorDescription}
+								title={anchorDescription}
+							>
+								<LinkIcon styles="project__title__url" />
+							</a>
+						)
+					}
+				</span>
 			</h4>
 			{
 				paragraphs.map((paragraph, index) => (
 					<p class="project__description">
 						{paragraph}
 						{index === amountParagraphs - 1 && (
-							<a href={url_code} class="project__repositoryLink" rel="noopener noreferrer">
-								Ver código
+							<a
+								href={url_code}
+								class="project__repositoryLink"
+								rel="noopener noreferrer"
+								target="_blank"
+							>
+								Ver&nbsp;código
 							</a>
 						)}
 					</p>

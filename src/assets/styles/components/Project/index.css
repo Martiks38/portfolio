@@ -20,15 +20,15 @@
 	}
 
 	&__title {
-		position: relative;
 		display: block;
 		width: fit-content;
 
 		&__text {
+			position: relative;
 			margin-bottom: 1.5rem;
 			font-weight: 600;
-			font-size: 2.25rem;
-			line-height: 2.5rem;
+			font-size: 1.875rem;
+			line-height: 2.25rem;
 		}
 
 		&__url {
@@ -55,6 +55,18 @@
 	&__repositoryLink {
 		color: var(--repository-link);
 		font-weight: 600;
+
+		@media (hover: none) {
+			&:active {
+				text-decoration: underline;
+			}
+		}
+
+		@media (hover: hover) {
+			&:hover {
+				text-decoration: underline;
+			}
+		}
 	}
 
 	&__techs {
