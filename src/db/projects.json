@@ -37,7 +37,7 @@
     "description": "Juego de la memoria con temática en Darkest Dungeon. Y modo contrarreloj.",
     "imgs": ["/images/Memory/img1.webp", "/images/Memory/img2.webp", "/images/Memory/img3.webp"],
     "title": "Memory",
-    "name_repository": "game-memory",
+    "name_repository": "memory",
     "url_page": "https://memory-game-dd.vercel.app",
     "techs": ["React.js", "Wouter", "Tailwind CSS", "Vitest"]
   },
