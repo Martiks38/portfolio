@@ -129,11 +129,14 @@
 	list-style-type: none;
 	gap: 1em;
 
-	& a {
-		display: inline-block;
-		vertical-align: middle;
+	&__item {
+		display: flex;
+		align-items: center;
 		position: relative;
 		padding: 0.4em 0.75em;
+		color: var(--color-menu-item);
+		font-family: 'Poppins', sans-serif;
+		font-weight: 600;
 
 		&::before {
 			--height: 0.25rem;
@@ -152,12 +155,6 @@
 			background-color: var(--color-secondary-alpha-75);
 			transition: width 200ms cubic-bezier(0.83, 0.04, 0.7, 1);
 		}
-	}
-
-	&__item {
-		color: var(--color-menu-item);
-		font-family: 'Poppins', sans-serif;
-		font-weight: 600;
 	}
 }
 
@@ -263,11 +260,7 @@
 	.navMenu__item {
 		height: var(--height-nav-item);
 
-		& a {
-			height: 100%;
-		}
-
-		&:hover a::before {
+		&:hover::before {
 			width: 100%;
 		}
 	}
