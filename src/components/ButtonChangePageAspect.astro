@@ -1,7 +1,4 @@
 ---
-import Moon from './Moon.astro'
-import Sun from './Sun.astro'
-
 // eslint-disable-next-line
 interface Props {
   changeColor: string
@@ -21,7 +18,11 @@ const { changeColor, color, turns } = Astro.props
     aria-label={`Cambiar aspecto a modo ${changeColor}`}
     style={`transform: rotate(${turns * 0.5}turn)`}
   >
-    <Moon />
-    <Sun />
+    <svg class="btnColorScheme__icon">
+      <use href="/sprites/modesSprite.svg#moon"></use>
+    </svg>
+    <svg class="btnColorScheme__icon">
+      <use href="/sprites/modesSprite.svg#sun"></use>
+    </svg>
   </button>
 </div>

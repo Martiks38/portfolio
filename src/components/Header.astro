@@ -56,8 +56,10 @@ const changeColor = turns === 0 ? light : dark
 				<ul class="navMenu">
 					{
 						ITEMS_NAV.map((item_menu) => (
-							<li class="navMenu__item">
-								<a href={`#${item_menu[1]}`}>{item_menu[0]}</a>
+							<li>
+								<a href={`#${item_menu[1]}`} class="navMenu__item">
+									{item_menu[0]}
+								</a>
 							</li>
 						))
 					}

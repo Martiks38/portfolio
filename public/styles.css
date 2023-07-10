@@ -23,7 +23,7 @@
 	--border-radius-8: 0.5rem;
 	--border-radius-10: 0.625rem;
 	--height-nav-item: 2.375rem;
-	--invert-icon: 1;
+	--social-card-color: #ebebeb;
 }
 
 :root {
@@ -69,6 +69,7 @@ body.light {
 	--shadow-project-image: drop-shadow(0px 2px 2px rgb(0 0 0 / 0.12))
 		drop-shadow(0px 2px 5px rgb(0 0 0 / 0.16));
 	--repository-link: var(--color-tertiary-dark);
+	--social-card-color: #2d2d2d;
 }
 
 a {

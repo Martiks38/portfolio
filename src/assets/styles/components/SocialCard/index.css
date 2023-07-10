@@ -4,6 +4,7 @@
 	justify-content: center;
 	gap: 3.2em;
 	margin-top: 1rem;
+	color: var(--social-card);
 
 	@media (min-width: 23.75rem) {
 		margin-top: 0;
@@ -13,20 +14,16 @@
 		justify-content: flex-start;
 	}
 
-	&__button {
+	&__link {
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		width: 3rem;
 		transition: transform 0.3s ease-in-out;
 
-		&:is(:first-child, :nth-child(2)) img {
+		& svg {
 			height: 2.375rem;
 			width: 2.375rem;
-		}
-
-		&_invert {
-			filter: invert(var(--invert-icon));
 		}
 
 		&:hover {
