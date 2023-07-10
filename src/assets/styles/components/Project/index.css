@@ -70,6 +70,7 @@
 	}
 
 	&__techs {
+		margin-bottom: 0.8rem;
 		font-size: 1.25rem;
 		line-height: 1.75rem;
 	}
