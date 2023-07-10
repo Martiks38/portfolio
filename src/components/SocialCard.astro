@@ -1,39 +1,41 @@
 ---
 import '@assets/styles/components/SocialCard/index.css'
-
-import github from '@assets/svgs/github.svg'
-import linkedin from '@assets/svgs/linkedin.svg'
-import gmail from '@assets/svgs/gmail.svg'
 ---
 
 <div class="socialCard">
 	<a
 		href="https://github.com/Martiks38?tab=repositories"
 		target="_blank"
-		class="socialCard__button socialCard__button_invert"
+		class="socialCard__link socialCard__link_invert"
 		title="Ir al repositorio GitHub"
 		aria-label="Ver projectos en GitHub"
 		rel="noopener noreferrer"
 	>
-		<img src={github} alt="Repositorio de GitHub" class="socialCard__img" width="48" height="48" />
+		<svg>
+			<use xlink:href="/sprites.svg#github"></use>
+		</svg>
 	</a>
 	<a
 		href="https://www.linkedin.com/in/giuliano-cappa"
 		target="_blank"
-		class="socialCard__button"
+		class="socialCard__link"
 		title="Ir al perfil de LinkedIn"
 		aria-label="Ir al perfil de LinkedIn"
 		rel="noopener noreferrer"
 	>
-		<img src={linkedin} alt="LinkedIn" width="48" height="48" />
+		<svg>
+			<use xlink:href="/sprites.svg#linkedin"></use>
+		</svg>
 	</a>
 	<a
 		href="mailto:cappa.giuliano@gmail.com"
-		class="socialCard__button"
+		class="socialCard__link"
 		title="Enviar correo electrónico"
 		aria-label="Enviar correo electrónico"
 		rel="noopener noreferrer"
 	>
-		<img src={gmail} alt="Gmail" width="48" height="48" />
+		<svg>
+			<use xlink:href="/sprites.svg#gmail"></use>
+		</svg>
 	</a>
 </div>
