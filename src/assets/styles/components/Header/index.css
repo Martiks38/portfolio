@@ -68,14 +68,10 @@
 	transition: transform linear 700ms;
 	cursor: pointer;
 
-	& svg path {
-		stroke: currentColor;
-	}
-
-	& svg {
+	&__icon {
 		height: var(--height-nav-item);
 		width: var(--height-nav-item);
-		padding: 0.4rem;
+		color: inherit;
 	}
 }
 
