@@ -32,14 +32,12 @@ menuBtn.addEventListener('click', changeMenuView)
 backdropMenu.addEventListener('click', changeMenuView)
 
 /** Establece los atributos de aria según las dimensiones iniciales */
-document.addEventListener('DOMContentLoaded', () => {
-	const isDesktopView = window.innerWidth >= 776
+const isDesktopView = window.innerWidth >= 776
 
-	if (isDesktopView) return
+if (isDesktopView) return
 
-	menuBtn.setAttribute('aria-hidden', 'falsez')
-	header.setAttribute('aria-hidden', 'true')
-})
+menuBtn.setAttribute('aria-hidden', 'false')
+header.setAttribute('aria-hidden', 'true')
 
 /** Modifies the aria attributes according to the new dimensions */
 window.addEventListener('resize', () => {
