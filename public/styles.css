@@ -90,3 +90,12 @@ img {
 		transition-delay: 0;
 	}
 }
+
+@font-face {
+	font-family: 'Poppins';
+	font-display: 'fallback';
+	src: local('Poppins Regular'), local('Poppins-Regular'),
+		url('/fonts/Poppins-Regular.woff2') format('woff2');
+	font-style: normal;
+	font-weight: normal;
+}
