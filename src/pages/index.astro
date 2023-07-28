@@ -11,11 +11,12 @@ import '@assets/styles/normalize.css'
 
 // Data
 import projects from '@/db/projects.json'
+import { ITEMS_NAV } from '@/consts'
 ---
 
 <Layout title="Giuliano Cappa">
 	<Header />
-	<main>
+	<main id={ITEMS_NAV.mainContent}>
 		<Section classes="introduction" id="home">
 			<img src="/photo.webp" alt="Foto" class="introduction__img" width="250" height="250" />
 			<div class="introduction__text">
@@ -28,7 +29,7 @@ import projects from '@/db/projects.json'
 			</div>
 		</Section>
 		<Section classes="section_min-h-screen">
-			<h3 class="section__title" id="about-me">Sobre mí</h3>
+			<h3 class="section__title" id={ITEMS_NAV['about-me']}>Sobre mí</h3>
 			<div class="section__text">
 				<p class="section__paragraph">
 					Bienvenido, probablemente, ahora mismo esté continuando un proyecto o aprendiendo, si no
@@ -38,11 +39,11 @@ import projects from '@/db/projects.json'
 			</div>
 		</Section>
 		<Section id="viewBtnToTop">
-			<h3 class="section__title" id="projects">Proyectos</h3>
+			<h3 class="section__title" id={ITEMS_NAV.projects}>Proyectos</h3>
 			{projects.map((project, ind) => <Project project={project} isReverse={ind % 2 !== 0} />)}
 		</Section>
 		<Section>
-			<h3 class="section__title" id="contact">Contacto</h3>
+			<h3 class="section__title" id={ITEMS_NAV.contact}>Contacto</h3>
 			<div class="section__text">
 				<p class="section__paragraph">
 					Muchas gracias por ver llegado hasta aquí. Espero que este portfolio haya sido de tu

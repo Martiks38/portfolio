@@ -6,6 +6,9 @@ interface Props {
   turns: number
 }
 
+
+import schemes from "@assets/sprites/modesSprite.svg"
+
 const { changeColor, color, turns } = Astro.props
 ---
 
@@ -19,10 +22,10 @@ const { changeColor, color, turns } = Astro.props
     style={`transform: rotate(${turns * 0.5}turn)`}
   >
     <svg class="btnColorScheme__icon">
-      <use href="/sprites/modesSprite.svg#moon"></use>
+      <use href={`${schemes}#moon`}></use>
     </svg>
     <svg class="btnColorScheme__icon">
-      <use href="/sprites/modesSprite.svg#sun"></use>
+      <use href={`${schemes}#sun`}></use>
     </svg>
   </button>
 </div>

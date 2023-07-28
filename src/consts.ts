@@ -1,4 +1,4 @@
-export const COLOR_ASPECT = {
+const COLOR_ASPECT = {
 	dark: 'oscuro',
 	light: 'claro',
 	textColors: {
@@ -7,7 +7,16 @@ export const COLOR_ASPECT = {
 	}
 }
 
-export const NAME_COOKIE_COLOR = 'prefersColor'
+const ITEMS_NAV = {
+	mainContent: 'INICIO',
+	'about-me': 'SOBRE MÍ',
+	projects: 'PROYECTOS',
+	contact: 'CONTACTO'
+}
+
+const NAME_COOKIE_COLOR = 'prefersColor'
 
 // sixty days
-export const MAX_AGE_COOKIE = 24 * 60 * 60 * 60
+const MAX_AGE_COOKIE = 24 * 60 * 60 * 60
+
+export { COLOR_ASPECT, ITEMS_NAV, NAME_COOKIE_COLOR, MAX_AGE_COOKIE }

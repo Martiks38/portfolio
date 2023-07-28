@@ -5,17 +5,7 @@ import ButtonChangePageAspect from './ButtonChangePageAspect.astro'
 // Styles
 import '@assets/styles/components/Header/index.css'
 
-// Images
-import logo from '/logo.webp'
-
-import { COLOR_ASPECT, NAME_COOKIE_COLOR } from '@/consts'
-
-const ITEMS_NAV = [
-	['INICIO', 'home'],
-	['SOBRE MÍ', 'about-me'],
-	['PROYECTOS', 'projects'],
-	['CONTACTO', 'contact']
-]
+import { COLOR_ASPECT,  ITEMS_NAV,  NAME_COOKIE_COLOR } from '@/consts'
 
 const { dark, light } = COLOR_ASPECT
 
@@ -45,7 +35,7 @@ const changeColor = turns === 0 ? light : dark
 <script src="@utils/handlerMenu.js"></script>
 <script src="@utils/changeTheme.ts"></script>
 
-<a href="#home" class="skipNavLinks">Ir al contenido principal</a>
+<a href={`#${ITEMS_NAV.mainContent}`} class="skipNavLinks">Ir al contenido principal</a>
 
 <div class="asideButtons">
 	<ButtonToTop />
@@ -53,15 +43,15 @@ const changeColor = turns === 0 ? light : dark
 
 <header class="headerPage">
 	<div class="headerPage__container">
-		<img src={logo} alt="Giuliano Cappa" class="logo" width="38" height="38" />
+		<div class="logo"></div>
 		<div class="headerPage__actions">
 			<nav class="nav">
 				<ul class="navMenu">
 					{
-						ITEMS_NAV.map((item_menu) => (
+						Object.entries(ITEMS_NAV).map(([key, value]) => (
 							<li>
-								<a href={`#${item_menu[1]}`} class="navMenu__item">
-									{item_menu[0]}
+								<a href={`#${key}`} class="navMenu__item">
+									{value}
 								</a>
 							</li>
 						))
