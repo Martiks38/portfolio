@@ -1,0 +1,56 @@
+---
+import logoSprites from '@assets/sprites/socialSprite.svg'
+import '@assets/styles/components/Project/projectCard.css'
+
+import { BASE_URL_GITHUB } from '@/consts'
+
+import type { Project } from '@/typings'
+
+interface Props {
+	project: Project
+}
+
+/** @TODO - Añadir lista de techs */
+const { project } = Astro.props
+const { description, images, nameRepository, title, urlPage } = project
+
+const nameProject = 'Matatena'
+---
+
+<article class="projectCard">
+	<figure class="projectCard__containerImg">
+		<img src={images[0]} alt={title} class="projectCard__img" loading="lazy" decoding="async" />
+	</figure>
+
+	<div class="projectCard__info">
+		<h4 class="projectCard__title">{title}</h4>
+		<p class="projectCard__paragraph">{description}</p>
+		<div class="projectCard__containerLinks">
+			<a
+				href={`${BASE_URL_GITHUB}/${nameRepository}`}
+				rel="noopener"
+				aria-label={`Ver repositorio del código de ${title}`}
+				class="projectCard__repositoryLink"
+				title={`Ir al repositorio de ${title}`}
+			>
+				<svg>
+					<use href={`${logoSprites}#github`}></use>
+				</svg>
+			</a>
+			<a
+				href={urlPage}
+				rel="noopener"
+				title={`Ir al sitio de ${title}`}
+				class="projectCard__pageLink">Ir a la página</a
+			>
+		</div>
+	</div>
+	{
+		title === nameProject ? (
+			<div class="projectCard__patron">
+				<div class="line-1" />
+				<div class="line-2" />
+			</div>
+		) : null
+	}
+</article>
