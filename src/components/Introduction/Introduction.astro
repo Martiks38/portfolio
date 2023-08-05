@@ -1,0 +1,29 @@
+---
+import Section from '@/layouts/Section.astro'
+import SocialCard from '@components/SocialCard.astro'
+
+import photo from '@assets/images/photo.webp'
+---
+
+<Section addClass="section__introduction">
+	<div class="section__introduction__presentation">
+		<span class="section__introduction__greetings">Bienvenidos y bienvenidas a mi sitio.</span>
+		<hgroup>
+			<h1 class="section__introduction__title">
+				Soy <strong>Giuliano&nbsp;Cappa</strong>
+			</h1>
+			<p class="section__introduction__subtitle">Desarrollador Frontend</p>
+		</hgroup>
+		<!-- Añadir Stack -->
+		<p class="section__introduction__text">
+			Me encanta escribir código, creando sitios web <strong
+				class="section__introduction__highlight">creativos</strong
+			> y <strong class="section__introduction__highlight">accesibles</strong>. Siempre estoy
+			dispuesto a aprender y explorar nuevas tecnologías, escuchar consejos y compartir lo que sé.
+		</p>
+		<SocialCard />
+	</div>
+	<div class="section__introduction_photo-info">
+		<img src={photo} alt="" class="section__introduction__img" />
+	</div>
+</Section>
