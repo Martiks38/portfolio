@@ -1,0 +1,52 @@
+---
+import Project from './Project.astro'
+import Section from '@/layouts/Section.astro'
+
+import { getProjects } from '@/services/getProjects'
+import ProjectCard from './ProjectCard.astro'
+
+interface Props {
+	sectionid: string
+}
+
+const { sectionid } = Astro.props
+const projects = await getProjects()
+
+const principalProject = 'Pets - The Crazy Goblin'
+
+const project = projects.find((project) => project.title === principalProject)
+const projectlist = projects.filter((project) => project.title !== principalProject)
+---
+
+<Section addClass="section__projects" id="viewBtnToTop">
+	<h3 class="section__title section__projects__title" id={sectionid}>Proyectos</h3>
+	{typeof project !== 'undefined' ? <Project project={project} /> : null}
+
+	<ul class="section__projects__projectList">
+		{
+			projectlist.map((project) => (
+				<li class="itemProjectCard hidden">
+					<ProjectCard project={project} />
+				</li>
+			))
+		}
+	</ul>
+</Section>
+
+<script>
+	const projectCards = document.querySelectorAll('.itemProjectCard')
+
+	const options = {
+		root: null,
+		rootMargin: '-10px 0px',
+		threshold: 0.4
+	}
+
+	const observer = new IntersectionObserver((entries) => {
+		entries.forEach(({ isIntersecting, target }) => {
+			if (isIntersecting) target.classList.remove('hidden')
+		})
+	}, options)
+
+	projectCards.forEach((card) => observer.observe(card))
+</script>

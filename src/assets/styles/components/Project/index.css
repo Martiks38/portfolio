@@ -1,109 +1,112 @@
-.project {
-	width: 100%;
+.mainProject {
 	margin-bottom: 9rem;
 
 	&__descriptionContainer {
 		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-		min-height: 28.125rem;
-		margin-bottom: 4rem;
-
-		&_mb-0 {
-			margin-bottom: 0;
-		}
-
-		& :is(div:first-child) {
-			padding-left: 1rem;
-			padding-right: 1rem;
-		}
+		align-items: center;
+		gap: 4.5rem;
 	}
 
 	&__title {
+		position: relative;
 		display: block;
 		width: fit-content;
+		margin-bottom: 1.5rem;
+		font-weight: 600;
+		font-size: 1.875rem;
+		line-height: 2.25rem;
 
-		&__text {
-			position: relative;
-			margin-bottom: 1.5rem;
-			font-weight: 600;
-			font-size: 1.875rem;
-			line-height: 2.25rem;
+		& a:focus &__urlIcon {
+			outline: solid 3px var(--color-secondary);
+			outline-offset: 3px;
+			border-radius: 0.375rem;
 		}
 
-		&__url {
+		&__urlIcon {
+			--size-icon: 1.5rem;
+
 			position: absolute;
 			bottom: -0.25rem;
-			right: -2rem;
-			width: 1.5rem;
-			height: auto;
-
-			& path {
-				stroke: var(--url-icon);
-			}
+			right: -3rem;
+			width: fit-content;
+			stroke: var(--url-icon);
 		}
 	}
 
 	&__description {
-		max-width: 55ch;
-		margin-top: 0.5rem;
-		margin-bottom: 0.5rem;
 		font-size: 1.25rem;
 		line-height: 1.75rem;
 	}
 
 	&__repositoryLink {
-		color: var(--repository-link);
 		font-weight: 600;
-
-		@media (hover: none) {
-			&:active {
-				text-decoration: underline;
-			}
-		}
-
-		@media (hover: hover) {
-			&:hover {
-				text-decoration: underline;
-			}
-		}
 	}
 
-	&__techs {
-		margin-bottom: 0.8rem;
-		font-size: 1.25rem;
-		line-height: 1.75rem;
+	&__paragraph {
+		margin-bottom: 0.8em;
 	}
 
-	&__introImgContainer {
+	&__techList {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 2rem;
+		list-style-type: none;
+		margin-top: 2rem;
+	}
+
+	&__tech {
+		padding: 0.3em 0.7em;
+		border: solid 0.1875rem var(--color-secondary);
+		border-radius: 2.5rem;
+	}
+
+	&__mainImage {
 		position: relative;
-		width: fit-content;
-		margin-top: 3rem;
-		margin-left: auto;
-		margin-right: auto;
 
 		& img {
-			position: relative;
-			height: auto;
-			margin: 1rem auto 0;
+			height: fit-content;
 			border-radius: var(--border-radius-8);
-			object-fit: cover;
+			object-fit: contain;
 		}
 
-		&_mb-0 img {
-			margin-bottom: 0;
-			object-fit: cover;
+		&:after,
+		&:before {
+			--size-circle: 50%;
+
+			content: '';
+			position: absolute;
+			display: block;
+			width: var(--size-circle);
+			height: var(--size-circle);
+			filter: blur(2.5rem);
+			border-radius: 50%;
+			animation: 3s linear 0s infinite running light;
+			z-index: -1;
+		}
+
+		&:after {
+			right: -5%;
+			top: 10%;
+			background-image: radial-gradient(var(--color-primary) 10%, transparent);
+		}
+
+		&:before {
+			left: -5%;
+			top: 25%;
+			background-image: radial-gradient(#6dbc66 10%, transparent);
 		}
 	}
 
 	&__wrapperImages {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(15.625rem, 1fr));
-		gap: 3rem;
 		justify-items: center;
+		gap: 3rem;
+		margin-top: 10rem;
 		width: 100%;
 		margin-left: auto;
 		margin-right: auto;
+		list-style-type: none;
 
 		& img {
 			border-radius: var(--border-radius-8);
@@ -111,57 +114,21 @@
 		}
 	}
 
-	&__introImgContainer img,
+	&__mainImage img,
 	&__wrapperImages img {
 		filter: var(--shadow-project-image);
 	}
 }
 
-.techs {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 0.75rem;
+@media (hover: hover) {
+	.mainProject__repositoryLink:hover {
+		text-decoration: underline;
+		color: var(--color-secondary);
+	}
 }
 
-.tech {
-	width: fit-content;
-	padding: 0.2rem 0.6rem;
-	border: solid 0.1875rem var(--border-tech);
-	border-radius: 2.5rem;
-}
-
-@media screen and (min-width: 61rem) {
-	.project__title__url {
-		position: relative;
-		bottom: -0.5rem;
-		right: 0;
-	}
-
-	.project__descriptionContainer {
-		&_rowReverse {
-			flex-direction: row-reverse;
-		}
-
-		&_row {
-			flex-direction: row;
-		}
-	}
-
-	.project__introImgContainer {
-		margin-top: 0;
-
-		& img {
-			top: 50%;
-			width: 40.625rem;
-			transform: translateY(-50%);
-		}
-
-		&_left img {
-			left: -40%;
-		}
-
-		&_right img {
-			right: -40%;
-		}
+@media (hover: none) {
+	.mainProject__repositoryLink {
+		text-decoration: underline;
 	}
 }
