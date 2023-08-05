@@ -5,6 +5,7 @@
 	gap: 3.2em;
 	margin-top: 1rem;
 	color: var(--social-card);
+	list-style-type: none;
 
 	@media (min-width: 23.75rem) {
 		margin-top: 0;

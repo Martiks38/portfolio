@@ -1,41 +1,51 @@
 ---
 import '@assets/styles/components/SocialCard/index.css'
+
+import logos from '@assets/sprites/socialSprite.svg'
 ---
 
-<div class="socialCard">
-	<a
-		href="https://github.com/Martiks38?tab=repositories"
-		target="_blank"
-		class="socialCard__link socialCard__link_invert"
-		title="Ir al repositorio GitHub"
-		aria-label="Ver projectos en GitHub"
-		rel="noopener noreferrer"
-	>
-		<svg>
-			<use href="/sprites/socialSprite.svg#github"></use>
-		</svg>
-	</a>
-	<a
-		href="https://www.linkedin.com/in/giuliano-cappa"
-		target="_blank"
-		class="socialCard__link"
-		title="Ir al perfil de LinkedIn"
-		aria-label="Ir al perfil de LinkedIn"
-		rel="noopener noreferrer"
-	>
-		<svg>
-			<use href="/sprites/socialSprite.svg#linkedin"></use>
-		</svg>
-	</a>
-	<a
-		href="mailto:cappa.giuliano@gmail.com"
-		class="socialCard__link"
-		title="Enviar correo electrónico"
-		aria-label="Enviar correo electrónico"
-		rel="noopener noreferrer"
-	>
-		<svg>
-			<use href="/sprites/socialSprite.svg#gmail"></use>
-		</svg>
-	</a>
-</div>
+<aside>
+	<ul class="socialCard">
+		<li>
+			<a
+				href="https://github.com/Martiks38?tab=repositories"
+				target="_blank"
+				class="socialCard__link socialCard__link_invert"
+				title="Ir al repositorio GitHub"
+				aria-label="Ver projectos en GitHub"
+				rel="noopener noreferrer"
+			>
+				<svg>
+					<use href={`${logos}#github`}></use>
+				</svg>
+			</a>
+		</li>
+		<li>
+			<a
+				href="https://www.linkedin.com/in/giuliano-cappa"
+				target="_blank"
+				class="socialCard__link"
+				title="Ir al perfil de LinkedIn"
+				aria-label="Ir al perfil de LinkedIn"
+				rel="noopener noreferrer"
+			>
+				<svg>
+					<use href={`${logos}#linkedin`}></use>
+				</svg>
+			</a>
+		</li>
+		<li>
+			<a
+				href="mailto:cappa.giuliano.m@gmail.com"
+				class="socialCard__link"
+				title="Enviar correo electrónico"
+				aria-label="Enviar correo electrónico"
+				rel="noopener noreferrer"
+			>
+				<svg>
+					<use href={`${logos}#gmail`}></use>
+				</svg>
+			</a>
+		</li>
+	</ul>
+</aside>
