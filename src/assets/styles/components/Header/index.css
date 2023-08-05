@@ -11,7 +11,7 @@
 .headerPage {
 	--height-nav-item: 2.375rem;
 
-	position: fixed;
+	position: sticky;
 	top: 0;
 	width: 100%;
 	background-color: rgba(27, 36, 91, 0.2);
@@ -32,11 +32,12 @@
 
 	&__container {
 		display: flex;
+		max-width: var(--width-content);
 		align-items: center;
 		flex-direction: column;
 		gap: 3em;
 		margin: 0 auto;
-		padding: 1rem 2rem 2.5rem;
+		padding: 1rem 2rem;
 		max-width: var(--width-content);
 		width: 100%;
 		backdrop-filter: blur(50px);
@@ -69,7 +70,7 @@
 	height: max-content;
 	background-color: transparent;
 	border-width: 0;
-	color: var(--color-menu-item);
+	color: currentColor;
 	transform-origin: center;
 	transition: transform linear 700ms;
 	cursor: pointer;
@@ -140,7 +141,6 @@
 		align-items: center;
 		position: relative;
 		padding: 0.4em 0.75em;
-		color: var(--color-menu-item);
 		font-family: 'Poppins', sans-serif;
 		font-weight: 600;
 
@@ -244,10 +244,16 @@
 	}
 }
 
-@media screen and (min-width: 61rem) {
-	.header-container {
-		padding-left: 0;
-		padding-right: 0;
+@media (min-width: 40rem) {
+	.menuBtn {
+		display: none;
+	}
+}
+
+@media screen and (min-width: 43.8125rem) {
+	.headerPage__actions,
+	.navMenu {
+		flex-direction: row;
 	}
 }
 
@@ -262,7 +268,6 @@
 		&__container {
 			flex-direction: row;
 			justify-content: space-between;
-			padding: 1rem 2rem;
 		}
 	}
 
@@ -277,19 +282,6 @@
 	}
 
 	.controlPanelBottom,
-	.menuBtn {
-		display: none;
-	}
-}
-
-@media screen and (min-width: 43.8125rem) {
-	.headerPage__actions,
-	.navMenu {
-		flex-direction: row;
-	}
-}
-
-@media (min-width: 40rem) {
 	.menuBtn {
 		display: none;
 	}
