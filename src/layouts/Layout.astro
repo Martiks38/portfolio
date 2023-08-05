@@ -1,7 +1,8 @@
 ---
+import '@assets/styles/normalize.css'
+
 import { COLOR_ASPECT, NAME_COOKIE_COLOR } from '@/consts'
 
-// eslint-disable-next-line
 interface Props {
 	title: string
 }
@@ -51,9 +52,7 @@ if (hasCookiePrefersColor) {
 		<title>{title}</title>
 	</head>
 
-	<script src="@utils/index.js"></script>
-
-	<body class={isLight ? 'light' : ''}>
+	<body class:list={[isLight && 'light']}>
 		<slot />
 	</body>
 </html>

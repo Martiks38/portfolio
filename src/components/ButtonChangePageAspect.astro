@@ -1,31 +1,29 @@
 ---
-// eslint-disable-next-line
 interface Props {
-  changeColor: string
-  color: string
-  turns: number
+	changeColor: string
+	color: string
+	turns: number
 }
 
-
-import schemes from "@assets/sprites/modesSprite.svg"
+import schemes from '@assets/sprites/modesSprite.svg'
 
 const { changeColor, color, turns } = Astro.props
 ---
 
 <div class="headerPage__actions__colorPanel">
-  <button
-    id="button-theme"
-    class="btnColorScheme"
-    data-turns={turns}
-    data-color={color}
-    aria-label={`Cambiar aspecto a modo ${changeColor}`}
-    style={`transform: rotate(${turns * 0.5}turn)`}
-  >
-    <svg class="btnColorScheme__icon">
-      <use href={`${schemes}#moon`}></use>
-    </svg>
-    <svg class="btnColorScheme__icon">
-      <use href={`${schemes}#sun`}></use>
-    </svg>
-  </button>
+	<button
+		id="button-theme"
+		class="btnColorScheme"
+		data-turns={turns}
+		data-color={color}
+		aria-label={`Cambiar aspecto a modo ${changeColor}`}
+		style={`transform: rotate(${turns * 0.5}turn)`}
+	>
+		<svg class="btnColorScheme__icon">
+			<use href={`${schemes}#moon`}></use>
+		</svg>
+		<svg class="btnColorScheme__icon">
+			<use href={`${schemes}#sun`}></use>
+		</svg>
+	</button>
 </div>

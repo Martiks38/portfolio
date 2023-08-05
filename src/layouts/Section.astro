@@ -1,16 +1,14 @@
 ---
-import clsx from 'clsx'
 import '@assets/styles/components/Section/index.css'
 
-// eslint-disable-next-line
 interface Props {
-	classes?: string
+	addClass?: string
 	id?: string
 }
 
-const { classes, id } = Astro.props
+const { addClass, id } = Astro.props
 ---
 
-<section class={clsx(['section', classes])} id={id}>
+<section class:list={['section', addClass]} id={id}>
 	<slot />
 </section>
