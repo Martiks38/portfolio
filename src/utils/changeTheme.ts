@@ -1,6 +1,6 @@
 import { COLOR_ASPECT, MAX_AGE_COOKIE, NAME_COOKIE_COLOR } from '@/consts'
 
-const { dark, light, textColors } = COLOR_ASPECT
+const { dark, light } = COLOR_ASPECT
 const btnsPrefersColor = document.querySelectorAll<HTMLButtonElement>('.btnColorScheme')
 const btnPrefersColor = btnsPrefersColor[0] ?? null
 
@@ -25,10 +25,6 @@ const changeColorScheme = () => {
 	const changeColor = currentColorIsDark ? dark : light
 
 	const prevTurn = Number(btnPrefersColor.dataset.turns)
-
-	const subtitle = document.querySelector<HTMLHeadingElement>('.introduction__subtitle')
-
-	if (subtitle) subtitle.style.color = currentColorIsDark ? textColors.light : textColors.dark
 
 	if (currentColorIsDark) {
 		document.body.classList.add('light')
