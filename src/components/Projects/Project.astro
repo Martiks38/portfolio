@@ -1,0 +1,88 @@
+---
+import LinkIcon from '@components/LinkIcon.astro'
+
+import '@assets/styles/components/BgCircles/index.css'
+import '@assets/styles/components/Project/index.css'
+
+import { BASE_URL_GITHUB } from '@/consts'
+
+import type { Project } from '@/typings'
+
+interface Props {
+	project: Project
+}
+
+const { project } = Astro.props
+
+const { title, description, images, urlPage, nameRepository, techs } = project
+
+const url_code = BASE_URL_GITHUB.concat(nameRepository)
+const [mainImage, ...presentationImages] = images
+---
+
+<article class="mainProject">
+	<div class="mainProject__descriptionContainer">
+		<div>
+			<h4 class="mainProject__title">
+				{title}
+				<a
+					href={urlPage}
+					target="_blank"
+					rel="noopener norefferer"
+					aria-label={`Ir a la página de ${title}`}
+					title={`Ir a la página de ${title}`}
+				>
+					<LinkIcon styles="mainProject__title__urlIcon" />
+				</a>
+			</h4>
+			<div class="mainProject__description">
+				<!-- Si es el último párrafo añade el enlace al repositori de GitHub -->
+				<p class="mainProject__paragraph">
+					{description}
+					<a
+						href={url_code}
+						class="mainProject__repositoryLink"
+						rel="noopener noreferrer"
+						target="_blank"
+					>
+						Ver&nbsp;código
+					</a>
+				</p>
+				<p>Tecnologías usadas:</p>
+				<ul class="mainProject__techList">
+					{
+						techs.map((tech) => (
+							<li>
+								<span class="mainProject__tech">{tech}</span>
+							</li>
+						))
+					}
+				</ul>
+			</div>
+		</div>
+		<div class="mainProject__mainImage">
+			<img
+				src={mainImage}
+				alt={`Visualización del inicio de la página de ${title}`}
+				width="540"
+				height="270"
+				loading="lazy"
+			/>
+		</div>
+	</div>
+	<ul class="mainProject__wrapperImages">
+		{
+			presentationImages.map((img) => (
+				<li>
+					<img
+						src={img}
+						alt={`Visualización de sección de la página ${title}`}
+						width="368"
+						height="184"
+						loading="lazy"
+					/>
+				</li>
+			))
+		}
+	</ul>
+</article>
