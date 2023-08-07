@@ -49,7 +49,7 @@
 	&__techList {
 		display: flex;
 		flex-wrap: wrap;
-		gap: 2rem;
+		gap: 3rem 2rem;
 		list-style-type: none;
 		margin-top: 2rem;
 	}
@@ -130,5 +130,17 @@
 @media (hover: none) {
 	.mainProject__repositoryLink {
 		text-decoration: underline;
+	}
+}
+
+@media (min-width: 100rem) {
+	.mainProject__title {
+		font-size: 2.25rem;
+		line-height: 2.5rem;
+	}
+
+	.mainProject__description {
+		font-size: 1.5rem;
+		line-height: 1.75rem;
 	}
 }

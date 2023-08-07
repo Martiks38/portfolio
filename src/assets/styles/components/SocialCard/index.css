@@ -7,28 +7,33 @@
 	color: var(--social-card);
 	list-style-type: none;
 
-	@media (min-width: 23.75rem) {
-		margin-top: 0;
-	}
-
-	@media (min-width: 48.5rem) {
-		justify-content: flex-start;
-	}
-
 	&__link {
+		--size-icon: 2.75rem;
+
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		width: 3rem;
 		transition: transform 0.3s ease-in-out;
 
 		& svg {
-			height: 2.375rem;
-			width: 2.375rem;
+			height: var(--size-icon, 38px);
+			width: var(--size-icon, 38px);
 		}
 
 		&:hover {
 			transform: scale(1.2);
 		}
+	}
+}
+
+@media (min-width: 48.5rem) {
+	.socialCard {
+		justify-content: flex-start;
+	}
+}
+
+@media (min-width: 100rem) {
+	.socialCard__link {
+		--size-icon: 3rem;
 	}
 }
