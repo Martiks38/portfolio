@@ -4,7 +4,7 @@ export type ProjectList = {
 
 export type Project = {
 	description: string
-	images: string[]
+	images: { imageList: string[]; presentationImage: string }
 	nameRepository: string
 	techs: string[]
 	title: string

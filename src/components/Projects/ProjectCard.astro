@@ -10,7 +10,6 @@ interface Props {
 	project: Project
 }
 
-/** @TODO - Añadir lista de techs */
 const { project } = Astro.props
 const { description, images, nameRepository, title, urlPage } = project
 
@@ -19,7 +18,13 @@ const nameProject = 'Matatena'
 
 <article class="projectCard">
 	<figure class="projectCard__containerImg">
-		<img src={images[0]} alt={title} class="projectCard__img" loading="lazy" decoding="async" />
+		<img
+			src={images.presentationImage}
+			alt={title}
+			class="projectCard__img"
+			loading="lazy"
+			decoding="async"
+		/>
 	</figure>
 
 	<div class="projectCard__info">

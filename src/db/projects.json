@@ -2,12 +2,14 @@
   "projects": [
     {
       "description": "Tienda de mascotas de batalla de World of Warcraft.",
-      "imgs": [
-        "/src/assets/images/PetsTheCrazyGoblin/img1.jpg",
-        "/src/assets/images/PetsTheCrazyGoblin/img2.jpg",
-        "/src/assets/images/PetsTheCrazyGoblin/img3.jpg",
-        "/src/assets/images/PetsTheCrazyGoblin/img4.jpg"
-      ],
+      "imgs": {
+        "list": [
+          "/src/assets/images/PetsTheCrazyGoblin/img2.jpg",
+          "/src/assets/images/PetsTheCrazyGoblin/img3.jpg",
+          "/src/assets/images/PetsTheCrazyGoblin/img4.jpg"
+        ],
+        "presentation_image": "/src/assets/images/PetsTheCrazyGoblin/img1.jpg"
+      },
       "title": "Pets - The Crazy Goblin",
       "name_repository": "pets-the-crazy-goblin",
       "url_page": "https://pets-the-crazy-goblin.vercel.app",
@@ -15,12 +17,14 @@
     },
     {
       "description": "Rediseño de la página de escuela secundaria creada durante la cuarentena, donde los nuevos y actuales estudiantes pueden ver los cronogramas del curso, las especialidades ofrecidas por la institución y sus respectivas materias.",
-      "imgs": [
-        "/src/assets/images/School/img1.webp",
-        "/src/assets/images/School/img2.webp",
-        "/src/assets/images/School/img3.webp",
-        "/src/assets/images/School/img4.webp"
-      ],
+      "imgs": {
+        "list": [
+          "/src/assets/images/School/img2.webp",
+          "/src/assets/images/School/img3.webp",
+          "/src/assets/images/School/img4.webp"
+        ],
+        "presentation_image": "/src/assets/images/School/img1.webp"
+      },
       "title": "School Page",
       "name_repository": "my_school_page",
       "url_page": "https://my-school-page.vercel.app",
@@ -28,11 +32,10 @@
     },
     {
       "description": "Clon del juego Matatena de Cult of the Lamb, con la finalidad de hacer una práctica del framework Vue 3.",
-      "imgs": [
-        "/src/assets/images/Matatena/img1.png",
-        "/src/assets/images/Matatena/img2.png",
-        "/src/assets/images/Matatena/img3.png"
-      ],
+      "imgs": {
+        "list": ["/src/assets/images/Matatena/img1.png", "/src/assets/images/Matatena/img2.png"],
+        "presentation_image": "/src/assets/images/Matatena/img3.png"
+      },
       "title": "Matatena",
       "name_repository": "Knucklebones",
       "url_page": "https://knucklebones-theta.vercel.app",
@@ -40,11 +43,10 @@
     },
     {
       "description": "Juego de la memoria con temática de Darkest Dungeon. El usuario puede optar por jugar libremente o contrarreloj.",
-      "imgs": [
-        "/src/assets/images/Memory/img1.webp",
-        "/src/assets/images/Memory/img2.webp",
-        "/src/assets/images/Memory/img3.webp"
-      ],
+      "imgs": {
+        "list": ["/src/assets/images/Memory/img1.webp", "/src/assets/images/Memory/img3.webp"],
+        "presentation_image": "/src/assets/images/Memory/img2.webp"
+      },
       "title": "Memory",
       "name_repository": "memory",
       "url_page": "https://memory-game-dd.vercel.app",
@@ -52,12 +54,14 @@
     },
     {
       "description": "Clon del home de la página Troy Total War Saga con animaciones agregadas y corrección en los enlaces de algunos héroes, los cuales redireccionan a la página de otro.",
-      "imgs": [
-        "/src/assets/images/TotalWar/img1.webp",
-        "/src/assets/images/TotalWar/img2.png",
-        "/src/assets/images/TotalWar/img3.webp",
-        "/src/assets/images/TotalWar/img4.webp"
-      ],
+      "imgs": {
+        "list": [
+          "/src/assets/images/TotalWar/img2.png",
+          "/src/assets/images/TotalWar/img3.webp",
+          "/src/assets/images/TotalWar/img4.webp"
+        ],
+        "presentation_image": "/src/assets/images/TotalWar/img1.webp"
+      },
       "title": "Troy Total War Saga - Clon",
       "name_repository": "clon-page-troy-total-war",
       "url_page": "https://clon-page-troy-total-war.vercel.app",
@@ -65,12 +69,14 @@
     },
     {
       "description": "Juego de mecanografía con tres idiomas para elegir. Durante la práctica, se muestran las palabras por minuto (WPM) al escribir una palabra correcta. Al finalizar, se muestra su desempeño, pudiendo ver una gráfica de WPM vs tiempo.",
-      "imgs": [
-        "/src/assets/images/Typing/img1.png",
-        "/src/assets/images/Typing/img2.png",
-        "/src/assets/images/Typing/img3.png",
-        "/src/assets/images/Typing/img4.png"
-      ],
+      "imgs": {
+        "list": [
+          "/src/assets/images/Typing/img1.png",
+          "/src/assets/images/Typing/img3.png",
+          "/src/assets/images/Typing/img4.png"
+        ],
+        "presentation_image": "/src/assets/images/Typing/img2.png"
+      },
       "title": "Typing-game",
       "name_repository": "typing-game-",
       "url_page": "https://typingso.vercel.app",
@@ -78,12 +84,14 @@
     },
     {
       "description": "Página creada para un reto entre amigos con temática de \"naturaleza\". Utilicé este reto para practicar el framework Astro.",
-      "imgs": [
-        "/src/assets/images/Madagascar/img1.jpg",
-        "/src/assets/images/Madagascar/img2.webp",
-        "/src/assets/images/Madagascar/img3.webp",
-        "/src/assets/images/Madagascar/img4.webp"
-      ],
+      "imgs": {
+        "list": [
+          "/src/assets/images/Madagascar/img2.webp",
+          "/src/assets/images/Madagascar/img3.webp",
+          "/src/assets/images/Madagascar/img4.webp"
+        ],
+        "presentation_image": "/src/assets/images/Madagascar/img1.jpg"
+      },
       "title": "Madagascar Salvaje",
       "name_repository": "madagascar-salvaje",
       "url_page": "https://madagascar-salvaje.vercel.app",

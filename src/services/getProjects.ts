@@ -8,7 +8,10 @@ export async function getProjects(): Promise<Project[]> {
 			({ description, imgs, name_repository, techs, title, url_page }) => {
 				return {
 					description: description,
-					images: imgs,
+					images: {
+						imageList: imgs.list,
+						presentationImage: imgs.presentation_image
+					},
 					nameRepository: name_repository,
 					techs,
 					title,

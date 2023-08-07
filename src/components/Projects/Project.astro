@@ -16,7 +16,7 @@ const { project } = Astro.props
 const { title, description, images, urlPage, nameRepository, techs } = project
 
 const url_code = BASE_URL_GITHUB.concat(nameRepository)
-const [mainImage, ...presentationImages] = images
+const { imageList, presentationImage } = images
 ---
 
 <article class="mainProject">
@@ -61,7 +61,7 @@ const [mainImage, ...presentationImages] = images
 		</div>
 		<div class="mainProject__mainImage">
 			<img
-				src={mainImage}
+				src={presentationImage}
 				alt={`Visualización del inicio de la página de ${title}`}
 				width="540"
 				height="270"
@@ -71,7 +71,7 @@ const [mainImage, ...presentationImages] = images
 	</div>
 	<ul class="mainProject__wrapperImages">
 		{
-			presentationImages.map((img) => (
+			imageList.map((img) => (
 				<li>
 					<img
 						src={img}
