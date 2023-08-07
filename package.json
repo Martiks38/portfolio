@@ -15,7 +15,9 @@
     "lint:fix": "npm run lint -- --fix"
   },
   "browserslist": [
-    "defaults"
+    ">0.3%",
+    "not dead",
+    "not op_mini all"
   ],
   "dependencies": {
     "@astrojs/vercel": "3.7.4",
@@ -27,7 +29,6 @@
     "@typescript-eslint/parser": "6.2.0",
     "autoprefixer": "10.4.14",
     "browserslist": "4.21.9",
-    "clsx": "2.0.0",
     "cssnano": "6.0.1",
     "eslint": "8.45.0",
     "eslint-config-standard": "17.1.0",
