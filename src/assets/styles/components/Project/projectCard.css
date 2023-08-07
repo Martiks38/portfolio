@@ -286,13 +286,17 @@
 				rgba(255, 255, 255, 0.4) 49% 51%,
 				transparent 95%
 			);
-			transform: rotate(var(--rotate-shyne)) translateX(-30rem);
+			transform: rotate(var(--rotate-shyne)) translateX(-10rem);
 			transform-origin: 0;
 			transition: transform ease 500ms;
 		}
 
 		&:hover:after {
-			transform: rotate(var(--rotate-shyne)) translateX(21.25rem);
+			transform: rotate(var(--rotate-shyne)) translateX(40.9375rem);
+
+			@media (min-width: 100rem) {
+				transform: rotate(var(--rotate-shyne)) translateX(50.3125rem);
+			}
 		}
 	}
 }
