@@ -210,7 +210,6 @@
 		grid-template-columns: repeat(auto-fit, minmax(15.625rem, 21.875rem));
 		gap: 4rem;
 		place-content: center;
-		padding: 2rem;
 		width: 100%;
 		list-style-type: none;
 		overflow-y: hidden;
