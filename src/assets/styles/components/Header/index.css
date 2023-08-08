@@ -11,7 +11,7 @@
 .headerPage {
 	--height-nav-item: 2.375rem;
 
-	position: sticky;
+	position: fixed;
 	top: 0;
 	width: 100%;
 	background-color: rgba(27, 36, 91, 0.2);
@@ -259,6 +259,7 @@
 
 @media screen and (min-width: 48.5rem) {
 	.headerPage {
+		position: sticky;
 		transform: translateY(0%);
 
 		&__actions__colorPanel {

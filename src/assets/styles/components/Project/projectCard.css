@@ -1,22 +1,3 @@
-.line-1 {
-	filter: drop-shadow(72px 0 #fff) drop-shadow(144px 0 #fff) drop-shadow(288px 0 #fff);
-}
-
-.line-2 {
-	transform: translate(36px, 0) rotate(180deg);
-	filter: drop-shadow(72px 0 #fff) drop-shadow(-144px 0 #fff) drop-shadow(-288px 0 #fff);
-}
-
-.line-1:after {
-	filter: drop-shadow(72px 0 var(--color-shadow-after))
-		drop-shadow(144px 0 var(--color-shadow-after)) drop-shadow(288px 0 var(--color-shadow-after));
-}
-
-.line-2:after {
-	filter: drop-shadow(72px 0 var(--color-shadow-after))
-		drop-shadow(-144px 0 var(--color-shadow-after)) drop-shadow(-288px 0 var(--color-shadow-after));
-}
-
 .itemProjectCard {
 	--rotate-card: 0.5deg;
 
@@ -80,24 +61,32 @@
 
 	&:nth-child(2) {
 		--color-1: #a12429;
-		--color-line: #fff;
-		--color-shadow-after: #a12429;
+		--line-color: #ececec;
+		--color-shadow-after: var(--color-1);
 		--color-bottom-card: var(--color-1);
 
 		position: relative;
 		background-color: var(--color-shadow-after);
 		background-image: none;
 
+		& .projectCard__paragraph {
+			margin-bottom: 7em;
+
+			@media (min-width: 53.125rem) {
+				margin-bottom: 3em;
+			}
+		}
+
 		& .projectCard__patron {
-			--height-patron: 80px;
+			--height-patron: 5rem;
 			--half-height-patron: calc(var(--height-patron) / 2);
-			--border-width: 24px;
+			--border-width: 1.5rem;
 
 			position: absolute;
 			width: 100%;
 			height: var(--height-patron);
 			bottom: 16%;
-			left: 10px;
+			left: 0.625rem;
 			z-index: -1;
 
 			& .line-1,
@@ -107,19 +96,42 @@
 				height: 0;
 				border-left: var(--border-width) solid transparent;
 				border-right: var(--border-width) solid transparent;
-				border-bottom: var(--half-height-patron) solid var(--color-line);
+				border-bottom: var(--half-height-patron) solid var(--line-color);
 
 				&:after {
 					content: '';
 					position: absolute;
 					bottom: calc(-1 * var(--half-height-patron));
-					left: -12px;
+					left: -0.75rem;
 					width: 0;
 					height: 0;
-					border-left: 12px solid transparent;
-					border-right: 12px solid transparent;
-					border-bottom: 20px solid var(--color-shadow-after);
+					border-left: 0.75rem solid transparent;
+					border-right: 0.75rem solid transparent;
+					border-bottom: 1.25rem solid var(--color-shadow-after);
 				}
+			}
+
+			& .line-1 {
+				filter: drop-shadow(4.5rem 0 var(--line-color)) drop-shadow(9rem 0 var(--line-color))
+					drop-shadow(18rem 0 var(--line-color));
+			}
+
+			& .line-2 {
+				transform: translate(2.25rem, 0) rotate(180deg);
+				filter: drop-shadow(4.5rem 0 var(--line-color)) drop-shadow(-9rem 0 var(--line-color))
+					drop-shadow(-18rem 0 var(--line-color));
+			}
+
+			& .line-1:after {
+				filter: drop-shadow(4.5rem 0 var(--color-shadow-after))
+					drop-shadow(9rem 0 var(--color-shadow-after))
+					drop-shadow(18rem 0 var(--color-shadow-after));
+			}
+
+			& .line-2:after {
+				filter: drop-shadow(4.5rem 0 var(--color-shadow-after))
+					drop-shadow(-9rem 0 var(--color-shadow-after))
+					drop-shadow(-18rem 0 var(--color-shadow-after));
 			}
 		}
 	}
@@ -183,7 +195,7 @@
 
 	&__containerImg {
 		position: relative;
-		height: 160px;
+		height: 10rem;
 
 		&:after {
 			content: '';
@@ -197,7 +209,7 @@
 
 	&__img {
 		width: 100%;
-		height: 160px;
+		height: 10rem;
 		border-top-left-radius: 1rem;
 		border-top-right-radius: 1rem;
 		opacity: 1;
@@ -214,7 +226,7 @@
 		margin-bottom: 0.8em;
 		font-size: 1.25rem;
 		line-height: 1.75rem;
-		text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+		text-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.8);
 	}
 
 	&__paragraph {
@@ -272,7 +284,7 @@
 			content: '';
 			position: absolute;
 			display: block;
-			width: 60px;
+			width: 3.75rem;
 			height: 200%;
 			top: 0;
 			left: 0;
@@ -282,13 +294,17 @@
 				rgba(255, 255, 255, 0.4) 49% 51%,
 				transparent 95%
 			);
-			transform: rotate(var(--rotate-shyne)) translateX(-480px);
-			transform-origin: 0 0;
+			transform: rotate(var(--rotate-shyne)) translateX(-10rem);
+			transform-origin: 0;
 			transition: transform ease 500ms;
 		}
 
 		&:hover:after {
-			transform: rotate(var(--rotate-shyne)) translateX(340px);
+			transform: rotate(var(--rotate-shyne)) translateX(40.9375rem);
+
+			@media (min-width: 100rem) {
+				transform: rotate(var(--rotate-shyne)) translateX(50.3125rem);
+			}
 		}
 	}
 }
