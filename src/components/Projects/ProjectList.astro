@@ -19,7 +19,12 @@ const projectlist = projects.filter((project) => project.title !== principalProj
 ---
 
 <Section addClass="section__projects" id="viewBtnToTop">
-	<h3 class="section__title section__projects__title" id={sectionid}>Proyectos</h3>
+	<h3
+		class="section__title section__title_largeReflectionSeparation section__projects__title"
+		id={sectionid}
+	>
+		Proyectos
+	</h3>
 	{typeof project !== 'undefined' ? <Project project={project} /> : null}
 
 	<ul class="section__projects__projectList">
