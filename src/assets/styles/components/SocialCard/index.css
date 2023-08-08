@@ -8,7 +8,7 @@
 	list-style-type: none;
 
 	&__link {
-		--size-icon: 2.75rem;
+		--size-icon: 2.5rem;
 
 		display: flex;
 		align-items: center;
@@ -26,7 +26,13 @@
 	}
 }
 
-@media (min-width: 48.5rem) {
+@media (min-width: 36.25rem) {
+	.socialCard__link {
+		--size-icon: 2.75rem;
+	}
+}
+
+@media (min-width: 1200px) {
 	.socialCard {
 		justify-content: flex-start;
 	}
