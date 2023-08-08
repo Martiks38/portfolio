@@ -69,6 +69,14 @@
 		background-color: var(--color-shadow-after);
 		background-image: none;
 
+		& .projectCard__paragraph {
+			margin-bottom: 7em;
+
+			@media (min-width: 53.125rem) {
+				margin-bottom: 3em;
+			}
+		}
+
 		& .projectCard__patron {
 			--height-patron: 5rem;
 			--half-height-patron: calc(var(--height-patron) / 2);
