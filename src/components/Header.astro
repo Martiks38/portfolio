@@ -1,11 +1,10 @@
 ---
-import ButtonToTop from './ButtonToTop.astro'
 import ButtonChangePageAspect from './ButtonChangePageAspect.astro'
 
 // Styles
 import '@assets/styles/components/Header/index.css'
 
-import { COLOR_ASPECT,  ITEMS_NAV,  NAME_COOKIE_COLOR } from '@/consts'
+import { COLOR_ASPECT, ITEMS_NAV, NAME_COOKIE_COLOR } from '@/consts'
 
 const { dark, light } = COLOR_ASPECT
 
@@ -36,10 +35,6 @@ const changeColor = turns === 0 ? light : dark
 <script src="@utils/changeTheme.ts"></script>
 
 <a href={`#${ITEMS_NAV.mainContent}`} class="skipNavLinks">Ir al contenido principal</a>
-
-<div class="asideButtons">
-	<ButtonToTop />
-</div>
 
 <header class="headerPage">
 	<div class="headerPage__container">
