@@ -12,7 +12,17 @@ const { sectionid } = Astro.props
 
 <Section addClass="section__aboutMe">
 	<h3 class="section__title section__aboutMe__title" id={sectionid}>Sobre mí</h3>
-	<img src={photo} alt="" class="section__aboutMe__img" width="450" height="338" loading="lazy" />
+	<figure class="section__aboutMe__containerImage">
+		<img
+			src={photo}
+			alt="Con Magi"
+			class="section__aboutMe__img"
+			width="450"
+			height="338"
+			loading="lazy"
+			title="Con Magi"
+		/>
+	</figure>
 	<div class="section__aboutMe__description">
 		<p class="section__aboutMe__paragraph">
 			De niño quería ser desarrollador de videojuegos, pero no sabía cómo empezar. No fue hasta que
@@ -20,18 +30,17 @@ const { sectionid } = Astro.props
 			por el <em class="section__aboutMe__highlight">desarrollo web Frontend</em>.
 		</p>
 		<p class="section__aboutMe__paragraph">
-			+3 años aprendiendo Frontend y Backend. Comencé con el libro: "El gran libro de HTML5, CSS3 y
-			JavaScript" y continué con los cursos de dos grandes personas: <a
-				href="https://www.youtube.com/@midulive"
-				rel="noopener">Midudev</a
-			> y <a href="https://www.youtube.com/@jonmircha" rel="noopener">jonmircha</a>. Creando
+			+3 años aprendiendo <span class="section__aboutMe__highlighted"><em>Frontend.</em></span>
+			Comencé con el libro: "El gran libro de HTML5, CSS3 y JavaScript" y continué con los cursos de
+			dos grandes personas: <a href="https://www.youtube.com/@midulive" rel="noopener">Midudev</a> y
+			<a href="https://www.youtube.com/@jonmircha" rel="noopener">jonmircha</a>. Creando
 			aplicaciones con <strong class="section__aboutMe__highlight">Next.js</strong>, <strong
 				class="section__aboutMe__highlight">TypeScript</strong
 			> y <strong class="section__aboutMe__highlight">Sass</strong>.
 		</p>
 		<p class="section__aboutMe__paragraph">
 			Actualmente, estoy aprendiendo <strong class="section__aboutMe__highlight">Node.js</strong>, <strong
-				class="section__aboutMe__highlight">PostgreSQL</strong
+				class="section__aboutMe__highlight">Postgres</strong
 			> y <strong class="section__aboutMe__highlight">accesibilidad</strong>.
 		</p>
 	</div>

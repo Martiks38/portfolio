@@ -164,6 +164,42 @@
 		place-self: center;
 	}
 
+	&__containerImage {
+		--frame-color: var(--color-secondary-dark);
+		--width: 0.5rem;
+		--length: 4.6875rem;
+		--border-length: calc(100% - var(--length));
+		--border-width: calc(100% - var(--width));
+
+		height: 22.0625rem;
+		background-color: var(--frame-color);
+		border-radius: 1rem;
+		border: solid var(--width) var(--frame-color);
+		clip-path: polygon(
+			0 0,
+			var(--length) 0,
+			var(--length) var(--border-width),
+			var(--border-length) var(--border-width),
+			var(--border-length) 0,
+			100% 0,
+			100% var(--length),
+			calc(100% - var(--border-width)) var(--length),
+			calc(100% - var(--border-width)) var(--border-length),
+			100% var(--border-length),
+			100% 100%,
+			var(--border-length) 100%,
+			var(--border-length) calc(100% - var(--border-width)),
+			var(--length) calc(100% - var(--border-width)),
+			var(--length) 100%,
+			0 100%,
+			0 var(--border-length),
+			var(--border-width) var(--border-length),
+			var(--border-width) var(--length),
+			0 var(--length),
+			0 0
+		);
+	}
+
 	&__img {
 		grid-area: image;
 		align-self: center;
@@ -175,6 +211,7 @@
 		grid-area: description;
 
 		margin-top: 4.5rem;
+		height: 100%;
 		max-width: 55ch;
 		text-wrap: balance;
 		font-size: 1.25rem;
@@ -194,6 +231,26 @@
 		color: var(--color-primary);
 		font-style: normal;
 		font-weight: 700;
+	}
+
+	&__highlighted {
+		position: relative;
+
+		&::before {
+			--highlighted-padding: 0.4em;
+
+			content: '';
+			position: absolute;
+			top: calc(var(--highlighted-padding) / (-4));
+			left: calc(var(--highlighted-padding) / (-2));
+			display: block;
+			width: calc(100% + var(--highlighted-padding));
+			height: calc(100% + calc(var(--highlighted-padding) / 2));
+			background-color: rebeccapurple;
+			transform: rotate(-1deg);
+			z-index: -1;
+			box-sizing: content-box;
+		}
 	}
 }
 
@@ -218,7 +275,7 @@
 		place-content: center;
 		width: 100%;
 		list-style-type: none;
-		overflow-y: hidden;
+		padding: 0.1rem 0;
 	}
 }
 
@@ -368,7 +425,7 @@
 		max-height: 80dvh;
 
 		&_photo-info {
-			background-image: url('/src/assets/images/userdata.png');
+			background-image: url('/src/assets/images/userdata.jpg');
 			justify-content: flex-start;
 			background-size: cover;
 			border: solid 2px #2b2b2b;
