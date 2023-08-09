@@ -6,6 +6,7 @@
 	border-radius: 1rem;
 	color: #fff;
 	transition: opacity 300ms ease-in-out;
+	visibility: visible;
 	opacity: 1;
 	overflow: hidden;
 
@@ -183,6 +184,7 @@
 
 .itemProjectCard.hidden {
 	opacity: 0;
+	visibility: hidden;
 }
 
 .projectCard {
