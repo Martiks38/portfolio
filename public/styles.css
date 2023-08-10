@@ -45,6 +45,7 @@ html {
 }
 
 body {
+	position: relative;
 	width: 100%;
 	background-color: var(--background-color-body);
 	color: var(--color-letter-body);
@@ -63,6 +64,34 @@ body {
 	line-height: 1.5;
 	transition: background-color linear 400ms;
 	overflow-x: hidden;
+}
+
+.dot {
+	position: absolute;
+	inset: 0;
+	margin-left: auto;
+	margin-right: auto;
+	width: var(--width-content);
+	height: 100%;
+
+	&:before {
+		--dot-size: 1.25px;
+
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		inset: 0;
+		background-image: radial-gradient(
+			circle,
+			rgba(255, 255, 255, 0.6) var(--dot-size),
+			transparent var(--dot-size)
+		);
+		background-size: calc(8% - 1px) 9.375rem;
+		background-position-x: 0.25rem;
+		animation: dotScroll 200s linear 0s infinite forwards;
+		z-index: -1;
+	}
 }
 
 body.light {
@@ -91,6 +120,49 @@ ul {
 	padding: 0;
 }
 
+main {
+	position: relative;
+	z-index: 1;
+}
+
+@media (min-width: 22.5rem) {
+	.dot:before {
+		--dot-size: 2px;
+	}
+}
+
+@media (min-width: 22.5625rem) {
+	.dot:before {
+		background-size: calc(10% - 1px) 15.625rem;
+		background-position-x: -0.625rem;
+	}
+}
+
+@media (min-width: 48rem) {
+	.dot:before {
+		background-position-x: -0.625rem;
+		background-size: calc(14.2857142857% - 1px) 15.625rem;
+	}
+}
+
+@media (min-width: 64rem) {
+	.dot:before {
+		background-position-x: 0.625rem;
+	}
+}
+
+@media (min-width: 80rem) {
+	.dot:before {
+		background-position-x: -3.375rem;
+	}
+}
+
+@media (min-width: 87.5rem) {
+	.dot:before {
+		background-position-x: -0.25rem;
+	}
+}
+
 @media (prefers-reduced-motion: reduce) {
 	html {
 		scroll-behavior: auto;
@@ -98,6 +170,10 @@ ul {
 
 	body {
 		transition-property: none;
+	}
+
+	.dot_before {
+		animation-duration: 500s;
 	}
 }
 
@@ -110,4 +186,13 @@ ul {
 		url('/fonts/Poppins-Regular.woff2') format('woff2');
 	font-style: normal;
 	font-weight: normal;
+}
+
+@keyframes dotScroll {
+	from {
+		background-position-y: 100%;
+	}
+	to {
+		background-position-y: 0%;
+	}
 }
