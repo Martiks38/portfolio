@@ -219,8 +219,12 @@
 		line-height: 1.75rem;
 	}
 
-	&__paragraph:not(:last-child) {
-		margin-bottom: 1em;
+	&__paragraph {
+		text-align: center;
+
+		&:not(:last-child) {
+			margin-bottom: 1em;
+		}
 	}
 
 	& a {
@@ -295,13 +299,18 @@
 		line-height: 2rem;
 	}
 
-	&__paragraph:not(:last-child) {
-		margin-bottom: 1em;
+	&__paragraph {
+		text-align: center;
+
+		&:not(:last-child) {
+			margin-bottom: 1em;
+		}
 	}
 
 	&__address {
 		margin-bottom: 2em;
 		color: var(--color-primary);
+		text-align: center;
 	}
 }
 
@@ -413,6 +422,12 @@
 		&__description {
 			margin-top: auto;
 		}
+	}
+
+	.section__aboutMe__paragraph,
+	.section__contact__paragraph,
+	.section__contact__address {
+		text-align: left;
 	}
 }
 
