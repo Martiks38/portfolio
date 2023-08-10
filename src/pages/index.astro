@@ -1,13 +1,13 @@
 ---
 import Layout from '@/layouts/Layout.astro'
-import Header from '@components/Header.astro'
-import Introduction from '@components/Introduction/Introduction.astro'
 
 import { ITEMS_NAV } from '@/values'
 
-import ProjectList from '@components/Projects/ProjectList.astro'
 import AboutMe from '@components/AboutMe/AboutMe.astro'
 import ContactSection from '@components/Contact/ContactSection.astro'
+import Header from '@components/Header.astro'
+import Introduction from '@components/Introduction/Introduction.astro'
+import ProjectList from '@components/Projects/ProjectList.astro'
 
 const getKeys = Object.keys as <T extends object>(obj: T) => Array<keyof T>
 const section_ids = Object.fromEntries(getKeys(ITEMS_NAV).map((item) => [item, item]))
