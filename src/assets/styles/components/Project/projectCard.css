@@ -264,6 +264,12 @@
 			width: inherit;
 			height: inherit;
 			filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.6));
+			transform: scale(1);
+			transition: transform 100ms linear;
+		}
+
+		&:hover svg {
+			transform: scale(1.01);
 		}
 	}
 
@@ -275,6 +281,11 @@
 		box-shadow:
 			0 2px 5px rgba(0, 0, 0, 0.16),
 			0 2px 10px rgba(0, 0, 0, 0.12);
+		transition: transform 100ms linear;
+
+		&:hover {
+			transform: scale(1.01);
+		}
 	}
 }
 

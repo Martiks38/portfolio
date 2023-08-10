@@ -1,6 +1,7 @@
 ---
 import LinkIcon from '@components/Icons/LinkIcon.astro'
 
+import i18n from '@assets/translations/i18n.json'
 import '@assets/styles/components/Project/index.css'
 
 import { BASE_URL_GITHUB } from '@/consts'
@@ -13,6 +14,13 @@ interface Props {
 
 const { project } = Astro.props
 
+const {
+	ALT_HOME_MAIN_PROJECT,
+	ALT_PAGE_VIEWS,
+	LABEL_TO_PAGE,
+	MAIN_PROJECT_LINK_TO_REPOSITORY,
+	TECHS_LIST_PARAGRAPH
+} = i18n.es.project
 const { title, description, images, urlPage, nameRepository, techs } = project
 
 const url_code = BASE_URL_GITHUB.concat(nameRepository)
@@ -28,26 +36,25 @@ const { imageList, presentationImage } = images
 					href={urlPage}
 					target="_blank"
 					rel="noopener norefferer"
-					aria-label={`Ir a la página de ${title}`}
-					title={`Ir a la página de ${title}`}
+					aria-label={`${LABEL_TO_PAGE} ${title}`}
+					title={`${LABEL_TO_PAGE} ${title}`}
 				>
 					<LinkIcon styles="mainProject__title__urlIcon" />
 				</a>
 			</h4>
 			<div class="mainProject__description">
-				<!-- Si es el último párrafo añade el enlace al repositori de GitHub -->
 				<p class="mainProject__paragraph">
-					{description}
+					{`${description} `}
 					<a
 						href={url_code}
 						class="mainProject__repositoryLink"
 						rel="noopener noreferrer"
 						target="_blank"
 					>
-						Ver&nbsp;código
+						{MAIN_PROJECT_LINK_TO_REPOSITORY}
 					</a>
 				</p>
-				<p>Tecnologías usadas:</p>
+				<p class="mainProject__paragraph">{TECHS_LIST_PARAGRAPH}</p>
 				<ul class="mainProject__techList">
 					{
 						techs.map((tech) => (
@@ -62,7 +69,7 @@ const { imageList, presentationImage } = images
 		<div class="mainProject__mainImage">
 			<img
 				src={presentationImage}
-				alt={`Visualización del inicio de la página de ${title}`}
+				alt={`${ALT_HOME_MAIN_PROJECT} ${title}`}
 				width="540"
 				height="270"
 				loading="lazy"
@@ -71,11 +78,11 @@ const { imageList, presentationImage } = images
 	</div>
 	<ul class="mainProject__wrapperImages">
 		{
-			imageList.map((img) => (
+			imageList.map((img, ind) => (
 				<li>
 					<img
 						src={img}
-						alt={`Visualización de sección de la página ${title}`}
+						alt={`${ALT_PAGE_VIEWS} ${title}, ${ind}`}
 						width="368"
 						height="184"
 						loading="lazy"

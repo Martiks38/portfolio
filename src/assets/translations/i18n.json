@@ -47,7 +47,14 @@
       "SECOND_PARAGRAPH": "Contacta conmigo a través del correo electrónico o redes sociales. ¡Hasta pronto!"
     },
     "project": {
-      "TITLE": "Proyectos"
+      "TITLE": "Proyectos",
+      "REPOSITORY_LABEL": "Ir al repositorio del código de",
+      "BUTTON_TO_PAGE": "Ir a la página",
+      "LABEL_TO_PAGE": "Ir a la página de",
+      "MAIN_PROJECT_LINK_TO_REPOSITORY": "Ver código",
+      "TECHS_LIST_PARAGRAPH": "Tecnologías usadas:",
+      "ALT_HOME_MAIN_PROJECT": "Visualización del inicio de la página de",
+      "ALT_PAGE_VIEWS": "Visualización de sección de la página"
     }
   }
 }

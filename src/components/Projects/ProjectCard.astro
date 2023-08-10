@@ -1,5 +1,6 @@
 ---
 import logoSprites from '@assets/sprites/socialSprite.svg'
+import i18n from '@assets/translations/i18n.json'
 import '@assets/styles/components/Project/projectCard.css'
 
 import { BASE_URL_GITHUB } from '@/consts'
@@ -12,6 +13,7 @@ interface Props {
 
 const { project } = Astro.props
 const { description, images, nameRepository, title, urlPage } = project
+const { BUTTON_TO_PAGE, REPOSITORY_LABEL } = i18n.es.project
 
 const nameProject = 'Matatena'
 ---
@@ -33,21 +35,16 @@ const nameProject = 'Matatena'
 		<div class="projectCard__containerLinks">
 			<a
 				href={`${BASE_URL_GITHUB}/${nameRepository}`}
-				rel="noopener"
-				aria-label={`Ver repositorio del código de ${title}`}
+				rel="noopener noreferrer"
+				aria-label={`${REPOSITORY_LABEL} ${title}`}
 				class="projectCard__repositoryLink"
-				title={`Ir al repositorio de ${title}`}
+				title={`${REPOSITORY_LABEL} ${title}`}
 			>
 				<svg>
 					<use href={`${logoSprites}#github`}></use>
 				</svg>
 			</a>
-			<a
-				href={urlPage}
-				rel="noopener"
-				title={`Ir al sitio de ${title}`}
-				class="projectCard__pageLink">Ir a la página</a
-			>
+			<a href={urlPage} rel="noopener noreferrer" class="projectCard__pageLink">{BUTTON_TO_PAGE}</a>
 		</div>
 	</div>
 	{

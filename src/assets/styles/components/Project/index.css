@@ -43,6 +43,7 @@
 	}
 
 	&__repositoryLink {
+		white-space: nowrap;
 		font-weight: 600;
 	}
 
