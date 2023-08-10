@@ -1,41 +1,25 @@
 :root {
-	--color-black-pure: #000;
 	--color-black: #0e0e10;
 	--color-black-1: #18181b;
 	--color-black-2-alpha-95: rgb(42 42 45 / 0.95);
 	--color-black-pure-alpha-50: rgba(0, 0, 0, 0.5);
-	--color-black-pure-alpha-80: rgba(0, 0, 0, 0.8);
-	--color-white-pure: #fff;
 	--color-white-pure-alpha-90: rgb(255 255 255 / 0.9);
-
 	--color-primary: #c7a76e;
 	--color-secondary: #75eff8;
-
 	--color-secondary-alpha-75: rgba(15, 130, 165, 0.75);
-	--color-secondary-alpha-50: rgba(13, 139, 178, 0.5);
 	--color-secondary-dark: #014d64;
-
 	--color-tertiary-dark: #685a1f;
-	--color-scrollbar-card: rgb(117 239 248 / 0.2);
-	--color-scrollbar-thumb-card: rgb(117 239 248 / 0.5);
-	--shadow-color-1-card-project: rgb(117 239 248 / 0.16);
-	--shadow-color-2-card-project: rgb(117 239 248 / 0.12);
 	--width-content: 87.5rem;
 	--border-radius-8: 0.5rem;
 	--border-radius-10: 0.625rem;
 	--height-nav-item: 2.375rem;
-	--social-card-color: #ebebeb;
 }
 
 :root {
 	--color-menu-item: var(--color-primary);
 	--background-color-body: #170125;
 	--color-letter-body: var(--color-white-pure-alpha-90);
-	--address-color: var(--color-primary);
-	--border-tech: var(--color-primary);
-	--color-line: var(--color-black-pure-alpha-80);
 	--url-icon: var(--color-menu-item);
-	--repository-link: var(--color-tertiary);
 	--shadow-project-image: drop-shadow(0px 2px 2px rgb(255 255 255 / 0.12))
 		drop-shadow(0px 2px 5px rgb(255 255 255 / 0.16));
 }
@@ -95,16 +79,11 @@ body {
 }
 
 body.light {
-	--address-color: var(--color-secondary-dark);
 	--background-color-body: #ececec;
-	--border-tech: var(--color-secondary);
 	--color-letter-body: var(--color-black);
-	--invert-icon: 0;
 	--url-icon: var(--color-tertiary-dark);
 	--shadow-project-image: drop-shadow(0px 2px 2px rgb(0 0 0 / 0.12))
 		drop-shadow(0px 2px 5px rgb(0 0 0 / 0.16));
-	--repository-link: var(--color-tertiary-dark);
-	--social-card-color: #2d2d2d;
 }
 
 a {
