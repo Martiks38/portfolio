@@ -3,6 +3,8 @@
 	--color-black-1: #18181b;
 	--color-black-2-alpha-95: rgb(42 42 45 / 0.95);
 	--color-black-pure-alpha-50: rgba(0, 0, 0, 0.5);
+	--color-white: #e1dbdb;
+	--color-white-pure: #fff;
 	--color-white-pure-alpha-90: rgb(255 255 255 / 0.9);
 	--color-primary: #c7a76e;
 	--color-secondary: #75eff8;
@@ -10,9 +12,11 @@
 	--color-secondary-dark: #014d64;
 	--color-tertiary-dark: #685a1f;
 	--width-content: 87.5rem;
+	--height-nav-item: 2.375rem;
+	--border-radius-6: 0.375rem;
 	--border-radius-8: 0.5rem;
 	--border-radius-10: 0.625rem;
-	--height-nav-item: 2.375rem;
+	--border-radius-16: 1rem;
 }
 
 :root {
@@ -32,7 +36,7 @@ body {
 	position: relative;
 	width: 100%;
 	background-color: var(--background-color-body);
-	color: var(--color-letter-body);
+	color: var(--color-white);
 	font-family:
 		system-ui,
 		-apple-system,

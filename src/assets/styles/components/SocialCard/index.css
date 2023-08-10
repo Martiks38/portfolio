@@ -13,16 +13,18 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		transition: transform 0.3s ease-in-out;
+		transition: transform 200ms ease-in-out;
 
 		& svg {
-			height: var(--size-icon, 38px);
-			width: var(--size-icon, 38px);
+			height: var(--size-icon, 2.375rem);
+			width: var(--size-icon, 2.375rem);
 		}
+	}
+}
 
-		&:hover {
-			transform: scale(1.2);
-		}
+@media (hover: hover) {
+	.socialCard__link:hover {
+		transform: scale(1.2);
 	}
 }
 

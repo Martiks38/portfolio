@@ -3,8 +3,8 @@
 
 	position: relative;
 	background-image: var(--bg-card);
-	border-radius: 1rem;
-	color: #fff;
+	border-radius: var(--border-radius-16);
+	color: var(--color-white-pure);
 	transition: opacity 300ms ease-in-out;
 	visibility: visible;
 	opacity: 1;
@@ -202,7 +202,7 @@
 	flex-direction: column;
 	padding: 1.4rem;
 	height: 100%;
-	border-radius: 1rem;
+	border-radius: var(--border-radius-16);
 	transition: transform 300ms ease-in-out;
 
 	&__containerImg {

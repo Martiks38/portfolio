@@ -23,9 +23,9 @@
 			vertical-align: middle;
 
 			&:focus &__urlIcon {
-				outline: solid 3px var(--color-secondary);
-				outline-offset: 3px;
-				border-radius: 0.375rem;
+				outline: solid 0.1875rem var(--color-secondary);
+				outline-offset: 0.1875rem;
+				border-radius: var(--border-radius-6);
 			}
 		}
 
