@@ -35,7 +35,7 @@ const changeColor = turns === 0 ? light : dark
 <script src="@utils/handlerMenu.ts"></script>
 <script src="@utils/changeTheme.ts"></script>
 
-<a href={`#${ITEMS_NAV.mainContent}`} class="skipNavLinks">{i18n.es.SKIP_TO_MAIN_CONTENT}</a>
+<a href={`#${Object.keys(ITEMS_NAV)[0]}`} class="skipNavLinks">{i18n.es.SKIP_TO_MAIN_CONTENT}</a>
 
 <header class="headerPage" aria-live="polite">
 	<div class="headerPage__container">
