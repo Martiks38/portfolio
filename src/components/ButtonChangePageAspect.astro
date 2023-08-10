@@ -1,11 +1,12 @@
 ---
+import schemes from '@assets/sprites/modesSprite.svg'
+import i18n from '@assets/translations/i18n.json'
+
 interface Props {
 	changeColor: string
 	color: string
 	turns: number
 }
-
-import schemes from '@assets/sprites/modesSprite.svg'
 
 const { changeColor, color, turns } = Astro.props
 ---
@@ -16,7 +17,7 @@ const { changeColor, color, turns } = Astro.props
 		class="btnColorScheme"
 		data-turns={turns}
 		data-color={color}
-		aria-label={`Cambiar aspecto a modo ${changeColor}`}
+		aria-label={`${i18n.es.BUTTON_CHANGE_PAGE_SCHEME} ${changeColor}`}
 		style={`transform: rotate(${turns * 0.5}turn)`}
 	>
 		<svg class="btnColorScheme__icon">

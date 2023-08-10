@@ -1,7 +1,10 @@
 ---
 import '@assets/styles/components/SocialCard/index.css'
+import i18n from '@assets/translations/i18n.json'
 
 import logos from '@assets/sprites/socialSprite.svg'
+
+const { email, github, linkedin } = i18n.es.social_card
 ---
 
 <aside>
@@ -11,8 +14,8 @@ import logos from '@assets/sprites/socialSprite.svg'
 				href="https://github.com/Martiks38?tab=repositories"
 				target="_blank"
 				class="socialCard__link socialCard__link_invert"
-				title="Ir al repositorio GitHub"
-				aria-label="Ver projectos en GitHub"
+				title={github}
+				aria-label={github}
 				rel="noopener noreferrer"
 			>
 				<svg>
@@ -25,8 +28,8 @@ import logos from '@assets/sprites/socialSprite.svg'
 				href="https://www.linkedin.com/in/giuliano-cappa"
 				target="_blank"
 				class="socialCard__link"
-				title="Ir al perfil de LinkedIn"
-				aria-label="Ir al perfil de LinkedIn"
+				title={linkedin}
+				aria-label={linkedin}
 				rel="noopener noreferrer"
 			>
 				<svg>
@@ -38,9 +41,8 @@ import logos from '@assets/sprites/socialSprite.svg'
 			<a
 				href="mailto:cappa.giuliano.m@gmail.com"
 				class="socialCard__link"
-				title="Enviar correo electrónico"
-				aria-label="Enviar correo electrónico"
-				rel="noopener noreferrer"
+				title={email}
+				aria-label={email}
 			>
 				<svg>
 					<use href={`${logos}#gmail`}></use>

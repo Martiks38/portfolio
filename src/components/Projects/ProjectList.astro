@@ -2,6 +2,7 @@
 import Project from './Project.astro'
 import Section from '@/layouts/Section.astro'
 
+import i18n from '@assets/translations/i18n.json'
 import { getProjects } from '@/services/getProjects'
 import ProjectCard from './ProjectCard.astro'
 
@@ -10,6 +11,9 @@ interface Props {
 }
 
 const { sectionid } = Astro.props
+
+const { TITLE } = i18n.es.project
+
 const projects = await getProjects()
 
 const principalProject = 'Pets - The Crazy Goblin'
@@ -23,7 +27,7 @@ const projectlist = projects.filter((project) => project.title !== principalProj
 		class="section__title section__title_largeReflectionSeparation section__projects__title"
 		id={sectionid}
 	>
-		Proyectos
+		{TITLE}
 	</h3>
 	{typeof project !== 'undefined' ? <Project project={project} /> : null}
 

@@ -1,0 +1,53 @@
+{
+  "es": {
+    "SKIP_TO_MAIN_CONTENT": "Ir al contenido principal",
+    "NAVIGATION_MENU": {
+      "home": "INICIO",
+      "about-me": "SOBRE MÍ",
+      "projects": "PROYECTOS",
+      "contact": "CONTACTO"
+    },
+    "LABEL_CHANGE_PAGE_THEME": {
+      "open": "Abrir menú de navegación",
+      "close": "Cerrar menú de navegación"
+    },
+    "BUTTON_CHANGE_PAGE_SCHEME": "Cambiar aspecto a modo",
+    "social_card": {
+      "github": "Ir al perfil de GitHub",
+      "linkedin": "Ir al perfil de LinkedIn",
+      "email": "Enviar correo electrónico"
+    },
+    "AND": " y ",
+    "introduction": {
+      "GREETING": "Bienvenidos a mi sitio.",
+      "PRESENTATION": "Soy",
+      "SPECIALTY": "Desarrollador Frontend",
+      "text": {
+        "FIRST_FRAGMENT": "Me encanta escribir código, creando sitios web ",
+        "CREATIVE": "creativos",
+        "A11Y": "accesibles",
+        "SECOND_FRAGMENT": ". Siempre estoy dispuesto a aprender y explorar nuevas tecnologías, escuchar consejos y compartir lo que sé."
+      }
+    },
+    "about-me": {
+      "TITLE": "Sobre mí",
+      "ALT_IMG": "Con Magi",
+      "FIRST_PARAGRAPH": "De niño quería ser desarrollador de videojuegos, pero no sabía cómo empezar. No fue hasta que empecé a cursar materias de informática en la universidad donde volvió ese deseo, pero cambió por el ",
+      "FIRST_HIGHLIGHTED": "desarrollo web Frontend",
+      "SECOND_PARAGRAPH_FIRST_FRAGMENT": "+3 años aprendiendo ",
+      "SECOND_HIGHLIGHTED": "Frontend.",
+      "SECOND_PARAGRAPH_SECOND_FRAGMENT": " Comencé con el libro: \"El gran libro de HTML5, CSS3 y JavaScript\" y continué con los cursos de dos grandes personas: ",
+      "THIRD_PARAGRAPH_FIRST_FRAGMENT": "Actualmente, estoy creando aplicaciones con ",
+      "THIRD_PARAGRAPH_SECOND_FRAGMENT": "",
+      "THIRD_HIGHLIGHTED": "accesibilidad"
+    },
+    "contact": {
+      "TITLE": "Contacto",
+      "FIRST_PARAGRAPH": "Muchas gracias ❤️ por ver llegado hasta aquí. Espero que este portfolio haya sido de tu agrado.",
+      "SECOND_PARAGRAPH": "Contacta conmigo a través del correo electrónico o redes sociales. ¡Hasta pronto!"
+    },
+    "project": {
+      "TITLE": "Proyectos"
+    }
+  }
+}

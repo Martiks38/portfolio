@@ -2,46 +2,60 @@
 import Section from '@/layouts/Section.astro'
 
 import photo from '@assets/images/photo.webp'
+import i18n from '@assets/translations/i18n.json'
 
 interface Props {
 	sectionid: string
 }
 
 const { sectionid } = Astro.props
+
+const {
+	ALT_IMG,
+	FIRST_HIGHLIGHTED,
+	FIRST_PARAGRAPH,
+	SECOND_HIGHLIGHTED,
+	SECOND_PARAGRAPH_FIRST_FRAGMENT,
+	SECOND_PARAGRAPH_SECOND_FRAGMENT,
+	THIRD_PARAGRAPH_FIRST_FRAGMENT,
+	THIRD_PARAGRAPH_SECOND_FRAGMENT,
+	THIRD_HIGHLIGHTED,
+	TITLE
+} = i18n.es['about-me']
 ---
 
 <Section addClass="section__aboutMe">
-	<h3 class="section__title section__aboutMe__title" id={sectionid}>Sobre mí</h3>
+	<h3 class="section__title section__aboutMe__title" id={sectionid}>{TITLE}</h3>
 	<figure class="section__aboutMe__containerImage">
 		<img
 			src={photo}
-			alt="Con Magi"
+			alt={ALT_IMG}
 			class="section__aboutMe__img"
 			width="450"
 			height="338"
 			loading="lazy"
-			title="Con Magi"
+			title={ALT_IMG}
 		/>
 	</figure>
 	<div class="section__aboutMe__description">
 		<p class="section__aboutMe__paragraph">
-			De niño quería ser desarrollador de videojuegos, pero no sabía cómo empezar. No fue hasta que
-			empecé a cursar materias de informática en la universidad donde volvió ese deseo, pero cambió
-			por el <em class="section__aboutMe__highlight">desarrollo web Frontend</em>.
+			{FIRST_PARAGRAPH}<em class="section__aboutMe__highlight">{FIRST_HIGHLIGHTED}</em>.
 		</p>
 		<p class="section__aboutMe__paragraph">
-			+3 años aprendiendo <span class="section__aboutMe__highlighted"><em>Frontend.</em></span>
-			Comencé con el libro: "El gran libro de HTML5, CSS3 y JavaScript" y continué con los cursos de
-			dos grandes personas: <a href="https://www.youtube.com/@midulive" rel="noopener">Midudev</a> y
-			<a href="https://www.youtube.com/@jonmircha" rel="noopener">jonmircha</a>. Creando
-			aplicaciones con <strong class="section__aboutMe__highlight">Next.js</strong>, <strong
+			{SECOND_PARAGRAPH_FIRST_FRAGMENT}<em
+				><span class="section__aboutMe__highlighted">{SECOND_HIGHLIGHTED}</span></em
+			>{SECOND_PARAGRAPH_SECOND_FRAGMENT}<a href="https://www.youtube.com/@midulive" rel="noopener"
+				>Midudev</a
+			>{i18n.es.AND}<a href="https://www.youtube.com/@jonmircha" rel="noopener">jonmircha</a>.
+		</p>
+		<p class="section__aboutMe__paragraph">
+			{THIRD_PARAGRAPH_FIRST_FRAGMENT}<strong class="section__aboutMe__highlight">Next.js</strong>, <strong
 				class="section__aboutMe__highlight">TypeScript</strong
-			> y <strong class="section__aboutMe__highlight">Sass</strong>.
-		</p>
-		<p class="section__aboutMe__paragraph">
-			Actualmente, estoy aprendiendo <strong class="section__aboutMe__highlight">Node.js</strong>, <strong
+			>{i18n.es.AND}<strong class="section__aboutMe__highlight">Sass</strong>. {
+				THIRD_PARAGRAPH_SECOND_FRAGMENT
+			}<strong class="section__aboutMe__highlight">Node.js</strong>, <strong
 				class="section__aboutMe__highlight">Postgres</strong
-			> y <strong class="section__aboutMe__highlight">accesibilidad</strong>.
+			>{i18n.es.AND}<strong class="section__aboutMe__highlight">{THIRD_HIGHLIGHTED}</strong>.
 		</p>
 	</div>
 </Section>

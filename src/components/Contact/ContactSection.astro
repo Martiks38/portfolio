@@ -1,26 +1,29 @@
 ---
 import SocialCard from '@components/SocialCard.astro'
 import Section from '../../layouts/Section.astro'
+import i18n from '@assets/translations/i18n.json'
 
 interface Props {
 	sectionid: string
 }
 
 const { sectionid } = Astro.props
+
+const { contact } = i18n.es
+const { FIRST_PARAGRAPH, SECOND_PARAGRAPH, TITLE } = contact
 ---
 
 <Section addClass="section__contact">
-	<h3 class="section__title section__contact__title" id={sectionid}>Contacto</h3>
+	<h3 class="section__title section__contact__title" id={sectionid}>{TITLE}</h3>
 	<div class="section__contact__text">
 		<p class="section__contact__paragraph">
-			Muchas gracias ❤️ por ver llegado hasta aquí. Espero que este portfolio haya sido de tu
-			agrado.
+			{FIRST_PARAGRAPH}
 		</p>
 		<p class="section__contact__paragraph">
-			Contacta conmigo a través del correo electrónico o redes sociales. ¡Hasta pronto!
+			{SECOND_PARAGRAPH}
 		</p>
 		<address class="section__contact__address">
-			<a href="mailto:cappa.giuliano@gmail.com"> cappa.giuliano@gmail.com</a>
+			<a href="mailto:cappa.giuliano@gmail.com">cappa.giuliano@gmail.com</a>
 		</address>
 	</div>
 	<SocialCard />
