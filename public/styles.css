@@ -42,7 +42,7 @@
 	);
 	--navmenu-item-bar: var(--color-secondary-alpha-75);
 	--border-tech: var(--color-secondary);
-	--address-color: var(--color-light-1);
+	--address-color: var(--color-primary);
 }
 
 html {
