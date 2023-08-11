@@ -170,8 +170,9 @@
 		--length: 4.6875rem;
 		--border-length: calc(100% - var(--length));
 		--border-width: calc(100% - var(--width));
+		--height-img: 21.125rem;
 
-		height: 22.0625rem;
+		height: calc(2 * var(--width) + var(--height-img));
 		background-color: var(--frame-color);
 		border-radius: var(--border-radius-16);
 		border: solid var(--width) var(--frame-color);
