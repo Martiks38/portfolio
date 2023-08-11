@@ -1,0 +1,33 @@
+.contact {
+	&__title {
+		width: fit-content;
+	}
+
+	&__text {
+		max-width: 55ch;
+		font-size: 1.25rem;
+		font-size: clamp(1.125rem, 0.9952rem + 0.5769vw, 1.5rem);
+		line-height: 2rem;
+	}
+
+	&__paragraph {
+		text-align: center;
+
+		&:not(:last-child) {
+			margin-bottom: 1em;
+		}
+	}
+
+	&__address {
+		margin-bottom: 2em;
+		color: var(--address-color);
+		text-align: center;
+	}
+}
+
+@media (min-width: 73.75rem) {
+	.contact__paragraph,
+	.contact__address {
+		text-align: left;
+	}
+}

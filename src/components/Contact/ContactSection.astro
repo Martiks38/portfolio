@@ -3,6 +3,7 @@ import Section from '@/layouts/Section.astro'
 import SocialCard from '@components/SocialCard.astro'
 
 import i18n from '@assets/translations/i18n.json'
+import '@assets/styles/sections/Contact/index.css'
 
 interface Props {
 	sectionId: string
@@ -15,15 +16,15 @@ const { FIRST_PARAGRAPH, SECOND_PARAGRAPH, TITLE } = contact
 ---
 
 <Section addClass="section__contact" id={sectionId}>
-	<h3 class="section__title section__contact__title">{TITLE}</h3>
-	<div class="section__contact__text">
-		<p class="section__contact__paragraph">
+	<h3 class="section__title contact__title">{TITLE}</h3>
+	<div class="contact__text">
+		<p class="contact__paragraph">
 			{FIRST_PARAGRAPH}
 		</p>
-		<p class="section__contact__paragraph">
+		<p class="contact__paragraph">
 			{SECOND_PARAGRAPH}
 		</p>
-		<address class="section__contact__address">
+		<address class="contact__address">
 			<a href="mailto:cappa.giuliano@gmail.com">cappa.giuliano@gmail.com</a>
 		</address>
 	</div>
