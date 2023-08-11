@@ -72,7 +72,7 @@ body {
 }
 
 body.light {
-	--background-color-body: #eae2e2;
+	--background-color-body: #e6e6f0;
 	--color-letter-body: #1b1a1a;
 	--url-icon: #c25a19;
 	--shadow-project-image: drop-shadow(0px 2px 2px rgb(0 0 0 / 0.12))
