@@ -3,7 +3,7 @@
 
 	position: relative;
 	display: grid;
-	padding: 0 1rem;
+	padding: 4.5rem 1rem 2rem;
 	margin: 0 auto;
 	max-width: var(--width-content);
 	width: 100%;
@@ -377,7 +377,8 @@
 
 @media screen and (min-width: 48.5rem) {
 	.section {
-		padding: 2rem;
+		padding-left: 2rem;
+		padding-right: 2rem;
 	}
 
 	.section__introduction:first-child {
