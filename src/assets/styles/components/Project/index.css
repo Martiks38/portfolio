@@ -61,7 +61,8 @@
 
 	&__tech {
 		padding: 0.3em 0.7em;
-		border: solid 0.1875rem var(--color-secondary);
+		background-color: var(--background-color-body);
+		border: solid 0.1875rem var(--border-tech);
 		border-radius: 2.5rem;
 	}
 
@@ -126,15 +127,17 @@
 }
 
 @media (hover: hover) {
-	.mainProject__repositoryLink:hover {
+	.mainProject__repositoryLink:hover,
+	.mainProject__repositoryLink:focus {
 		text-decoration: underline;
-		color: var(--color-secondary);
+		color: var(--repository-link);
 	}
 }
 
 @media (hover: none) {
 	.mainProject__repositoryLink {
 		text-decoration: underline;
+		color: var(--repository-link);
 	}
 }
 

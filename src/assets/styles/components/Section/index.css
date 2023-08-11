@@ -74,7 +74,7 @@
 	}
 
 	&__highlight {
-		color: var(--color-primary);
+		color: var(--color-highlighted);
 		font-weight: 700;
 	}
 
@@ -136,7 +136,7 @@
 
 		& strong {
 			background-clip: text;
-			background-image: linear-gradient(105deg, #75eff8 40%, #0bcddb);
+			background-image: var(--introduction-title-gradient);
 			color: transparent;
 		}
 	}
@@ -165,7 +165,7 @@
 	}
 
 	&__containerImage {
-		--frame-color: var(--color-secondary-dark);
+		--frame-color: var(--color-highlighted);
 		--width: 0.5rem;
 		--length: 4.6875rem;
 		--border-length: calc(100% - var(--length));
@@ -216,7 +216,7 @@
 		text-wrap: balance;
 		font-size: 1.25rem;
 		font-size: clamp(1.125rem, 0.9952rem + 0.5769vw, 1.5rem);
-		line-height: 1.75rem;
+		line-height: 2rem;
 	}
 
 	&__paragraph {
@@ -228,17 +228,19 @@
 	}
 
 	& a {
+		font-weight: 600;
 		text-decoration: underline;
 	}
 
-	&__highlight {
-		color: var(--color-primary);
+	&__highlighted {
+		color: var(--color-highlighted);
 		font-style: normal;
 		font-weight: 700;
 	}
 
-	&__highlighted {
+	&__mark {
 		position: relative;
+		color: var(--color-white);
 
 		&:before {
 			--highlighted-padding: 0.4em;
@@ -309,7 +311,7 @@
 
 	&__address {
 		margin-bottom: 2em;
-		color: var(--color-primary);
+		color: var(--address-color);
 		text-align: center;
 	}
 }
@@ -387,7 +389,7 @@
 
 @media (min-width: 50rem) {
 	.section__aboutMe__description {
-		line-height: 2rem;
+		line-height: 2.25rem;
 	}
 }
 
