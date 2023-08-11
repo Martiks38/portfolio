@@ -152,3 +152,14 @@
 		line-height: 2.25rem;
 	}
 }
+
+@keyframes light {
+	0%,
+	100% {
+		transform: scale(1);
+	}
+
+	50% {
+		transform: scale(1.2);
+	}
+}
