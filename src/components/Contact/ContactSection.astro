@@ -5,17 +5,17 @@ import SocialCard from '@components/SocialCard.astro'
 import i18n from '@assets/translations/i18n.json'
 
 interface Props {
-	sectionid: string
+	sectionId: string
 }
 
-const { sectionid } = Astro.props
+const { sectionId } = Astro.props
 
 const { contact } = i18n.es
 const { FIRST_PARAGRAPH, SECOND_PARAGRAPH, TITLE } = contact
 ---
 
-<Section addClass="section__contact">
-	<h3 class="section__title section__contact__title" id={sectionid}>{TITLE}</h3>
+<Section addClass="section__contact" id={sectionId}>
+	<h3 class="section__title section__contact__title">{TITLE}</h3>
 	<div class="section__contact__text">
 		<p class="section__contact__paragraph">
 			{FIRST_PARAGRAPH}

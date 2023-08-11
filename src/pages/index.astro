@@ -16,10 +16,10 @@ const section_ids = Object.fromEntries(getKeys(ITEMS_NAV).map((item) => [item, i
 <Layout title="Giuliano Cappa">
 	<div class="dot"></div>
 	<Header />
-	<main id={section_ids.mainContent}>
-		<Introduction />
-		<ProjectList sectionid={section_ids.projects} />
-		<AboutMe sectionid={section_ids['about-me']} />
-		<ContactSection sectionid={section_ids.contact} />
+	<main>
+		<Introduction sectionId={section_ids.mainContent} nextSectionId={section_ids.projects} />
+		<ProjectList sectionId={section_ids.projects} />
+		<AboutMe sectionId={section_ids['about-me']} />
+		<ContactSection sectionId={section_ids.contact} />
 	</main>
 </Layout>

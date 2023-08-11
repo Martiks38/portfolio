@@ -6,10 +6,10 @@ import i18n from '@assets/translations/i18n.json'
 import { EXTERNAL_LINKS } from '@/consts'
 
 interface Props {
-	sectionid: string
+	sectionId: string
 }
 
-const { sectionid } = Astro.props
+const { sectionId } = Astro.props
 
 const { jonmircha, midudev } = EXTERNAL_LINKS
 const {
@@ -26,8 +26,8 @@ const {
 } = i18n.es['about-me']
 ---
 
-<Section addClass="section__aboutMe">
-	<h3 class="section__title section__aboutMe__title" id={sectionid}>{TITLE}</h3>
+<Section addClass="section__aboutMe" id={sectionId}>
+	<h3 class="section__title section__aboutMe__title">{TITLE}</h3>
 	<figure class="section__aboutMe__containerImage">
 		<img
 			src={photo}

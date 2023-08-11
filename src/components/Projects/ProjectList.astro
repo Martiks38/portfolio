@@ -7,10 +7,10 @@ import i18n from '@assets/translations/i18n.json'
 import { getProjects } from '@/services/getProjects'
 
 interface Props {
-	sectionid: string
+	sectionId: string
 }
 
-const { sectionid } = Astro.props
+const { sectionId } = Astro.props
 
 const { TITLE } = i18n.es.project
 
@@ -22,11 +22,8 @@ const project = projects.find((project) => project.title === principalProject)
 const projectlist = projects.filter((project) => project.title !== principalProject)
 ---
 
-<Section addClass="section__projects" id="viewBtnToTop">
-	<h3
-		class="section__title section__title_largeReflectionSeparation section__projects__title"
-		id={sectionid}
-	>
+<Section addClass="section__projects" id={sectionId}>
+	<h3 class="section__title section__title_largeReflectionSeparation section__projects__title">
 		{TITLE}
 	</h3>
 	{typeof project !== 'undefined' ? <Project project={project} /> : null}
