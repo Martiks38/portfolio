@@ -1,0 +1,154 @@
+.introduction {
+	&__presentation {
+		grid-area: presentation;
+		text-align: center;
+	}
+
+	&__greetings {
+		margin-bottom: 1.25em;
+		max-width: 55ch;
+		font-size: 1.125rem;
+		line-height: 1.75rem;
+	}
+
+	&__highlight {
+		color: var(--color-highlighted);
+		font-weight: 700;
+	}
+
+	&_photo-info {
+		grid-area: photoInfo;
+
+		position: relative;
+		display: flex;
+		justify-content: center;
+		max-width: 100%;
+		height: auto;
+
+		&::before {
+			--r-circle: 10vw;
+
+			content: '';
+			position: absolute;
+			bottom: 25%;
+			left: -8%;
+			display: none;
+			width: var(--r-circle);
+			max-width: 25rem;
+			max-height: 25rem;
+			height: var(--r-circle);
+			background-image: radial-gradient(circle at center, #0bcddb 40%, transparent);
+			border-radius: 50%;
+			filter: saturate(2) blur(65px) brightness(1.2);
+			animation: 3s linear 0s infinite running light;
+			z-index: -1;
+		}
+	}
+
+	&__photo {
+		--size-photo: 12.5rem;
+
+		width: var(--size-photo);
+		height: var(--size-photo);
+		border: solid 0 #2b2b2b;
+		border-radius: 50%;
+		object-fit: cover;
+		object-position: center right;
+		aspect-ratio: auto;
+	}
+
+	&__text {
+		margin-bottom: 1.25em;
+		max-width: 55ch;
+		text-wrap: balance;
+		font-size: 1.125rem;
+		line-height: 1.75rem;
+	}
+
+	&__title {
+		margin-top: 0.25em;
+		margin-bottom: 0.5em;
+		font-size: 2.5rem;
+		font-size: clamp(2rem, 0.8rem + 5.3333vw, 4rem);
+		line-height: 2.5rem;
+
+		& strong {
+			background-clip: text;
+			background-image: var(--introduction-title-gradient);
+			color: transparent;
+		}
+	}
+
+	&__subtitle {
+		margin-bottom: 0.85em;
+		font-size: 1.875rem;
+		line-height: 2.25rem;
+	}
+}
+
+@media (min-width: 36.25rem) {
+	.introduction__photo {
+		--size-photo: 18.75rem;
+	}
+
+	.introduction__greetings,
+	.introduction__text {
+		font-size: 1.25rem;
+		line-height: 1.75rem;
+	}
+
+	.introduction__subtitle {
+		font-size: 2.25rem;
+		line-height: 2.5rem;
+	}
+}
+
+@media screen and (min-width: 48.5rem) {
+	.introduction__title {
+		line-height: 1;
+	}
+}
+
+@media (min-width: 73.75rem) {
+	.introduction__photo {
+		border-width: 0.25rem;
+	}
+}
+
+@media (min-width: 75rem) {
+	.introduction {
+		&_photo-info {
+			background-image: url('/src/assets/images/userdata.jpg');
+			justify-content: flex-start;
+			background-size: cover;
+			border: solid 2px #2b2b2b;
+			border-radius: var(--border-radius-8);
+			aspect-ratio: 4/3;
+
+			&:before {
+				display: block;
+			}
+		}
+
+		&__presentation {
+			text-align: left;
+		}
+
+		&__photo {
+			--size-photo: 8.4375rem;
+
+			position: absolute;
+			top: 100%;
+			right: 8%;
+			transform: translate(0, -40%);
+		}
+	}
+}
+
+@media screen and (min-width: 100rem) {
+	.introduction__greetings,
+	.introduction__text {
+		font-size: 1.875rem;
+		line-height: 2.25rem;
+	}
+}

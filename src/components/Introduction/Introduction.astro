@@ -7,6 +7,7 @@ import photo from '@assets/images/photo.webp'
 import i18n from '@assets/translations/i18n.json'
 
 import '@assets/styles/components/ArrowDown/index.css'
+import '@assets/styles/sections/Introduction/index.css'
 
 interface Props {
 	sectionId: string
@@ -20,31 +21,24 @@ const { BUTTON_TO_NEXT_SECTION, GREETING, PRESENTATION, SPECIALTY, text } = intr
 ---
 
 <Section addClass="section__introduction" id={sectionId}>
-	<div class="section__introduction__presentation">
-		<span class="section__introduction__greetings">{GREETING}</span>
+	<div class="introduction__presentation">
+		<span class="introduction__greetings">{GREETING}</span>
 		<hgroup>
-			<h1 class="section__introduction__title">
+			<h1 class="introduction__title">
 				{PRESENTATION}
 				<strong> Giuliano&nbsp;Cappa</strong>
 			</h1>
-			<p class="section__introduction__subtitle">{SPECIALTY}</p>
+			<p class="introduction__subtitle">{SPECIALTY}</p>
 		</hgroup>
-		<p class="section__introduction__text">
-			{text.FIRST_FRAGMENT}<strong class="section__introduction__highlight">{text.CREATIVE}</strong
-			>{AND}<strong class="section__introduction__highlight">{text.A11Y}</strong>{
-				text.SECOND_FRAGMENT
-			}
+		<p class="introduction__text">
+			{text.FIRST_FRAGMENT}<strong class="introduction__highlight">{text.CREATIVE}</strong>{
+				AND
+			}<strong class="introduction__highlight">{text.A11Y}</strong>{text.SECOND_FRAGMENT}
 		</p>
 		<SocialCard />
 	</div>
-	<div class="section__introduction_photo-info">
-		<img
-			src={photo}
-			alt="Giuliano Cappa"
-			class="section__introduction__photo"
-			width="300"
-			height="300"
-		/>
+	<div class="introduction_photo-info">
+		<img src={photo} alt="Giuliano Cappa" class="introduction__photo" width="300" height="300" />
 	</div>
 	<ArrowDown sectionId={nextSectionId} styles="arrowDown" label={BUTTON_TO_NEXT_SECTION} />
 </Section>
