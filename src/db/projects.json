@@ -16,19 +16,12 @@
       "techs": ["Next.js", "TypeScript", "PostCSS", "MongoDB", "Mongoose", "Zustand"]
     },
     {
-      "description": "Rediseño de la página de escuela secundaria creada durante la cuarentena, donde los nuevos y actuales estudiantes pueden ver los cronogramas del curso, las especialidades ofrecidas por la institución y sus respectivas materias.",
-      "imgs": {
-        "list": [
-          "/src/assets/images/School/img2.webp",
-          "/src/assets/images/School/img3.webp",
-          "/src/assets/images/School/img4.webp"
-        ],
-        "presentation_image": "/src/assets/images/School/img1.webp"
-      },
-      "title": "School Page",
-      "name_repository": "my_school_page",
-      "url_page": "https://my-school-page.vercel.app",
-      "techs": ["Next.js", "TypeScript", "Tailwind CSS", "Remark", "Vitest"]
+      "description": "Prueba técnica de Frontend dada por Midudev. Consiste en mostar en pantalla la lista de libros disponibles para leer y la lista de libros leídos. Los libros se pueden filtrar y la lista de libros leídos debe persistir.",
+      "imgs": { "list": [], "presentation_image": "/src/assets/images/ReadingList/img1.png" },
+      "title": "Reading List",
+      "name_repository": "reading-list/tree/main/pruebas/01-reading-list/martiks38",
+      "url_page": "https://reading-list-two.vercel.app",
+      "techs": ["Next.js", "TypeScript", "CSS modules", "Vitest", "Testing Library"]
     },
     {
       "description": "Clon del juego Matatena de Cult of the Lamb, con la finalidad de hacer una práctica del framework Vue 3.",
@@ -68,19 +61,19 @@
       "techs": ["React.js", "Tailwind CSS"]
     },
     {
-      "description": "Juego de mecanografía con tres idiomas para elegir. Durante la práctica, se muestran las palabras por minuto (WPM) al escribir una palabra correcta. Al finalizar, se muestra su desempeño, pudiendo ver una gráfica de WPM vs tiempo.",
+      "description": "Rediseño de la página de escuela secundaria creada durante la cuarentena, donde los nuevos y actuales estudiantes pueden ver los cronogramas del curso, las especialidades ofrecidas por la institución y sus respectivas materias.",
       "imgs": {
         "list": [
-          "/src/assets/images/Typing/img1.png",
-          "/src/assets/images/Typing/img3.png",
-          "/src/assets/images/Typing/img4.png"
+          "/src/assets/images/School/img2.webp",
+          "/src/assets/images/School/img3.webp",
+          "/src/assets/images/School/img4.webp"
         ],
-        "presentation_image": "/src/assets/images/Typing/img2.png"
+        "presentation_image": "/src/assets/images/School/img1.webp"
       },
-      "title": "Typing-game",
-      "name_repository": "typing-game-",
-      "url_page": "https://typingso.vercel.app",
-      "techs": ["Next.js", "SCSS", "chart.js", "TypeScript"]
+      "title": "School Page",
+      "name_repository": "my_school_page",
+      "url_page": "https://my-school-page.vercel.app",
+      "techs": ["Next.js", "TypeScript", "Tailwind CSS", "Remark", "Vitest"]
     },
     {
       "description": "Página creada para un reto entre amigos con temática de \"naturaleza\". Utilicé este reto para practicar el framework Astro.",
@@ -96,6 +89,29 @@
       "name_repository": "madagascar-salvaje",
       "url_page": "https://madagascar-salvaje.vercel.app",
       "techs": ["Astro", "Tailwind CSS", "TypeScript"]
+    },
+    {
+      "description": "Tienda de cartas Pokémon. Primera práctica de tienda con persistencia de datos y validación de formulario e inicio práctico de TypeScript.",
+      "imgs": { "list": [], "presentation_image": "/src/assets/images/Pokestore/img1.png" },
+      "title": "Pokestore",
+      "name_repository": "Pokestore",
+      "url_page": "pokestore-now.vercel.app",
+      "techs": ["Next.js", "TypeScript", "Sass"]
+    },
+    {
+      "description": "Juego de mecanografía con tres idiomas para elegir. Durante la práctica, se muestran las palabras por minuto (WPM) al escribir una palabra correcta. Al finalizar, se muestra su desempeño, pudiendo ver una gráfica de WPM vs tiempo.",
+      "imgs": {
+        "list": [
+          "/src/assets/images/Typing/img1.png",
+          "/src/assets/images/Typing/img3.png",
+          "/src/assets/images/Typing/img4.png"
+        ],
+        "presentation_image": "/src/assets/images/Typing/img2.png"
+      },
+      "title": "Typing-game",
+      "name_repository": "typing-game-",
+      "url_page": "https://typingso.vercel.app",
+      "techs": ["Next.js", "Sass", "chart.js", "TypeScript"]
     }
   ]
 }
