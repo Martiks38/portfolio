@@ -53,21 +53,21 @@
 	}
 
 	&:nth-child(6n + 1) {
-		--color-1: #781074;
-		--color-2: #781716;
+		--color-1: #341078;
+		--color-2: #0b6099;
 		--color-shadow-after: var(--color-2);
 		--color-bottom-card: var(--color-1);
 
-		--bg-card: linear-gradient(30deg, var(--color-1) 10%, var(--color-2) 50%);
+		--bg-card: linear-gradient(-5deg, var(--color-1) 5%, var(--color-2) 55%);
 	}
 
 	&:nth-child(6n + 2) {
-		--color-1: #781074;
-		--color-2: #781716;
+		--color-1: #0d4f7b;
+		--color-2: #69d1f5;
 		--color-shadow-after: var(--color-2);
 		--color-bottom-card: var(--color-1);
 
-		--bg-card: linear-gradient(30deg, var(--color-1) 10%, var(--color-2) 50%);
+		--bg-card: linear-gradient(to top, var(--color-1) 47%, var(--color-2) 60%);
 	}
 
 	&:nth-child(2) {
@@ -178,12 +178,12 @@
 	}
 
 	&:nth-child(6n + 5) {
-		--color-1: #0d4f7b;
-		--color-2: #69d1f5;
+		--color-1: #3d0510;
+		--color-2: #781716;
 		--color-shadow-after: var(--color-2);
 		--color-bottom-card: var(--color-1);
 
-		--bg-card: linear-gradient(to top, var(--color-1) 47%, var(--color-2) 60%);
+		--bg-card: linear-gradient(-5deg, var(--color-1) 10%, var(--color-2) 40%);
 	}
 
 	&:nth-child(6n + 6) {
