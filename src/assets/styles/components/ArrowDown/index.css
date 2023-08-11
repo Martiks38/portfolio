@@ -1,0 +1,38 @@
+.arrowDownBtn {
+	--size-arrow: 2rem;
+
+	position: absolute;
+	bottom: 1rem;
+	left: 50%;
+	display: block;
+	width: var(--size-arrow);
+	height: var(--size-arrow);
+	padding: 0;
+	outline: solid 2px transparent;
+	outline-offset: 8px;
+	border-radius: 0.125rem;
+	transform: translateX(-50%);
+	opacity: 0.8;
+}
+
+.arrowDown {
+	width: inherit;
+	height: inherit;
+
+	& path {
+		fill: var(--border-tech);
+	}
+}
+
+@media (hover: hover) {
+	.arrowDownBtn:hover,
+	.arrowDownBtn:focus {
+		outline-color: var(--color-white);
+	}
+}
+
+@media (min-width: 1080px) {
+	.arrowDownBtn {
+		--size-arrow: 2.5rem;
+	}
+}

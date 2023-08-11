@@ -1,15 +1,25 @@
 ---
 import Section from '@/layouts/Section.astro'
 import SocialCard from '@components/SocialCard.astro'
+import ArrowDown from '@components/Icons/ArrowDown.astro'
 
 import photo from '@assets/images/photo.webp'
 import i18n from '@assets/translations/i18n.json'
 
+import '@assets/styles/components/ArrowDown/index.css'
+
+interface Props {
+	sectionId: string
+	nextSectionId: string
+}
+
+const { nextSectionId, sectionId } = Astro.props
+
 const { AND, introduction } = i18n.es
-const { GREETING, PRESENTATION, SPECIALTY, text } = introduction
+const { BUTTON_TO_NEXT_SECTION, GREETING, PRESENTATION, SPECIALTY, text } = introduction
 ---
 
-<Section addClass="section__introduction">
+<Section addClass="section__introduction" id={sectionId}>
 	<div class="section__introduction__presentation">
 		<span class="section__introduction__greetings">{GREETING}</span>
 		<hgroup>
@@ -36,4 +46,5 @@ const { GREETING, PRESENTATION, SPECIALTY, text } = introduction
 			height="300"
 		/>
 	</div>
+	<ArrowDown sectionId={nextSectionId} styles="arrowDown" label={BUTTON_TO_NEXT_SECTION} />
 </Section>

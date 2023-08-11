@@ -1,14 +1,23 @@
 ---
 interface Props {
-	styles: string
+	sectionId: string
+	styles?: string
+	label: string
 }
 
-const { styles } = Astro.props
+const { label, sectionId, styles } = Astro.props
 ---
 
-<svg class={styles} width="38" height="38" viewBox="0 -4.5 20 20" xmlns="http://www.w3.org/2000/svg"
-	><path
-		d="M.3.37c-.4.4-.4 1.06 0 1.46l8.26 8.56c.78.81 2.04.81 2.82 0l8.33-8.62c.38-.4.39-1.05 0-1.46a.98.98 0 0 0-1.42 0L10.68 8.2c-.4.4-1.03.4-1.42 0L1.71.37a.97.97 0 0 0-1.42 0"
-		fill="currentColor"
-		fill-rule="evenodd"></path></svg
->
+<a href={`#${sectionId}`} class="arrowDownBtn" aria-label={label}>
+	<svg
+		class={styles}
+		width="38"
+		height="38"
+		viewBox="0 -4.5 20 20"
+		xmlns="http://www.w3.org/2000/svg"
+		><path
+			d="M.3.37c-.4.4-.4 1.06 0 1.46l8.26 8.56c.78.81 2.04.81 2.82 0l8.33-8.62c.38-.4.39-1.05 0-1.46a.98.98 0 0 0-1.42 0L10.68 8.2c-.4.4-1.03.4-1.42 0L1.71.37a.97.97 0 0 0-1.42 0"
+			fill="currentColor"
+			fill-rule="evenodd"></path></svg
+	>
+</a>

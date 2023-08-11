@@ -1,6 +1,7 @@
 .section {
 	--padding: 2rem;
 
+	position: relative;
 	display: grid;
 	padding: 0 1rem;
 	margin: 0 auto;
