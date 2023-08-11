@@ -1,7 +1,7 @@
 {
   "projects": [
     {
-      "description": "Tienda de mascotas de batalla de World of Warcraft.",
+      "description": "Tienda de mascotas de batalla de World of Warcraft. Ejercicio autopropuesto sobre frontend y práctica de conexión y manejo de base de datos, repaso del manejo de peticiones y práctica de paginación.",
       "imgs": {
         "list": [
           "/src/assets/images/PetsTheCrazyGoblin/img2.jpg",
@@ -16,7 +16,7 @@
       "techs": ["Next.js", "TypeScript", "PostCSS", "MongoDB", "Mongoose", "Zustand"]
     },
     {
-      "description": "Prueba técnica de Frontend dada por Midudev. Consiste en mostar en pantalla la lista de libros disponibles para leer y la lista de libros leídos. Los libros se pueden filtrar y la lista de libros leídos debe persistir.",
+      "description": "Prueba técnica de frontend dada por Midudev. Consiste en mostrar en pantalla la lista de libros disponibles para leer y la lista de libros leídos. Los libros se pueden filtrar y la lista de libros leídos debe persistir.",
       "imgs": { "list": [], "presentation_image": "/src/assets/images/ReadingList/img1.png" },
       "title": "Reading List",
       "name_repository": "reading-list/tree/main/pruebas/01-reading-list/martiks38",
@@ -46,7 +46,7 @@
       "techs": ["React.js", "Wouter", "Tailwind CSS", "Vitest"]
     },
     {
-      "description": "Clon del home de la página Troy Total War Saga con animaciones agregadas y corrección en los enlaces de algunos héroes, los cuales redireccionan a la página de otro.",
+      "description": "Clon del home de la página Troy Total War Saga con animaciones agregadas y corrección en los enlaces de algunos héroes, los cuales redirigen a la página de otro.",
       "imgs": {
         "list": [
           "/src/assets/images/TotalWar/img2.png",
@@ -61,7 +61,7 @@
       "techs": ["React.js", "Tailwind CSS"]
     },
     {
-      "description": "Rediseño de la página de escuela secundaria creada durante la cuarentena, donde los nuevos y actuales estudiantes pueden ver los cronogramas del curso, las especialidades ofrecidas por la institución y sus respectivas materias.",
+      "description": "Rediseño de la página de escuela secundaria creada durante la cuarentena, donde los nuevos y actuales estudiantes pueden ver los horarios del curso, las especialidades ofrecidas por la institución y sus respectivas materias.",
       "imgs": {
         "list": [
           "/src/assets/images/School/img2.webp",
@@ -76,7 +76,7 @@
       "techs": ["Next.js", "TypeScript", "Tailwind CSS", "Remark", "Vitest"]
     },
     {
-      "description": "Página creada para un reto entre amigos con temática de \"naturaleza\". Utilicé este reto para practicar el framework Astro.",
+      "description": "Página creada para un reto entre amigos con temática de 'naturaleza'. Utilicé este reto para practicar el framework Astro.",
       "imgs": {
         "list": [
           "/src/assets/images/Madagascar/img2.webp",
@@ -91,7 +91,7 @@
       "techs": ["Astro", "Tailwind CSS", "TypeScript"]
     },
     {
-      "description": "Tienda de cartas Pokémon. Primera práctica de tienda con persistencia de datos y validación de formulario e inicio práctico de TypeScript.",
+      "description": "Tienda de cartas Pokémon. Primera práctica de tienda con persistencia de datos y validación de formulario, e inicio práctico de TypeScript.",
       "imgs": { "list": [], "presentation_image": "/src/assets/images/Pokestore/img1.png" },
       "title": "Pokestore",
       "name_repository": "Pokestore",
@@ -99,7 +99,7 @@
       "techs": ["Next.js", "TypeScript", "Sass"]
     },
     {
-      "description": "Juego de mecanografía con tres idiomas para elegir. Durante la práctica, se muestran las palabras por minuto (WPM) al escribir una palabra correcta. Al finalizar, se muestra su desempeño, pudiendo ver una gráfica de WPM vs tiempo.",
+      "description": "Juego de mecanografía con tres idiomas para elegir. Durante la práctica, se muestran las palabras por minuto (WPM) al escribir una palabra correctamente. Al finalizar, se muestra su desempeño, pudiendo ver una gráfica de WPM vs. tiempo.",
       "imgs": {
         "list": [
           "/src/assets/images/Typing/img1.png",
