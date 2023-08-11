@@ -171,6 +171,10 @@
 		--color-bottom-card: var(--color-1);
 
 		--bg-card: radial-gradient(circle at 75% 120%, var(--color-1) 20%, var(--color-2) 45%);
+
+		& .projectCard__pageLink {
+			background-color: #976e0f;
+		}
 	}
 
 	&:nth-child(6n + 5) {

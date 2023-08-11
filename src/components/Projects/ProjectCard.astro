@@ -36,6 +36,7 @@ const nameProject = 'Matatena'
 			<a
 				href={`${BASE_URL_GITHUB}/${nameRepository}`}
 				rel="noopener noreferrer"
+				target="_blank"
 				aria-label={`${REPOSITORY_LABEL} ${title}`}
 				class="projectCard__repositoryLink"
 				title={`${REPOSITORY_LABEL} ${title}`}
@@ -44,7 +45,9 @@ const nameProject = 'Matatena'
 					<use href={`${logoSprites}#github`}></use>
 				</svg>
 			</a>
-			<a href={urlPage} rel="noopener noreferrer" class="projectCard__pageLink">{BUTTON_TO_PAGE}</a>
+			<a href={urlPage} rel="noopener noreferrer" target="_blank" class="projectCard__pageLink"
+				>{BUTTON_TO_PAGE}</a
+			>
 		</div>
 	</div>
 	{
