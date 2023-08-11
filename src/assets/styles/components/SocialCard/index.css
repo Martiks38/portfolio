@@ -34,7 +34,7 @@
 	}
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 75rem) {
 	.socialCard {
 		justify-content: flex-start;
 	}

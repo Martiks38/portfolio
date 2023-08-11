@@ -109,7 +109,7 @@
 	}
 
 	&__photo {
-		--size-photo: 200px;
+		--size-photo: 12.5rem;
 
 		width: var(--size-photo);
 		height: var(--size-photo);
@@ -324,7 +324,7 @@
 	}
 
 	.section__introduction__photo {
-		--size-photo: 300px;
+		--size-photo: 18.75rem;
 	}
 
 	.section__introduction__greetings,
