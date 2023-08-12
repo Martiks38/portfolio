@@ -59,6 +59,11 @@
 		font-size: 1.25rem;
 		font-size: clamp(1.125rem, 0.9952rem + 0.5769vw, 1.5rem);
 		line-height: 2rem;
+
+		@supports (font-size: clamp(1.125rem, 0.9952rem + 0.5769vw, 1.5rem)) {
+			font-size: clamp(1.125rem, 0.9952rem + 0.5769vw, 1.5rem);
+			line-height: 1.75rem;
+		}
 	}
 
 	&__paragraph {
@@ -69,7 +74,7 @@
 		}
 	}
 
-	& a {
+	&__externalLink {
 		font-weight: 600;
 		text-decoration: underline;
 	}
