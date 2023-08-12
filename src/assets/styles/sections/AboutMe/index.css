@@ -1,0 +1,119 @@
+.aboutMe {
+	&__title {
+		grid-area: title;
+		width: fit-content;
+		place-self: center;
+	}
+
+	&__containerImage {
+		--frame-color: var(--color-highlighted);
+		--width: 0.5rem;
+		--length: 4.6875rem;
+		--border-length: calc(100% - var(--length));
+		--border-width: calc(100% - var(--width));
+		--height-img: 25rem;
+
+		height: calc(2 * var(--width) + var(--height-img));
+		background-color: var(--frame-color);
+		border-radius: var(--border-radius-16);
+		border: solid var(--width) var(--frame-color);
+		clip-path: polygon(
+			0 0,
+			var(--length) 0,
+			var(--length) var(--border-width),
+			var(--border-length) var(--border-width),
+			var(--border-length) 0,
+			100% 0,
+			100% var(--length),
+			calc(100% - var(--border-width)) var(--length),
+			calc(100% - var(--border-width)) var(--border-length),
+			100% var(--border-length),
+			100% 100%,
+			var(--border-length) 100%,
+			var(--border-length) calc(100% - var(--border-width)),
+			var(--length) calc(100% - var(--border-width)),
+			var(--length) 100%,
+			0 100%,
+			0 var(--border-length),
+			var(--border-width) var(--border-length),
+			var(--border-width) var(--length),
+			0 var(--length),
+			0 0
+		);
+	}
+
+	&__img {
+		grid-area: image;
+		align-self: center;
+		border-radius: var(--border-radius-16);
+		object-fit: cover;
+	}
+
+	&__description {
+		grid-area: description;
+
+		margin-top: 4.5rem;
+		height: 100%;
+		max-width: 55ch;
+		text-wrap: balance;
+		font-size: 1.25rem;
+		font-size: clamp(1.125rem, 0.9952rem + 0.5769vw, 1.5rem);
+		line-height: 2rem;
+	}
+
+	&__paragraph {
+		text-align: center;
+
+		&:not(:last-child) {
+			margin-bottom: 1em;
+		}
+	}
+
+	& a {
+		font-weight: 600;
+		text-decoration: underline;
+	}
+
+	&__highlighted {
+		color: var(--color-highlighted);
+		font-style: normal;
+		font-weight: 700;
+	}
+
+	&__mark {
+		position: relative;
+		color: var(--color-white);
+
+		&:before {
+			--highlighted-padding: 0.4em;
+
+			content: '';
+			position: absolute;
+			top: calc(var(--highlighted-padding) / (-4));
+			left: calc(var(--highlighted-padding) / (-2));
+			display: block;
+			width: calc(100% + var(--highlighted-padding));
+			height: calc(100% + calc(var(--highlighted-padding) / 2));
+			background-color: rebeccapurple;
+			transform: rotate(-1deg);
+			z-index: -1;
+			box-sizing: content-box;
+		}
+	}
+}
+
+@media (min-width: 50rem) {
+	.aboutMe__description {
+		line-height: 2.25rem;
+	}
+}
+
+@media (min-width: 73.75rem) {
+	.aboutMe__description {
+		margin-top: auto;
+	}
+
+	.aboutMe__paragraph {
+		text-align: left;
+	}
+}

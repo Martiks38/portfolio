@@ -3,6 +3,8 @@ import Section from '@/layouts/Section.astro'
 
 import photo from '@assets/images/photo.jpg'
 import i18n from '@assets/translations/i18n.json'
+import '@assets/styles/sections/AboutMe/index.css'
+
 import { EXTERNAL_LINKS } from '@/consts'
 
 interface Props {
@@ -27,38 +29,38 @@ const {
 ---
 
 <Section addClass="section__aboutMe" id={sectionId}>
-	<h3 class="section__title section__aboutMe__title">{TITLE}</h3>
-	<figure class="section__aboutMe__containerImage">
+	<h3 class="section__title aboutMe__title">{TITLE}</h3>
+	<figure class="aboutMe__containerImage">
 		<img
 			src={photo}
 			alt={ALT_IMG}
-			class="section__aboutMe__img"
+			class="aboutMe__img"
 			width="225"
 			height="400"
 			loading="lazy"
 			title={ALT_IMG}
 		/>
 	</figure>
-	<div class="section__aboutMe__description">
-		<p class="section__aboutMe__paragraph">
-			{FIRST_PARAGRAPH}<em class="section__aboutMe__highlighted">{FIRST_HIGHLIGHTED}</em>.
+	<div class="aboutMe__description">
+		<p class="aboutMe__paragraph">
+			{FIRST_PARAGRAPH}<em class="aboutMe__highlighted">{FIRST_HIGHLIGHTED}</em>.
 		</p>
-		<p class="section__aboutMe__paragraph">
+		<p class="aboutMe__paragraph">
 			{SECOND_PARAGRAPH_FIRST_FRAGMENT}<em
-				><span class="section__aboutMe__mark">{SECOND_HIGHLIGHTED}</span></em
+				><span class="aboutMe__mark">{SECOND_HIGHLIGHTED}</span></em
 			>{SECOND_PARAGRAPH_SECOND_FRAGMENT}<a href={midudev} rel="noopener">Midudev</a>{i18n.es.AND}<a
 				href={jonmircha}
 				rel="noopener">jonmircha</a
 			>.
 		</p>
-		<p class="section__aboutMe__paragraph">
-			{THIRD_PARAGRAPH_FIRST_FRAGMENT}<strong class="section__aboutMe__highlight">Next.js</strong>, <strong
-				class="section__aboutMe__highlight">TypeScript</strong
-			>{i18n.es.AND}<strong class="section__aboutMe__highlight">Sass</strong>. {
+		<p class="aboutMe__paragraph">
+			{THIRD_PARAGRAPH_FIRST_FRAGMENT}<strong class="aboutMe__highlight">Next.js</strong>, <strong
+				class="aboutMe__highlight">TypeScript</strong
+			>{i18n.es.AND}<strong class="aboutMe__highlight">Sass</strong>. {
 				THIRD_PARAGRAPH_SECOND_FRAGMENT
-			}<strong class="section__aboutMe__highlight">Node.js</strong>, <strong
-				class="section__aboutMe__highlight">Postgres</strong
-			>{i18n.es.AND}<strong class="section__aboutMe__highlight">{THIRD_HIGHLIGHTED}</strong>.
+			}<strong class="aboutMe__highlight">Node.js</strong>, <strong class="aboutMe__highlight"
+				>Postgres</strong
+			>{i18n.es.AND}<strong class="aboutMe__highlight">{THIRD_HIGHLIGHTED}</strong>.
 		</p>
 	</div>
 </Section>
