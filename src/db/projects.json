@@ -95,7 +95,7 @@
       "imgs": { "list": [], "presentation_image": "/images/Pokestore/img1.png" },
       "title": "Pokestore",
       "name_repository": "Pokestore",
-      "url_page": "pokestore-now.vercel.app",
+      "url_page": "https://pokestore-now.vercel.app",
       "techs": ["Next.js", "TypeScript", "Sass"]
     },
     {
