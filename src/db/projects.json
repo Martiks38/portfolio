@@ -4,11 +4,11 @@
       "description": "Tienda de mascotas de batalla de World of Warcraft. Ejercicio autopropuesto sobre frontend y práctica de conexión y manejo de base de datos, repaso del manejo de peticiones y práctica de paginación.",
       "imgs": {
         "list": [
-          "/src/assets/images/PetsTheCrazyGoblin/img2.jpg",
-          "/src/assets/images/PetsTheCrazyGoblin/img3.jpg",
-          "/src/assets/images/PetsTheCrazyGoblin/img4.jpg"
+          "/images/PetsTheCrazyGoblin/img2.jpg",
+          "/images/PetsTheCrazyGoblin/img3.jpg",
+          "/images/PetsTheCrazyGoblin/img4.jpg"
         ],
-        "presentation_image": "/src/assets/images/PetsTheCrazyGoblin/img1.jpg"
+        "presentation_image": "/images/PetsTheCrazyGoblin/img1.jpg"
       },
       "title": "Pets - The Crazy Goblin",
       "name_repository": "pets-the-crazy-goblin",
@@ -17,7 +17,7 @@
     },
     {
       "description": "Prueba técnica de frontend dada por Midudev. Consiste en mostrar en pantalla la lista de libros disponibles para leer y la lista de libros leídos. Los libros se pueden filtrar y la lista de libros leídos debe persistir.",
-      "imgs": { "list": [], "presentation_image": "/src/assets/images/ReadingList/img1.png" },
+      "imgs": { "list": [], "presentation_image": "/images/ReadingList/img1.png" },
       "title": "Reading List",
       "name_repository": "reading-list/tree/main/pruebas/01-reading-list/martiks38",
       "url_page": "https://reading-list-two.vercel.app",
@@ -26,8 +26,8 @@
     {
       "description": "Clon del juego Matatena de Cult of the Lamb, con la finalidad de hacer una práctica del framework Vue 3.",
       "imgs": {
-        "list": ["/src/assets/images/Matatena/img1.png", "/src/assets/images/Matatena/img2.png"],
-        "presentation_image": "/src/assets/images/Matatena/img3.png"
+        "list": ["/images/Matatena/img1.png", "/images/Matatena/img2.png"],
+        "presentation_image": "/images/Matatena/img3.png"
       },
       "title": "Matatena",
       "name_repository": "Knucklebones",
@@ -37,8 +37,8 @@
     {
       "description": "Juego de la memoria con temática de Darkest Dungeon. El usuario puede optar por jugar libremente o contrarreloj.",
       "imgs": {
-        "list": ["/src/assets/images/Memory/img1.webp", "/src/assets/images/Memory/img3.webp"],
-        "presentation_image": "/src/assets/images/Memory/img2.webp"
+        "list": ["/images/Memory/img1.webp", "/images/Memory/img3.webp"],
+        "presentation_image": "/images/Memory/img2.webp"
       },
       "title": "Memory",
       "name_repository": "memory",
@@ -49,11 +49,11 @@
       "description": "Clon del home de la página Troy Total War Saga con animaciones agregadas y corrección en los enlaces de algunos héroes, los cuales redirigen a la página de otro.",
       "imgs": {
         "list": [
-          "/src/assets/images/TotalWar/img2.png",
-          "/src/assets/images/TotalWar/img3.webp",
-          "/src/assets/images/TotalWar/img4.webp"
+          "/images/TotalWar/img2.png",
+          "/images/TotalWar/img3.webp",
+          "/images/TotalWar/img4.webp"
         ],
-        "presentation_image": "/src/assets/images/TotalWar/img1.webp"
+        "presentation_image": "/images/TotalWar/img1.webp"
       },
       "title": "Troy Total War Saga - Clon",
       "name_repository": "clon-page-troy-total-war",
@@ -64,11 +64,11 @@
       "description": "Rediseño de la página de escuela secundaria creada durante la cuarentena, donde los nuevos y actuales estudiantes pueden ver los horarios del curso, las especialidades ofrecidas por la institución y sus respectivas materias.",
       "imgs": {
         "list": [
-          "/src/assets/images/School/img2.webp",
-          "/src/assets/images/School/img3.webp",
-          "/src/assets/images/School/img4.webp"
+          "/images/School/img2.webp",
+          "/images/School/img3.webp",
+          "/images/School/img4.webp"
         ],
-        "presentation_image": "/src/assets/images/School/img1.webp"
+        "presentation_image": "/images/School/img1.webp"
       },
       "title": "School Page",
       "name_repository": "my_school_page",
@@ -79,11 +79,11 @@
       "description": "Página creada para un reto entre amigos con temática de 'naturaleza'. Utilicé este reto para practicar el framework Astro.",
       "imgs": {
         "list": [
-          "/src/assets/images/Madagascar/img2.webp",
-          "/src/assets/images/Madagascar/img3.webp",
-          "/src/assets/images/Madagascar/img4.webp"
+          "/images/Madagascar/img2.webp",
+          "/images/Madagascar/img3.webp",
+          "/images/Madagascar/img4.webp"
         ],
-        "presentation_image": "/src/assets/images/Madagascar/img1.jpg"
+        "presentation_image": "/images/Madagascar/img1.jpg"
       },
       "title": "Madagascar Salvaje",
       "name_repository": "madagascar-salvaje",
@@ -92,7 +92,7 @@
     },
     {
       "description": "Tienda de cartas Pokémon. Primera práctica de tienda con persistencia de datos y validación de formulario, e inicio práctico de TypeScript.",
-      "imgs": { "list": [], "presentation_image": "/src/assets/images/Pokestore/img1.png" },
+      "imgs": { "list": [], "presentation_image": "/images/Pokestore/img1.png" },
       "title": "Pokestore",
       "name_repository": "Pokestore",
       "url_page": "pokestore-now.vercel.app",
@@ -101,12 +101,8 @@
     {
       "description": "Juego de mecanografía con tres idiomas para elegir. Durante la práctica, se muestran las palabras por minuto (WPM) al escribir una palabra correctamente. Al finalizar, se muestra su desempeño, pudiendo ver una gráfica de WPM vs. tiempo.",
       "imgs": {
-        "list": [
-          "/src/assets/images/Typing/img1.png",
-          "/src/assets/images/Typing/img3.png",
-          "/src/assets/images/Typing/img4.png"
-        ],
-        "presentation_image": "/src/assets/images/Typing/img2.png"
+        "list": ["/images/Typing/img1.png", "/images/Typing/img3.png", "/images/Typing/img4.png"],
+        "presentation_image": "/images/Typing/img2.png"
       },
       "title": "Typing-game",
       "name_repository": "typing-game-",
