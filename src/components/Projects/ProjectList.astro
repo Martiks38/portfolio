@@ -3,8 +3,10 @@ import Project from './Project.astro'
 import ProjectCard from './ProjectCard.astro'
 import Section from '@/layouts/Section.astro'
 
-import i18n from '@assets/translations/i18n.json'
 import { getProjects } from '@/services/getProjects'
+
+import i18n from '@assets/translations/i18n.json'
+import '@assets/styles/sections/Projects/index.css'
 
 interface Props {
 	sectionId: string
@@ -23,12 +25,12 @@ const projectlist = projects.filter((project) => project.title !== principalProj
 ---
 
 <Section addClass="section__projects" id={sectionId}>
-	<h3 class="section__title section__title_largeReflectionSeparation section__projects__title">
+	<h3 class="section__title section__title_largeReflectionSeparation projects__title">
 		{TITLE}
 	</h3>
 	{typeof project !== 'undefined' ? <Project project={project} /> : null}
 
-	<ul class="section__projects__projectList">
+	<ul class="projects__projectList">
 		{
 			projectlist.map((project) => (
 				<li class="itemProjectCard hidden">

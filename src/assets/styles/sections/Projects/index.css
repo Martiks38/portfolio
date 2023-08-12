@@ -1,0 +1,27 @@
+.projects {
+	&__title {
+		width: fit-content;
+		place-self: center;
+		-webkit-box-reflect: below 0.6875rem linear-gradient(transparent 0%, #fff);
+
+		&_largeReflectionSeparation {
+			-webkit-box-reflect: below 0.6875rem linear-gradient(transparent 0%, #fff);
+		}
+	}
+
+	&__projectList {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(15.625rem, 21.875rem));
+		gap: 4rem;
+		place-content: center;
+		width: 100%;
+		list-style-type: none;
+		padding: 0.1rem 0;
+	}
+}
+
+@media screen and (min-width: 100rem) {
+	.projects__projectList {
+		grid-template-columns: repeat(auto-fit, minmax(18.75rem, 26.875rem));
+	}
+}
