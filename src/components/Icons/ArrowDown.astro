@@ -8,7 +8,7 @@ interface Props {
 const { label, sectionId, styles } = Astro.props
 ---
 
-<a href={`#${sectionId}`} class="arrowDownBtn" aria-label={label}>
+<a href={`#${sectionId}`} class="arrowDownBtn" aria-label={label} title={label}>
 	<svg
 		class={styles}
 		width="38"
