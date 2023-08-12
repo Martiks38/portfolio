@@ -38,6 +38,7 @@
 	}
 
 	&__description {
+		max-width: 65ch;
 		font-size: 1.25rem;
 		line-height: 1.75rem;
 	}
