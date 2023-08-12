@@ -4,8 +4,8 @@ const COLOR_ASPECT = {
 }
 
 const EXTERNAL_LINKS = {
-	midudev: 'https://www.youtube.com/@jonmircha',
-	jonmircha: 'https://www.youtube.com/@midulive'
+	midudev: 'https://www.youtube.com/@midulive',
+	jonmircha: 'https://www.youtube.com/@jonmircha'
 }
 
 const BASE_URL_GITHUB = 'https://github.com/Martiks38/'
