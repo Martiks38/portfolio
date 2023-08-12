@@ -2,14 +2,12 @@
 	--size-arrow: 2rem;
 
 	position: absolute;
-	bottom: 2rem;
+	bottom: 1rem;
 	left: 50%;
 	display: block;
 	width: var(--size-arrow);
 	height: var(--size-arrow);
 	padding: 0;
-	outline: solid 0.125rem transparent;
-	outline-offset: 0.5rem;
 	border-radius: 0.125rem;
 	transform: translateX(-50%);
 	opacity: 0.8;
@@ -25,9 +23,8 @@
 }
 
 @media (hover: hover) {
-	.arrowDownBtn:hover,
-	.arrowDownBtn:focus {
-		outline-color: var(--color-white);
+	.arrowDownBtn:hover path {
+		fill: var(--color-1-gradient-title-light);
 	}
 }
 
