@@ -12,7 +12,7 @@
 		position: relative;
 		display: block;
 		width: fit-content;
-		margin-bottom: 1.5rem;
+		margin: 0 auto 1.5rem;
 		font-weight: 600;
 		font-size: 1.875rem;
 		line-height: 2.25rem;
@@ -139,6 +139,13 @@
 	.mainProject__repositoryLink {
 		text-decoration: underline;
 		color: var(--repository-link);
+	}
+}
+
+@media (min-width: 73.75rem) {
+	.mainProject__title {
+		margin-left: 0;
+		margin-right: 0;
 	}
 }
 
