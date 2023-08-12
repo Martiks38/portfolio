@@ -128,8 +128,14 @@
 }
 
 @media screen and (min-width: 48.5rem) {
-	.section:not(:last-child) {
-		padding: 4.5rem 1rem 2rem;
+	.section {
+		padding-left: var(--padding);
+		padding-right: var(--padding);
+
+		&:not(:last-child) {
+			padding-top: 4.5rem;
+			padding-bottom: 2rem;
+		}
 	}
 
 	.section__introduction:first-child {

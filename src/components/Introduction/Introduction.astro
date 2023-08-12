@@ -23,13 +23,13 @@ const { BUTTON_TO_NEXT_SECTION, GREETING, PRESENTATION, SPECIALTY, text } = intr
 <Section addClass="section__introduction" id={sectionId}>
 	<div class="introduction__presentation">
 		<span class="introduction__greetings">{GREETING}</span>
-		<hgroup>
+		<div>
 			<h1 class="introduction__title">
 				{PRESENTATION}
 				<strong> Giuliano&nbsp;Cappa</strong>
 			</h1>
-			<p class="introduction__subtitle">{SPECIALTY}</p>
-		</hgroup>
+			<h2 class="introduction__subtitle">{SPECIALTY}</h2>
+		</div>
 		<p class="introduction__text">
 			{text.FIRST_FRAGMENT}<strong class="introduction__highlight">{text.CREATIVE}</strong>{
 				AND
