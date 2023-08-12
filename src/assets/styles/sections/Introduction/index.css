@@ -46,7 +46,7 @@
 	}
 
 	&__photo {
-		--size-photo: 12.5rem;
+		--size-photo: 9.375rem;
 
 		width: var(--size-photo);
 		height: var(--size-photo);
@@ -69,8 +69,12 @@
 		margin-top: 0.25em;
 		margin-bottom: 0.5em;
 		font-size: 2.5rem;
-		font-size: clamp(2rem, 0.8rem + 5.3333vw, 4rem);
-		line-height: 2.5rem;
+		line-height: 2.75rem;
+
+		@supports (font-size: clamp(1.875rem, 1.1394rem + 3.2692vw, 4rem)) {
+			font-size: clamp(1.875rem, 1.1394rem + 3.2692vw, 4rem);
+			line-height: 2.25rem;
+		}
 
 		& strong {
 			background-clip: text;
@@ -81,6 +85,21 @@
 
 	&__subtitle {
 		margin-bottom: 0.85em;
+		font-size: 1.5rem;
+		line-height: 2rem;
+	}
+}
+
+@media (min-width: 30rem) {
+	.introduction__photo {
+		--size-photo: 12.5rem;
+	}
+
+	.introduction__title {
+		line-height: 2.5rem;
+	}
+
+	.introduction__subtitle {
 		font-size: 1.875rem;
 		line-height: 2.25rem;
 	}
@@ -100,6 +119,12 @@
 	.introduction__subtitle {
 		font-size: 2.25rem;
 		line-height: 2.5rem;
+	}
+}
+
+@media (max-height: 780px) {
+	.introduction__text {
+		display: none;
 	}
 }
 

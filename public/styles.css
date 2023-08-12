@@ -116,9 +116,9 @@ body.light {
 			var(--background-dot) var(--dot-size),
 			transparent var(--dot-size)
 		);
-		background-size: calc(33.333% - 1px) 9.375rem;
+		background-size: calc(33.333% - 1px) 12.5rem;
 		background-position-x: 0.25rem;
-		animation: dotScroll 200s linear 0s infinite forwards;
+		animation: dotScroll 600s linear 0s infinite forwards;
 		z-index: -1;
 	}
 }
@@ -155,7 +155,7 @@ main {
 
 @media (min-width: 33.75rem) {
 	.dot:before {
-		background-size: calc(24.5% - 1px) 9.375rem;
+		background-size: calc(24.5% - 1px) 12.5rem;
 	}
 }
 
@@ -194,7 +194,7 @@ main {
 	}
 
 	.dot_before {
-		animation-duration: 500s;
+		animation-duration: 1000s;
 	}
 }
 

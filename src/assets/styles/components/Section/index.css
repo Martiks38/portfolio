@@ -3,7 +3,7 @@
 
 	position: relative;
 	display: grid;
-	padding: 4.5rem 1rem 2rem;
+	padding: 2rem 1rem;
 	margin: 0 auto;
 	max-width: var(--width-content);
 	width: 100%;
@@ -55,7 +55,7 @@
 		'presentation';
 	place-content: center;
 	align-items: center;
-	gap: 2.5rem;
+	gap: 1.5rem;
 	max-height: 100vh;
 
 	&:first-child {
@@ -129,12 +129,12 @@
 
 @media screen and (min-width: 48.5rem) {
 	.section {
-		padding-left: 2rem;
-		padding-right: 2rem;
+		padding: 4.5rem 1rem 2rem;
 	}
 
 	.section__introduction:first-child {
 		height: calc(100dvh - 4.4375rem);
+		gap: 2.5rem;
 	}
 }
 
