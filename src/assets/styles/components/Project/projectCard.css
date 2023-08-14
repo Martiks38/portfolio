@@ -1,6 +1,4 @@
 .itemProjectCard {
-	--rotate-card: 0.5deg;
-
 	position: relative;
 	background-image: var(--bg-card);
 	border-radius: var(--border-radius-16);
@@ -24,32 +22,6 @@
 
 	& .projectCard__pageLink {
 		background-color: var(--color-bottom-card);
-	}
-
-	&:nth-child(2n + 1) {
-		transform: rotate(calc(-1 * var(--rotate-card)));
-
-		& .projectCard {
-			transform: rotate(var(--rotate-card));
-		}
-	}
-
-	&:nth-child(2n + 2) {
-		transform: rotate(var(--rotate-card));
-
-		& .projectCard {
-			transform: rotate(calc(-1 * var(--rotate-card)));
-		}
-	}
-
-	@media (max-width: 48.5rem) {
-		&:nth-child(n) {
-			transform: rotate(0deg);
-
-			& .projectCard {
-				transform: rotate(0deg);
-			}
-		}
 	}
 
 	&:nth-child(6n + 1) {
@@ -343,5 +315,12 @@
 
 	.projectCard__repositoryLink {
 		--size-svg: 3.5rem;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.itemProjectCard,
+	.projectCard {
+		transition: none;
 	}
 }
