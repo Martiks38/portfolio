@@ -23,7 +23,7 @@ const {
 } = i18n.es.project
 const { title, description, images, urlPage, nameRepository, techs } = project
 
-const url_code = BASE_URL_GITHUB.concat(nameRepository)
+const url_code = encodeURI(BASE_URL_GITHUB.concat('/', nameRepository))
 const { imageList, presentationImage } = images
 ---
 

@@ -8,7 +8,7 @@ const EXTERNAL_LINKS = {
 	jonmircha: 'https://www.youtube.com/@jonmircha'
 }
 
-const BASE_URL_GITHUB = 'https://github.com/Martiks38/'
+const BASE_URL_GITHUB = 'https://github.com/Martiks38'
 
 const NAME_COOKIE_COLOR = 'prefersColor'
 
