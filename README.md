@@ -3,10 +3,8 @@
 Bienvenidos.
 Desarrollador Frontend | React con +3 de años de aprendizaje autodidacta; comenzando con el libro "El gran libro de HTML5, CSS3 y JavaScript" y siguiendo con los cursos de [Midudev](https://www.youtube.com/@midulive) y [jonmircha](https://www.youtube.com/@jonmircha).
 
-Te invito a ver el portfolio y poder conocerme un poco más y de las cosas que he ido realizando.
+Te invito a ver el [portfolio](https://giuliano-cappa.vercel.app) y poder conocerme un poco más y de las cosas que he ido realizando.
 Espero que sea de tu agrado. Saludos 👋😀.
-
-<h2 align="center"><a href="https://giuliano-cappa.vercel.app">WEB</a></h2>
 
 ## Stack
 
