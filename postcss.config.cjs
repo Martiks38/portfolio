@@ -11,7 +11,7 @@ module.exports = {
 			content: ['src/**/*.astro'],
 			css: ['src/**/*.css'],
 			safelist: {
-				deep: [/headerPage$/, /menuBtn$/]
+				deep: [/headerPage$/]
 			}
 		})
 	]
