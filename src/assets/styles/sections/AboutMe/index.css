@@ -52,6 +52,9 @@
 	&__description {
 		grid-area: description;
 
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
 		margin-top: 4.5rem;
 		height: 100%;
 		max-width: 55ch;
