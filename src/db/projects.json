@@ -108,6 +108,17 @@
       "name_repository": "typing-game-",
       "url_page": "https://typingso.vercel.app",
       "techs": ["Next.js", "Sass", "chart.js", "TypeScript"]
+    },
+    {
+      "description": "Aplicación para encriptar y desencriptar textos (español o inglés) empleando el cifrado César o cifrado por desplazamiento.",
+      "imgs": {
+        "list": [],
+        "presentation_image": "/images/Cryptsar/img1.webp"
+      },
+      "title": "Cryptsar",
+      "name_repository": "cryptsar",
+      "url_page": "https://cryptsar.vercel.app",
+      "techs": ["React.js", "CSS", "TypeScript"]
     }
   ]
 }
