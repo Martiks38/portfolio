@@ -123,6 +123,14 @@ body.light {
 	}
 }
 
+.dot.dot_error {
+	height: 1000%;
+
+	&:before {
+		animation-name: dotScrollErrorPage;
+	}
+}
+
 a {
 	text-decoration: none;
 	color: inherit;
@@ -212,6 +220,15 @@ main {
 @keyframes dotScroll {
 	from {
 		background-position-y: 100%;
+	}
+	to {
+		background-position-y: 0%;
+	}
+}
+
+@keyframes dotScrollErrorPage {
+	from {
+		background-position-y: calc(100% + -4.375rem);
 	}
 	to {
 		background-position-y: 0%;

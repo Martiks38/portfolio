@@ -56,6 +56,10 @@
       "TECHS_LIST_PARAGRAPH": "Tecnologías usadas:",
       "ALT_HOME_MAIN_PROJECT": "Visualización del inicio de la página de",
       "ALT_PAGE_VIEWS": "Visualización de sección de la página"
+    },
+    "error404": {
+      "reason": "La página a la que intenta acceder no existe.",
+      "toHome": "Volver al inicio"
     }
   }
 }
