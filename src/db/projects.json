@@ -91,7 +91,7 @@
       "techs": ["Astro", "Tailwind CSS", "TypeScript"]
     },
     {
-      "description": "Tienda de cartas Pokémon. Primera práctica de tienda con persistencia de datos y validación de formulario, e inicio práctico de TypeScript.",
+      "description": "Tienda de Cartas Pokémon. Primera práctica de tienda con persistencia de datos y validación de formularios, e inicio práctico de TypeScript.",
       "imgs": { "list": [], "presentation_image": "/images/Pokestore/img1.png" },
       "title": "Pokestore",
       "name_repository": "Pokestore",
