@@ -132,7 +132,7 @@
 		padding-left: var(--padding);
 		padding-right: var(--padding);
 
-		&:not(:last-child) {
+		&:not(:is(:first-child, :last-child)) {
 			padding-top: 4.5rem;
 			padding-bottom: 2rem;
 		}

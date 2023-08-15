@@ -107,7 +107,7 @@
 
 @media (min-width: 36.25rem) {
 	.introduction__photo {
-		--size-photo: 18.75rem;
+		--size-photo: 15.625rem;
 	}
 
 	.introduction__greetings,
