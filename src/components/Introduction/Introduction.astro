@@ -16,29 +16,30 @@ interface Props {
 
 const { nextSectionId, sectionId } = Astro.props
 
-const { AND, introduction } = i18n.es
-const { BUTTON_TO_NEXT_SECTION, GREETING, PRESENTATION, SPECIALTY, text } = introduction
+const { introduction } = i18n.es
+const { BUTTON_TO_NEXT_SECTION, PRESENTATION, SPECIALTY } = introduction
 ---
 
-<Section addClass="section__introduction" id={sectionId}>
-	<div class="introduction__presentation">
-		<span class="introduction__greetings">{GREETING}</span>
+<Section addClass='section__introduction' id={sectionId}>
+	<div class='introduction__presentation'>
+		<img src={photo} alt='Giuliano Cappa' class='introduction__photo' width='250' height='250' />
+
 		<div>
-			<h1 class="introduction__title">
+			<h1 class='introduction__title'>
 				{PRESENTATION}
 				<strong> Giuliano&nbsp;Cappa</strong>
 			</h1>
-			<h2 class="introduction__subtitle">{SPECIALTY}</h2>
+			<h2 class='introduction__subtitle'>{SPECIALTY}</h2>
 		</div>
-		<p class="introduction__text">
-			{text.FIRST_FRAGMENT}<strong class="introduction__highlight">{text.CREATIVE}</strong>{
+		<!-- TODO: Modificar contenido -->
+		<!-- <p class='introduction__text'>
+		 	radial-gradient(circle, blue, transparent)
+			{text.FIRST_FRAGMENT}<strong class='introduction__highlight'>{text.CREATIVE}</strong>{
 				AND
-			}<strong class="introduction__highlight">{text.A11Y}</strong>{text.SECOND_FRAGMENT}
-		</p>
+			}<strong class='introduction__highlight'>{text.A11Y}</strong>{text.SECOND_FRAGMENT}
+		</p> -->
 		<SocialCard />
 	</div>
-	<div class="introduction_photo-info">
-		<img src={photo} alt="Giuliano Cappa" class="introduction__photo" width="250" height="250" />
-	</div>
-	<ArrowDown sectionId={nextSectionId} styles="arrowDown" label={BUTTON_TO_NEXT_SECTION} />
+
+	<ArrowDown sectionId={nextSectionId} styles='arrowDown' label={BUTTON_TO_NEXT_SECTION} />
 </Section>

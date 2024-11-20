@@ -2,7 +2,6 @@
 	--padding: 2rem;
 
 	position: relative;
-	display: grid;
 	padding: 2rem 1rem;
 	margin: 0 auto;
 	max-width: var(--width-content);
@@ -50,9 +49,6 @@
 /* Section - Introduction */
 .section__introduction {
 	position: relative;
-	grid-template-areas:
-		'photoInfo'
-		'presentation';
 	place-content: center;
 	align-items: center;
 	gap: 1.5rem;
@@ -65,12 +61,6 @@
 
 /* Section - About me */
 .section__aboutMe {
-	grid-template-areas:
-		'title'
-		'image'
-		'description';
-	grid-template-rows: repeat(2, min-content) 1fr;
-	column-gap: 4.5rem;
 	place-items: center;
 }
 
@@ -168,20 +158,13 @@
 	}
 }
 
-@media (min-width: 73.75rem) {
+/* @media (min-width: 73.75rem) {
 	.section__aboutMe {
-		grid-template-areas:
-			'title title'
-			'image description';
-		grid-template-columns: minmax(22.5rem, 28.125rem) 1fr;
-		grid-template-rows: min-content 1fr;
 	}
-}
+} */
 
 @media (min-width: 75rem) {
 	.section__introduction {
-		grid-template-areas: 'presentation photoInfo';
-		grid-template-columns: 1fr minmax(22.5rem, 28.125rem);
 		max-height: 80vh;
 		max-height: 80dvh;
 	}

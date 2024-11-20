@@ -17,17 +17,9 @@
       "linkedin": "Ir al perfil de LinkedIn",
       "email": "Enviar correo electrónico"
     },
-    "AND": " y ",
     "introduction": {
-      "GREETING": "Bienvenidos a mi sitio.",
-      "PRESENTATION": "Soy",
-      "SPECIALTY": "Desarrollador Frontend",
-      "text": {
-        "FIRST_FRAGMENT": "Me encanta escribir código, creando sitios web ",
-        "CREATIVE": "creativos",
-        "A11Y": "accesibles",
-        "SECOND_FRAGMENT": ". Siempre estoy dispuesto a aprender y explorar nuevas tecnologías, escuchar consejos y compartir lo que sé."
-      },
+      "PRESENTATION": "Hey, soy",
+      "SPECIALTY": "Desarrollador Fullstack",
       "BUTTON_TO_NEXT_SECTION": "Ir a la siguiente sección"
     },
     "about-me": {
