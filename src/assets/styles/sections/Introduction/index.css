@@ -29,7 +29,7 @@
 
 	&__title {
 		margin-top: 0.25em;
-		margin-bottom: 0.5em;
+		margin-bottom: 0.25em;
 		font-size: 1.75rem;
 		line-height: 2.25rem;
 
@@ -39,9 +39,7 @@
 		}
 
 		& strong {
-			background-clip: text;
-			background-image: var(--introduction-title-gradient);
-			color: transparent;
+			color: var(--color-title);
 		}
 	}
 
