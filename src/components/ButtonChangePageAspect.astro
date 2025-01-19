@@ -1,5 +1,4 @@
 ---
-import schemes from '@assets/sprites/modesSprite.svg'
 import i18n from '@assets/translations/i18n.json'
 
 interface Props {
@@ -11,19 +10,19 @@ interface Props {
 const { changeColor, color, turns } = Astro.props
 ---
 
-<div class="headerPage__actions__colorPanel">
+<div class='headerPage__actions__colorPanel'>
 	<button
-		class="btnColorScheme"
+		class='btnColorScheme'
 		data-turns={turns}
 		data-color={color}
 		aria-label={`${i18n.es.BUTTON_CHANGE_PAGE_SCHEME} ${changeColor}`}
 		style={`transform: rotate(${turns * 0.5}turn)`}
 	>
-		<svg class="btnColorScheme__icon">
-			<use href={`${schemes}#moon`}></use>
+		<svg class='btnColorScheme__icon'>
+			<use href='/sprites/modesSprite.svg#moon'></use>
 		</svg>
-		<svg class="btnColorScheme__icon">
-			<use href={`${schemes}#sun`}></use>
+		<svg class='btnColorScheme__icon'>
+			<use href='/sprites/modesSprite.svg#sun'></use>
 		</svg>
 	</button>
 </div>

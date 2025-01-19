@@ -27,65 +27,65 @@ const url_code = encodeURI(BASE_URL_GITHUB.concat('/', nameRepository))
 const { imageList, presentationImage } = images
 ---
 
-<article class="mainProject">
-	<div class="mainProject__descriptionContainer">
+<article class='mainProject'>
+	<div class='mainProject__descriptionContainer'>
 		<div>
-			<h4 class="mainProject__title">
+			<h4 class='mainProject__title'>
 				{title}
 				<a
 					href={urlPage}
-					target="_blank"
-					rel="noopener norefferer"
+					target='_blank'
+					rel='noopener norefferer'
 					aria-label={`${LABEL_TO_PAGE} ${title}`}
 					title={`${LABEL_TO_PAGE} ${title}`}
 				>
-					<LinkIcon styles="mainProject__title__urlIcon" />
+					<LinkIcon styles='mainProject__title__urlIcon' />
 				</a>
 			</h4>
-			<div class="mainProject__description">
-				<p class="mainProject__paragraph">
+			<div class='mainProject__description'>
+				<p class='mainProject__paragraph'>
 					{`${description} `}
 					<a
 						href={url_code}
-						class="mainProject__repositoryLink"
-						rel="noopener noreferrer"
-						target="_blank"
+						class='mainProject__repositoryLink'
+						rel='noopener noreferrer'
+						target='_blank'
 					>
 						{MAIN_PROJECT_LINK_TO_REPOSITORY}
 					</a>
 				</p>
-				<p class="mainProject__paragraph">{TECHS_LIST_PARAGRAPH}</p>
-				<ul class="mainProject__techList">
+				<p class='mainProject__paragraph'>{TECHS_LIST_PARAGRAPH}</p>
+				<ul class='mainProject__techList'>
 					{
 						techs.map((tech) => (
 							<li>
-								<span class="mainProject__tech">{tech}</span>
+								<span class='mainProject__tech'>{tech}</span>
 							</li>
 						))
 					}
 				</ul>
 			</div>
 		</div>
-		<div class="mainProject__mainImage">
+		<div class='mainProject__mainImage'>
 			<img
 				src={presentationImage}
 				alt={`${ALT_HOME_MAIN_PROJECT} ${title}`}
-				width="540"
-				height="270"
-				loading="lazy"
+				width='540'
+				height='270'
+				loading='lazy'
 			/>
 		</div>
 	</div>
-	<ul class="mainProject__wrapperImages">
+	<ul class='mainProject__wrapperImages'>
 		{
 			imageList.map((img, ind) => (
 				<li>
 					<img
 						src={img}
 						alt={`${ALT_PAGE_VIEWS} ${title}, ${ind}`}
-						width="368"
-						height="184"
-						loading="lazy"
+						width='368'
+						height='184'
+						loading='lazy'
 					/>
 				</li>
 			))

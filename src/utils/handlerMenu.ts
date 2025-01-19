@@ -23,7 +23,7 @@ const changeMenuView = () => {
 
 		// Establece el foco en el primer elemento del menú de navegación
 		setTimeout(() => {
-			const firstItem = document.querySelector<HTMLAnchorElement>('.navMenu__item')
+			const firstItem = $('.navMenu__item')
 
 			if (firstItem instanceof HTMLAnchorElement) firstItem.focus()
 		}, 0)

@@ -1,5 +1,5 @@
 ---
-import logoSprites from '@assets/sprites/socialSprite.svg'
+// import logoSprites from '@assets/sprites/socialSprite.svg'
 import i18n from '@assets/translations/i18n.json'
 import '@assets/styles/components/Project/projectCard.css'
 
@@ -18,43 +18,43 @@ const { BUTTON_TO_PAGE, REPOSITORY_LABEL } = i18n.es.project
 const nameProject = 'Matatena'
 ---
 
-<article class="projectCard">
-	<figure class="projectCard__containerImg">
+<article class='projectCard'>
+	<figure class='projectCard__containerImg'>
 		<img
 			src={images.presentationImage}
 			alt={title}
-			class="projectCard__img"
-			loading="lazy"
-			decoding="async"
+			class='projectCard__img'
+			loading='lazy'
+			decoding='async'
 		/>
 	</figure>
 
-	<div class="projectCard__info">
-		<h4 class="projectCard__title">{title}</h4>
-		<p class="projectCard__paragraph">{description}</p>
-		<div class="projectCard__containerLinks">
+	<div class='projectCard__info'>
+		<h4 class='projectCard__title'>{title}</h4>
+		<p class='projectCard__paragraph'>{description}</p>
+		<div class='projectCard__containerLinks'>
 			<a
 				href={`${BASE_URL_GITHUB}/${nameRepository}`}
-				rel="noopener noreferrer"
-				target="_blank"
+				rel='noopener noreferrer'
+				target='_blank'
 				aria-label={`${REPOSITORY_LABEL} ${title}`}
-				class="projectCard__repositoryLink"
+				class='projectCard__repositoryLink'
 				title={`${REPOSITORY_LABEL} ${title}`}
 			>
 				<svg>
-					<use href={`${logoSprites}#github`}></use>
+					<!-- <use href={`${logoSprites}#github`}></use> -->
 				</svg>
 			</a>
-			<a href={urlPage} rel="noopener noreferrer" target="_blank" class="projectCard__pageLink"
+			<a href={urlPage} rel='noopener noreferrer' target='_blank' class='projectCard__pageLink'
 				>{BUTTON_TO_PAGE}</a
 			>
 		</div>
 	</div>
 	{
 		title === nameProject ? (
-			<div class="projectCard__patron">
-				<div class="line-1" />
-				<div class="line-2" />
+			<div class='projectCard__patron'>
+				<div class='line-1' />
+				<div class='line-2' />
 			</div>
 		) : null
 	}

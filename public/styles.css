@@ -101,12 +101,12 @@ body.light {
 		inset: 0;
 		background-image: radial-gradient(
 			circle,
-			var(--background-dot) var(--dot-size),
+			rgb(20 20 224 / 0.75) var(--dot-size),
 			transparent var(--dot-size)
 		);
 		background-size: calc(33.333% - 1px) 12.5rem;
 		background-position-x: 0.25rem;
-		filter: blur(1px);
+		filter: blur(2px);
 		animation: dotScroll 75s linear 0s infinite forwards;
 		will-change: background-position;
 		z-index: -1;

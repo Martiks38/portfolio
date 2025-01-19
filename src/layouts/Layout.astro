@@ -1,7 +1,7 @@
 ---
 import '@assets/styles/normalize.css'
 
-import { COLOR_ASPECT, NAME_COOKIE_COLOR } from '@/consts'
+// import { COLOR_ASPECT, NAME_COOKIE_COLOR } from '@/consts'
 
 interface Props {
 	title: string
@@ -9,50 +9,79 @@ interface Props {
 
 const { title } = Astro.props
 
-const hasCookiePrefersColor = Astro.cookies.has(NAME_COOKIE_COLOR)
-let isLight = false
+// const hasCookiePrefersColor = Astro.cookies.has(NAME_COOKIE_COLOR)
+// let isLight = false
 
-if (hasCookiePrefersColor) {
-	const color = Astro.cookies.get(NAME_COOKIE_COLOR).value
+// if (hasCookiePrefersColor) {
+// 	const color = Astro.cookies.get(NAME_COOKIE_COLOR).value
 
-	isLight = color === COLOR_ASPECT.light
-}
+// 	isLight = color === COLOR_ASPECT.light
+// }
 ---
 
 <!DOCTYPE html>
-<html lang="es">
+<html lang='es'>
 	<head>
-		<meta charset="UTF-8" />
+		<meta charset='UTF-8' />
 
-		<link rel="icon" type="image/svg+xml" href="/favicon.ico" />
-		<link rel="icon" type="image/png" sizes="48x48" href="/logo-48x48.png" />
-		<link rel="icon" type="image/png" sizes="144x144" href="/logo-144x144.png" />
-		<link rel="manifest" href="/manifest.json" />
+		<link rel='icon' type='image/svg+xml' href='/favicon.ico' />
+		<link rel='icon' type='image/png' sizes='48x48' href='/logo-48x48.png' />
+		<link rel='icon' type='image/png' sizes='144x144' href='/logo-144x144.png' />
+		<link rel='manifest' href='/manifest.json' />
 
-		<meta name="viewport" content="width=device-width" />
+		<meta name='viewport' content='width=device-width' />
 		<meta
-			name="description"
-			content="Hola y bienvenido a mi portfolio. Me llamo Giuliano, desarrollador Full Stack centrado en Front End. Aquí podrás ver algunos de mis proyectos y las tecnologías que uso comúnmente."
+			name='description'
+			content='Hola y bienvenido a mi portfolio. Me llamo Giuliano, desarrollador Full Stack centrado en Front End. Aquí podrás ver algunos de mis proyectos y las tecnologías que uso comúnmente.'
 		/>
-		<meta property="og:title" content={title} />
+		<meta property='og:title' content={title} />
 		<meta
-			property="og:description"
-			content="Hola y bienvenido a mi portfolio. Me llamo Giuliano, desarrollador Full Stack centrado en Front End. Aquí podrás ver algunos de mis proyectos y las tecnologías que uso comúnmente."
+			property='og:description'
+			content='Hola y bienvenido a mi portfolio. Me llamo Giuliano, desarrollador Full Stack centrado en Front End. Aquí podrás ver algunos de mis proyectos y las tecnologías que uso comúnmente.'
 		/>
-		<meta property="og:image" content="/logo.webp" />
-		<meta property="og:type" content="website" />
-		<meta property="og:url" content="https://giuliano-cappa.vercel.app" />
+		<meta property='og:image' content='/logo.webp' />
+		<meta property='og:type' content='website' />
+		<meta property='og:url' content='https://giuliano-cappa.vercel.app' />
 
-		<meta name="theme-color" content="#75eff8" />
+		<meta name='theme-color' content='#75eff8' />
 
-		<meta name="generator" content={Astro.generator} />
+		<meta name='generator' content={Astro.generator} />
 
-		<link rel="stylesheet" href="/styles.css" />
+		<link rel='stylesheet' href='/styles.css' />
 
 		<title>{title}</title>
 	</head>
 
-	<body class:list={[isLight && 'light']}>
+	<body>
 		<slot />
+		<script is:inline>
+			const theme = (() => {
+				const localStorageTheme = localStorage?.getItem('theme') ?? ''
+
+				if (['dark', 'light'].includes(localStorageTheme)) {
+					return localStorageTheme
+				}
+
+				return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+			})()
+
+			if (theme === 'light') {
+				document.documentElement.classList.remove('dark')
+			} else {
+				document.documentElement.classList.add('dark')
+			}
+
+			window.localStorage.setItem('theme', theme)
+
+			const handleToggleClick = () => {
+				const element = document.body
+				element.classList.toggle('dark')
+
+				const isDark = element.classList.contains('dark')
+				localStorage.setItem('theme', isDark ? 'dark' : 'light')
+			}
+
+			document.getElementById('themeToggle')?.addEventListener('click', handleToggleClick)
+		</script>
 	</body>
 </html>
