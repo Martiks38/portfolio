@@ -10,13 +10,18 @@
 /* Page Header */
 .headerPage {
 	--height-nav-item: 2.375rem;
+	--header-border-width: .125rem;
+	--border: solid 0 rgba(255, 255, 255, 0.1);
 
 	position: fixed;
-	top: 0;
+	max-width: var(--width-content);
 	width: 100%;
+	margin: 0 auto;
+	overflow: hidden;
 	background-color: var(--bg-header-page);
 	color: var(--color-white);
-	border-bottom: solid 2px rgba(255, 255, 255, 0.1);
+	border: var(--border);
+	border-bottom-width: var(--header-border-width);
 	visibility: hidden;
 	transform: translateY(-100%);
 	transition:
@@ -41,12 +46,11 @@
 
 	&__container {
 		display: flex;
-		max-width: var(--width-content);
 		align-items: center;
 		flex-direction: column;
 		gap: 3em;
 		margin: 0 auto;
-		padding: 1rem 2rem;
+		padding: 0.75rem 2rem;
 		max-width: var(--width-content);
 		width: 100%;
 		backdrop-filter: blur(50px);
@@ -174,7 +178,7 @@
 }
 
 .skipNavLinks {
-	position: absolute;
+	position: fixed;
 	top: 0;
 	left: 0;
 	display: block;
@@ -192,7 +196,7 @@
 
 	&:focus {
 		opacity: 1;
-		z-index: 3;
+		z-index: 100;
 	}
 }
 
@@ -269,6 +273,9 @@
 @media screen and (min-width: 48.5rem) {
 	.headerPage {
 		position: sticky;
+		top: 0.8dvh;
+		border-width: var(--header-border-width);
+		border-radius: calc((2.3988rem + 1rem * 2) / 2);
 		visibility: visible;
 		transform: translateY(0%);
 

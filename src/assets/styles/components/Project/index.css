@@ -46,7 +46,21 @@
 	&__repositoryLink {
 		white-space: nowrap;
 		font-weight: 600;
+		color: var(--repository-link);
+
+		@media (hover: hover) {
+			&:hover, &:focus {
+				text-decoration: underline;
+			}
+		}
+
+		@media (hover: none){
+			& {
+				text-decoration: underline;
+			}
+		}
 	}
+	
 
 	&__paragraph {
 		margin-bottom: 0.8em;
@@ -124,21 +138,6 @@
 	&__mainImage img,
 	&__wrapperImages img {
 		filter: var(--shadow-project-image);
-	}
-}
-
-@media (hover: hover) {
-	.mainProject__repositoryLink:hover,
-	.mainProject__repositoryLink:focus {
-		text-decoration: underline;
-		color: var(--repository-link);
-	}
-}
-
-@media (hover: none) {
-	.mainProject__repositoryLink {
-		text-decoration: underline;
-		color: var(--repository-link);
 	}
 }
 
