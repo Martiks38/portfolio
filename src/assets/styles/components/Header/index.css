@@ -21,7 +21,6 @@
 	background-color: var(--bg-header-page);
 	color: var(--color-white);
 	border: var(--border);
-	border-bottom-width: var(--header-border-width);
 	visibility: hidden;
 	transform: translateY(-100%);
 	transition:
@@ -274,8 +273,7 @@
 	.headerPage {
 		position: sticky;
 		top: 0.8dvh;
-		border-width: var(--header-border-width);
-		border-radius: calc((2.3988rem + 1rem * 2) / 2);
+		border-bottom-width: var(--header-border-width);
 		visibility: visible;
 		transform: translateY(0%);
 
@@ -307,5 +305,12 @@
 	.btnColorScheme {
 		--size: 1.5rem;
 		color: currentColor;
+	}
+}
+
+@media (min-width: 87.5rem){
+	.headerPage{
+		border-radius: calc((2.3988rem + 1rem * 2) / 2);
+		border-width: var(--header-border-width);
 	}
 }
