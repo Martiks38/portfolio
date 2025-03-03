@@ -15,7 +15,7 @@ const changeMenuView = () => {
 	if (!(header instanceof HTMLElement)) return
 
 	const visibleMenu = header.classList.contains('menu-view')
-	console.log(visibleMenu)
+
 	if (!visibleMenu) {
 		menuBtn.setAttribute('aria-expanded', 'false')
 		menuBtn.setAttribute('aria-label', close)
