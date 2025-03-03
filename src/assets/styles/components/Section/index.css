@@ -62,7 +62,7 @@
 
 /* Section - About me */
 .section__aboutMe {
-	place-items: center;
+	justify-content: space-around;
 }
 
 /* Section - Projects */
@@ -158,11 +158,6 @@
 		}
 	}
 }
-
-/* @media (min-width: 73.75rem) {
-	.section__aboutMe {
-	}
-} */
 
 @media (min-width: 75rem) {
 	.section__introduction {

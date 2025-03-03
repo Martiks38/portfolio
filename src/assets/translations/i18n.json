@@ -52,6 +52,7 @@
     "error404": {
       "reason": "La página a la que intenta acceder no existe.",
       "toHome": "Volver al inicio"
-    }
+    },
+    "AND": "y"
   }
 }

@@ -1,8 +1,14 @@
 .aboutMe {
 	&__title {
-		grid-area: title;
 		width: fit-content;
 		place-self: center;
+	}
+
+	&__container{
+		display: flex;
+		gap: 2.5em;
+		justify-content: space-evenly;
+		font-size: clamp(1.125rem, 0.9952rem + 0.5769vw, 1.5rem);
 	}
 
 	&__containerImage {
@@ -43,24 +49,16 @@
 	}
 
 	&__img {
-		grid-area: image;
 		align-self: center;
 		border-radius: var(--border-radius-16);
 		object-fit: cover;
 	}
 
 	&__description {
-		grid-area: description;
-
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		margin-top: 4.5rem;
 		height: 100%;
 		max-width: 55ch;
 		text-wrap: balance;
 		font-size: 1.25rem;
-		font-size: clamp(1.125rem, 0.9952rem + 0.5769vw, 1.5rem);
 		line-height: 2rem;
 
 		@supports (font-size: clamp(1.125rem, 0.9952rem + 0.5769vw, 1.5rem)) {
@@ -117,10 +115,6 @@
 }
 
 @media (min-width: 73.75rem) {
-	.aboutMe__description {
-		margin-top: auto;
-	}
-
 	.aboutMe__paragraph {
 		text-align: left;
 	}
