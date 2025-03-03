@@ -91,6 +91,7 @@
 		height: var(--size, --height-nav-item);
 		width: var(--size, --height-nav-item);
 		color: inherit;
+		fill: transparent; 
 	}
 }
 
@@ -272,7 +273,7 @@
 @media screen and (min-width: 48.5rem) {
 	.headerPage {
 		position: sticky;
-		top: 0.8dvh;
+		top: 0;
 		border-bottom-width: var(--header-border-width);
 		visibility: visible;
 		transform: translateY(0%);
@@ -310,6 +311,7 @@
 
 @media (min-width: 87.5rem){
 	.headerPage{
+		top: 0.8dvh;
 		border-radius: calc((2.3988rem + 1rem * 2) / 2);
 		border-width: var(--header-border-width);
 	}

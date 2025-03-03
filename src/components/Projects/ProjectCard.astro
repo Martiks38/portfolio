@@ -1,5 +1,4 @@
 ---
-// import logoSprites from '@assets/sprites/socialSprite.svg'
 import i18n from '@assets/translations/i18n.json'
 import '@assets/styles/components/Project/projectCard.css'
 
@@ -42,7 +41,7 @@ const nameProject = 'Matatena'
 				title={`${REPOSITORY_LABEL} ${title}`}
 			>
 				<svg>
-					<!-- <use href={`${logoSprites}#github`}></use> -->
+					<use href='/sprites/socialSprite.svg#github'></use>
 				</svg>
 			</a>
 			<a href={urlPage} rel='noopener noreferrer' target='_blank' class='projectCard__pageLink'

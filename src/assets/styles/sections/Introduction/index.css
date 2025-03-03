@@ -1,7 +1,23 @@
 .introduction {
 	&__presentation {
+		--gap-right: 0;
+		--size-photo: 8rem;
+		
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-right: var(--gap-right);
+		margin-bottom: 1.75rem;
 		text-align: center;
+
+		& ~ .socialCard{
+			--gap-right: 0;
+			--size-photo: 8rem;
+
+			margin-left: calc(var(--gap-right) + var(--size-photo));
+		}
 	}
+	
 
 	&__greetings {
 		margin-bottom: 1.25em;
@@ -16,8 +32,6 @@
 	}
 
 	&__photo {
-		--size-photo: 2.25rem;
-
 		width: var(--size-photo);
 		height: var(--size-photo);
 		border: solid 0 #2b2b2b;
@@ -77,11 +91,21 @@
 @media (min-width: 75rem) {
 	.introduction {
 		&__presentation {
+			--size-photo: 10rem;
+			--gap-right: 3rem;
+			
+			flex-direction: row;
 			text-align: left;
+			
+			& ~ .socialCard {
+				--size-photo: 10rem;
+				--gap-right: 3.5rem;
+				margin-left: calc(var(--size-photo) + var(--gap-right));
+			}
 		}
 
 		&__photo {
-			--size-photo: 3.75rem;
+			margin-right: 3.5rem;
 		}
 	}
 }

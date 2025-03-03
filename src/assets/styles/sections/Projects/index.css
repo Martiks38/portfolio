@@ -9,8 +9,8 @@
 	}
 
 	&__projectList {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(15.625rem, 21.875rem));
+		display: flex;
+		flex-direction: column;
 		gap: 4rem;
 		place-content: center;
 		width: 100%;

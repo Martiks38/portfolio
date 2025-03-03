@@ -1,11 +1,14 @@
 .socialCard {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	gap: 3.2em;
-	margin-top: 1rem;
-	color: var(--social-card);
-	list-style-type: none;
+	
+	&__links{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 3.2em;
+		margin-top: 1rem;
+		color: var(--social-card);
+		list-style-type: none;
+	}
 
 	&__link {
 		--size-icon: 2.25rem;
@@ -35,7 +38,7 @@
 }
 
 @media (min-width: 75rem) {
-	.socialCard {
+	.socialCard__links {
 		justify-content: flex-start;
 	}
 }

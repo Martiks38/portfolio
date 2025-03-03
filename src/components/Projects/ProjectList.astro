@@ -24,16 +24,16 @@ const project = projects.find((project) => project.title === principalProject)
 const projectlist = projects.filter((project) => project.title !== principalProject)
 ---
 
-<Section addClass="section__projects" id={sectionId}>
-	<h3 class="section__title section__title_largeReflectionSeparation projects__title">
+<Section addClass='section__projects' id={sectionId}>
+	<h3 class='section__title section__title_largeReflectionSeparation projects__title'>
 		{TITLE}
 	</h3>
 	{typeof project !== 'undefined' ? <Project project={project} /> : null}
 
-	<ul class="projects__projectList">
+	<ul class='projects__projectList'>
 		{
 			projectlist.map((project) => (
-				<li class="itemProjectCard hidden">
+				<li class='itemProjectCard hidden'>
 					<ProjectCard project={project} />
 				</li>
 			))
@@ -42,19 +42,55 @@ const projectlist = projects.filter((project) => project.title !== principalProj
 </Section>
 
 <script>
-	const projectCards = document.querySelectorAll('.itemProjectCard')
+	const initIntersectionObserver = () => {
+		const projectCards = document.querySelectorAll('.itemProjectCard')
 
-	const options = {
-		root: null,
-		rootMargin: '-10px 0px',
-		threshold: 0.2
+		const options = {
+			root: null,
+			rootMargin: '-10px 0px',
+			threshold: 0.2
+		}
+
+		const observer = new IntersectionObserver((entries) => {
+			entries.forEach(({ isIntersecting, target }) => {
+				if (isIntersecting) target.classList.remove('hidden')
+			})
+		}, options)
+
+		projectCards.forEach((card) => observer.observe(card))
 	}
 
-	const observer = new IntersectionObserver((entries) => {
-		entries.forEach(({ isIntersecting, target }) => {
-			if (isIntersecting) target.classList.remove('hidden')
-		})
-	}, options)
+	const $projectCard = document.querySelector<HTMLElement>('.itemProjectCard')
+	const $containerProjectCard = document.querySelector('.projects__projectList')
 
-	projectCards.forEach((card) => observer.observe(card))
+	const rechangeShine = () => {
+		console.log('change')
+		if ($projectCard instanceof HTMLElement && $containerProjectCard instanceof HTMLElement) {
+			const { width, height } = $projectCard.getBoundingClientRect()
+
+			const angle = (Math.atan(height / width) * 180) / Math.PI
+			const long = Math.sqrt(width ** 2 + height ** 2)
+			const transY = height + 350
+
+			const properties: [string, string][] = [
+				['--rotate-shyne', `${angle}deg`],
+				['--long', `${long}px`],
+				['--translateYD', `${transY}px`],
+				['--translateYU', `${-1 * transY}px`]
+			]
+
+			properties.forEach(([prop, value]) => {
+				$containerProjectCard.style.setProperty(prop, value)
+			})
+		}
+	}
+
+	initIntersectionObserver()
+	rechangeShine()
+
+	let rechangeId: number
+	window.addEventListener('resize', () => {
+		clearTimeout(rechangeId)
+		rechangeId = setTimeout(() => rechangeShine(), 150)
+	})
 </script>

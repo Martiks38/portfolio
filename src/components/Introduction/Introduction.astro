@@ -24,7 +24,6 @@ const { BUTTON_TO_NEXT_SECTION, PRESENTATION, SPECIALTY } = introduction
 <Section addClass='section__introduction' id={sectionId}>
 	<div class='introduction__presentation'>
 		<Image src={photo} alt='Giuliano Cappa' class='introduction__photo' width='250' height='250' />
-
 		<div>
 			<h1 class='introduction__title'>
 				{PRESENTATION}
@@ -32,8 +31,8 @@ const { BUTTON_TO_NEXT_SECTION, PRESENTATION, SPECIALTY } = introduction
 			</h1>
 			<h2 class='introduction__subtitle'>{SPECIALTY}</h2>
 		</div>
-		<SocialCard />
 	</div>
+	<SocialCard />
 
 	<ArrowDown sectionId={nextSectionId} styles='arrowDown' label={BUTTON_TO_NEXT_SECTION} />
 </Section>
