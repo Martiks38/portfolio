@@ -72,8 +72,12 @@
 
 /* Section - Contact */
 .section__contact {
-	place-items: center;
+	justify-content: center;
 	padding-bottom: 6rem;
+
+	& .socialCard__links{
+		justify-content: center;
+	}
 }
 
 @media screen and (min-width: 36.25rem) {
