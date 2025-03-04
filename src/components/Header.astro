@@ -1,36 +1,12 @@
 ---
-import ButtonChangePageAspect from './ButtonChangePageAspect.astro'
 import i18n from '@assets/translations/i18n.json'
 
 import '@assets/styles/components/Header/index.css'
 
-import { COLOR_ASPECT } from '@/consts'
 import { ITEMS_NAV } from '@/values'
-
-const { dark, light } = COLOR_ASPECT
-
-/**
- * Indica si los iconos del botón están girados o no.
- * Valor 0: el contendio del botón no está rotado
- * Valor 1: el contenido del botón está girado
- */
-let turns = 0
-
-const setColorScheme = () => {
-	// const hasCookiePrefersColor = Astro.cookies.has(NAME_COOKIE_COLOR)
-	// if (!hasCookiePrefersColor) return
-	// const currentColor = Astro.cookies.get(NAME_COOKIE_COLOR).value
-	// if (currentColor === light) turns = 1
-}
-
-setColorScheme()
-
-const color = turns === 0 ? dark : light
-const changeColor = turns === 0 ? light : dark
 ---
 
 <script src='@utils/handlerMenu.ts'></script>
-<script src='@utils/changeTheme.ts'></script>
 
 <a href={`#${Object.keys(ITEMS_NAV)[0]}`} class='skipNavLinks'>{i18n.es.SKIP_TO_MAIN_CONTENT}</a>
 
@@ -51,7 +27,6 @@ const changeColor = turns === 0 ? light : dark
 					}
 				</ul>
 			</nav>
-			<ButtonChangePageAspect changeColor={changeColor} color={color} turns={turns} />
 		</div>
 	</div>
 </header>
@@ -62,5 +37,4 @@ const changeColor = turns === 0 ? light : dark
 	<button class='menuBtn' aria-label={i18n.es.LABEL_CHANGE_PAGE_THEME.open} aria-expanded='false'>
 		<span class='menuBtn__line'></span>
 	</button>
-	<ButtonChangePageAspect changeColor={changeColor} color={color} turns={turns} />
 </div>
