@@ -7,14 +7,14 @@ import '@assets/styles/error404.css'
 const { reason, toHome } = i18n.es.error404
 ---
 
-<Layout title="Giuliano Cappa | Error 404">
-	<main class="errorPage">
-		<div class="dot dot_error"></div>
-		<article class="errorMessage">
-			<h1 class="errorMessage__title">Error 404</h1>
-			<div class="errorMessage__reason">
+<Layout title='Página no encontrada'>
+	<main class='errorPage'>
+		<div class='dot dot_error'></div>
+		<article class='errorMessage'>
+			<h1 class='errorMessage__title'>Error 404</h1>
+			<div class='errorMessage__reason'>
 				<p>{reason}</p>
-				<a href="/" class="errorMessage__return">{toHome}</a>
+				<a href='/' class='errorMessage__return'>{toHome}</a>
 			</div>
 		</article>
 	</main>
