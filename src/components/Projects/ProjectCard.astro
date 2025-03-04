@@ -13,8 +13,6 @@ interface Props {
 const { project } = Astro.props
 const { description, images, nameRepository, title, urlPage } = project
 const { BUTTON_TO_PAGE, REPOSITORY_LABEL } = i18n.es.project
-
-const nameProject = 'Matatena'
 ---
 
 <article class='projectCard'>
@@ -49,12 +47,4 @@ const nameProject = 'Matatena'
 			>
 		</div>
 	</div>
-	{
-		title === nameProject ? (
-			<div class='projectCard__patron'>
-				<div class='line-1' />
-				<div class='line-2' />
-			</div>
-		) : null
-	}
 </article>

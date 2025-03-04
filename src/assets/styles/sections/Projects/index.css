@@ -10,17 +10,11 @@
 
 	&__projectList {
 		display: flex;
-		flex-direction: column;
+		flex-wrap: wrap;
+		align-items: stretch;
+		justify-content: center;
 		gap: 4rem;
-		place-content: center;
 		width: 100%;
 		list-style-type: none;
-		padding: 0.1rem 0;
-	}
-}
-
-@media screen and (min-width: 100rem) {
-	.projects__projectList {
-		grid-template-columns: repeat(auto-fit, minmax(18.75rem, 26.875rem));
 	}
 }
