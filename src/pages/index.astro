@@ -7,15 +7,16 @@ import AboutMe from '@components/AboutMe/AboutMe.astro'
 import ContactSection from '@components/Contact/ContactSection.astro'
 import Header from '@components/Header.astro'
 import Introduction from '@components/Introduction/Introduction.astro'
+import MeteorShower from '@components/MeteorShower/index.astro'
 import ProjectList from '@components/Projects/ProjectList.astro'
 
 const getKeys = Object.keys as <T extends object>(obj: T) => Array<keyof T>
 const section_ids = Object.fromEntries(getKeys(ITEMS_NAV).map((item) => [item, item]))
 ---
 
-<Layout title="Giuliano Cappa">
-	<div class="dot"></div>
+<Layout title='Giuliano Cappa'>
 	<Header />
+	<MeteorShower />
 	<main>
 		<Introduction sectionId={section_ids.mainContent} nextSectionId={section_ids.projects} />
 		<ProjectList sectionId={section_ids.projects} />

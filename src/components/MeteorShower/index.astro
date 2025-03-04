@@ -1,0 +1,172 @@
+---
+import '@assets/styles/components/MeteorShower/index.css'
+---
+
+<canvas id='stars'></canvas>
+
+<script>
+	import invariant from 'tiny-invariant'
+
+	type Star = {
+		x: number
+		y: number
+		z: number
+	}
+
+	const STAR_COLOR = '#fff'
+	const STAR_SIZE = 3
+	const STAR_MIN_SCALE = 0.2
+	const OVERFLOW_THRESHOLD = 50
+	const STAR_COUNT = (window.innerWidth + window.innerHeight) / 8
+
+	let canvas: HTMLCanvasElement | null
+	let ctx: CanvasRenderingContext2D | null
+
+	let scale = 1
+	let width = 1
+	let height = 1
+	let stars: Star[] = []
+	let velocity = {
+		x: 0,
+		y: 0,
+		tx: 0,
+		ty: 0,
+		z: 0.0005
+	}
+
+	function generate() {
+		stars = Array.from({ length: STAR_COUNT }, () => ({
+			x: 0,
+			y: 0,
+			z: STAR_MIN_SCALE + Math.random() * (1 - STAR_MIN_SCALE)
+		}))
+	}
+
+	function placeStar(star: Star) {
+		star.x = Math.random() * width
+		star.y = Math.random() * height
+	}
+
+	function recycleStar(star: Star) {
+		let direction = 'z'
+		let vx = Math.abs(velocity.x)
+		let vy = Math.abs(velocity.y)
+
+		if (vx > 1 || vy > 1) {
+			let axis = Math.random() < vx / (vx + vy) ? 'h' : 'v'
+			direction = axis === 'h' ? (velocity.x > 0 ? 'l' : 'r') : velocity.y > 0 ? 't' : 'b'
+		}
+
+		star.z = STAR_MIN_SCALE + Math.random() * (1 - STAR_MIN_SCALE)
+
+		switch (direction) {
+			case 'l':
+				star.x = -OVERFLOW_THRESHOLD
+				star.y = height * Math.random()
+				break
+			case 'r':
+				star.x = width + OVERFLOW_THRESHOLD
+				star.y = height * Math.random()
+				break
+			case 't':
+				star.x = width * Math.random()
+				star.y = -OVERFLOW_THRESHOLD
+				break
+			case 'b':
+				star.x = width * Math.random()
+				star.y = height + OVERFLOW_THRESHOLD
+				break
+			default: // Caso 'z'
+				star.z = 0.1
+				star.x = Math.random() * width
+				star.y = Math.random() * height
+				break
+		}
+	}
+
+	function resize() {
+		scale = window.devicePixelRatio || 1
+		width = window.innerWidth * scale
+		height = window.innerHeight * scale
+
+		if (!(canvas instanceof HTMLCanvasElement)) return
+
+		invariant(canvas)
+
+		canvas.width = width
+		canvas.height = height
+		stars.forEach(placeStar)
+	}
+
+	function step() {
+		invariant(ctx)
+		ctx.clearRect(0, 0, width, height)
+		update()
+		render()
+		requestAnimationFrame(step)
+	}
+
+	function update() {
+		velocity.tx *= 0.96
+		velocity.ty *= 0.96
+
+		velocity.x += (velocity.tx - velocity.x) * 0.8
+		velocity.y += (velocity.ty - velocity.y) * 0.8
+
+		stars.forEach((star) => {
+			star.x += velocity.x * star.z
+			star.y += velocity.y * star.z
+
+			star.x += (star.x - width / 2) * velocity.z * star.z
+			star.y += (star.y - height / 2) * velocity.z * star.z
+			star.z += velocity.z
+
+			if (
+				star.x < -OVERFLOW_THRESHOLD ||
+				star.x > width + OVERFLOW_THRESHOLD ||
+				star.y < -OVERFLOW_THRESHOLD ||
+				star.y > height + OVERFLOW_THRESHOLD
+			) {
+				recycleStar(star)
+			}
+		})
+	}
+
+	function render() {
+		stars.forEach((star) => {
+			invariant(ctx)
+
+			ctx.beginPath()
+			ctx.lineCap = 'round'
+			ctx.lineWidth = STAR_SIZE * star.z * scale
+			ctx.globalAlpha = 0.5 + 0.5 + Math.random()
+			ctx.strokeStyle = STAR_COLOR
+			ctx.moveTo(star.x, star.y)
+
+			let tailX = velocity.x * 2
+			let tailY = velocity.y * 2
+
+			if (Math.abs(tailX) < 0.1) tailX = 0.5
+			if (Math.abs(tailY) < 0.1) tailY = 0.5
+
+			ctx.lineTo(star.x + tailX, star.y + tailY)
+			ctx.stroke()
+		})
+	}
+
+	function init() {
+		canvas = document.querySelector('#stars')
+		invariant(canvas)
+		if (!(canvas instanceof HTMLCanvasElement)) return
+
+		ctx = canvas.getContext('2d')
+
+		generate()
+		resize()
+		step()
+
+		window.onresize = resize
+	}
+
+	init()
+</script>
