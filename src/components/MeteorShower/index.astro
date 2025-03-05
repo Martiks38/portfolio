@@ -155,6 +155,8 @@ import '@assets/styles/components/MeteorShower/index.css'
 	}
 
 	function init() {
+		if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+
 		canvas = document.querySelector('#stars')
 
 		if (!(canvas instanceof HTMLCanvasElement)) return
