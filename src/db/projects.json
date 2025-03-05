@@ -16,7 +16,7 @@
       "techs": ["Next.js", "TypeScript", "PostCSS", "MongoDB", "Mongoose", "Zustand"]
     },
     {
-      "description": "Prueba técnica de frontend dada por Midudev. Consiste en mostrar en pantalla la lista de libros disponibles para leer y la lista de libros leídos. Los libros se pueden filtrar y la lista de libros leídos debe persistir.",
+      "description": "Prueba técnica de frontend dada por Midudev. Consiste en mostrar en pantalla una lista de libros disponibles para leer y otra lista de libros leídos.",
       "imgs": { "list": [], "presentation_image": "/images/ReadingList/img1.png" },
       "title": "Reading List",
       "name_repository": "reading-list/tree/main/pruebas/01-reading-list/martiks38",
@@ -24,7 +24,7 @@
       "techs": ["Next.js", "TypeScript", "CSS modules", "Vitest", "Testing Library"]
     },
     {
-      "description": "Clon del juego Matatena de Cult of the Lamb, con la finalidad de hacer una práctica del framework Vue 3.",
+      "description": "Clon del juego Matatena de Cult of the Lamb.",
       "imgs": {
         "list": ["/images/Matatena/img1.png", "/images/Matatena/img2.png"],
         "presentation_image": "/images/Matatena/img3.png"
@@ -35,7 +35,7 @@
       "techs": ["Vue 3", "Vue Router", "TypeScript", "Tailwind CSS", "Vitest"]
     },
     {
-      "description": "Juego de la memoria con temática de Darkest Dungeon. El usuario puede optar por jugar libremente o contrarreloj.",
+      "description": "Juego de la memoria con temática de Darkest Dungeon. El usuario puede optar por jugar libremente o a contrarreloj.",
       "imgs": {
         "list": ["/images/Memory/img1.webp", "/images/Memory/img3.webp"],
         "presentation_image": "/images/Memory/img2.webp"
@@ -46,7 +46,7 @@
       "techs": ["React.js", "Wouter", "Tailwind CSS", "Vitest"]
     },
     {
-      "description": "Clon del home de la página Troy Total War Saga con animaciones agregadas y corrección en los enlaces de algunos héroes, los cuales redirigen a la página de otro.",
+      "description": "Clon del home de la página Troy Total War Saga con animaciones agregadas y corrección en los enlaces de algunos héroes.",
       "imgs": {
         "list": [
           "/images/TotalWar/img2.png",
@@ -55,13 +55,13 @@
         ],
         "presentation_image": "/images/TotalWar/img1.webp"
       },
-      "title": "Troy Total War Saga - Clon",
+      "title": "Troy Total War Saga",
       "name_repository": "clon-page-troy-total-war",
       "url_page": "https://clon-page-troy-total-war.vercel.app",
       "techs": ["React.js", "Tailwind CSS"]
     },
     {
-      "description": "Rediseño de la página de escuela secundaria creada durante la cuarentena, donde los nuevos y actuales estudiantes pueden ver los horarios del curso, las especialidades ofrecidas por la institución y sus respectivas materias.",
+      "description": "Rediseño de la página de escuela creada durante la cuarentena, donde los nuevos y actuales estudiantes pueden ver los horarios del curso, las especialidades ofrecidas por la institución y sus respectivas materias.",
       "imgs": {
         "list": [
           "/images/School/img2.webp",
