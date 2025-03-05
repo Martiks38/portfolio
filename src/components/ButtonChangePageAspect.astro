@@ -7,7 +7,7 @@ interface Props {
 	turns: number
 }
 
-const { changeColor, color, turns } = Astro.props
+const { changeColor, color, turns } = Astro.props as Props
 ---
 
 <div class='headerPage__actions__colorPanel'>

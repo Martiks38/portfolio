@@ -17,7 +17,7 @@ import '@assets/styles/components/MeteorShower/index.css'
 	const STAR_SIZE = 3
 	const STAR_MIN_SCALE = 0.2
 	const OVERFLOW_THRESHOLD = 50
-	const STAR_COUNT = (window.innerWidth + window.innerHeight) / 8
+	const STAR_COUNT = (window.innerWidth + window.innerHeight) / 40
 
 	let canvas: HTMLCanvasElement | null
 	let ctx: CanvasRenderingContext2D | null
@@ -156,17 +156,24 @@ import '@assets/styles/components/MeteorShower/index.css'
 
 	function init() {
 		canvas = document.querySelector('#stars')
-		invariant(canvas)
+
 		if (!(canvas instanceof HTMLCanvasElement)) return
+		invariant(canvas)
 
 		ctx = canvas.getContext('2d')
+		if (!ctx) return
 
 		generate()
 		resize()
 		step()
 
-		window.onresize = resize
+		let resizeTimeout: number
+
+		window.onresize = () => {
+			clearTimeout(resizeTimeout)
+			resizeTimeout = setTimeout(resize, 150)
+		}
 	}
 
-	init()
+	window.addEventListener('DOMContentLoaded', () => init())
 </script>

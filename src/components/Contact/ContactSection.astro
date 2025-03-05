@@ -9,23 +9,23 @@ interface Props {
 	sectionId: string
 }
 
-const { sectionId } = Astro.props
+const { sectionId } = Astro.props as Props
 
 const { contact } = i18n.es
 const { FIRST_PARAGRAPH, SECOND_PARAGRAPH, TITLE } = contact
 ---
 
-<Section addClass="section__contact" id={sectionId}>
-	<h3 class="section__title contact__title">{TITLE}</h3>
-	<div class="contact__text">
-		<p class="contact__paragraph">
+<Section addClass='section__contact' id={sectionId}>
+	<h3 class='section__title contact__title'>{TITLE}</h3>
+	<div class='contact__text'>
+		<p class='contact__paragraph'>
 			{FIRST_PARAGRAPH}
 		</p>
-		<p class="contact__paragraph">
+		<p class='contact__paragraph'>
 			{SECOND_PARAGRAPH}
 		</p>
-		<address class="contact__address">
-			<a href="mailto:cappa.giuliano@gmail.com">cappa.giuliano@gmail.com</a>
+		<address class='contact__address'>
+			<a href='mailto:cappa.giuliano@gmail.com'>cappa.giuliano@gmail.com</a>
 		</address>
 	</div>
 	<SocialCard />

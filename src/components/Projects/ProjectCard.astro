@@ -10,7 +10,8 @@ interface Props {
 	project: Project
 }
 
-const { project } = Astro.props
+const { project } = Astro.props as Props
+
 const { description, images, nameRepository, title, urlPage } = project
 const { BUTTON_TO_PAGE, REPOSITORY_LABEL } = i18n.es.project
 ---

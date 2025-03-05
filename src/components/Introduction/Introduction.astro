@@ -15,7 +15,7 @@ interface Props {
 	nextSectionId: string
 }
 
-const { nextSectionId, sectionId } = Astro.props
+const { nextSectionId, sectionId } = Astro.props as Props
 
 const { introduction } = i18n.es
 const { BUTTON_TO_NEXT_SECTION, PRESENTATION, SPECIALTY } = introduction
@@ -23,7 +23,14 @@ const { BUTTON_TO_NEXT_SECTION, PRESENTATION, SPECIALTY } = introduction
 
 <Section addClass='section__introduction' id={sectionId}>
 	<div class='introduction__presentation'>
-		<Image src={photo} alt='Giuliano Cappa' class='introduction__photo' width='250' height='250' />
+		<Image
+			src={photo}
+			alt='Giuliano Cappa'
+			class='introduction__photo'
+			width='250'
+			height='250'
+			loading='eager'
+		/>
 		<div>
 			<h1 class='introduction__title'>
 				{PRESENTATION}
