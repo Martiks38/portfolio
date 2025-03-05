@@ -6,7 +6,7 @@ interface Props {
 	id?: string
 }
 
-const { addClass, id } = Astro.props
+const { addClass, id } = Astro.props as Props
 ---
 
 <section class:list={['section', addClass]} id={id}>
