@@ -5,7 +5,6 @@ import photo from '@assets/images/photo.jpg'
 import i18n from '@assets/translations/i18n.json'
 import '@assets/styles/sections/AboutMe/index.css'
 
-import { EXTERNAL_LINKS } from '@/consts'
 import { Image } from 'astro:assets'
 
 interface Props {
@@ -14,19 +13,7 @@ interface Props {
 
 const { sectionId } = Astro.props as Props
 
-const { jonmircha, midudev } = EXTERNAL_LINKS
-const {
-	ALT_IMG,
-	FIRST_HIGHLIGHTED,
-	FIRST_PARAGRAPH,
-	SECOND_HIGHLIGHTED,
-	SECOND_PARAGRAPH_FIRST_FRAGMENT,
-	SECOND_PARAGRAPH_SECOND_FRAGMENT,
-	THIRD_PARAGRAPH_FIRST_FRAGMENT,
-	THIRD_PARAGRAPH_SECOND_FRAGMENT,
-	THIRD_HIGHLIGHTED,
-	TITLE
-} = i18n.es['about-me']
+const { ALT_IMG, PARAGRAPHS, TITLE } = i18n.es['about-me']
 ---
 
 <Section addClass='section__aboutMe' id={sectionId}>
@@ -44,32 +31,7 @@ const {
 			/>
 		</figure>
 		<div class='aboutMe__description'>
-			<p class='aboutMe__paragraph'>
-				{FIRST_PARAGRAPH}<em class='aboutMe__highlighted'>{FIRST_HIGHLIGHTED}</em>.
-			</p>
-			<p class='aboutMe__paragraph'>
-				{SECOND_PARAGRAPH_FIRST_FRAGMENT}<em
-					><span class='aboutMe__mark'>{SECOND_HIGHLIGHTED}</span></em
-				>{SECOND_PARAGRAPH_SECOND_FRAGMENT}<a
-					href={midudev}
-					class='aboutMe__externalLink'
-					rel='noopener noreferrer'
-					target='_blank'>Midudev</a
-				>
-				{i18n.es.AND}
-				<a href={jonmircha} class='aboutMe__externalLink' rel='noopener noreferrer' target='_blank'
-					>jonmircha</a
-				>.
-			</p>
-			<p class='aboutMe__paragraph'>
-				{THIRD_PARAGRAPH_FIRST_FRAGMENT}<strong class='aboutMe__highlight'>Next.js</strong>, <strong
-					class='aboutMe__highlight'>TypeScript</strong
-				>{i18n.es.AND}<strong class='aboutMe__highlight'>Sass</strong>{
-					THIRD_PARAGRAPH_SECOND_FRAGMENT
-				}<strong class='aboutMe__highlight'>PostgreSQL</strong>{i18n.es.AND}<strong
-					class='aboutMe__highlight'>{THIRD_HIGHLIGHTED}</strong
-				>.
-			</p>
+			{PARAGRAPHS.map((p) => <p class='aboutMe__paragraph'>{p}</p>)}
 		</div>
 	</div>
 </Section>

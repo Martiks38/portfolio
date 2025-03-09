@@ -25,14 +25,7 @@
     "about-me": {
       "TITLE": "Sobre mí",
       "ALT_IMG": "Con Magi",
-      "FIRST_PARAGRAPH": "De niño deseaba ser desarrollador de videojuegos, pero no sabía cómo empezar. Esa chispa volvió cuando cursaba informática en la universidad en el ",
-      "FIRST_HIGHLIGHTED": "desarrollo web Frontend",
-      "SECOND_PARAGRAPH_FIRST_FRAGMENT": "+3 años aprendiendo ",
-      "SECOND_HIGHLIGHTED": "Frontend.",
-      "SECOND_PARAGRAPH_SECOND_FRAGMENT": " Comencé con el libro: \"El gran libro de HTML5, CSS3 y JavaScript\" y continué con los cursos de dos grandes personas: ",
-      "THIRD_PARAGRAPH_FIRST_FRAGMENT": "Actualmente, estoy creando aplicaciones con ",
-      "THIRD_PARAGRAPH_SECOND_FRAGMENT": "; y aprendiendo ",
-      "THIRD_HIGHLIGHTED": "accesibilidad"
+      "PARAGRAPHS": ["Me llamo Giuliano Cappa. Mi primer vistazo al diseño de páginas web fue a los 13 años en Nasa Computación.", "Mientras estudiaba ingeniería electrónica retomé y comencé a profundizar en el mundo de la Programación. Desde entonces, disfruto creando experiencias web para los usuarios.", "Actualmente, estudio Ingeniería en Sistemas de la Información y ayudo a mis compañeros a aprender a programar, a trabajar con bases de datos y a comprender las materias básicas de la ingeniería. Me gusta compartir mi conocimiento."]
     },
     "contact": {
       "TITLE": "Contacto",
